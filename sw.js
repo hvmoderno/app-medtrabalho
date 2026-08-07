@@ -10,7 +10,7 @@
    abre offline, mas pega a versão nova assim que houver rede.
    ========================================================================== */
 
-const VERSAO = 'v20';
+const VERSAO = 'v21';
 const CACHE = 'medtrabalho-' + VERSAO;
 
 const ARQUIVOS = [
@@ -57,7 +57,15 @@ const ARQUIVOS = [
   './manifest.webmanifest',
   './materiais/guia.css',
   './materiais/guias/1.1.html',
+  './materiais/guias/1.10.html',
   './materiais/guias/1.2.html',
+  './materiais/guias/1.3.html',
+  './materiais/guias/1.4.html',
+  './materiais/guias/1.5.html',
+  './materiais/guias/1.6.html',
+  './materiais/guias/1.7.html',
+  './materiais/guias/1.8.html',
+  './materiais/guias/1.9.html',
   './materiais/guias/2.1.html',
   './materiais/guias/2.2.html',
   './materiais/guias/2.3.html',
@@ -67,12 +75,24 @@ const ARQUIVOS = [
   './materiais/guias/2.7.html',
   './materiais/guias/2.8.html',
   './materiais/guias/2.9.html',
+  './materiais/guias/3.1.html',
+  './materiais/guias/3.2.html',
   './materiais/guias/4.1.html',
+  './materiais/guias/4.10.html',
   './materiais/guias/4.2.html',
   './materiais/guias/4.3.html',
+  './materiais/guias/4.4.html',
+  './materiais/guias/4.5.html',
+  './materiais/guias/4.6.html',
+  './materiais/guias/4.7.html',
+  './materiais/guias/4.8.html',
+  './materiais/guias/4.9.html',
   './materiais/guias/5.1.html',
   './materiais/guias/5.2.html',
   './materiais/guias/5.3.html',
+  './materiais/guias/5.4.html',
+  './materiais/guias/5.5.html',
+  './materiais/guias/5.6.html',
   './materiais/guias/6.1.html',
   './materiais/guias/6.2.html',
   './materiais/guias/6.3.html',

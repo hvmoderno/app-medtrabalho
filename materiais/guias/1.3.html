@@ -1,0 +1,108 @@
+<h1>1.3 Epidemiologia Clínica e Bioestatística</h1>
+<p class="sub">Seção 1 · alto retorno em prova · o tema que mais se resolve com raciocínio e menos com decoreba</p>
+
+<div class="caixa chave">
+  <span class="tit">As três famílias de medidas</span>
+  <b>Frequência</b> (quanto existe) · <b>Associação</b> (o quanto a exposição aumenta o risco) ·
+  <b>Impacto</b> (quanto se evitaria removendo a exposição). A banca troca uma pela outra o tempo todo.
+</div>
+
+<h2>Medidas de frequência</h2>
+<div class="tab">
+<table>
+  <thead><tr><th>Medida</th><th>O que mede</th><th>Cuidado</th></tr></thead>
+  <tbody>
+    <tr><th>Prevalência</th><td>Casos <b>existentes</b> em um momento</td><td>Depende da incidência <b>e</b> da duração da doença</td></tr>
+    <tr><th>Incidência cumulativa</th><td>Casos <b>novos</b> sobre a população em risco no período</td><td>Exige seguimento e população fechada</td></tr>
+    <tr><th>Densidade de incidência</th><td>Casos novos por <b>pessoa-tempo</b> de observação</td><td>Adequada quando o seguimento é desigual</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2>Medidas de associação e de impacto</h2>
+<div class="tab">
+<table>
+  <thead><tr><th>Medida</th><th>Cálculo</th><th>Leitura</th></tr></thead>
+  <tbody>
+    <tr><th>Risco relativo</th><td>Incidência nos expostos ÷ nos não expostos</td><td>Quantas vezes maior o risco. <b>Coorte</b></td></tr>
+    <tr><th>Razão de chances</th><td>Razão entre as chances de exposição</td><td>Medida do <b>caso-controle</b>; aproxima o RR em doença rara</td></tr>
+    <tr><th>Diferença de risco</th><td>Incidência nos expostos − nos não expostos</td><td>Impacto <b>absoluto</b></td></tr>
+    <tr><th>Fração atribuível</th><td>Derivada do RR</td><td>Proporção de casos evitáveis removendo a exposição. Medida <b>populacional</b></td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="caixa mnemonico">
+  <span class="tit">Mnemônico dos desenhos</span>
+  <span class="sigla">COORTE olha pra FRENTE · CASO-CONTROLE olha pra TRÁS</span>
+  Coorte: parte da <b>exposição</b>, mede <b>incidência</b>, calcula <b>RR</b>.<br>
+  Caso-controle: parte da <b>doença</b>, não mede incidência, calcula <b>razão de chances</b>.<br>
+  Transversal: mede <b>prevalência</b>; não estabelece temporalidade.
+</div>
+
+<h2>Validade de testes</h2>
+<div class="tab">
+<table>
+  <thead><tr><th>Medida</th><th>Definição</th><th>Depende da prevalência?</th></tr></thead>
+  <tbody>
+    <tr><th>Sensibilidade</th><td>Proporção de <b>doentes</b> com teste positivo</td><td><b>Não</b></td></tr>
+    <tr><th>Especificidade</th><td>Proporção de <b>não doentes</b> com teste negativo</td><td><b>Não</b></td></tr>
+    <tr><th>Valor preditivo positivo</th><td>Proporção de <b>positivos</b> que têm a doença</td><td><b>Sim</b> — cai muito em baixa prevalência</td></tr>
+    <tr><th>Valor preditivo negativo</th><td>Proporção de <b>negativos</b> que não têm a doença</td><td><b>Sim</b> — sobe em baixa prevalência</td></tr>
+    <tr><th>Razão de verossimilhança</th><td>Quanto o resultado modifica a probabilidade pré-teste</td><td><b>Não</b></td></tr>
+  </tbody>
+</table>
+</div>
+<p class="pequeno"><b>Consequência para o rastreamento ocupacional:</b> rastrear doença rara com teste bom
+gera <b>muitos falsos-positivos</b> — o VPP despenca. É a base da prevenção quaternária (tema 1.10).
+Deslocar o ponto de corte <b>troca</b> sensibilidade por especificidade; não melhora as duas.</p>
+
+<h2>Viés, confundimento e modificação de efeito</h2>
+<div class="tab">
+<table>
+  <thead><tr><th>Fenômeno</th><th>O que é</th><th>Como se trata</th></tr></thead>
+  <tbody>
+    <tr><th>Viés de seleção</th><td>Erro em quem entra no estudo — ex.: <b>efeito do trabalhador sadio</b></td><td>Escolher comparador adequado (outro grupo de trabalhadores)</td></tr>
+    <tr><th>Viés de aferição</th><td>Erro na medida da exposição ou do desfecho</td><td>Padronizar instrumentos, cegar avaliadores</td></tr>
+    <tr><th>Confundimento</th><td>Terceira variável associada à exposição E ao desfecho, sem ser elo intermediário</td><td>Ajustar, estratificar, restringir</td></tr>
+    <tr><th>Modificação de efeito</th><td>A associação <b>difere entre estratos</b></td><td><b>Descrever por estrato</b> — não ajustar</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="pequeno"><b>Efeito do trabalhador sadio:</b> quem está empregado precisou estar saudável para ser
+admitido e permanecer. Comparar trabalhadores com a população geral <b>subestima</b> o dano ocupacional
+e pode fazer a exposição parecer protetora.</p>
+
+<h2>Inferência</h2>
+<ul>
+  <li><b>Intervalo de confiança</b> que inclui o valor nulo (1 para razões, 0 para diferenças) → não significativo ao nível adotado.</li>
+  <li><b>Não significativo ≠ ausência de efeito.</b> Intervalo largo denuncia <b>imprecisão</b>, geralmente por amostra pequena.</li>
+  <li><b>Aumentar a amostra</b> reduz erro aleatório — <b>não</b> corrige viés nem confundimento.</li>
+  <li><b>Significância estatística ≠ relevância clínica.</b></li>
+</ul>
+
+<div class="caixa pegadinha">
+  <span class="tit">Pegadinhas de prova</span>
+  <ul>
+    <li><b>Número certo, interpretação errada</b> — RR = 4,0 lido como "4% dos casos são atribuíveis". Leia sempre a frase inteira.</li>
+    <li><b>"Sensibilidade cai em baixa prevalência"</b> → não cai; quem cai é o VPP.</li>
+    <li><b>"Sensibilidade alta garante que os positivos são verdadeiros"</b> → garante poucos falsos-negativos.</li>
+    <li><b>Razão de chances calculada em coorte como se fosse obrigatória</b> → na coorte mede-se incidência e calcula-se RR.</li>
+    <li><b>Confundimento × modificação de efeito trocados</b> → confundimento se ajusta; modificação se descreve.</li>
+    <li><b>Ajustar por variável intermediária</b> da cadeia causal → remove parte do próprio efeito.</li>
+    <li><b>Menor mortalidade em trabalhadores lida como "exposição protetora"</b> → efeito do trabalhador sadio.</li>
+    <li><b>Elevar o ponto de corte melhora sensibilidade e especificidade</b> → é sempre troca.</li>
+  </ul>
+</div>
+
+<h2>Checklist de véspera</h2>
+<ul>
+  <li>Prevalência depende de incidência <b>e</b> duração.</li>
+  <li>RR é da coorte; razão de chances é do caso-controle.</li>
+  <li>Sensibilidade e especificidade não mudam com a prevalência; VPP e VPN mudam.</li>
+  <li>Baixa prevalência → VPP baixo, VPN alto.</li>
+  <li>Efeito do trabalhador sadio subestima o dano ocupacional.</li>
+  <li>Intervalo cruzando o nulo não prova ausência de efeito.</li>
+</ul>
+
+<div class="fontes">Base conceitual: Fletcher — Epidemiologia Clínica: Elementos Essenciais; Hulley — Delineando a pesquisa clínica.</div>
