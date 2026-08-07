@@ -10,7 +10,7 @@
    abre offline, mas pega a versão nova assim que houver rede.
    ========================================================================== */
 
-const VERSAO = 'v21';
+const VERSAO = 'v22';
 const CACHE = 'medtrabalho-' + VERSAO;
 
 const ARQUIVOS = [
@@ -23,6 +23,9 @@ const ARQUIVOS = [
   './assets/icone-180.png',
   './assets/icone-192.png',
   './assets/icone-512.png',
+  './banco/casos-2.js',
+  './banco/casos-3.js',
+  './banco/casos-4.js',
   './banco/casos.js',
   './banco/indice.js',
   './banco/misc-alto.js',
