@@ -1,0 +1,222 @@
+/* 6.1 Exames Médicos Ocupacionais (PCMSO) — bloco de aprofundamento.
+   Questões AUTORAIS. Ver banco/README-formato.md */
+window.BANCO = window.BANCO || [];
+window.BANCO.push(
+
+{ id: 'q-6.1-020', tema: '6.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Um trabalhador é admitido em 3 de março e, por atraso na agenda da clínica, realiza o exame admissional em 12 de março, já tendo iniciado suas atividades em linha de produção com exposição a ruído. O médico coordenador é questionado sobre a regularidade. A resposta CORRETA é:',
+  alts: [
+    { t: 'O exame admissional deve ser realizado antes que o trabalhador assuma suas atividades, de modo que houve irregularidade; a finalidade preventiva do exame é justamente avaliar a compatibilidade antes de iniciar a exposição.', ok: true,
+      why: 'Correta. O admissional é exame prévio por definição: avaliar depois de já exposto esvazia sua finalidade e ainda cria dificuldade para estabelecer a condição basal do trabalhador.' },
+    { t: 'A realização em até quinze dias após o início das atividades é regular, desde que não haja intercorrência.', ok: false,
+      why: 'Errada. Não há tolerância que permita iniciar a exposição antes da avaliação.' },
+    { t: 'A irregularidade é meramente formal, sem repercussão prática, já que o trabalhador estava assintomático.', ok: false,
+      why: 'Errada. A ausência de exame prévio compromete a condição basal, que é referência para todo o acompanhamento futuro — sobretudo em exposição a ruído.' },
+    { t: 'O exame admissional é dispensável quando o trabalhador apresenta atestado de saúde de emprego anterior.', ok: false,
+      why: 'Errada. O exame se refere aos riscos da nova função e não pode ser substituído por avaliação feita para outro contexto.' },
+    { t: 'A responsabilidade pela irregularidade é do trabalhador, que deveria ter comparecido antes.', ok: false,
+      why: 'Errada. Organizar a realização do exame antes do início das atividades é obrigação do empregador.' }
+  ],
+  comentario: 'Três exames são PRÉVIOS por natureza: admissional (antes de assumir), retorno ao trabalho (antes de reassumir) e mudança de riscos ocupacionais (antes da mudança). O periódico e o demissional têm lógica temporal distinta.',
+  pegadinha: 'A ideia de uma "tolerância de alguns dias" para o admissional não existe e é oferecida com frequência.',
+  refs: ['NR-7', 'CLT — Capítulo V do Título II'] },
+
+{ id: 'q-6.1-021', tema: '6.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Trabalhadora retorna após 45 dias de afastamento por licença-maternidade. O setor de pessoal pergunta se é necessário exame antes do retorno. A orientação CORRETA é:',
+  alts: [
+    { t: 'O exame de retorno ao trabalho é devido após ausência por período prolongado decorrente de doença, acidente ou parto, e deve ser realizado antes que a trabalhadora reassuma suas funções.', ok: true,
+      why: 'Correta. O parto está entre as hipóteses que geram exame de retorno, ao lado de doença e acidente, e o exame é prévio à retomada das atividades.' },
+    { t: 'O exame de retorno só é exigível após afastamento por doença ou acidente, não se aplicando à licença-maternidade.', ok: false,
+      why: 'Errada. O parto figura expressamente entre as hipóteses.' },
+    { t: 'O exame pode ser realizado nos primeiros dias após o retorno, desde que a trabalhadora não exerça função de risco.', ok: false,
+      why: 'Errada. O exame de retorno é prévio à retomada, independentemente do risco da função.' },
+    { t: 'Basta a apresentação de alta médica do obstetra, dispensando o exame ocupacional.', ok: false,
+      why: 'Errada. A alta assistencial responde à condição clínica; o exame ocupacional avalia a compatibilidade com os riscos da função.' },
+    { t: 'O exame de retorno substitui o periódico devido no mesmo ano.', ok: false,
+      why: 'Errada. São exames com finalidades distintas e o retorno não elimina a periodicidade do acompanhamento.' }
+  ],
+  comentario: 'Exame de retorno ao trabalho: cabível após ausência prolongada por doença, acidente OU parto, e sempre realizado antes de reassumir as funções. Alta assistencial não substitui avaliação ocupacional.',
+  pegadinha: 'Excluir o parto das hipóteses é o erro mais comum, porque a licença-maternidade não é vista como "afastamento por saúde".',
+  refs: ['NR-7'] },
+
+{ id: 'q-6.1-022', tema: '6.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Um trabalhador do setor administrativo será transferido para a área de produção, onde passará a ser exposto a ruído e a agentes químicos. Sobre a avaliação médica, é CORRETO afirmar:',
+  alts: [
+    { t: 'É devido exame por mudança de riscos ocupacionais, realizado antes da efetivação da mudança, com definição dos exames complementares pertinentes aos novos riscos e registro da nova condição basal.', ok: true,
+      why: 'Correta. O gatilho é a mudança de RISCOS, não a mudança de cargo em si, e o exame é prévio para estabelecer a condição basal frente aos novos agentes.' },
+    { t: 'Nenhum exame é devido, pois o trabalhador já está empregado e possui exame admissional válido.', ok: false,
+      why: 'Errada. O admissional avaliou os riscos da função anterior, que eram outros.' },
+    { t: 'O exame é devido apenas se a mudança implicar alteração de cargo formal e de salário.', ok: false,
+      why: 'Errada. O critério é a alteração da exposição a riscos, e não a formalidade contratual.' },
+    { t: 'O exame pode ser realizado até trinta dias após a transferência.', ok: false,
+      why: 'Errada. É exame prévio à mudança.' },
+    { t: 'Basta atualizar o atestado anterior, acrescentando os novos riscos por escrito.', ok: false,
+      why: 'Errada. Novos riscos exigem nova avaliação clínica e a definição dos exames complementares pertinentes.' }
+  ],
+  comentario: 'Guarde o gatilho: mudança de RISCOS ocupacionais, não de cargo. Alguém pode mudar de cargo sem mudar de exposição — e mudar de exposição sem mudar de cargo, por alteração do processo produtivo. É a exposição que manda.',
+  pegadinha: 'Vincular o exame à formalidade contratual (cargo, salário) desloca o critério do risco para o papel.',
+  refs: ['NR-7', 'NR-1'] },
+
+{ id: 'q-6.1-023', tema: '6.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Ao revisar os atestados de saúde ocupacional emitidos pela clínica contratada, o médico coordenador identifica documentos que trazem o código diagnóstico do trabalhador no campo de observações. Sobre o conteúdo do atestado, é CORRETO afirmar:',
+  alts: [
+    { t: 'O documento deve conter a identificação do trabalhador e da função, os riscos aos quais está exposto, os exames realizados com suas datas, a conclusão sobre a aptidão e a identificação do médico responsável — jamais o diagnóstico.', ok: true,
+      why: 'Correta. O atestado comunica aptidão e riscos avaliados; o diagnóstico permanece protegido pelo sigilo e não integra o documento entregue à empresa.' },
+    { t: 'O diagnóstico deve constar sempre que houver restrição, para que a empresa compreenda a limitação.', ok: false,
+      why: 'Errada. A empresa precisa conhecer a restrição operacional, não a condição de saúde que a origina.' },
+    { t: 'O diagnóstico pode constar quando o trabalhador autorizar verbalmente.', ok: false,
+      why: 'Errada. Mesmo com autorização, a inclusão do diagnóstico em documento que circula na empresa expõe o trabalhador; e em relação de emprego a autorização é frágil.' },
+    { t: 'O atestado deve ser emitido em via única, arquivada pela empresa.', ok: false,
+      why: 'Errada. É emitido em mais de uma via, com entrega de via ao trabalhador mediante recibo.' },
+    { t: 'A identificação dos riscos ocupacionais é dispensável no documento.', ok: false,
+      why: 'Errada. Os riscos aos quais o trabalhador está exposto integram o conteúdo do atestado.' }
+  ],
+  comentario: 'O atestado ocupacional é a fronteira entre o que a empresa pode e não pode saber: identificação, função, riscos, exames com datas, conclusão de aptidão e o médico responsável. Diagnóstico, nunca. E o trabalhador recebe a sua via.',
+  pegadinha: 'A justificativa de que "a empresa precisa entender a restrição" é a mais usada para incluir diagnóstico e é sempre indevida.',
+  refs: ['NR-7', 'Código de Ética Médica', 'LGPD'] },
+
+{ id: 'q-6.1-024', tema: '6.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Uma empresa de grau de risco elevado pergunta ao médico coordenador quais exames complementares devem compor a bateria dos trabalhadores expostos a determinado agente químico. A orientação CORRETA é:',
+  alts: [
+    { t: 'Os exames complementares devem ser definidos em função dos riscos identificados no gerenciamento de riscos ocupacionais e das características do agente, com periodicidade compatível — não existindo "bateria padrão" aplicável indistintamente a todos os trabalhadores da empresa.', ok: true,
+      why: 'Correta. O programa médico se alimenta do reconhecimento de riscos; a definição é por exposição e por agente, e não por pacote comercial uniforme.' },
+    { t: 'Deve-se adotar uma bateria única e ampla para todos os empregados, garantindo cobertura máxima.', ok: false,
+      why: 'Errada. Exames sem indicação de risco geram achados incidentais, investigações desnecessárias e dano — é a lógica da prevenção quaternária.' },
+    { t: 'Os exames complementares são facultativos quando a empresa fornece equipamento de proteção individual.', ok: false,
+      why: 'Errada. O fornecimento de equipamento não elimina a exposição nem dispensa o monitoramento dos expostos.' },
+    { t: 'A definição cabe ao laboratório contratado, que conhece melhor os métodos disponíveis.', ok: false,
+      why: 'Errada. A definição é responsabilidade técnica do médico coordenador do programa.' },
+    { t: 'A periodicidade deve ser sempre anual, independentemente do agente e do nível de exposição.', ok: false,
+      why: 'Errada. A periodicidade decorre do agente, do nível de exposição e das características do efeito à saúde.' }
+  ],
+  comentario: 'A cadeia é: gerenciamento de riscos identifica a exposição → o programa médico define quem monitorar, com que exame e com que periodicidade. Sem essa articulação, o programa vira bateria genérica — cara, invasiva e cega ao risco real.',
+  pegadinha: 'A "bateria ampla para todos" soa como zelo e é exemplo clássico de dano por excesso de intervenção.',
+  refs: ['NR-7', 'NR-9', 'Ferreira Junior — Rastreamento de doenças'] },
+
+{ id: 'q-6.1-025', tema: '6.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Trabalhador é considerado apto com restrição para não operar máquinas em movimento por período de três meses. O gerente devolve o atestado ao serviço médico dizendo que "restrição não serve, ou é apto ou é inapto". A conduta CORRETA é:',
+  alts: [
+    { t: 'Manter a conclusão, esclarecendo que a aptidão com restrição é instrumento técnico legítimo e frequentemente necessário, que viabiliza a permanência segura do trabalhador, e que a conclusão sobre aptidão é ato médico com autonomia técnica.', ok: true,
+      why: 'Correta. A restrição é o que permite manter o trabalhador trabalhando com segurança; suprimi-la por conveniência operacional seria expor o trabalhador e falsear o documento.' },
+    { t: 'Reemitir o atestado como apto, registrando a restrição apenas no prontuário.', ok: false,
+      why: 'Errada. O documento passaria a não refletir a avaliação, e a empresa não teria a informação necessária para proteger o trabalhador.' },
+    { t: 'Reemitir o atestado como inapto, já que não é possível restringir.', ok: false,
+      why: 'Errada. Inaptidão desproporcional prejudica o trabalhador tanto quanto a supressão da restrição.' },
+    { t: 'Acatar a orientação do gerente, pois a empresa é quem contrata o serviço médico.', ok: false,
+      why: 'Errada. O vínculo contratual não subordina o juízo técnico do médico.' },
+    { t: 'Encaminhar a decisão ao setor de recursos humanos para arbitrar entre apto e inapto.', ok: false,
+      why: 'Errada. A conclusão sobre aptidão não é matéria administrativa.' }
+  ],
+  comentario: 'Aptidão com restrição é ferramenta cotidiana da especialidade e a alternativa ao falso dilema entre apto e inapto. Escreva a restrição em linguagem de tarefa e exposição, com prazo de reavaliação — assim o gestor consegue realocar sem conhecer o diagnóstico.',
+  pegadinha: 'Os dois extremos são oferecidos juntos: apagar a restrição ou declarar inaptidão. Ambos prejudicam o trabalhador.',
+  refs: ['NR-7', 'Código de Ética Médica'] },
+
+{ id: 'q-6.1-026', tema: '6.1', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre o relatório analítico do programa de controle médico de saúde ocupacional, assinale a alternativa INCORRETA:',
+  alts: [
+    { t: 'Por conter informações de saúde, o relatório deve identificar nominalmente os trabalhadores com alterações, para permitir a atuação do setor de pessoal.', ok: true,
+      why: 'É a alternativa INCORRETA, portanto a resposta. O relatório é agregado; identificar nominalmente diagnósticos ou alterações viola o sigilo médico e a proteção de dados.' },
+    { t: 'Deve analisar a ocorrência dos agravos e a evolução dos indicadores ao longo do período.', ok: false,
+      why: 'Verdadeira, portanto não é a resposta. É o núcleo analítico do documento.' },
+    { t: 'Deve apontar a necessidade de mudança nas medidas de controle de risco quando os achados assim indicarem.', ok: false,
+      why: 'Verdadeira. É o que realimenta o gerenciamento de riscos.' },
+    { t: 'É de responsabilidade técnica do médico coordenador do programa.', ok: false,
+      why: 'Verdadeira. Trata-se de documento técnico-médico.' },
+    { t: 'Deve ser elaborado ainda que não tenha havido nenhum caso de doença ocupacional no período.', ok: false,
+      why: 'Verdadeira. A ausência de casos é ela própria um resultado a ser analisado e registrado.' }
+  ],
+  comentario: 'O relatório analítico é o elo entre o que a saúde detecta e o que o controle de risco precisa corrigir. Sempre agregado, sempre sob responsabilidade médica, sempre com conclusão sobre a necessidade de mudar as medidas de controle.',
+  pegadinha: 'Enunciado de "assinale a INCORRETA": a falsa invoca uma necessidade gerencial real para justificar violação de sigilo.',
+  refs: ['NR-7', 'Código de Ética Médica', 'LGPD'] },
+
+{ id: 'q-6.1-027', tema: '6.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Uma empresa encerra o contrato com a clínica que executava o programa de controle médico e pergunta o que fazer com os prontuários ocupacionais e por quanto tempo guardá-los. A orientação CORRETA é:',
+  alts: [
+    { t: 'Os registros devem ser mantidos por prazo prolongado após o desligamento do trabalhador, sob guarda de médico, com transferência da responsabilidade a outro médico quando houver sucessão — o descarte prematuro elimina prova essencial para reconhecimento futuro de nexo.', ok: true,
+      why: 'Correta. Doenças ocupacionais de latência longa podem se manifestar décadas depois, e é o prontuário que sustentará o nexo; a guarda é médica e a sucessão se dá entre médicos.' },
+    { t: 'Os prontuários podem ser descartados imediatamente após o encerramento do contrato de prestação de serviços.', ok: false,
+      why: 'Errada. Há prazo de guarda a observar, e o descarte prematuro é grave.' },
+    { t: 'Devem ser entregues ao setor de pessoal da empresa, que passa a ser o responsável pela guarda.', ok: false,
+      why: 'Errada. Setor administrativo não é depositário legítimo de dado clínico.' },
+    { t: 'Podem ser descartados assim que o trabalhador é desligado da empresa.', ok: false,
+      why: 'Errada. O prazo de guarda se conta a partir do desligamento e é prolongado justamente por causa da latência das doenças ocupacionais.' },
+    { t: 'A digitalização autoriza o descarte imediato do original sem outros cuidados.', ok: false,
+      why: 'Errada. A guarda digital exige controles próprios de integridade, autenticidade e segurança da informação.' }
+  ],
+  comentario: 'O prazo de guarda prolongado dos registros de saúde ocupacional existe por uma razão prática: câncer ocupacional, pneumoconioses e perdas auditivas se manifestam muito depois do vínculo. Sem prontuário, o trabalhador perde o nexo por falta de prova.',
+  pegadinha: 'Confira a redação vigente da norma quanto ao prazo exato de guarda — ele já foi objeto de alteração e a prova costuma cobrar o conceito de guarda prolongada.',
+  refs: ['NR-7', 'Código de Ética Médica', 'Resoluções do CFM sobre prontuário'] },
+
+{ id: 'q-6.1-028', tema: '6.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Ao elaborar o programa de controle médico de uma empresa, o médico coordenador constata que o inventário de riscos está desatualizado e não contempla os agentes efetivamente presentes em dois setores. A conduta CORRETA é:',
+  alts: [
+    { t: 'Comunicar formalmente a inconsistência e articular a atualização do inventário, pois o programa médico se estrutura a partir do reconhecimento dos riscos — elaborá-lo sobre base inexata produziria acompanhamento inadequado dos expostos.', ok: true,
+      why: 'Correta. A articulação entre o gerenciamento de riscos e o programa médico é estruturante: sem inventário correto não há como definir quem monitorar e com qual exame.' },
+    { t: 'Elaborar o programa médico com base apenas nos exames que a empresa já vinha realizando.', ok: false,
+      why: 'Errada. Perpetua a inadequação e deixa expostos sem monitoramento.' },
+    { t: 'O programa médico independe do inventário de riscos, podendo ser elaborado de forma autônoma.', ok: false,
+      why: 'Errada. A articulação entre os dois é exigência expressa e lógica.' },
+    { t: 'Cabe ao médico elaborar ele próprio o inventário de riscos, substituindo a equipe responsável.', ok: false,
+      why: 'Errada. O médico contribui e cobra, mas o gerenciamento de riscos é responsabilidade da organização, com equipe própria.' },
+    { t: 'A inconsistência deve ser registrada apenas no prontuário dos trabalhadores afetados.', ok: false,
+      why: 'Errada. Trata-se de falha organizacional que exige comunicação formal à empresa e correção do documento.' }
+  ],
+  comentario: 'Programa médico não é lista de exames: é a resposta de saúde ao mapa de riscos. Inventário errado gera programa errado. E há um ponto de prova relevante: comunicar formalmente a inconsistência é o que documenta a atuação do médico.',
+  pegadinha: 'Assumir a elaboração do inventário parece proatividade e confunde as responsabilidades entre o serviço médico e o gerenciamento de riscos.',
+  refs: ['NR-7', 'NR-1', 'NR-9'] },
+
+{ id: 'q-6.1-029', tema: '6.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Uma rede de lojas com trabalhadores exclusivamente administrativos, de grau de risco baixo, questiona se precisa de programa de controle médico e de exames ocupacionais. A orientação CORRETA é:',
+  alts: [
+    { t: 'Há previsão de tratamento diferenciado e simplificado conforme porte e grau de risco, mas não de dispensa integral: permanecem as obrigações de identificar riscos e de acompanhar a saúde dos trabalhadores, com atenção aos riscos ergonômicos e psicossociais, presentes também em atividades administrativas.', ok: true,
+      why: 'Correta. A simplificação é proporcional, não é isenção, e o grau de risco baixo da atividade econômica não elimina riscos ergonômicos e psicossociais.' },
+    { t: 'Empresas de grau de risco baixo com atividades administrativas estão integralmente dispensadas de programa médico e de exames.', ok: false,
+      why: 'Errada. A simplificação não chega a dispensa integral das obrigações.' },
+    { t: 'Basta o exame admissional, sendo dispensados os demais tipos de exame.', ok: false,
+      why: 'Errada. Os demais exames permanecem devidos nas hipóteses que os geram.' },
+    { t: 'Riscos ergonômicos e psicossociais não se aplicam a atividades administrativas.', ok: false,
+      why: 'Errada. Trabalho com telas, postura mantida, metas e organização do trabalho são riscos presentes em escritórios.' },
+    { t: 'A dispensa depende apenas do número de empregados, independentemente do grau de risco.', ok: false,
+      why: 'Errada. Porte e grau de risco atuam conjuntamente.' }
+  ],
+  comentario: 'Porte pequeno e risco baixo geram simplificação, jamais isenção. E o erro prático mais comum é supor que escritório não tem risco: ergonômico e psicossocial estão lá, e são os que mais afastam nesse perfil de empresa.',
+  pegadinha: 'A alternativa da dispensa integral é a expectativa de quase todo empregador de pequeno porte.',
+  refs: ['NR-1', 'NR-7', 'NR-17', 'Teixeira — Gestão da Saúde no Trabalho'] },
+
+{ id: 'q-6.1-030', tema: '6.1', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre o exame demissional, assinale a alternativa CORRETA:',
+  alts: [
+    { t: 'Sua realização é devida dentro do prazo previsto para a homologação, podendo ser dispensado quando o último exame clínico ocupacional tiver sido realizado dentro de um intervalo definido em norma, que varia conforme o grau de risco da atividade.', ok: true,
+      why: 'Correta. A dispensa é condicionada à existência de exame clínico ocupacional recente, e o intervalo admitido é menor nas atividades de maior grau de risco.' },
+    { t: 'É sempre obrigatório, sem qualquer hipótese de dispensa.', ok: false,
+      why: 'Errada. Há hipótese de dispensa condicionada à recência do último exame clínico ocupacional.' },
+    { t: 'É sempre dispensável quando o desligamento se dá por pedido do próprio trabalhador.', ok: false,
+      why: 'Errada. A forma de desligamento não é o critério de dispensa.' },
+    { t: 'Sua finalidade é apenas comprovar que o trabalhador não adquiriu doença durante o vínculo.', ok: false,
+      why: 'Errada. Ele documenta a condição de saúde ao término do vínculo, o que serve tanto ao trabalhador quanto à empresa, e pode identificar agravos que exigem encaminhamento.' },
+    { t: 'Pode ser realizado a qualquer tempo após o desligamento, sem prazo definido.', ok: false,
+      why: 'Errada. Há prazo vinculado à homologação da rescisão.' }
+  ],
+  comentario: 'Demissional: devido no prazo ligado à homologação, com dispensa condicionada à recência do último exame clínico ocupacional — intervalo menor quanto maior o grau de risco. Confira os prazos na redação vigente, pois já foram alterados.',
+  pegadinha: 'Vincular a dispensa à forma do desligamento (pedido, justa causa, acordo) desloca o critério, que é a recência do exame.',
+  refs: ['NR-7'] },
+
+{ id: 'q-6.1-031', tema: '6.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Durante exame periódico de trabalhador exposto a ruído, a audiometria mostra piora dos limiares em relação à audiometria de referência, ainda sem repercussão em frequências da fala. A conduta CORRETA é:',
+  alts: [
+    { t: 'Investigar a evolução, verificar o repouso auditivo e a qualidade do exame, avaliar a eficácia das medidas de controle e do protetor auditivo, reavaliar o trabalhador em intervalo menor e comunicar a necessidade de revisão do controle de risco — o achado é sinal de falha do sistema de proteção.', ok: true,
+      why: 'Correta. Piora dos limiares em exposto é evento sentinela: aponta que o controle não está funcionando, e a resposta combina reavaliação do trabalhador com revisão das medidas.' },
+    { t: 'Aguardar o comprometimento das frequências da fala antes de qualquer providência.', ok: false,
+      why: 'Errada. Esperar o impacto na comunicação significa esperar o dano se consolidar — o oposto da finalidade do monitoramento.' },
+    { t: 'Concluir pelo diagnóstico de perda auditiva induzida por ruído e emitir a comunicação do agravo imediatamente, sem outras verificações.', ok: false,
+      why: 'Errada. Antes é preciso verificar repouso auditivo, qualidade técnica do exame e diagnóstico diferencial; o diagnóstico não se firma em exame isolado.' },
+    { t: 'Substituir o protetor auditivo por outro de maior atenuação e encerrar o caso.', ok: false,
+      why: 'Errada. Trocar o protetor sem investigar a exposição e a adequação do uso trata o sintoma do sistema, não a causa.' },
+    { t: 'Como não há queixa auditiva, o achado não tem significado clínico.', ok: false,
+      why: 'Errada. A perda induzida por ruído é assintomática nas fases iniciais — é justamente isso que torna o monitoramento necessário.' }
+  ],
+  comentario: 'Monitoramento existe para detectar antes do sintoma. Piora de limiares dispara três frentes: verificar a validade do exame, reavaliar o trabalhador em intervalo menor e revisar o controle de risco — porque a piora sinaliza que a proteção falhou.',
+  pegadinha: 'As duas armadilhas opostas: esperar a fala ser afetada e fechar diagnóstico em exame único sem verificar repouso auditivo.',
+  refs: ['NR-7', 'Gândara — Doenças Otorrinolaringológicas Relacionadas ao Trabalho'] }
+
+);

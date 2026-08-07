@@ -1,0 +1,260 @@
+/* 7.4 Normas Regulamentadoras e 7.2 Legislação Previdenciária — aprofundamento.
+   Questões AUTORAIS. Ver banco/README-formato.md */
+window.BANCO = window.BANCO || [];
+window.BANCO.push(
+
+/* ===================== 7.4 Normas Regulamentadoras ====================== */
+{ id: 'q-7.4-030', tema: '7.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Um trabalhador recusa-se a executar tarefa em andaime que apresenta travamento improvisado com arame, alegando risco grave e iminente. O encarregado ameaça puni-lo por insubordinação. Sobre a situação, é CORRETO afirmar:',
+  alts: [
+    { t: 'O trabalhador tem direito de interromper suas atividades quando constatar condição de risco grave e iminente para sua segurança ou de terceiros, comunicando imediatamente ao superior hierárquico, sem que isso configure insubordinação.', ok: true,
+      why: 'Correta. O direito de recusa diante de risco grave e iminente está expressamente previsto e vem acompanhado do dever de comunicar de imediato ao superior.' },
+    { t: 'A recusa configura insubordinação, cabendo advertência, já que a avaliação do risco compete apenas ao serviço especializado.', ok: false,
+      why: 'Errada. O direito de recusa é do trabalhador e não depende de laudo prévio do serviço especializado.' },
+    { t: 'O direito de recusa só existe após a interdição formal do local pela autoridade competente.', ok: false,
+      why: 'Errada. Condicionar a recusa à interdição prévia esvazia o instituto, que existe justamente para o momento anterior à intervenção externa.' },
+    { t: 'O trabalhador pode recusar-se, mas fica obrigado a apresentar laudo técnico que comprove o risco.', ok: false,
+      why: 'Errada. Não se exige laudo do trabalhador; exige-se a comunicação imediata ao superior.' },
+    { t: 'A recusa autoriza o desconto das horas não trabalhadas.', ok: false,
+      why: 'Errada. A paralisação legítima por risco grave e iminente não gera prejuízo salarial ao trabalhador.' }
+  ],
+  comentario: 'Direito de recusa: interromper a atividade diante de risco grave e iminente, com comunicação imediata ao superior. Não exige laudo, não exige interdição prévia e não configura insubordinação.',
+  pegadinha: 'Condicionar o direito de recusa a laudo ou a interdição prévia é a forma mais comum de anulá-lo na prática.',
+  refs: ['NR-1', 'CLT — Capítulo V do Título II'] },
+
+{ id: 'q-7.4-031', tema: '7.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Uma indústria apresenta ao médico do trabalho seu inventário de riscos e seu plano de ação. Sobre o gerenciamento de riscos ocupacionais, é CORRETO afirmar:',
+  alts: [
+    { t: 'O inventário de riscos consolida a identificação dos perigos e a avaliação dos riscos, e o plano de ação define as medidas de prevenção com prazos e responsáveis — ambos integram o programa de gerenciamento de riscos e devem ser revisados quando houver mudança no processo ou ocorrência de acidente ou doença.', ok: true,
+      why: 'Correta. Inventário e plano de ação são os dois produtos do gerenciamento, e sua revisão é disparada por mudança de processo, acidente, doença ou identificação de risco novo.' },
+    { t: 'O inventário de riscos substitui o programa de controle médico, por já conter a avaliação de saúde dos trabalhadores.', ok: false,
+      why: 'Errada. São documentos com objetos distintos: o inventário mapeia riscos, o programa médico acompanha a saúde dos expostos.' },
+    { t: 'O plano de ação é facultativo quando todos os riscos forem classificados como baixos.', ok: false,
+      why: 'Errada. A classificação orienta a prioridade das medidas, não dispensa o plano de ação.' },
+    { t: 'A revisão do inventário deve ocorrer apenas na periodicidade fixa prevista, independentemente de eventos.', ok: false,
+      why: 'Errada. Além da periodicidade, eventos como acidente, doença ocupacional e mudança de processo disparam revisão.' },
+    { t: 'O gerenciamento de riscos ocupacionais permanece regulado pela norma de agentes físicos, químicos e biológicos.', ok: false,
+      why: 'Errada. O gerenciamento migrou para a norma de disposições gerais; a norma de agentes trata da avaliação e do controle das exposições.' }
+  ],
+  comentario: 'Estrutura atual: gerenciamento de riscos na norma de disposições gerais, com inventário de riscos e plano de ação como produtos. A norma de agentes cuida da avaliação e do controle das exposições. E a revisão é disparada por evento, não só por calendário.',
+  pegadinha: 'A alternativa que devolve o gerenciamento à norma de agentes reproduz a estrutura antiga, do tempo do PPRA.',
+  refs: ['NR-1', 'NR-9'] },
+
+{ id: 'q-7.4-032', tema: '7.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Trabalhador eleito representante dos empregados na comissão interna de prevenção de acidentes é comunicado de sua dispensa sem justa causa dois meses após o término do mandato. Sobre a situação, é CORRETO afirmar:',
+  alts: [
+    { t: 'O representante eleito dos empregados possui garantia de emprego que se estende desde o registro da candidatura até período posterior ao término do mandato, de modo que a dispensa nesse intervalo é irregular salvo motivo disciplinar, técnico, econômico ou financeiro devidamente comprovado.', ok: true,
+      why: 'Correta. A garantia protege o representante justamente contra retaliação pelo exercício da função e se prolonga para além do fim do mandato.' },
+    { t: 'A garantia de emprego cessa no dia do término do mandato.', ok: false,
+      why: 'Errada. Ela se prolonga por período posterior ao término, exatamente para evitar a retaliação diferida.' },
+    { t: 'A garantia alcança igualmente os representantes indicados pelo empregador.', ok: false,
+      why: 'Errada. A garantia protege os representantes ELEITOS pelos empregados, que são os expostos a retaliação.' },
+    { t: 'A garantia só se aplica ao titular, não existindo qualquer proteção ao suplente.', ok: false,
+      why: 'Errada. A proteção alcança também o suplente eleito.' },
+    { t: 'A garantia depende de o trabalhador ter comparecido a todas as reuniões da comissão.', ok: false,
+      why: 'Errada. Frequência é matéria de exercício do mandato e não condiciona a garantia de emprego.' }
+  ],
+  comentario: 'Guarde três pontos: a garantia vale do registro da candidatura até período após o término do mandato; protege eleitos (titulares e suplentes), não indicados pelo empregador; e existe para blindar quem cobra segurança contra retaliação.',
+  pegadinha: 'Encerrar a garantia no último dia do mandato é a leitura mais intuitiva e está errada.',
+  refs: ['NR-5', 'CLT'] },
+
+{ id: 'q-7.4-033', tema: '7.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Um hospital solicita orientação sobre as exigências específicas aplicáveis aos seus trabalhadores. Sobre a norma de segurança e saúde em serviços de saúde, é CORRETO afirmar:',
+  alts: [
+    { t: 'Ela estabelece medidas de proteção frente a riscos biológicos, químicos e radiações ionizantes, inclui a exigência de programa de prevenção de acidentes com perfurocortantes com participação dos trabalhadores e prevê a vacinação gratuita dos trabalhadores expostos.', ok: true,
+      why: 'Correta. O escopo é amplo — biológico, químico e radiações — e inclui expressamente o plano de prevenção de acidentes com perfurocortantes e a imunização gratuita dos expostos.' },
+    { t: 'Sua aplicação restringe-se aos profissionais de nível superior que prestam assistência direta.', ok: false,
+      why: 'Errada. Alcança todos os trabalhadores dos serviços de saúde, inclusive de limpeza, manutenção, lavanderia e apoio.' },
+    { t: 'A vacinação dos trabalhadores expostos pode ter seu custo dividido com o empregado.', ok: false,
+      why: 'Errada. A imunização relacionada ao risco ocupacional é gratuita para o trabalhador.' },
+    { t: 'A norma não trata de riscos químicos, que ficam restritos à norma de agentes.', ok: false,
+      why: 'Errada. Ela contempla riscos químicos próprios do ambiente de saúde, como quimioterápicos e gases anestésicos.' },
+    { t: 'O reencape de agulhas é permitido desde que haja treinamento específico.', ok: false,
+      why: 'Errada. O reencape é prática vedada; o descarte é imediato em recipiente rígido apropriado.' }
+  ],
+  comentario: 'A norma de serviços de saúde alcança TODOS os trabalhadores do estabelecimento, cobre riscos biológicos, químicos e radiações, exige plano de prevenção de perfurocortantes com participação dos trabalhadores e garante vacinação gratuita aos expostos.',
+  pegadinha: 'Restringir a aplicação aos profissionais assistenciais deixa de fora justamente quem mais se acidenta com perfurocortante descartado incorretamente.',
+  refs: ['NR-32'] },
+
+{ id: 'q-7.4-034', tema: '7.4', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre o dimensionamento e a natureza do serviço especializado em segurança e medicina do trabalho, assinale a alternativa CORRETA:',
+  alts: [
+    { t: 'O dimensionamento considera o grau de risco da atividade principal e o número total de empregados do estabelecimento, e os profissionais que o integram devem ter formação e qualificação específicas para as funções previstas.', ok: true,
+      why: 'Correta. São dois eixos — grau de risco e número de empregados — e a exigência de qualificação específica é o que distingue o serviço de uma equipe genérica.' },
+    { t: 'O dimensionamento depende exclusivamente do número de empregados.', ok: false,
+      why: 'Errada. O grau de risco da atividade é determinante.' },
+    { t: 'Qualquer profissional de nível superior pode ocupar as funções previstas, desde que haja um médico na equipe.', ok: false,
+      why: 'Errada. Cada função exige formação e qualificação específicas.' },
+    { t: 'O serviço especializado substitui a comissão interna de prevenção de acidentes.', ok: false,
+      why: 'Errada. São institutos complementares, com naturezas distintas: um é serviço técnico contratado, o outro é comissão com representação eleita.' },
+    { t: 'A existência de serviço especializado dispensa a empresa de elaborar o programa de gerenciamento de riscos.', ok: false,
+      why: 'Errada. O serviço executa e assessora; a obrigação documental e de gestão permanece da empresa.' }
+  ],
+  comentario: 'Serviço especializado: dimensionado por grau de risco e número de empregados, com profissionais de formação específica. Comissão interna: paritária, com representantes eleitos. Coexistem — um se contrata, o outro se elege.',
+  pegadinha: 'A confusão entre serviço especializado e comissão interna é o erro mais recorrente do tema.',
+  refs: ['NR-4', 'NR-5', 'NR-1'] },
+
+{ id: 'q-7.4-035', tema: '7.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Após inspeção, a autoridade competente determina a interdição de um setor por risco grave e iminente. A empresa questiona os efeitos sobre os trabalhadores. A orientação CORRETA é:',
+  alts: [
+    { t: 'Durante a paralisação decorrente de interdição ou embargo os trabalhadores recebem seus salários como se estivessem em efetivo exercício, cabendo à empresa sanar as condições que motivaram a medida para requerer o levantamento.', ok: true,
+      why: 'Correta. A manutenção dos salários evita que o custo da irregularidade da empresa recaia sobre o trabalhador, e o levantamento depende da correção das condições.' },
+    { t: 'Os trabalhadores devem ter suas férias antecipadas durante o período de paralisação.', ok: false,
+      why: 'Errada. Não é essa a solução prevista; os salários são mantidos como se em efetivo exercício.' },
+    { t: 'A interdição depende de autorização judicial prévia para produzir efeitos.', ok: false,
+      why: 'Errada. Trata-se de ato administrativo, sujeito a controle posterior.' },
+    { t: 'A empresa pode descontar as horas paralisadas do banco de horas dos trabalhadores.', ok: false,
+      why: 'Errada. Transferiria ao trabalhador o ônus de irregularidade da empresa.' },
+    { t: 'A interdição só pode alcançar o estabelecimento inteiro, não setores ou máquinas isoladas.', ok: false,
+      why: 'Errada. A medida pode recair sobre máquina, equipamento, setor ou estabelecimento, conforme o risco identificado.' }
+  ],
+  comentario: 'Interdição e embargo são as medidas extremas para risco grave e iminente: ato administrativo, alcance graduável (máquina, setor ou estabelecimento) e salários mantidos durante a paralisação. O levantamento depende de sanar a causa.',
+  pegadinha: 'Descontar horas ou antecipar férias durante a paralisação transfere ao trabalhador o custo da falha da empresa.',
+  refs: ['CLT — Capítulo V do Título II', 'NR-3'] },
+
+{ id: 'q-7.4-036', tema: '7.4', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre as normas aplicáveis a atividades de alto risco, assinale a alternativa INCORRETA:',
+  alts: [
+    { t: 'A aptidão para trabalho em altura pode ser presumida a partir do exame admissional geral, sem avaliação dirigida.', ok: true,
+      why: 'É a alternativa INCORRETA, portanto a resposta. Trabalho em altura exige avaliação de aptidão dirigida, considerando condições que possam gerar perda de consciência, alterações de equilíbrio e uso de medicamentos, entre outras.' },
+    { t: 'O trabalho em espaço confinado exige permissão de entrada, avaliação prévia da atmosfera e vigia permanente do lado de fora.', ok: false,
+      why: 'Verdadeira, portanto não é a resposta.' },
+    { t: 'A norma de eletricidade exige prontuário de instalações elétricas e capacitação específica dos trabalhadores autorizados.', ok: false,
+      why: 'Verdadeira. Documentação e capacitação são exigências centrais.' },
+    { t: 'A norma de máquinas e equipamentos exige proteções e dispositivos de segurança que impeçam o acesso a zonas de perigo.', ok: false,
+      why: 'Verdadeira. É o núcleo da prevenção de amputações.' },
+    { t: 'Atividades em altura exigem análise de risco e autorização prévia para a execução do trabalho.', ok: false,
+      why: 'Verdadeira. Análise de risco e permissão de trabalho integram o regime dessas atividades.' }
+  ],
+  comentario: 'Atividades de alto risco compartilham uma lógica: análise de risco, autorização prévia por escrito, capacitação específica e avaliação de aptidão dirigida. Nenhuma delas se satisfaz com o exame admissional genérico.',
+  pegadinha: 'Enunciado de "assinale a INCORRETA": a falsa dispensa a avaliação dirigida de aptidão, que é exigência autônoma.',
+  refs: ['NR-33', 'NR-35', 'NR-10', 'NR-12', 'NR-7'] },
+
+/* ================ 7.2 Legislação Previdenciária ======================== */
+{ id: 'q-7.2-030', tema: '7.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Empregado sofre acidente de trabalho e permanece afastado por 40 dias. A empresa pergunta quem paga o período. A orientação CORRETA é:',
+  alts: [
+    { t: 'Os primeiros quinze dias de afastamento são pagos pela empresa; a partir do décimo sexto dia, havendo manutenção da incapacidade, o benefício é devido pela Previdência, com natureza acidentária no caso.', ok: true,
+      why: 'Correta. A responsabilidade dos primeiros quinze dias é do empregador para o segurado empregado, passando a Previdência a arcar a partir daí.' },
+    { t: 'A Previdência paga desde o primeiro dia em qualquer hipótese de acidente do trabalho.', ok: false,
+      why: 'Errada. Para o empregado, os quinze primeiros dias são de responsabilidade da empresa.' },
+    { t: 'A empresa paga todo o período de afastamento, independentemente da duração.', ok: false,
+      why: 'Errada. A responsabilidade da empresa se limita aos primeiros quinze dias.' },
+    { t: 'O prazo de quinze dias determina também a obrigatoriedade de comunicar o acidente.', ok: false,
+      why: 'Errada. A comunicação do acidente é devida ainda que não haja afastamento algum; os quinze dias dizem respeito ao custeio.' },
+    { t: 'Havendo acidente de trajeto, a empresa fica isenta dos primeiros quinze dias.', ok: false,
+      why: 'Errada. O acidente de trajeto é equiparado a acidente do trabalho, com a mesma sistemática.' }
+  ],
+  comentario: 'Dois prazos que a banca embaralha: quinze dias é a divisão do CUSTEIO entre empresa e Previdência; a obrigação de COMUNICAR o acidente independe de afastamento e não se confunde com aquele prazo.',
+  pegadinha: 'Vincular a obrigação de comunicar o acidente ao prazo de quinze dias é a confusão mais frequente do tema.',
+  refs: ['Lei nº 8.213/1991', 'Decreto nº 3.048/1999'] },
+
+{ id: 'q-7.2-031', tema: '7.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Trabalhador com dois meses de contribuição sofre acidente de motocicleta no fim de semana, sem qualquer relação com o trabalho, e fica incapacitado. Sobre a carência, é CORRETO afirmar:',
+  alts: [
+    { t: 'A carência é dispensada em caso de acidente de qualquer natureza, inclusive não relacionado ao trabalho, de modo que o benefício por incapacidade pode ser devido apesar do pequeno número de contribuições.', ok: true,
+      why: 'Correta. A dispensa alcança acidente de QUALQUER natureza, e não apenas o acidente do trabalho — é justamente esse o detalhe cobrado.' },
+    { t: 'A carência de doze contribuições é exigida em todos os casos de incapacidade, sem exceção.', ok: false,
+      why: 'Errada. Há dispensas expressas: acidente de qualquer natureza, doença ocupacional e doenças graves especificadas.' },
+    { t: 'A dispensa de carência aplica-se somente a acidentes do trabalho.', ok: false,
+      why: 'Errada. A expressão legal é acidente de qualquer natureza.' },
+    { t: 'Nesse caso o benefício seria acidentário, com estabilidade de emprego posterior.', ok: false,
+      why: 'Errada. Acidente sem relação com o trabalho gera benefício de natureza previdenciária, sem estabilidade acidentária.' },
+    { t: 'A dispensa de carência depende de o acidente ter ocorrido em dia útil.', ok: false,
+      why: 'Errada. O dia da ocorrência é irrelevante para a dispensa.' }
+  ],
+  comentario: 'Dispensa de carência: acidente de QUALQUER natureza, doença profissional ou do trabalho, e doenças graves listadas. Mas atenção: dispensar carência não transforma o benefício em acidentário — a espécie depende da relação com o trabalho.',
+  pegadinha: 'A alternativa que confunde dispensa de carência com natureza acidentária mistura dois efeitos independentes.',
+  refs: ['Lei nº 8.213/1991', 'Decreto nº 3.048/1999'] },
+
+{ id: 'q-7.2-032', tema: '7.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Trabalhadora teve alta de benefício por incapacidade temporária de natureza acidentária em 10 de março e recebeu auxílio-acidente a partir de então, por sequela que reduz sua capacidade. A empresa pretende dispensá-la em setembro do mesmo ano. A orientação CORRETA é:',
+  alts: [
+    { t: 'A garantia de manutenção do contrato é de no mínimo doze meses contados da cessação do benefício por incapacidade de natureza acidentária, independentemente da percepção de auxílio-acidente, de modo que a dispensa em setembro seria irregular.', ok: true,
+      why: 'Correta. O termo inicial é a CESSAÇÃO do benefício por incapacidade, o prazo mínimo é de doze meses e a garantia independe do auxílio-acidente.' },
+    { t: 'A percepção de auxílio-acidente é condição para a existência da garantia de emprego.', ok: false,
+      why: 'Errada. São institutos independentes; a garantia não depende do auxílio-acidente.' },
+    { t: 'O prazo de doze meses conta-se do início do afastamento, já esgotado no caso.', ok: false,
+      why: 'Errada quanto ao termo inicial: conta-se da cessação do benefício.' },
+    { t: 'A alta pericial restabelece plenamente o poder de dispensa do empregador.', ok: false,
+      why: 'Errada. É justamente após a alta que corre o período de garantia.' },
+    { t: 'A garantia aplica-se apenas a acidentes típicos, não alcançando doenças ocupacionais.', ok: false,
+      why: 'Errada. A doença ocupacional é equiparada a acidente do trabalho e a garantia alcança ambas as hipóteses.' }
+  ],
+  comentario: 'Três detalhes decidem: prazo mínimo de doze meses; termo inicial na CESSAÇÃO do benefício (não no início do afastamento); e independência em relação ao auxílio-acidente. Doença ocupacional entra por equiparação.',
+  pegadinha: 'Mudar o termo inicial para o começo do afastamento mantém o prazo certo e erra o marco — é o distrator mais eficaz.',
+  refs: ['Lei nº 8.213/1991 — arts. 86 e 118'] },
+
+{ id: 'q-7.2-033', tema: '7.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre o auxílio-acidente, assinale a alternativa CORRETA:',
+  alts: [
+    { t: 'Tem natureza indenizatória, é devido após a consolidação das lesões quando restarem sequelas que impliquem redução da capacidade para o trabalho habitualmente exercido, é compatível com o exercício de atividade remunerada e cessa com a aposentadoria.', ok: true,
+      why: 'Correta. É indenização por redução de capacidade, pressupõe consolidação e sequela, acumula com o trabalho e se extingue com a aposentadoria.' },
+    { t: 'É benefício por incapacidade, incompatível com o exercício de atividade remunerada.', ok: false,
+      why: 'Errada. Justamente por ser indenizatório, é compatível com o trabalho.' },
+    { t: 'É devido durante o período de tratamento, antes da consolidação das lesões.', ok: false,
+      why: 'Errada. Durante o tratamento, com incapacidade, o benefício cabível é outro; o auxílio-acidente pressupõe consolidação.' },
+    { t: 'Exige incapacidade total e permanente para ser concedido.', ok: false,
+      why: 'Errada. Exige REDUÇÃO da capacidade, não incapacidade total.' },
+    { t: 'Pode ser concedido em decorrência de qualquer doença, independentemente de relação com o trabalho ou com acidente.', ok: false,
+      why: 'Errada. Decorre de acidente de qualquer natureza; não é benefício de doença comum sem evento acidentário.' }
+  ],
+  comentario: 'Auxílio-acidente é o benefício que mais confunde: NÃO é benefício por incapacidade. É indenização por sequela consolidada que REDUZ a capacidade, acumula com o trabalho e com o salário, e cessa com a aposentadoria.',
+  pegadinha: 'Classificá-lo entre os benefícios por incapacidade leva a errar tudo o mais: compatibilidade com trabalho, pressuposto de consolidação e grau de comprometimento exigido.',
+  refs: ['Lei nº 8.213/1991 — art. 86', 'Decreto nº 3.048/1999'] },
+
+{ id: 'q-7.2-034', tema: '7.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Uma empresa contesta administrativamente a aplicação do nexo técnico epidemiológico a diversos benefícios concedidos a seus empregados. Sobre o instituto, é CORRETO afirmar:',
+  alts: [
+    { t: 'O nexo se estabelece pelo cruzamento entre a atividade econômica da empresa e a entidade mórbida, gerando presunção relativa que a empresa pode afastar administrativamente demonstrando a inexistência de relação entre o agravo e o trabalho.', ok: true,
+      why: 'Correta. Cruzamento entre atividade econômica e agravo, presunção relativa e via administrativa de contestação são os três elementos do instituto.' },
+    { t: 'A presunção decorrente do nexo epidemiológico é absoluta, não admitindo contestação.', ok: false,
+      why: 'Errada. A presunção é relativa e existe procedimento para afastá-la.' },
+    { t: 'O nexo epidemiológico depende de prévia emissão da comunicação de acidente do trabalho pela empresa.', ok: false,
+      why: 'Errada. Ele foi concebido justamente para operar na ausência dessa comunicação, corrigindo a subnotificação.' },
+    { t: 'Aplicado o nexo epidemiológico, não há qualquer repercussão sobre o custo previdenciário da empresa.', ok: false,
+      why: 'Errada. Benefícios concedidos como acidentários compõem o cálculo do fator de desempenho e elevam o custo.' },
+    { t: 'O nexo epidemiológico substituiu integralmente as demais formas de reconhecimento de nexo.', ok: false,
+      why: 'Errada. Convive com o nexo profissional ou do trabalho e com o nexo técnico individual.' }
+  ],
+  comentario: 'Três formas de nexo: profissional ou do trabalho (listas de agente-doença), individual (análise do caso concreto) e epidemiológico (cruzamento entre atividade econômica e agravo, com presunção relativa). Coexistem.',
+  pegadinha: 'Trocar "presunção relativa" por "absoluta" é a armadilha número um deste tema.',
+  refs: ['Lei nº 8.213/1991 — art. 21-A', 'Decreto nº 3.048/1999'] },
+
+{ id: 'q-7.2-035', tema: '7.2', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre a aposentadoria por incapacidade permanente, assinale a alternativa CORRETA:',
+  alts: [
+    { t: 'Exige incapacidade total e permanente, insuscetível de reabilitação para atividade que garanta a subsistência, e o beneficiário está sujeito a reavaliação periódica, podendo o benefício ser cessado se constatada recuperação da capacidade.', ok: true,
+      why: 'Correta. Os requisitos são cumulativos e a natureza permanente não significa definitiva: há reavaliação periódica prevista.' },
+    { t: 'Uma vez concedida, a aposentadoria por incapacidade permanente não pode ser revista.', ok: false,
+      why: 'Errada. Há previsão de reavaliação periódica e de cessação em caso de recuperação.' },
+    { t: 'Basta a incapacidade para a atividade habitualmente exercida.', ok: false,
+      why: 'Errada. Incapacidade apenas para a função habitual, com capacidade residual, aponta para reabilitação profissional.' },
+    { t: 'A irreversibilidade da lesão é suficiente para caracterizar o direito ao benefício.', ok: false,
+      why: 'Errada. Irreversibilidade da lesão não equivale a incapacidade total para toda e qualquer atividade.' },
+    { t: 'O benefício é incompatível com qualquer acréscimo, mesmo havendo necessidade de assistência permanente de terceiro.', ok: false,
+      why: 'Errada. Há previsão de acréscimo quando o beneficiário necessita de assistência permanente de outra pessoa.' }
+  ],
+  comentario: 'Requisitos cumulativos: incapacidade total, permanente e insuscetível de reabilitação. Havendo capacidade residual, o caminho é a reabilitação profissional. E "permanente" não significa imutável: há reavaliação.',
+  pegadinha: 'Equiparar lesão irreversível a incapacidade total é o erro que atravessa todo o bloco de perícia e previdência.',
+  refs: ['Lei nº 8.213/1991', 'Decreto nº 3.048/1999'] },
+
+{ id: 'q-7.2-036', tema: '7.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a aposentadoria especial, é CORRETO afirmar:',
+  alts: [
+    { t: 'Exige comprovação de exposição a agentes nocivos de forma habitual e permanente, não ocasional nem intermitente, pelo período exigido conforme o agente, e a comprovação se faz por documentação técnica emitida pela empresa com base em laudo de profissional habilitado.', ok: true,
+      why: 'Correta. Habitualidade e permanência, tempo variável conforme o agente e comprovação por documentação técnica lastreada em laudo são os três pilares.' },
+    { t: 'Exige sempre vinte e cinco anos de exposição, qualquer que seja o agente.', ok: false,
+      why: 'Errada. O tempo exigido varia conforme o grau de nocividade do agente.' },
+    { t: 'A exposição eventual e intermitente é suficiente para a caracterização.', ok: false,
+      why: 'Errada. A lei exige exposição habitual e permanente.' },
+    { t: 'A percepção de adicional de insalubridade comprova, por si, o direito à aposentadoria especial.', ok: false,
+      why: 'Errada. São institutos com finalidades e critérios distintos; o adicional é trabalhista, a aposentadoria especial é previdenciária.' },
+    { t: 'O fornecimento de equipamento de proteção individual sempre descaracteriza a exposição para esse fim.', ok: false,
+      why: 'Errada. A tese de neutralização tem limites reconhecidos, especialmente para ruído e para agentes cancerígenos sem limiar.' }
+  ],
+  comentario: 'Aposentadoria especial: exposição habitual e permanente, tempo conforme o agente, comprovação documental técnica. E dois cuidados: adicional de insalubridade não prova exposição para esse fim, e a neutralização por equipamento individual não vale para todos os agentes.',
+  pegadinha: 'Equiparar adicional de insalubridade a prova de exposição mistura o plano trabalhista com o previdenciário.',
+  refs: ['Lei nº 8.213/1991', 'Decreto nº 3.048/1999'] }
+
+);
