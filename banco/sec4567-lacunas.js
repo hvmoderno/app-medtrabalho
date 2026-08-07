@@ -1,0 +1,410 @@
+/* Seções 4, 5, 6 e 7 — temas que estavam sem questão nenhuma
+   (4.7, 4.10, 5.6, 6.4, 7.1, 7.3, 7.7)
+   Questões AUTORAIS, escritas no estilo da banca. Ver banco/README-formato.md */
+window.BANCO = window.BANCO || [];
+window.BANCO.push(
+
+/* ==================== 4.7 Psiquiatria Ocupacional ======================= */
+{ id: 'q-4.7-010', tema: '4.7', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Operador de empilhadeira, 38 anos, em tratamento de transtorno depressivo, iniciou medicação com efeito sedativo e relata sonolência diurna nas primeiras semanas. Sobre a conduta do médico do trabalho, assinale a alternativa CORRETA:',
+  alts: [
+    { t: 'A decisão de aptidão deve considerar o risco concreto da função e a fase do tratamento, cabendo restrição temporária para atividade de risco enquanto houver sonolência, com articulação junto ao médico assistente.', ok: true,
+      why: 'Correta. O que decide não é o diagnóstico e sim o efeito atual sobre a capacidade de operar com segurança; a restrição é temporária e revisável, e a articulação com o assistente permite ajustar o esquema.' },
+    { t: 'O diagnóstico de transtorno depressivo, por si, torna o trabalhador inapto para operar empilhadeira.', ok: false,
+      why: 'Errada. Diagnóstico não define aptidão; muitos trabalhadores em tratamento operam com segurança. Avalia-se a repercussão funcional.' },
+    { t: 'O uso de psicofármaco deve ser informado ao gestor para que ele acompanhe o desempenho.', ok: false,
+      why: 'Errada. Ao gestor cabem aptidão e restrições; medicação e diagnóstico permanecem protegidos pelo sigilo.' },
+    { t: 'O médico do trabalho deve suspender a medicação para viabilizar a manutenção na função.', ok: false,
+      why: 'Errada. Suspender tratamento psiquiátrico para preservar a função é conduta perigosa e invade a condução do médico assistente.' },
+    { t: 'Não há necessidade de qualquer restrição, pois a sonolência é efeito transitório e esperado.', ok: false,
+      why: 'Errada. Ser transitório e esperado não elimina o risco de acidente enquanto durar — é justamente por ser previsível que se antecipa a restrição.' }
+  ],
+  comentario: 'Aptidão em saúde mental segue a mesma lógica das demais condições: o que pesa é a repercussão funcional atual frente ao risco da tarefa, não o rótulo diagnóstico. Restrição temporária, revisável, com sigilo preservado e diálogo com o assistente.',
+  pegadinha: 'Os dois extremos estão nas alternativas: inaptidão automática pelo diagnóstico e negação de qualquer restrição. A resposta está na avaliação funcional.',
+  refs: ['Camargo — Psiquiatria Ocupacional', 'Código de Ética Médica'] },
+
+{ id: 'q-4.7-011', tema: '4.7', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Vigilante sofre assalto com arma de fogo durante o turno. Semanas depois apresenta revivescências do episódio, pesadelos, evitação do local e hipervigilância, com prejuízo funcional. Sobre o quadro, assinale a alternativa CORRETA:',
+  alts: [
+    { t: 'O quadro é compatível com transtorno de estresse pós-traumático relacionado ao evento ocupacional, e sua ocorrência em razão do trabalho permite reconhecimento como agravo relacionado ao trabalho.', ok: true,
+      why: 'Correta. Revivescência, evitação, hipervigilância e alterações de humor e cognição após evento traumático definem o quadro, e o evento ocorreu no exercício do trabalho.' },
+    { t: 'Transtornos mentais nunca podem ser reconhecidos como relacionados ao trabalho, por dependerem de vulnerabilidade individual.', ok: false,
+      why: 'Errada. Vulnerabilidade individual não afasta o nexo — ela é, quando muito, concausa. Transtornos mentais figuram entre os agravos relacionados ao trabalho.' },
+    { t: 'A ausência de lesão física afasta a caracterização de acidente do trabalho.', ok: false,
+      why: 'Errada. O conceito legal abrange perturbação funcional que cause perda ou redução da capacidade, sem exigir lesão corporal.' },
+    { t: 'O diagnóstico exige que os sintomas tenham surgido nas primeiras 48 horas após o evento.', ok: false,
+      why: 'Errada. Há quadros de início mais tardio; a exigência de janela tão curta descreve outra entidade e não se sustenta.' },
+    { t: 'O tratamento é exclusivamente medicamentoso, sem indicação de psicoterapia.', ok: false,
+      why: 'Errada. A psicoterapia com abordagem específica para trauma é componente central do tratamento.' }
+  ],
+  comentario: 'Dois pontos jurídicos e um clínico: perturbação funcional sem lesão física é acidente do trabalho; transtorno mental pode sim ser relacionado ao trabalho; e o quadro pós-traumático combina revivescência, evitação, hiperexcitabilidade e alterações cognitivo-afetivas, com tratamento que inclui psicoterapia.',
+  pegadinha: 'A exigência de lesão física para caracterizar acidente é falsa e muito repetida — inclusive por serviços de recursos humanos.',
+  refs: ['Lei nº 8.213/1991 — art. 19', 'DSM-5-TR', 'De Lucca — Fatores Psicossociais e Saúde Mental no Trabalho'] },
+
+{ id: 'q-4.7-012', tema: '4.7', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Em perícia de trabalhador afastado por transtorno mental, o perito precisa avaliar a consistência do relato. Sobre simulação e conceitos correlatos, assinale a alternativa CORRETA:',
+  alts: [
+    { t: 'Simulação é a produção intencional de sintomas falsos ou exagerados motivada por ganho externo, e sua afirmação exige demonstração de intencionalidade e de motivação — não se presume a partir de inconsistências isoladas.', ok: true,
+      why: 'Correta. Simulação é diagnóstico de exceção, que exige evidência de intenção e de ganho; incoerências pontuais também ocorrem em quadros genuínos e não bastam.' },
+    { t: 'Qualquer inconsistência entre o relato e o exame autoriza concluir por simulação.', ok: false,
+      why: 'Errada. Inconsistências são frequentes em transtornos genuínos, por flutuação dos sintomas, comprometimento cognitivo e ansiedade na própria perícia.' },
+    { t: 'Dissimulação é sinônimo de simulação.', ok: false,
+      why: 'Errada. Dissimulação é ocultar ou minimizar sintomas existentes, movimento oposto ao da simulação — e é comum em quem teme perder o emprego.' },
+    { t: 'A ausência de achado objetivo em exame de imagem comprova a inexistência do transtorno mental.', ok: false,
+      why: 'Errada. Transtornos mentais não se diagnosticam nem se excluem por exame de imagem; o diagnóstico é clínico.' },
+    { t: 'Uma vez levantada a suspeita de simulação, o perito deve encerrar a avaliação e concluir pela capacidade laborativa.', ok: false,
+      why: 'Errada. A suspeita exige aprofundar a avaliação, não encerrá-la; concluir por atalho é falha técnica grave.' }
+  ],
+  comentario: 'Simulação: inventa ou exagera, por ganho externo. Dissimulação: esconde ou minimiza — muito comum em perícia de aptidão, quando o trabalhador teme a inaptidão. Sobressimulação: amplifica sintoma real existente. Nenhuma delas se afirma por inconsistência isolada.',
+  pegadinha: 'A troca entre simulação e dissimulação é a inversão preferida da banca neste tema.',
+  refs: ['Camargo — Psiquiatria Ocupacional', 'Resoluções do CFM sobre perícia médica'] },
+
+{ id: 'q-4.7-013', tema: '4.7', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre o retorno ao trabalho após afastamento por transtorno mental, assinale a alternativa INCORRETA:',
+  alts: [
+    { t: 'O retorno deve ocorrer necessariamente na mesma função e com a mesma carga, pois qualquer adaptação estigmatiza o trabalhador.', ok: true,
+      why: 'É a alternativa INCORRETA, portanto a resposta. Retorno gradual e adaptação temporária de carga e tarefas são estratégias reconhecidas e favorecem a permanência; a preocupação com estigma se resolve com sigilo e cultura, não recolocando o trabalhador na condição que o adoeceu.' },
+    { t: 'Se o adoecimento tem relação com a organização do trabalho, devolver o trabalhador ao mesmo contexto sem mudanças tende a levar à recidiva.', ok: false,
+      why: 'Verdadeira. Tratar o indivíduo e preservar intacto o determinante é receita conhecida de reincidência.' },
+    { t: 'O acompanhamento nas primeiras semanas após o retorno é parte da conduta, e não gentileza opcional.', ok: false,
+      why: 'Verdadeira. É o período de maior risco de recidiva e de abandono do tratamento.' },
+    { t: 'A empresa deve saber quais restrições observar, sem receber o diagnóstico.', ok: false,
+      why: 'Verdadeira. É a regra geral de comunicação em saúde ocupacional, e vale integralmente para saúde mental.' },
+    { t: 'Restrições que se prolongam indicam avaliar readaptação ou reabilitação profissional.', ok: false,
+      why: 'Verdadeira. Restrição sem prazo de resolução sinaliza incompatibilidade com a função original.' }
+  ],
+  comentario: 'Retorno ao trabalho em saúde mental exige três coisas: gradualidade, mudança no determinante organizacional quando ele existe, e acompanhamento próximo nas primeiras semanas. Sigilo do diagnóstico o tempo todo.',
+  pegadinha: 'A falsa usa um argumento nobre — evitar estigma — para defender exatamente o que causa recidiva.',
+  refs: ['De Lucca — Fatores Psicossociais e Saúde Mental no Trabalho', 'NR-7'] },
+
+/* ==================== 4.10 Imunizações do Trabalhador =================== */
+{ id: 'q-4.10-010', tema: '4.10', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Ao estruturar a imunização de trabalhadores de um hospital, o médico do trabalho define as vacinas por grupo de exposição. Sobre imunização ocupacional, assinale a alternativa CORRETA:',
+  alts: [
+    { t: 'A indicação decorre do risco ocupacional identificado, e para hepatite B em profissionais de saúde recomenda-se verificar a resposta vacinal por sorologia após o esquema, pois há não respondedores que exigem conduta específica.', ok: true,
+      why: 'Correta. A vacinação por risco é a lógica do programa, e a hepatite B é o exemplo clássico em que a comprovação de resposta importa: quem não responde precisa de novo esquema e de conduta diferenciada em caso de acidente.' },
+    { t: 'Todos os trabalhadores da empresa devem receber o mesmo conjunto de vacinas, independentemente da função.', ok: false,
+      why: 'Errada. A indicação é por risco: quem manipula material biológico, quem trabalha em campo, quem lida com animais e quem viaja têm necessidades distintas.' },
+    { t: 'A verificação de resposta vacinal por sorologia é desnecessária, pois toda pessoa vacinada está protegida.', ok: false,
+      why: 'Errada. Existem não respondedores, e identificá-los muda a conduta tanto na prevenção quanto após exposição.' },
+    { t: 'A vacinação do trabalhador é obrigação exclusiva do sistema público de saúde, sem custo ou responsabilidade para a empresa.', ok: false,
+      why: 'Errada. A imunização relacionada aos riscos ocupacionais é obrigação do empregador, sem custo para o trabalhador.' },
+    { t: 'A recusa vacinal do trabalhador deve ser ignorada, aplicando-se a vacina compulsoriamente.', ok: false,
+      why: 'Errada. A recusa deve ser esclarecida e registrada; não se vacina à força. O registro documenta a oferta e a decisão informada.' }
+  ],
+  comentario: 'Três pilares: indicação por risco (não por lista genérica), verificação de resposta quando ela muda a conduta — hepatite B é o exemplo —, e custo do empregador. Recusa se registra, não se vence pela força.',
+  pegadinha: 'A ideia de que "vacinado está protegido" ignora o não respondedor, que é justamente quem mais precisa ser identificado antes do acidente.',
+  refs: ['Calendário de vacinação ocupacional — SBIm', 'NR-32', 'NR-7'] },
+
+{ id: 'q-4.10-011', tema: '4.10', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Trabalhador rural que manipula animais e trabalha com solo procura o serviço médico. Sobre imunização nesse contexto ocupacional, assinale a alternativa CORRETA:',
+  alts: [
+    { t: 'A avaliação deve considerar as exposições próprias da atividade rural, incluindo o risco de ferimentos com contaminação e o contato com animais, verificando e atualizando o esquema conforme o risco identificado.', ok: true,
+      why: 'Correta. O raciocínio é sempre o mesmo: identificar as exposições concretas da atividade e verificar quais imunizações o esquema do trabalhador já contempla.' },
+    { t: 'Trabalhadores rurais não têm indicações de imunização ocupacional específicas.', ok: false,
+      why: 'Errada. Manipulação de animais, contato com solo e risco de ferimentos geram indicações próprias.' },
+    { t: 'Basta a vacinação recebida na infância, sem necessidade de verificar reforços na vida adulta.', ok: false,
+      why: 'Errada. Diversas imunizações requerem reforço periódico na vida adulta, o que é parte da avaliação ocupacional.' },
+    { t: 'A imunização substitui os equipamentos de proteção nas atividades com risco biológico.', ok: false,
+      why: 'Errada. Imunização é medida complementar e cobre apenas parte dos agentes; barreiras físicas continuam necessárias.' },
+    { t: 'A carteira de vacinação do trabalhador não deve ser registrada no prontuário ocupacional, por ser dado sensível.', ok: false,
+      why: 'Errada. É dado de saúde e por isso mesmo integra o prontuário, sob sigilo — o que não se faz é entregá-lo ao empregador.' }
+  ],
+  comentario: 'Imunização ocupacional segue o mapa de risco da atividade, exige verificação de esquema e reforços na vida adulta e nunca substitui as demais medidas de controle. O registro fica no prontuário, protegido — não no setor de pessoal.',
+  pegadinha: 'A alternativa que confunde "dado sensível" com "não registrar" inverte a proteção de dados: sensível se protege, não se apaga.',
+  refs: ['Calendário de vacinação ocupacional — SBIm', 'LGPD — Lei nº 13.709/2018'] },
+
+{ id: 'q-4.10-012', tema: '4.10', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre contraindicações e eventos adversos em imunização ocupacional, assinale a alternativa CORRETA:',
+  alts: [
+    { t: 'Vacinas de agentes vivos atenuados exigem cautela em imunossuprimidos e gestantes, o que torna a avaliação individual parte necessária do programa de imunização ocupacional.', ok: true,
+      why: 'Correta. É a contraindicação de maior relevância prática, e ela obriga a individualizar a decisão em vez de aplicar protocolo cego a toda a força de trabalho.' },
+    { t: 'Reação local leve no sítio de aplicação contraindica doses subsequentes.', ok: false,
+      why: 'Errada. Reação local leve é evento esperado e não contraindica a continuidade do esquema.' },
+    { t: 'Qualquer relato de alergia contraindica automaticamente a vacinação.', ok: false,
+      why: 'Errada. O que contraindica é a reação anafilática a dose anterior ou a componente da vacina, não alergia inespecífica.' },
+    { t: 'Eventos adversos pós-vacinação em trabalhadores não precisam ser notificados.', ok: false,
+      why: 'Errada. A notificação de eventos adversos integra a vigilância e não é dispensada por ser contexto ocupacional.' },
+    { t: 'Doença febril leve é contraindicação absoluta à vacinação.', ok: false,
+      why: 'Errada. Doença febril leve não contraindica; quadro febril moderado a grave apenas adia a aplicação.' }
+  ],
+  comentario: 'Contraindicação real: anafilaxia a dose anterior ou componente; e cautela com vacinas de agentes vivos em imunossuprimidos e gestantes. Falsas contraindicações — reação local leve, alergia inespecífica, doença febril leve — são as mais cobradas, porque geram perda de oportunidade de vacinação.',
+  pegadinha: 'A prova gosta de listar falsas contraindicações; guarde que a maioria dos motivos usados no dia a dia para adiar vacina não se sustenta.',
+  refs: ['Sociedade Brasileira de Imunizações (SBIm)', 'Ministério da Saúde — imunizações'] },
+
+/* ==================== 5.6 Reabilitação Profissional ===================== */
+{ id: 'q-5.6-010', tema: '5.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Trabalhador afastado há oito meses por lesão de ombro com sequela definitiva é considerado incapaz para a função de auxiliar de produção, que exige elevação repetida acima da cabeça, mas mantém capacidade para outras atividades. Sobre a conduta previdenciária adequada, assinale a alternativa CORRETA:',
+  alts: [
+    { t: 'O caso é típico de encaminhamento à reabilitação profissional, que visa proporcionar meios para reeducação ou readaptação e o retorno a atividade compatível com a capacidade residual.', ok: true,
+      why: 'Correta. Incapacidade para a função habitual com capacidade residual preservada é exatamente a hipótese que o programa de reabilitação profissional atende.' },
+    { t: 'O caso configura incapacidade total e permanente, com indicação de aposentadoria por incapacidade permanente.', ok: false,
+      why: 'Errada. Há capacidade residual para outras atividades, o que afasta a incapacidade total exigida para esse benefício.' },
+    { t: 'A alta deve ser dada imediatamente para retorno à função original, já que a lesão está consolidada.', ok: false,
+      why: 'Errada. Lesão consolidada não significa capacidade para a função que exige justamente o movimento comprometido; devolvê-lo ao mesmo posto agrava o quadro.' },
+    { t: 'A reabilitação profissional é facultativa e depende exclusivamente da vontade do trabalhador.', ok: false,
+      why: 'Errada. É etapa do processo previdenciário nas hipóteses cabíveis, com participação obrigatória do segurado encaminhado.' },
+    { t: 'A empresa não tem qualquer participação no processo de reabilitação profissional.', ok: false,
+      why: 'Errada. A empresa participa na identificação de função compatível e na reintegração do trabalhador reabilitado.' }
+  ],
+  comentario: 'A pergunta que resolve: há capacidade residual? Se sim, o caminho é reabilitação e readaptação, não aposentadoria por incapacidade permanente — que exige incapacidade total e insuscetível de reabilitação. A empresa participa da reintegração.',
+  pegadinha: 'Confundir "incapaz para a função habitual" com "incapaz para o trabalho" é o erro central, e ele muda completamente o desfecho do caso.',
+  refs: ['Lei nº 8.213/1991', 'Decreto nº 3.048/1999'] },
+
+{ id: 'q-5.6-011', tema: '5.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Ao acompanhar o retorno ao trabalho de trabalhadores após afastamentos prolongados, o médico do trabalho observa que alguns casos evoluem para cronificação. Sobre os fatores que dificultam o retorno, assinale a alternativa CORRETA:',
+  alts: [
+    { t: 'Fatores psicossociais e relacionados ao contexto de trabalho — expectativa de recuperação, medo de reincidência, conflito com a chefia e insegurança quanto ao emprego — pesam sobre o retorno tanto quanto ou mais que a gravidade da lesão.', ok: true,
+      why: 'Correta. Em quadros musculoesqueléticos e mentais, os preditores de retorno mais consistentes são contextuais e psicossociais, e não a magnitude do achado de imagem.' },
+    { t: 'O tempo de retorno é determinado essencialmente pela extensão da lesão anatômica.', ok: false,
+      why: 'Errada. A correlação entre achado anatômico e incapacidade é fraca em boa parte dos quadros musculoesqueléticos.' },
+    { t: 'Quanto maior o tempo de afastamento, maior a probabilidade de retorno bem-sucedido, pela recuperação mais completa.', ok: false,
+      why: 'Errada, e é o inverso: quanto mais prolongado o afastamento, menor a probabilidade de retorno efetivo ao trabalho.' },
+    { t: 'A comunicação entre serviço médico, chefia e trabalhador durante o afastamento é irrelevante para o desfecho.', ok: false,
+      why: 'Errada. Manutenção do vínculo e comunicação durante o afastamento estão entre os fatores que favorecem o retorno.' },
+    { t: 'Restrições formais devem ser evitadas, pois sinalizam fragilidade e prejudicam o trabalhador.', ok: false,
+      why: 'Errada. Restrições claras e temporárias são o que viabiliza o retorno seguro; a ausência de restrição é que costuma gerar nova falha.' }
+  ],
+  comentario: 'Retorno ao trabalho é fenômeno biopsicossocial. Afastamento longo é fator de risco por si só. Manter contato durante o afastamento, definir restrições claras e cuidar do contexto de retorno mudam mais o desfecho do que qualquer detalhe do exame de imagem.',
+  pegadinha: 'A intuição de que "mais tempo parado = mais recuperado" é falsa e importante: a probabilidade de retorno cai com a duração do afastamento.',
+  refs: ['Penteado — Perícias em DORT', 'Lei nº 8.213/1991'] },
+
+{ id: 'q-5.6-012', tema: '5.6', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre readaptação funcional dentro da empresa, assinale a alternativa CORRETA:',
+  alts: [
+    { t: 'Consiste em realocar o trabalhador em atividade compatível com suas limitações, preservando-o de exposições incompatíveis, e deve partir de restrições técnicas definidas pelo médico do trabalho, sem revelação de diagnóstico.', ok: true,
+      why: 'Correta. A readaptação se apoia em restrições funcionais escritas em termos de tarefa e exposição, não de doença — é isso que permite ao gestor realocar sem violar o sigilo.' },
+    { t: 'Implica necessariamente redução salarial proporcional à limitação.', ok: false,
+      why: 'Errada. Readaptação por motivo de saúde não autoriza redução salarial como decorrência automática.' },
+    { t: 'Deve ser evitada, pois cria precedente para outros trabalhadores solicitarem mudança de função.', ok: false,
+      why: 'Errada. É instrumento legítimo de preservação da saúde e da capacidade laborativa, não concessão a ser racionada.' },
+    { t: 'As restrições devem ser comunicadas com o diagnóstico completo, para que a chefia dimensione as tarefas.', ok: false,
+      why: 'Errada. A chefia precisa saber o que o trabalhador não pode fazer, não do que ele sofre.' },
+    { t: 'Uma vez readaptado, o trabalhador não deve mais ser reavaliado.', ok: false,
+      why: 'Errada. Restrições são revisáveis, e a reavaliação periódica pode ampliar ou reduzir as limitações.' }
+  ],
+  comentario: 'A regra prática que resolve o tema: escreva restrição em linguagem de TAREFA e EXPOSIÇÃO — "não elevar membros superiores acima da linha dos ombros", "não permanecer exposto a ruído acima do nível de ação" —, nunca em linguagem de diagnóstico. E reavalie.',
+  pegadinha: 'Comunicar diagnóstico "para ajudar o gestor" é a violação de sigilo mais comum e mais bem-intencionada da medicina do trabalho.',
+  refs: ['NR-7', 'Código de Ética Médica', 'Lei nº 8.213/1991'] },
+
+/* ============ 6.4 Urgências e emergências no ambiente de trabalho ======= */
+{ id: 'q-6.4-010', tema: '6.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Trabalhador sofre respingo de solução alcalina concentrada no olho durante manuseio em linha de limpeza industrial. A conduta imediata CORRETA é:',
+  alts: [
+    { t: 'Irrigação abundante e prolongada com água ou solução salina, iniciada no local o mais precocemente possível, antes mesmo do transporte, pois o tempo até o início da irrigação é o principal determinante do dano.', ok: true,
+      why: 'Correta. Em queimadura química ocular o fator prognóstico decisivo é a precocidade e a duração da irrigação; ela começa no local, não na emergência.' },
+    { t: 'Aguardar a chegada ao serviço de emergência para irrigar com solução apropriada, evitando manipulação leiga.', ok: false,
+      why: 'Errada. Postergar a irrigação para usar solução "apropriada" custa tempo, que é o que mais importa no desfecho.' },
+    { t: 'Neutralizar o álcali com solução ácida diluída, para interromper a reação.', ok: false,
+      why: 'Errada e perigosa. Tentar neutralizar gera reação exotérmica e agrava a lesão; irriga-se, não se neutraliza.' },
+    { t: 'Ocluir o olho com curativo compressivo e encaminhar, sem irrigação prévia.', ok: false,
+      why: 'Errada. Ocluir mantém o agente em contato com a superfície ocular e piora o dano.' },
+    { t: 'Aplicar colírio anestésico e corticoide antes de qualquer irrigação.', ok: false,
+      why: 'Errada. Nada precede a irrigação; medicações vêm depois, na avaliação especializada.' }
+  ],
+  comentario: 'Queimadura química ocular: irrigar já, no local, em grande volume e por tempo prolongado. Álcalis penetram mais profundamente que ácidos e têm pior prognóstico. Nunca neutralizar, nunca ocluir antes de irrigar.',
+  pegadinha: 'A neutralização parece raciocínio químico correto e é justamente a conduta que agrava a lesão.',
+  refs: ['Greenberg — Occupational Emergency Medicine'] },
+
+{ id: 'q-6.4-011', tema: '6.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Um trabalhador é encontrado inconsciente no fundo de um tanque de armazenamento. Um colega desce imediatamente para socorrê-lo e também perde a consciência. Sobre esse cenário, assinale a alternativa CORRETA:',
+  alts: [
+    { t: 'O caso é típico de espaço confinado, no qual a maior parte das mortes ocorre entre os socorristas improvisados; o resgate exige equipe treinada, equipamento de proteção respiratória adequado e avaliação prévia da atmosfera.', ok: true,
+      why: 'Correta. É o padrão descrito na literatura: o segundo trabalhador entra sem avaliar a atmosfera e se torna a segunda vítima. Resgate em espaço confinado é atividade planejada, nunca improvisada.' },
+    { t: 'O colega agiu corretamente, pois o socorro imediato é a prioridade absoluta em qualquer emergência.', ok: false,
+      why: 'Errada. A primeira regra do atendimento é a segurança da cena; entrar em atmosfera desconhecida multiplica as vítimas em vez de salvar.' },
+    { t: 'A perda de consciência indica necessariamente intoxicação por gás tóxico, e não deficiência de oxigênio.', ok: false,
+      why: 'Errada. Deficiência de oxigênio por deslocamento é causa frequente e pode produzir perda de consciência em poucos instantes, sem qualquer aviso sensorial.' },
+    { t: 'Máscara semifacial com filtro químico seria suficiente para o resgate.', ok: false,
+      why: 'Errada. Purificadores de ar não protegem em atmosfera com deficiência de oxigênio ou concentração desconhecida — situação obrigatória de adução de ar.' },
+    { t: 'A permissão de entrada e a presença de vigia são formalidades dispensáveis em tanques de pequeno porte.', ok: false,
+      why: 'Errada. Permissão de entrada, vigia permanente e plano de resgate são exigências que não dependem do tamanho do espaço.' }
+  ],
+  comentario: 'Espaço confinado mata em dupla: a vítima e quem tenta salvá-la. Guarde a sequência — avaliar a atmosfera antes de entrar, permissão de entrada, vigia do lado de fora, plano de resgate e equipamento de adução de ar. Deficiência de oxigênio não dá aviso.',
+  pegadinha: 'A alternativa que elogia o socorro imediato explora o instinto correto na situação errada: segurança da cena vem antes.',
+  refs: ['NR-33', 'Greenberg — Occupational Emergency Medicine'] },
+
+{ id: 'q-6.4-012', tema: '6.4', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre a organização do atendimento a emergências em ambiente de trabalho, assinale a alternativa INCORRETA:',
+  alts: [
+    { t: 'Por serem eventos raros, o plano de resposta a emergências pode ser escrito e arquivado, dispensando simulados periódicos.', ok: true,
+      why: 'É a alternativa INCORRETA, portanto a resposta. Plano sem treinamento e sem simulado falha na hora do evento; a raridade é justamente o motivo pelo qual o ensaio é necessário.' },
+    { t: 'O plano deve definir quem aciona o socorro, por quais meios e qual a rota de remoção.', ok: false,
+      why: 'Verdadeira. Indefinição de papéis e de fluxo é causa frequente de atraso no atendimento.' },
+    { t: 'A disponibilidade de desfibrilador externo automático e de pessoal treinado melhora o desfecho da parada cardíaca no ambiente de trabalho.', ok: false,
+      why: 'Verdadeira. A desfibrilação precoce é determinante de sobrevida, e por isso o equipamento precisa estar acessível e haver quem saiba usá-lo.' },
+    { t: 'A composição do material de primeiros socorros deve refletir os riscos específicos da atividade.', ok: false,
+      why: 'Verdadeira. Uma indústria química e um escritório têm necessidades diferentes.' },
+    { t: 'O registro do atendimento prestado é necessário, inclusive para eventual caracterização de acidente do trabalho.', ok: false,
+      why: 'Verdadeira. O registro documenta o evento, embasa a comunicação de acidente e alimenta a investigação.' }
+  ],
+  comentario: 'Plano de emergência só funciona se for treinado. Os itens que caem: definição de papéis e fluxo de acionamento, acesso a desfibrilador com pessoal capacitado, material compatível com os riscos da atividade e registro de todo atendimento.',
+  pegadinha: 'A falsa usa a raridade do evento como argumento para dispensar o treino, quando é ela que torna o treino indispensável.',
+  refs: ['Greenberg — Occupational Emergency Medicine', 'NR-1'] },
+
+/* ============= 7.1 Legislação Trabalhista aplicável à MT ================ */
+{ id: 'q-7.1-010', tema: '7.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Uma trabalhadora comunica gravidez à empresa e exerce atividade em setor classificado como insalubre. O gestor pergunta ao médico do trabalho como proceder. A orientação CORRETA é:',
+  alts: [
+    { t: 'A trabalhadora deve ser afastada das atividades insalubres conforme o grau, com transferência para função compatível sem prejuízo de sua remuneração, e a permanência em atividades de grau menor depende de atestado médico que assegure a ausência de risco.', ok: true,
+      why: 'Correta. A regra combina afastamento conforme o grau de insalubridade, garantia de transferência sem prejuízo salarial e possibilidade de permanência mediante atestado que ateste a ausência de risco.' },
+    { t: 'A gravidez, por si, torna a trabalhadora inapta para o trabalho, cabendo afastamento previdenciário.', ok: false,
+      why: 'Errada. Gravidez não é incapacidade; o que se faz é afastar da EXPOSIÇÃO, mantendo a trabalhadora em atividade compatível.' },
+    { t: 'A transferência de função autoriza a redução proporcional da remuneração, inclusive do adicional.', ok: false,
+      why: 'Errada quanto ao salário: a transferência deve ocorrer sem prejuízo da remuneração da trabalhadora.' },
+    { t: 'Nenhuma providência é necessária enquanto a trabalhadora não apresentar sintomas.', ok: false,
+      why: 'Errada. A proteção é preventiva e independe de sintomas — esperar o dano é exatamente o que a norma quer evitar.' },
+    { t: 'O afastamento das atividades insalubres só se aplica no último trimestre da gestação.', ok: false,
+      why: 'Errada. A proteção não está restrita ao terceiro trimestre; ao contrário, o período embrionário inicial é de especial vulnerabilidade.' }
+  ],
+  comentario: 'Guarde a estrutura: afastamento da exposição conforme o grau de insalubridade, transferência para função compatível sem prejuízo salarial, e possibilidade de permanência em graus menores mediante atestado que assegure ausência de risco. Gravidez afasta da EXPOSIÇÃO, não do trabalho.',
+  pegadinha: 'A alternativa que restringe a proteção ao último trimestre inverte a janela de maior vulnerabilidade embrionária.',
+  refs: ['CLT — Capítulo V do Título II', 'NR-15'] },
+
+{ id: 'q-7.1-011', tema: '7.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Um trabalhador pergunta se pode receber cumulativamente os adicionais de insalubridade e de periculosidade, já que sua função o expõe a ruído acima do limite e também a inflamáveis. Sobre os adicionais, assinale a alternativa CORRETA:',
+  alts: [
+    { t: 'Havendo direito a ambos, o empregado opta por um deles, e a caracterização de cada um depende de perícia técnica; eliminada ou neutralizada a condição, cessa o respectivo adicional.', ok: true,
+      why: 'Correta. A opção por um dos adicionais, a exigência de perícia para caracterização e a cessação com a eliminação ou neutralização da condição são os três pontos consolidados do tema.' },
+    { t: 'Os adicionais são cumulativos sempre que houver exposição simultânea a agentes distintos.', ok: false,
+      why: 'Errada. A regra é a opção por um deles quando ambos são devidos.' },
+    { t: 'A percepção do adicional torna a exposição regular e dispensa medidas de controle.', ok: false,
+      why: 'Errada, e é o erro conceitual mais grave do tema: adicional é compensação pecuniária e nunca substitui a obrigação de eliminar ou reduzir o risco.' },
+    { t: 'A caracterização depende apenas da declaração do empregador no registro do empregado.', ok: false,
+      why: 'Errada. A caracterização e a classificação dependem de perícia a cargo de profissional habilitado.' },
+    { t: 'Uma vez concedido, o adicional integra definitivamente o salário e não pode cessar.', ok: false,
+      why: 'Errada. Cessada a condição que o gerou — por eliminação ou neutralização —, cessa o pagamento.' }
+  ],
+  comentario: 'Três verdades sobre adicionais: opta-se por um quando ambos cabem; a caracterização é pericial; e o adicional cessa quando a condição cessa. E a quarta, que é a mais importante na prática médica: pagar adicional não é medida de proteção.',
+  pegadinha: 'A ideia de que o adicional "regulariza" a exposição aparece com frequência em defesa de empresas e é insustentável.',
+  refs: ['CLT — arts. 189 a 195', 'NR-15', 'NR-16'] },
+
+{ id: 'q-7.1-012', tema: '7.1', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre as obrigações previstas na legislação trabalhista em matéria de segurança e medicina do trabalho, assinale a alternativa INCORRETA:',
+  alts: [
+    { t: 'O custo dos exames médicos ocupacionais pode ser rateado com o empregado quando previsto em acordo coletivo.', ok: true,
+      why: 'É a alternativa INCORRETA, portanto a resposta. Os exames correm por conta exclusiva do empregador, e negociação coletiva não pode transferir esse custo ao trabalhador.' },
+    { t: 'Cabe ao empregador instruir os empregados quanto às precauções para evitar acidentes do trabalho e doenças ocupacionais.', ok: false,
+      why: 'Verdadeira. É dever expresso do empregador na legislação trabalhista.' },
+    { t: 'A recusa injustificada do empregado em observar as instruções e usar o equipamento fornecido constitui ato faltoso.', ok: false,
+      why: 'Verdadeira. A norma prevê expressamente essa consequência, sem prejuízo do dever do empregador de fornecer e fiscalizar.' },
+    { t: 'Diante de risco grave e iminente, pode haver interdição ou embargo pela autoridade competente.', ok: false,
+      why: 'Verdadeira. É a medida extrema prevista para risco grave e iminente.' },
+    { t: 'A empresa deve comunicar as doenças profissionais e as produzidas por condições especiais de trabalho.', ok: false,
+      why: 'Verdadeira. A obrigação de notificar consta da própria legislação trabalhista, além das obrigações previdenciárias e sanitárias.' }
+  ],
+  comentario: 'Regra sem exceção: nenhum custo de saúde e segurança se transfere ao trabalhador — exames, equipamentos de proteção e treinamentos são do empregador, e negociação coletiva não pode reduzir esse patamar.',
+  pegadinha: 'Invocar acordo coletivo para legitimar o rateio soa juridicamente sofisticado e esbarra no limite do que é negociável.',
+  refs: ['CLT — Capítulo V do Título II', 'NR-6', 'NR-7'] },
+
+/* ============= 7.3 Legislação Sanitária aplicável à MT ================== */
+{ id: 'q-7.3-010', tema: '7.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Uma equipe de vigilância sanitária municipal atua em um estabelecimento onde há risco à saúde dos trabalhadores e da população do entorno. Sobre a interface entre vigilância sanitária e saúde do trabalhador, assinale a alternativa CORRETA:',
+  alts: [
+    { t: 'As competências se somam: a atuação sanitária alcança os ambientes e processos de trabalho, e a articulação com a inspeção do trabalho amplia a capacidade de intervenção sem que uma exclua a outra.', ok: true,
+      why: 'Correta. São competências concorrentes e complementares, com fundamentos legais distintos — sanitário e trabalhista — que se reforçam em vez de se anularem.' },
+    { t: 'A competência sobre ambientes de trabalho é exclusiva da inspeção do trabalho, sendo vedada a atuação sanitária.', ok: false,
+      why: 'Errada. A legislação sanitária inclui a saúde do trabalhador no campo de atuação do sistema de saúde, com poder de vigilância sobre ambientes e processos.' },
+    { t: 'A atuação sanitária limita-se aos aspectos de higiene dos alimentos e das instalações, sem alcançar riscos ocupacionais.', ok: false,
+      why: 'Errada. O objeto sanitário abrange riscos à saúde de forma ampla, incluindo os decorrentes do trabalho.' },
+    { t: 'Uma vez autuado pela inspeção do trabalho, o estabelecimento não pode ser objeto de medida sanitária pelo mesmo fato.', ok: false,
+      why: 'Errada. As esferas são autônomas e a atuação de uma não impede a da outra.' },
+    { t: 'A interdição sanitária depende de autorização judicial prévia em qualquer hipótese.', ok: false,
+      why: 'Errada. A interdição cautelar sanitária é ato administrativo, sujeito a controle posterior, e não depende de autorização judicial prévia.' }
+  ],
+  comentario: 'A chave é entender que existem esferas paralelas: sanitária (saúde), trabalhista (inspeção do trabalho), previdenciária e ambiental. Elas se somam. A prova gosta de sugerir exclusividade de uma delas — e a resposta é quase sempre a complementaridade.',
+  pegadinha: 'A ideia de que autuação numa esfera impede atuação em outra confunde autonomia administrativa com bis in idem penal.',
+  refs: ['Lei nº 8.080/1990', 'Política Nacional de Saúde do Trabalhador e da Trabalhadora'] },
+
+{ id: 'q-7.3-011', tema: '7.3', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre a notificação compulsória de agravos relacionados ao trabalho no âmbito da legislação sanitária, assinale a alternativa CORRETA:',
+  alts: [
+    { t: 'A notificação é obrigação de profissionais de saúde e de serviços públicos e privados, decorre da suspeita e não exige confirmação diagnóstica, e constitui exceção legal ao sigilo profissional.', ok: true,
+      why: 'Correta. Os três elementos que a banca cobra: alcance público e privado, notificação por suspeita, e o fato de a comunicação à autoridade sanitária não configurar quebra de sigilo.' },
+    { t: 'Só se notifica após a confirmação diagnóstica do agravo relacionado ao trabalho.', ok: false,
+      why: 'Errada. Exigir confirmação atrasa a vigilância; a notificação decorre da suspeita, quando assim previsto para o agravo.' },
+    { t: 'A obrigação alcança apenas os serviços públicos de saúde.', ok: false,
+      why: 'Errada. Serviços privados, incluindo os que atendem trabalhadores por contrato com empresas, também notificam.' },
+    { t: 'A notificação depende de autorização expressa do trabalhador.', ok: false,
+      why: 'Errada. É dever legal e não se condiciona a consentimento, embora o trabalhador deva ser informado.' },
+    { t: 'A notificação substitui a comunicação de acidente do trabalho para fins previdenciários.', ok: false,
+      why: 'Errada. São instrumentos distintos, com finalidades e destinatários diferentes, e um não dispensa o outro.' }
+  ],
+  comentario: 'Notificação: instrumento sanitário, por suspeita, obrigatória em serviço público e privado, exceção ao sigilo. Comunicação de acidente: instrumento previdenciário, garante direitos. Convivem — e essa distinção cai com frequência.',
+  pegadinha: 'Condicionar a notificação ao consentimento do trabalhador troca dever legal por autonomia, em um dos poucos pontos em que a lei já fez essa ponderação.',
+  refs: ['Lei nº 8.080/1990', 'Lista Nacional de Notificação Compulsória — Ministério da Saúde'] },
+
+{ id: 'q-7.3-012', tema: '7.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Uma indústria manipula produto químico sujeito a controle especial. Sobre o marco sanitário aplicável, assinale a alternativa CORRETA:',
+  alts: [
+    { t: 'O controle sanitário de substâncias perigosas incide sobre produção, armazenamento, transporte e descarte, e as obrigações sanitárias coexistem com as obrigações trabalhistas de proteção dos trabalhadores expostos.', ok: true,
+      why: 'Correta. O produto é regulado do berço ao descarte por normas sanitárias e ambientais, e isso não substitui nem é substituído pelas obrigações de proteção do trabalhador.' },
+    { t: 'O cumprimento das normas trabalhistas de proteção dispensa as obrigações sanitárias relativas ao produto.', ok: false,
+      why: 'Errada. São planos normativos distintos: um protege o trabalhador, o outro regula a substância e o risco à população e ao ambiente.' },
+    { t: 'A ficha com informações de segurança do produto é documento de uso exclusivo do setor de compras.', ok: false,
+      why: 'Errada. É documento técnico essencial para a avaliação de risco, para o serviço médico e para a resposta a emergências.' },
+    { t: 'O descarte de resíduos perigosos é matéria estranha à saúde do trabalhador.', ok: false,
+      why: 'Errada. Quem manipula o resíduo é trabalhador, e a etapa de descarte concentra exposições relevantes.' },
+    { t: 'Produtos com registro sanitário estão automaticamente isentos de medidas de controle no ambiente de trabalho.', ok: false,
+      why: 'Errada. Registro atesta a regularidade do produto, não a segurança das condições em que ele é usado.' }
+  ],
+  comentario: 'Regra geral do tema: cumprir uma esfera não dispensa a outra. E um detalhe prático que a prova cobra: a ficha de informações de segurança do produto químico é instrumento de trabalho do médico e da higiene ocupacional, não papel de almoxarifado.',
+  pegadinha: 'Confundir registro sanitário do produto com segurança do uso é o mesmo erro de confundir certificação com desempenho.',
+  refs: ['Lei nº 8.080/1990', 'NR-9', 'Buschinelli — Toxicologia Ocupacional'] },
+
+/* ============ 7.7 Resoluções do Conselho Federal de Medicina ============ */
+{ id: 'q-7.7-010', tema: '7.7', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Uma empresa contratante exige que o médico do trabalho entregue os prontuários ocupacionais ao setor de recursos humanos ao término do contrato de prestação de serviços. Sobre a conduta, à luz das normas do conselho profissional, assinale a alternativa CORRETA:',
+  alts: [
+    { t: 'Os prontuários devem permanecer sob guarda de médico, com sigilo preservado, cabendo a transferência a outro médico responsável — nunca a setor administrativo da empresa.', ok: true,
+      why: 'Correta. A guarda do prontuário é responsabilidade médica e a sucessão se dá entre médicos; entregar a setor administrativo expõe dados sensíveis e configura quebra de sigilo.' },
+    { t: 'Encerrado o contrato, os documentos pertencem à empresa contratante, que pode arquivá-los como quiser.', ok: false,
+      why: 'Errada. A empresa custeia o serviço, mas o conteúdo clínico não fica à sua livre disposição.' },
+    { t: 'Os prontuários podem ser destruídos ao fim do contrato, já que o vínculo assistencial se encerrou.', ok: false,
+      why: 'Errada. Há prazo de guarda a observar, e a destruição prematura elimina prova essencial para futuros reconhecimentos de nexo.' },
+    { t: 'A entrega ao setor administrativo é aceitável se os documentos forem lacrados.', ok: false,
+      why: 'Errada. Lacre não transforma setor administrativo em depositário legítimo de dado clínico.' },
+    { t: 'O sigilo se extingue com o fim do vínculo empregatício do trabalhador.', ok: false,
+      why: 'Errada. O sigilo médico persiste após o fim do vínculo e mesmo após a morte do paciente.' }
+  ],
+  comentario: 'Prontuário ocupacional é documento médico: guarda por médico, prazo de guarda a observar, sucessão entre médicos e sigilo que não se extingue com o fim do contrato nem do vínculo empregatício. A empresa paga o serviço; não é dona do conteúdo clínico.',
+  pegadinha: 'A alternativa dos documentos lacrados oferece uma solução operacional para um problema que é de titularidade, não de embalagem.',
+  refs: ['Código de Ética Médica', 'Resoluções do CFM sobre prontuário e sobre atendimento ao trabalhador', 'LGPD'] },
+
+{ id: 'q-7.7-011', tema: '7.7', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'O médico do trabalho de uma empresa é procurado por um empregado que solicita atestado para justificar falta ocorrida na semana anterior, quando esteve doente mas não procurou atendimento. Sobre a conduta, assinale a alternativa CORRETA:',
+  alts: [
+    { t: 'O atestado deve refletir o que o médico efetivamente constatou; atestar retroativamente condição não avaliada configura documento médico com conteúdo falso, ainda que motivado por compaixão.', ok: true,
+      why: 'Correta. O atestado é declaração de fato constatado pelo médico; retroagir sobre período não avaliado compromete a veracidade do documento e expõe o médico a responsabilização ética.' },
+    { t: 'A retroatividade é sempre admissível, desde que o trabalhador declare por escrito que estava doente.', ok: false,
+      why: 'Errada. Declaração do próprio interessado não substitui a constatação médica que o atestado afirma.' },
+    { t: 'O médico do trabalho da empresa não pode emitir atestado em nenhuma hipótese.', ok: false,
+      why: 'Errada. Ele pode atestar aquilo que constata em seu atendimento; a vedação é ao conteúdo inverídico, não ao ato de atestar.' },
+    { t: 'O atestado deve obrigatoriamente conter o diagnóstico codificado para ser aceito pela empresa.', ok: false,
+      why: 'Errada. O diagnóstico só é informado com autorização expressa do paciente ou por dever legal; sua ausência não invalida o atestado.' },
+    { t: 'Cabe ao médico do trabalho validar ou recusar atestados de médicos assistentes conforme sua própria avaliação clínica retrospectiva.', ok: false,
+      why: 'Errada. Divergência entre médicos se resolve pelos caminhos próprios, e não por revisão unilateral do trabalho do colega.' }
+  ],
+  comentario: 'Duas linhas fixas: o atestado declara o que foi constatado, e o diagnóstico só sai com autorização do paciente ou por dever legal. A pressão para "resolver" a falta do colega é justamente a situação em que essas linhas são testadas.',
+  pegadinha: 'A alternativa que exige o código diagnóstico no atestado reproduz uma exigência empresarial comum e ilegítima.',
+  refs: ['Código de Ética Médica', 'Resoluções do CFM sobre atestado médico'] },
+
+{ id: 'q-7.7-012', tema: '7.7', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre as normas do conselho profissional aplicáveis ao médico que atende trabalhadores, assinale a alternativa INCORRETA:',
+  alts: [
+    { t: 'O médico do trabalho, por ser contratado pela empresa, responde às determinações técnicas do empregador quanto à conclusão de aptidão.', ok: true,
+      why: 'É a alternativa INCORRETA, portanto a resposta. A conclusão sobre aptidão é ato médico com autonomia técnica; o vínculo contratual não subordina o juízo clínico ao empregador.' },
+    { t: 'É vedado ao médico revelar ao empregador o diagnóstico do trabalhador sem autorização expressa deste.', ok: false,
+      why: 'Verdadeira. À empresa se comunicam aptidão e restrições, não diagnóstico.' },
+    { t: 'O médico deve comunicar ao trabalhador os achados de sua avaliação e as repercussões sobre a saúde dele.', ok: false,
+      why: 'Verdadeira. O trabalhador é o paciente e tem direito à informação sobre a própria saúde.' },
+    { t: 'É vedado ao médico exercer simultaneamente, no mesmo caso, as funções de perito e de assistente de uma das partes.', ok: false,
+      why: 'Verdadeira. As funções são inconciliáveis por comprometerem a imparcialidade exigida do perito.' },
+    { t: 'O médico deve notificar situações de risco à saúde coletiva identificadas no ambiente de trabalho.', ok: false,
+      why: 'Verdadeira. O dever de agir diante de risco coletivo integra a responsabilidade profissional.' }
+  ],
+  comentario: 'O eixo ético da especialidade: quem paga não manda no juízo técnico. A autonomia da conclusão de aptidão, o sigilo do diagnóstico perante o empregador, o direito do trabalhador à informação e a incompatibilidade entre perito e assistente formam o núcleo do que a banca cobra em ética.',
+  pegadinha: 'Enunciado de "assinale a INCORRETA": a falsa é a que soa como realismo contratual e é justamente o que a norma proíbe.',
+  refs: ['Código de Ética Médica', 'Resolução CFM sobre normas para médicos que atendem o trabalhador'] }
+
+);

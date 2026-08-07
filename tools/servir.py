@@ -20,5 +20,21 @@ class Handler(SimpleHTTPRequestHandler):
             super().log_message(fmt, *args)
 
 porta = int(sys.argv[1]) if len(sys.argv) > 1 else 8732
-print(f'servindo {RAIZ} em http://127.0.0.1:{porta}', flush=True)
-ThreadingHTTPServer(('127.0.0.1', porta), Handler).serve_forever()
+# '--rede' abre para a rede local (para abrir no iPad); sem ela, só nesta máquina
+rede = '--rede' in sys.argv
+host = '0.0.0.0' if rede else '127.0.0.1'
+if rede:
+    import socket
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    try:
+        s.connect(('8.8.8.8', 80)); ip = s.getsockname()[0]
+    except Exception:
+        ip = '127.0.0.1'
+    finally:
+        s.close()
+    print(f'servindo {RAIZ}', flush=True)
+    print(f'  neste Mac:  http://127.0.0.1:{porta}', flush=True)
+    print(f'  no iPad:    http://{ip}:{porta}', flush=True)
+else:
+    print(f'servindo {RAIZ} em http://127.0.0.1:{porta}', flush=True)
+ThreadingHTTPServer((host, porta), Handler).serve_forever()

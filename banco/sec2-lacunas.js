@@ -1,0 +1,316 @@
+/* Seção 2 — temas que estavam sem questão nenhuma (2.4, 2.5, 2.7, 2.8)
+   Questões AUTORAIS, escritas no estilo da banca. Ver banco/README-formato.md */
+window.BANCO = window.BANCO || [];
+window.BANCO.push(
+
+/* ============================ 2.4 Agentes Biológicos ===================== */
+{ id: 'q-2.4-010', tema: '2.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Um laboratório de análises clínicas vai passar a processar amostras de um agente que, segundo a classificação de risco dos agentes biológicos, pode causar doença grave no ser humano, representa risco para quem trabalha, tem risco limitado de disseminação na comunidade e dispõe de medidas eficazes de tratamento e prevenção. Essa descrição corresponde à classe de risco:',
+  alts: [
+    { t: 'Classe de risco 3.', ok: true,
+      why: 'Correta. A classe 3 reúne agentes de alto risco individual e risco moderado ou limitado para a comunidade, capazes de causar doença grave, com tratamento e profilaxia geralmente disponíveis.' },
+    { t: 'Classe de risco 1.', ok: false,
+      why: 'Errada. A classe 1 reúne agentes com baixo risco individual e para a comunidade, com pouca ou nenhuma probabilidade de causar doença no ser humano saudável.' },
+    { t: 'Classe de risco 2.', ok: false,
+      why: 'Errada. A classe 2 tem risco individual moderado e risco comunitário limitado, causando doença geralmente não grave, com exposição de menor gravidade que a descrita.' },
+    { t: 'Classe de risco 4.', ok: false,
+      why: 'Errada. A classe 4 exige alto risco individual E alto risco de disseminação comunitária, em geral sem tratamento ou profilaxia eficazes — o enunciado diz justamente o contrário nesses dois pontos.' },
+    { t: 'A classificação depende exclusivamente da via de transmissão, não da gravidade.', ok: false,
+      why: 'Errada. A classificação combina risco individual, risco para a comunidade, gravidade e existência de profilaxia e tratamento; a via de transmissão é um dos elementos, não o único critério.' }
+  ],
+  comentario: 'A classificação anda em dois eixos: risco para o indivíduo e risco para a comunidade. Classe 1 baixo/baixo; classe 2 moderado/limitado; classe 3 alto/limitado com tratamento disponível; classe 4 alto/alto e em geral sem profilaxia ou tratamento eficazes.',
+  pegadinha: 'A diferença entre 3 e 4 está na DISSEMINAÇÃO COMUNITÁRIA e na existência de tratamento. Quem só olha "doença grave" marca 4.',
+  refs: ['Classificação de Risco dos Agentes Biológicos — Ministério da Saúde', 'NR-32'] },
+
+{ id: 'q-2.4-011', tema: '2.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Em um hospital, discute-se quais precauções adotar para um paciente com suspeita de tuberculose pulmonar bacilífera internado em enfermaria. Sobre precauções e risco biológico ocupacional, assinale a alternativa CORRETA:',
+  alts: [
+    { t: 'Além das precauções padrão, devem ser adotadas precauções para aerossóis, com quarto adequado e uso de respirador com eficiência de filtração apropriada pelos profissionais que entram no quarto.', ok: true,
+      why: 'Correta. A transmissão do bacilo se dá por partículas que permanecem suspensas no ar, o que exige precaução específica para aerossóis somada às precauções padrão, com proteção respiratória e ambiente adequado.' },
+    { t: 'Basta a precaução de gotículas, com máscara cirúrgica pelos profissionais.', ok: false,
+      why: 'Errada. Máscara cirúrgica e precaução de gotículas não protegem contra partículas que permanecem suspensas no ar por longos períodos.' },
+    { t: 'As precauções padrão só se aplicam a pacientes com diagnóstico infeccioso confirmado.', ok: false,
+      why: 'Errada, e inverte o conceito central: as precauções padrão aplicam-se a TODOS os pacientes, independentemente de diagnóstico, porque o estado infeccioso frequentemente é desconhecido.' },
+    { t: 'A vacinação prévia do profissional dispensa o uso de proteção respiratória nesse contexto.', ok: false,
+      why: 'Errada. Não há vacina que dispense a proteção respiratória nesse cenário no adulto profissional de saúde; a proteção é ambiental e individual.' },
+    { t: 'O uso de luvas substitui a higienização das mãos quando há contato apenas com superfícies.', ok: false,
+      why: 'Errada. Luva não substitui higienização das mãos em nenhuma circunstância — a higienização é devida antes e depois do uso da luva.' }
+  ],
+  comentario: 'Precauções padrão valem para todo paciente, sempre. Sobre elas somam-se as precauções por via de transmissão: contato, gotículas ou aerossóis. Tuberculose pulmonar bacilífera pede precaução para aerossóis, com proteção respiratória adequada e ambiente apropriado.',
+  pegadinha: 'A confusão entre gotícula e aerossol é a mais explorada: gotícula cai perto, aerossol fica suspenso — e isso muda a máscara e o quarto.',
+  refs: ['NR-32', 'Protocolo de vigilância da infecção latente pelo M. tuberculosis — Ministério da Saúde'] },
+
+{ id: 'q-2.4-012', tema: '2.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Trabalhadores de uma estação de tratamento de esgoto relatam quadros febris após período de chuvas intensas com alagamento da área operacional. Sobre risco biológico em saneamento, assinale a alternativa CORRETA:',
+  alts: [
+    { t: 'A leptospirose deve ser considerada, transmitida pelo contato de pele lesada ou mucosas com água ou lama contaminada por urina de animais infectados, e o quadro pode variar de forma leve a formas graves com comprometimento renal e hemorrágico.', ok: true,
+      why: 'Correta. O contato com água ou lama contaminada é a via ocupacional clássica em saneamento, e o espectro clínico vai de quadro febril inespecífico a formas graves com icterícia, insuficiência renal e hemorragia pulmonar.' },
+    { t: 'O risco biológico em saneamento restringe-se a agentes de veiculação aérea, sendo desprezível a via cutânea.', ok: false,
+      why: 'Errada, e inverte a via principal. Em saneamento a via cutâneo-mucosa por contato com água e lama contaminadas é central.' },
+    { t: 'A leptospirose é doença exclusivamente rural, não ocorrendo em trabalhadores urbanos de saneamento.', ok: false,
+      why: 'Errada. O ambiente urbano com roedores e alagamentos é justamente um cenário de risco importante para trabalhadores de saneamento e limpeza urbana.' },
+    { t: 'Por ser doença infecciosa comum na população, a leptospirose em trabalhador de saneamento nunca configura doença relacionada ao trabalho.', ok: false,
+      why: 'Errada. A exclusão de doença endêmica não se aplica quando há exposição determinada pela natureza do trabalho, que é exatamente o caso.' },
+    { t: 'A única medida de controle eficaz é a vacinação dos trabalhadores expostos.', ok: false,
+      why: 'Errada. O controle se apoia em medidas de engenharia, organização do trabalho, EPI adequado (botas e luvas impermeáveis), controle de roedores e cuidado com lesões cutâneas.' }
+  ],
+  comentario: 'Saneamento concentra risco biológico por contato cutâneo-mucoso. Leptospirose é o exemplo cobrado: transmissão por água ou lama contaminada com urina de roedores, agravada por alagamentos, com espectro clínico amplo. E atenção ao nexo — exposição determinada pela natureza do trabalho afasta a exclusão de "doença endêmica".',
+  pegadinha: 'A alternativa que nega o nexo por ser "doença comum na população" reproduz um erro clássico: a exclusão legal tem ressalva expressa para exposição decorrente do trabalho.',
+  refs: ['Nota Técnica Leptospirose — Ministério da Saúde', 'Lei nº 8.213/1991 — art. 20, §1º'] },
+
+{ id: 'q-2.4-013', tema: '2.4', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre o gerenciamento do risco biológico em serviços de saúde, assinale a alternativa INCORRETA:',
+  alts: [
+    { t: 'O reencape manual de agulhas é aceitável desde que realizado com técnica de uma só mão e por profissional treinado.', ok: true,
+      why: 'É a alternativa INCORRETA, portanto a resposta. O reencape de agulhas é prática vedada; o descarte deve ser imediato em recipiente rígido apropriado, sem manipulação adicional do perfurocortante.' },
+    { t: 'Dispositivos de segurança em perfurocortantes reduzem a ocorrência de acidentes e devem ser priorizados.', ok: false,
+      why: 'Verdadeira. A substituição por dispositivos com mecanismo de segurança é medida de engenharia reconhecida e prioritária sobre o comportamento individual.' },
+    { t: 'O recipiente para descarte de perfurocortantes deve ser rígido, estar próximo ao local do procedimento e não pode ser preenchido além do limite indicado.', ok: false,
+      why: 'Verdadeira. Distância do recipiente e enchimento excessivo são causas frequentes e evitáveis de acidente.' },
+    { t: 'Todo acidente com material biológico deve ser registrado e comunicado, ainda que não haja soroconversão.', ok: false,
+      why: 'Verdadeira. O registro independe do desfecho e é a base tanto do direito do trabalhador quanto da vigilância epidemiológica.' },
+    { t: 'A capacitação dos trabalhadores é medida necessária, mas não substitui as medidas de proteção coletiva e de engenharia.', ok: false,
+      why: 'Verdadeira. Treinamento é complemento, não alternativa à hierarquia de controles.' }
+  ],
+  comentario: 'Três pontos fixos: reencape de agulha é proibido, sem exceção de técnica; dispositivos de segurança são medida de engenharia prioritária; e todo acidente com material biológico gera registro e comunicação, independentemente de soroconversão.',
+  pegadinha: 'A "técnica de uma só mão" existe como manobra descrita em literatura antiga e por isso soa plausível — mas a orientação vigente é não reencapar.',
+  refs: ['NR-32', 'PCDT — Profilaxia Pós-Exposição — Ministério da Saúde'] },
+
+{ id: 'q-2.4-014', tema: '2.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Um frigorífico de suínos solicita avaliação do risco biológico para seus trabalhadores. Sobre exposição ocupacional a agentes biológicos fora dos serviços de saúde, assinale a alternativa CORRETA:',
+  alts: [
+    { t: 'Atividades com animais, produtos de origem animal e dejetos expõem a zoonoses, e a avaliação deve considerar as tarefas concretas — abate, evisceração, manejo de resíduos — e não apenas o setor econômico.', ok: true,
+      why: 'Correta. O risco biológico se define pela tarefa e pelo contato efetivo com o material potencialmente infectante, não pelo rótulo da atividade econômica.' },
+    { t: 'O risco biológico ocupacional é matéria restrita aos serviços de saúde e laboratórios.', ok: false,
+      why: 'Errada. Agropecuária, frigoríficos, saneamento, coleta de resíduos, atividades funerárias e trabalho com animais também concentram exposição relevante.' },
+    { t: 'A ausência de casos notificados na empresa demonstra que não há exposição a agentes biológicos.', ok: false,
+      why: 'Errada. Ausência de notificação frequentemente reflete subnotificação e não caracteriza ausência de risco; a avaliação é do processo de trabalho, não do histórico de casos.' },
+    { t: 'Para agentes biológicos, a avaliação quantitativa da concentração no ar é sempre obrigatória e determina o controle.', ok: false,
+      why: 'Errada. Para agentes biológicos a avaliação é predominantemente qualitativa, baseada na identificação das fontes, das tarefas e das vias de exposição.' },
+    { t: 'A vacinação dos trabalhadores expostos torna dispensáveis os equipamentos de proteção.', ok: false,
+      why: 'Errada. A imunização é medida complementar, cobre apenas parte dos agentes e nunca substitui as barreiras físicas e as medidas de controle.' }
+  ],
+  comentario: 'A avaliação de risco biológico é essencialmente qualitativa: identificar fonte, tarefa, via de exposição e população exposta. E o campo não é só hospital — frigorífico, saneamento, campo e coleta de resíduos entram com força.',
+  pegadinha: 'A exigência de "avaliação quantitativa obrigatória" transporta a lógica dos agentes químicos para os biológicos, onde ela não se aplica do mesmo modo.',
+  refs: ['Classificação de Risco dos Agentes Biológicos — Ministério da Saúde', 'NR-9'] },
+
+{ id: 'q-2.4-015', tema: '2.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Um trabalhador de necrotério sofre corte com instrumento contaminado. O serviço médico avalia a conduta. Sobre a exposição ocupacional a material biológico, assinale a alternativa CORRETA:',
+  alts: [
+    { t: 'A conduta depende do tipo de exposição, do material envolvido e do estado sorológico da fonte, quando conhecido, e a avaliação para eventual profilaxia deve ser feita com urgência.', ok: true,
+      why: 'Correta. A decisão é individualizada e sensível ao tempo: tipo e profundidade da lesão, material envolvido e condição da fonte definem a conduta, e a janela para profilaxia é curta.' },
+    { t: 'Exposições ocorridas fora de serviços assistenciais não configuram acidente com material biológico.', ok: false,
+      why: 'Errada. O acidente se define pelo contato com material potencialmente infectante, independentemente do tipo de serviço.' },
+    { t: 'Deve-se aguardar o resultado das sorologias do trabalhador antes de qualquer conduta profilática.', ok: false,
+      why: 'Errada. Aguardar resultados perde a janela terapêutica; a avaliação para profilaxia é imediata, e as sorologias correm em paralelo para estabelecer a condição basal.' },
+    { t: 'A sorologia basal do trabalhador é dispensável quando ele está assintomático.', ok: false,
+      why: 'Errada. A sorologia basal é essencial justamente para caracterizar a condição prévia e permitir, depois, atribuir ou afastar a soroconversão ao acidente.' },
+    { t: 'O acompanhamento sorológico posterior é desnecessário se a profilaxia foi iniciada.', ok: false,
+      why: 'Errada. O seguimento sorológico é parte do protocolo, independentemente do início de profilaxia.' }
+  ],
+  comentario: 'Roteiro: cuidado local, avaliação imediata da exposição e da fonte, decisão sobre profilaxia dentro da janela, coleta de sorologia basal do trabalhador, registro e comunicação, e seguimento sorológico. Nenhuma dessas etapas depende de o serviço ser assistencial.',
+  pegadinha: 'A alternativa que manda "aguardar as sorologias" parece prudente e é justamente o erro que inviabiliza a profilaxia.',
+  refs: ['PCDT — Profilaxia Pós-Exposição (PEP) — Ministério da Saúde', 'NR-32'] },
+
+/* ============= 2.5 Avaliação e Gerenciamento das Exposições ============== */
+{ id: 'q-2.5-010', tema: '2.5', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Ao estruturar a avaliação de exposições ocupacionais em uma indústria com centenas de trabalhadores, o higienista propõe agrupar os trabalhadores antes de amostrar. Sobre grupos similares de exposição, assinale a alternativa CORRETA:',
+  alts: [
+    { t: 'O agrupamento reúne trabalhadores cuja exposição se presume semelhante em intensidade, frequência e duração, permitindo que a amostragem de alguns represente o grupo — e a hipótese de similaridade precisa ser verificada, não apenas presumida.', ok: true,
+      why: 'Correta. O grupo é uma hipótese de trabalho que torna a amostragem viável, e essa hipótese deve ser testada; se os resultados se mostrarem heterogêneos, o grupo precisa ser redefinido.' },
+    { t: 'O agrupamento deve seguir o organograma da empresa, reunindo trabalhadores por setor administrativo.', ok: false,
+      why: 'Errada. O critério é a similaridade de EXPOSIÇÃO, definida por tarefa, agente, processo e ambiente — não a estrutura hierárquica.' },
+    { t: 'Uma única amostra por grupo é suficiente para caracterizar a exposição de forma conclusiva.', ok: false,
+      why: 'Errada. A exposição varia ao longo do tempo e entre trabalhadores; uma amostra isolada não permite julgamento estatisticamente defensável.' },
+    { t: 'Formado o grupo, ele não deve ser revisado, sob pena de comprometer a comparabilidade histórica.', ok: false,
+      why: 'Errada. O grupo é revisado sempre que mudam processo, produto, ritmo ou controles — manter grupo obsoleto é que compromete a avaliação.' },
+    { t: 'O agrupamento dispensa a caracterização básica do ambiente e dos processos de trabalho.', ok: false,
+      why: 'Errada. A caracterização básica é justamente o que fundamenta a formação dos grupos; sem ela o agrupamento é arbitrário.' }
+  ],
+  comentario: 'A estratégia é: caracterização básica → formação de grupos similares de exposição → amostragem → julgamento (aceitável, inaceitável ou incerto) → controle → reavaliação. O grupo é hipótese testável, não rótulo administrativo.',
+  pegadinha: 'Agrupar por setor ou por cargo é o atalho mais comum na prática e está errado: dois trabalhadores do mesmo cargo podem ter exposições muito diferentes.',
+  refs: ['Jahn, Bullock & Ignacio — Uma estratégia para avaliar e gerenciar exposições ocupacionais (ABHO)'] },
+
+{ id: 'q-2.5-011', tema: '2.5', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Um conjunto de medições de um agente químico em um grupo de exposição resultou em valores dispersos, com algumas medidas próximas do limite e outras muito abaixo. O laudo conclui pela regularidade usando a MÉDIA das medições. A crítica CORRETA a essa conclusão é:',
+  alts: [
+    { t: 'O julgamento da exposição não deve se apoiar na média, e sim na parte superior da distribuição, porque o que importa é a probabilidade de ocorrerem exposições acima do limite ao longo do tempo.', ok: true,
+      why: 'Correta. Dados de exposição costumam ter distribuição assimétrica, e a média mascara a cauda superior; a decisão se apoia em estimativas dos percentis altos da distribuição.' },
+    { t: 'A média está correta, desde que calculada sobre pelo menos três medições.', ok: false,
+      why: 'Errada. Aumentar o número de medições melhora a estimativa, mas não corrige o erro conceitual de julgar pela tendência central.' },
+    { t: 'A dispersão dos resultados indica erro laboratorial e invalida todas as medições.', ok: false,
+      why: 'Errada. Variabilidade é característica intrínseca da exposição ocupacional, não sinal automático de erro analítico.' },
+    { t: 'Diante de dispersão, o correto é descartar os valores extremos e recalcular a média.', ok: false,
+      why: 'Errada, e é grave: descartar os valores altos elimina exatamente a informação mais relevante para a proteção do trabalhador.' },
+    { t: 'Como algumas medidas ficaram abaixo do limite, está demonstrado que o controle é eficaz.', ok: false,
+      why: 'Errada. Medidas abaixo do limite nada dizem sobre as jornadas em que a exposição foi alta; a conclusão exige avaliar a distribuição inteira.' }
+  ],
+  comentario: 'Exposição ocupacional varia e costuma seguir distribuição assimétrica. Por isso o julgamento olha a cauda superior — a probabilidade de exposições acima do limite — e não a média. Descartar valores altos como "atípicos" é o oposto do que a proteção exige.',
+  pegadinha: 'A alternativa de descartar extremos parece rigor estatístico e é, na prática, o artifício mais usado para maquiar laudo.',
+  refs: ['Jahn, Bullock & Ignacio — Uma estratégia para avaliar e gerenciar exposições ocupacionais (ABHO)'] },
+
+{ id: 'q-2.5-012', tema: '2.5', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Após a avaliação de um grupo de exposição, o higienista classifica o resultado como "incerto". Sobre essa categoria de julgamento, a conduta CORRETA é:',
+  alts: [
+    { t: 'Reunir mais informação — novas amostragens, revisão da caracterização básica ou uso de dados de exposições análogas — até que a decisão possa migrar para aceitável ou inaceitável, adotando entretanto medidas de precaução.', ok: true,
+      why: 'Correta. "Incerto" é estado transitório que dispara coleta de mais informação, e a incerteza não autoriza inação: medidas de precaução seguem enquanto a dúvida persiste.' },
+    { t: 'Tratar como aceitável até prova em contrário, para não onerar a empresa sem evidência.', ok: false,
+      why: 'Errada. Incerteza não se resolve presumindo segurança; a presunção favorável ao risco contraria a lógica preventiva.' },
+    { t: 'Tratar automaticamente como inaceitável e paralisar a atividade.', ok: false,
+      why: 'Errada. A paralisação é resposta a risco grave e iminente caracterizado, não à mera incerteza; o passo devido é reduzir a incerteza.' },
+    { t: 'Encerrar a avaliação, já que a categoria "incerto" não gera obrigação técnica.', ok: false,
+      why: 'Errada. É precisamente a categoria que gera a obrigação de continuar avaliando.' },
+    { t: 'Substituir a avaliação por questionário de percepção de risco dos trabalhadores.', ok: false,
+      why: 'Errada. A percepção dos trabalhadores é insumo valioso da caracterização básica, mas não substitui a avaliação técnica da exposição.' }
+  ],
+  comentario: 'O julgamento tem três saídas: aceitável, inaceitável e incerto. A terceira não é um lugar de descanso — é um pedido de mais informação, com precaução mantida enquanto a dúvida existir.',
+  pegadinha: 'Converter "incerto" em "aceitável" é o desvio mais comum e o mais perigoso, porque parece neutro.',
+  refs: ['Jahn, Bullock & Ignacio — Uma estratégia para avaliar e gerenciar exposições ocupacionais (ABHO)'] },
+
+{ id: 'q-2.5-013', tema: '2.5', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Uma empresa implanta enclausuramento e ventilação local exaustora em um posto com exposição a vapores orgânicos. Sobre a etapa seguinte do gerenciamento das exposições, assinale a alternativa CORRETA:',
+  alts: [
+    { t: 'A eficácia da medida precisa ser verificada por reavaliação da exposição, pois controle implantado não equivale a controle eficaz.', ok: true,
+      why: 'Correta. O ciclo de gerenciamento se fecha com reavaliação: só a medição posterior demonstra que a medida efetivamente reduziu a exposição ao nível pretendido.' },
+    { t: 'Implantada a medida de engenharia, a exposição pode ser considerada controlada e o grupo removido do monitoramento.', ok: false,
+      why: 'Errada. Presumir eficácia sem verificar é falha recorrente; sistemas de exaustão perdem desempenho com o tempo e o uso.' },
+    { t: 'A reavaliação só é necessária se algum trabalhador apresentar alteração no monitoramento biológico.', ok: false,
+      why: 'Errada. Esperar o efeito biológico para reavaliar inverte a lógica preventiva: a exposição deve ser controlada antes de haver dano.' },
+    { t: 'Com controle de engenharia instalado, o programa médico de acompanhamento pode ser descontinuado.', ok: false,
+      why: 'Errada. O acompanhamento médico dos expostos permanece enquanto houver exposição, e é ele que detecta falhas do controle.' },
+    { t: 'A manutenção do sistema de exaustão é responsabilidade do trabalhador do posto.', ok: false,
+      why: 'Errada. Manutenção de medida de proteção coletiva é responsabilidade da empresa, com rotina e registro próprios.' }
+  ],
+  comentario: 'Gerenciar exposição é ciclo, não evento: caracterizar, avaliar, julgar, controlar e REAVALIAR. A reavaliação é a etapa que a prática costuma pular — e é ela que separa controle presumido de controle demonstrado.',
+  pegadinha: 'Condicionar a reavaliação a uma alteração no monitoramento biológico transforma o trabalhador em sensor de falha do sistema.',
+  refs: ['Jahn, Bullock & Ignacio — Uma estratégia para avaliar e gerenciar exposições ocupacionais (ABHO)', 'NR-9'] },
+
+/* ================= 2.7 Normas de Higiene Ocupacional (NHO) =============== */
+{ id: 'q-2.7-010', tema: '2.7', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Um perito judicial questiona por que a dose de ruído calculada por um laudo baseado em Norma de Higiene Ocupacional da Fundacentro difere daquela obtida pelo critério da norma regulamentadora de insalubridade, para a mesma jornada. A explicação CORRETA é:',
+  alts: [
+    { t: 'Os dois critérios usam incrementos de duplicação de dose diferentes, o que faz a mesma exposição produzir doses distintas; a norma de higiene adota critério mais protetor que o da norma de insalubridade.', ok: true,
+      why: 'Correta. O incremento de duplicação de dose é o parâmetro que define quanto o tempo permitido cai a cada aumento de nível; critérios diferentes produzem resultados diferentes para a mesma exposição, e o da norma técnica de higiene é o mais protetor.' },
+    { t: 'A diferença decorre apenas de erro de calibração do dosímetro.', ok: false,
+      why: 'Errada. A divergência é metodológica e esperada, não artefato de calibração.' },
+    { t: 'As normas de higiene ocupacional revogaram os critérios da norma regulamentadora para fins de insalubridade.', ok: false,
+      why: 'Errada. As normas técnicas de higiene não revogam norma regulamentadora; a caracterização de insalubridade segue o critério legal próprio.' },
+    { t: 'As normas de higiene ocupacional aplicam-se apenas a agentes químicos, não a ruído.', ok: false,
+      why: 'Errada. Há normas de higiene específicas para ruído, calor, vibração e aerodispersoides, entre outros agentes físicos.' },
+    { t: 'Ambos os critérios produzem sempre o mesmo resultado quando o nível é constante, o que indica erro no laudo.', ok: false,
+      why: 'Errada. Mesmo com nível constante, tempos máximos permitidos diferentes geram doses diferentes.' }
+  ],
+  comentario: 'Ponto de ouro deste tema: norma técnica de higiene diz COMO medir e avaliar, com critério mais protetor; norma regulamentadora diz qual é o LIMITE LEGAL e o que caracteriza insalubridade. Convivem, com finalidades distintas, e é normal que os números divirjam.',
+  pegadinha: 'Tratar a divergência como erro de medição é o equívoco que a questão persegue. Ela é metodológica e previsível.',
+  refs: ['Normas de Higiene Ocupacional — Fundacentro', 'NR-15'] },
+
+{ id: 'q-2.7-011', tema: '2.7', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre a natureza e o uso das Normas de Higiene Ocupacional da Fundacentro, assinale a alternativa INCORRETA:',
+  alts: [
+    { t: 'Por serem publicadas por instituição federal, as normas de higiene ocupacional têm força de norma regulamentadora e seu descumprimento gera autuação direta da inspeção do trabalho.', ok: true,
+      why: 'É a alternativa INCORRETA, portanto a resposta. São procedimentos técnicos de referência, e não normas regulamentadoras; a autuação decorre do descumprimento das NRs, ainda que as normas técnicas sirvam de referência metodológica.' },
+    { t: 'Elas padronizam os procedimentos de avaliação, aumentando a comparabilidade e a defensabilidade técnica dos resultados.', ok: false,
+      why: 'Verdadeira. Padronizar o método é o que permite comparar avaliações feitas por profissionais e em momentos diferentes.' },
+    { t: 'Existem normas específicas para diferentes agentes, como ruído, calor e vibração.', ok: false,
+      why: 'Verdadeira. O conjunto cobre agentes físicos e também procedimentos de amostragem de aerodispersoides.' },
+    { t: 'Servem de referência técnica em perícias e em discussões judiciais sobre exposição ocupacional.', ok: false,
+      why: 'Verdadeira. É um dos usos mais frequentes, exatamente por padronizarem o método.' },
+    { t: 'A adoção de um critério mais protetor que o legal é compatível com a política de prevenção da empresa.', ok: false,
+      why: 'Verdadeira. Nada impede que a empresa adote parâmetro mais protetor que o mínimo legal — e isso é recomendável.' }
+  ],
+  comentario: 'Guarde a distinção de natureza jurídica: norma técnica de higiene é referência metodológica; norma regulamentadora é obrigação legal com poder de autuação. Confundir as duas gera erro tanto na prova quanto na prática pericial.',
+  pegadinha: 'Enunciado de "assinale a INCORRETA", e a falsa é a que dá força de lei a documento técnico — hipótese que soa razoável por vir de instituição federal.',
+  refs: ['Normas de Higiene Ocupacional — Fundacentro', 'Portaria nº 3.214/1978'] },
+
+{ id: 'q-2.7-012', tema: '2.7', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Ao avaliar a exposição ocupacional ao calor em uma siderúrgica seguindo a norma técnica de higiene aplicável, o profissional deve considerar que:',
+  alts: [
+    { t: 'A avaliação combina as variáveis ambientais em um índice e o confronta com a taxa metabólica da atividade, de modo que a mesma condição ambiental pode ser aceitável para uma atividade leve e inaceitável para uma pesada.', ok: true,
+      why: 'Correta. É a lógica central: o julgamento nunca é só ambiental — depende do calor que o próprio corpo produz na tarefa avaliada.' },
+    { t: 'Basta medir a temperatura do ar no posto, pois as demais variáveis têm influência desprezível.', ok: false,
+      why: 'Errada. Umidade, radiação térmica e velocidade do ar são determinantes da troca de calor entre o corpo e o ambiente.' },
+    { t: 'A taxa metabólica é irrelevante, porque o índice já incorpora o esforço do trabalhador.', ok: false,
+      why: 'Errada. O índice descreve o ambiente; a taxa metabólica entra separadamente, como o outro lado da comparação.' },
+    { t: 'A avaliação deve ser feita apenas no período mais frio do dia, para representar a condição habitual.', ok: false,
+      why: 'Errada. A avaliação deve representar a condição mais desfavorável da jornada, não a mais amena.' },
+    { t: 'Sendo o trabalhador aclimatado, a avaliação é dispensada.', ok: false,
+      why: 'Errada. A aclimatização altera a tolerância e pode alterar o parâmetro de julgamento, mas não dispensa a avaliação.' }
+  ],
+  comentario: 'Calor se avalia em dois lados: o ambiente, por um índice que combina temperatura, umidade, radiação e velocidade do ar, e o organismo, pela taxa metabólica da tarefa. A condição de aclimatização modula o julgamento, sem eliminá-lo.',
+  pegadinha: 'A alternativa que diz que o índice "já incorpora o esforço" é atraente e falsa — ela apaga justamente o segundo lado da comparação.',
+  refs: ['NHO 06 — Avaliação da exposição ocupacional ao calor (Fundacentro)'] },
+
+/* ====================== 2.8 Proteção Respiratória ======================== */
+{ id: 'q-2.8-010', tema: '2.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Uma empresa precisa selecionar respiradores para trabalhadores que entrarão em um tanque para limpeza, ambiente onde a concentração do contaminante é desconhecida e há risco de deficiência de oxigênio. A seleção CORRETA é:',
+  alts: [
+    { t: 'Respirador de adução de ar do tipo autônomo, ou linha de ar comprimido com cilindro auxiliar de escape, pois em atmosfera com deficiência de oxigênio ou concentração desconhecida o respirador purificador de ar é inadequado.', ok: true,
+      why: 'Correta. Purificadores de ar apenas filtram o ar do ambiente: não geram oxigênio nem protegem quando a concentração é desconhecida ou imediatamente perigosa. A situação exige fornecimento independente de ar respirável.' },
+    { t: 'Peça semifacial filtrante de alta eficiência, desde que trocada a cada jornada.', ok: false,
+      why: 'Errada. Nenhuma peça filtrante resolve deficiência de oxigênio nem serve para concentração desconhecida, independentemente da frequência de troca.' },
+    { t: 'Respirador purificador motorizado, pois o fluxo assistido compensa a falta de oxigênio.', ok: false,
+      why: 'Errada. O motor apenas força a passagem do ar ambiente pelo filtro; se falta oxigênio no ambiente, continua faltando no ar entregue.' },
+    { t: 'Máscara facial inteira com filtro combinado, por oferecer vedação superior.', ok: false,
+      why: 'Errada. A vedação melhor não muda a natureza do equipamento: continua sendo purificador de ar, com a mesma limitação.' },
+    { t: 'Qualquer respirador certificado, desde que o trabalhador seja treinado e submetido a ensaio de vedação.', ok: false,
+      why: 'Errada. Certificação, treinamento e ensaio de vedação são condições necessárias, mas não corrigem a escolha errada de classe de equipamento.' }
+  ],
+  comentario: 'Regra que resolve a maioria das questões: purificador de ar SÓ serve quando há oxigênio suficiente E o contaminante é conhecido e está dentro da capacidade do filtro. Atmosfera com deficiência de oxigênio, concentração desconhecida ou condição imediatamente perigosa à vida exige adução de ar.',
+  pegadinha: 'A alternativa do purificador motorizado explora a ideia de que "mais ar" resolve. O ar continua sendo o do ambiente.',
+  refs: ['Torloni & Vieira — Manual de Proteção Respiratória', 'NR-6'] },
+
+{ id: 'q-2.8-011', tema: '2.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Durante a implantação de um programa de proteção respiratória, um trabalhador que usa respirador facial se recusa a raspar a barba por motivo pessoal. Sobre a conduta, assinale a alternativa CORRETA:',
+  alts: [
+    { t: 'Pelos na região de vedação comprometem o desempenho do respirador de vedação facial, de modo que a solução é oferecer alternativa que não dependa dessa vedação ou reavaliar a tarefa, e não simplesmente manter o equipamento inadequado.', ok: true,
+      why: 'Correta. Barba na zona de selagem inviabiliza a vedação e o fator de proteção esperado. A saída técnica é mudar o tipo de equipamento ou a exposição, não fingir que o respirador protege.' },
+    { t: 'Basta apertar mais os tirantes para compensar a falha de vedação.', ok: false,
+      why: 'Errada. Aumentar a tensão dos tirantes não corrige vazamento causado por pelos e ainda gera desconforto e lesão de pele.' },
+    { t: 'O uso de respirador sobre a barba é aceitável desde que o trabalhador assine termo de responsabilidade.', ok: false,
+      why: 'Errada. Termo assinado não cria proteção; a obrigação de fornecer proteção eficaz é da empresa e não se transfere por documento.' },
+    { t: 'A questão é estética e não interfere no desempenho do equipamento.', ok: false,
+      why: 'Errada. O efeito sobre a vedação é físico e mensurável nos ensaios, não estético.' },
+    { t: 'O ensaio de vedação é dispensável quando o respirador é de boa qualidade e certificado.', ok: false,
+      why: 'Errada. Certificação atesta o equipamento; o ensaio verifica a adequação daquele modelo e tamanho àquele rosto — são coisas diferentes.' }
+  ],
+  comentario: 'Três pilares do programa: seleção adequada à exposição, ensaio de vedação para o rosto de cada trabalhador e avaliação médica de aptidão para uso. Barba na zona de selagem é incompatível com respirador que dependa de vedação facial — e a resposta é técnica, não disciplinar.',
+  pegadinha: 'O "termo de responsabilidade" aparece com frequência e é sempre distrator: não existe consentimento que substitua proteção eficaz.',
+  refs: ['Torloni & Vieira — Manual de Proteção Respiratória', 'NR-6'] },
+
+{ id: 'q-2.8-012', tema: '2.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'O médico do trabalho é procurado para definir a avaliação médica dos trabalhadores que usarão respiradores. Sobre esse componente do programa de proteção respiratória, assinale a alternativa CORRETA:',
+  alts: [
+    { t: 'A avaliação verifica se o trabalhador tem condições de tolerar a carga fisiológica imposta pelo respirador e pela tarefa, considerando função cardiorrespiratória, condições que dificultem a vedação e fatores psicológicos como claustrofobia.', ok: true,
+      why: 'Correta. Usar respirador aumenta a resistência respiratória e a carga térmica e psicológica; a avaliação médica cobre justamente a capacidade de tolerar isso com segurança.' },
+    { t: 'A avaliação limita-se à espirometria, que sozinha define a aptidão para uso de respirador.', ok: false,
+      why: 'Errada. A espirometria pode compor a avaliação, mas não a esgota nem decide isoladamente a aptidão.' },
+    { t: 'Trata-se de exigência puramente formal, sem repercussão na segurança do trabalhador.', ok: false,
+      why: 'Errada. Há repercussão direta: intolerância ao equipamento leva a retirá-lo no ambiente contaminado ou a episódios agudos durante a tarefa.' },
+    { t: 'A avaliação é necessária apenas para respiradores de adução de ar.', ok: false,
+      why: 'Errada. Também os purificadores impõem resistência respiratória e desconforto, e demandam avaliação.' },
+    { t: 'Uma vez considerado apto, o trabalhador não precisa de reavaliação enquanto permanecer na mesma função.', ok: false,
+      why: 'Errada. A condição de saúde muda ao longo do tempo, o que exige reavaliação periódica enquanto durar o uso.' }
+  ],
+  comentario: 'O programa tem três exigências que caem sempre: seleção correta do equipamento pela exposição, ensaio de vedação individual e avaliação médica de tolerância. Esta última olha carga cardiorrespiratória, barreiras à vedação e tolerância psicológica — e se repete no tempo.',
+  pegadinha: 'Reduzir a avaliação à espirometria é o atalho mais comum e não sustenta a decisão de aptidão.',
+  refs: ['Torloni & Vieira — Manual de Proteção Respiratória', 'NR-7'] },
+
+{ id: 'q-2.8-013', tema: '2.8', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre o fator de proteção atribuído a um respirador, assinale a alternativa CORRETA:',
+  alts: [
+    { t: 'Expressa o nível de proteção esperado de uma classe de respirador quando usado corretamente dentro de um programa estruturado, e serve para verificar se o equipamento reduz a exposição a nível aceitável.', ok: true,
+      why: 'Correta. É parâmetro de seleção: compara-se a concentração ambiental com o limite aplicável para saber se aquela classe de respirador é suficiente — e o valor só vale se o programa existir de fato.' },
+    { t: 'É uma característica fixa do modelo, independente do programa de proteção respiratória adotado.', ok: false,
+      why: 'Errada. O valor pressupõe seleção adequada, ensaio de vedação, treinamento, manutenção e uso contínuo; sem programa, a proteção real é menor e imprevisível.' },
+    { t: 'Quanto maior o fator, menor a proteção oferecida.', ok: false,
+      why: 'Errada, é o inverso: fator maior corresponde a maior capacidade de reduzir a concentração inalada.' },
+    { t: 'Aplica-se apenas a respiradores purificadores de ar.', ok: false,
+      why: 'Errada. Diferentes classes de respirador, inclusive de adução de ar, têm fatores atribuídos próprios.' },
+    { t: 'Sua aplicação torna dispensável a avaliação ambiental da exposição.', ok: false,
+      why: 'Errada, e inverte a lógica: sem conhecer a concentração ambiental não é possível verificar se o fator é suficiente.' }
+  ],
+  comentario: 'O fator de proteção é ferramenta de seleção e pressupõe programa funcionando. Fora do programa — sem ensaio de vedação, sem treinamento, sem manutenção — o número vira ficção. E ele nunca substitui a avaliação ambiental: é justamente dela que vem o dado de entrada.',
+  pegadinha: 'Tratar o fator como atributo fixo do produto ignora que a proteção real depende do uso e do programa.',
+  refs: ['Torloni & Vieira — Manual de Proteção Respiratória', 'NR-6'] }
+
+);
