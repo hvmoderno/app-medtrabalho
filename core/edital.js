@@ -334,8 +334,17 @@
             'Compartilhamento de dados com a empresa e limites do ASO'] }
   ];
 
-  // Metas de questões por peso (definidas na Fase 1, ponderadas por peso de prova)
-  var META = { alto: 45, medio: 30 };
+  // Metas de questões por peso.
+  //
+  // Calibração original (Fase 1): alto 45 / medio 30 = 1.770 questões, ponderada
+  // apenas pelo peso de cada tema na prova.
+  //
+  // RECALIBRADA em 07/08/2026 para alto 25 / medio 15 = 935 questões avulsas
+  // (+100 de casos clínicos ≈ 1.035 no total). Motivo: o cronograma reserva 34
+  // horas a questões até 01/11/2026, o que comporta cerca de 1.000 questões
+  // lidas com o comentário. A meta anterior produziria um banco maior do que
+  // é possível percorrer no tempo disponível de estudo.
+  var META = { alto: 25, medio: 15 };
 
   var byId = {};
   TEMAS.forEach(function (t) {
