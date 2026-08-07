@@ -1,0 +1,203 @@
+/* Lote A — 2.3, 2.4, 2.6, 2.9. Questões AUTORAIS. */
+window.BANCO = window.BANCO || [];
+window.BANCO.push(
+
+{ id: 'q-2.3-040', tema: '2.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Trabalhador de posto de combustíveis, 15 anos na função de frentista, apresenta hemograma com leucopenia e plaquetopenia leves, persistentes em dois exames. Sobre a conduta, é CORRETO afirmar:',
+  alts: [
+    { t: 'A exposição a benzeno presente na gasolina deve ser investigada como causa, com afastamento da exposição, repetição seriada do hemograma e encaminhamento hematológico, pois alterações citopênicas em exposto ao benzeno são achado sentinela.', ok: true,
+      why: 'Correta. O benzeno é mielotóxico e a citopenia em exposto exige afastamento e investigação — esperar a evolução mantém a agressão medular.' },
+    { t: 'Alterações leves em duas amostras não justificam qualquer investigação.', ok: false,
+      why: 'Errada. Persistência em exames seriados é justamente o critério que dispara a investigação.' },
+    { t: 'O frentista não tem exposição relevante ao benzeno, por não manipular o produto puro.', ok: false,
+      why: 'Errada. A gasolina contém benzeno e a exposição durante o abastecimento é reconhecida.' },
+    { t: 'A conduta é solicitar dosagem de benzeno no sangue, exame de escolha para essa exposição.', ok: false,
+      why: 'Errada. O benzeno tem meia-vida muito curta no sangue; o monitoramento se faz por metabólito urinário em momento adequado.' },
+    { t: 'Havendo tabagismo, a alteração deve ser atribuída a ele, encerrando a investigação.', ok: false,
+      why: 'Errada. O tabagismo é concausa e fonte adicional de benzeno, não motivo para encerrar a investigação.' }
+  ],
+  comentario: 'Frentista é exposto ocupacional a benzeno. Citopenia persistente em exposto é achado sentinela: afasta da exposição, repete seriado e encaminha. E o monitoramento biológico do benzeno não é dosagem sanguínea do próprio agente.',
+  pegadinha: 'A alternativa da dosagem sanguínea parece técnica e desconsidera a cinética do agente.',
+  refs: ['Buschinelli — Toxicologia Ocupacional', 'IARC Monographs'] },
+
+{ id: 'q-2.3-041', tema: '2.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Trabalhador de indústria de plásticos exposto a cloreto de vinila por duas décadas apresenta lesão hepática rara. Sobre o caso, é CORRETO afirmar:',
+  alts: [
+    { t: 'O angiossarcoma hepático tem forte associação com exposição ocupacional ao cloreto de vinila, e a raridade do tumor combinada à exposição documentada torna o nexo particularmente robusto.', ok: true,
+      why: 'Correta. É um dos exemplos clássicos de tumor raro com agente ocupacional bem estabelecido, o que fortalece o nexo individual.' },
+    { t: 'A raridade do tumor dificulta o estabelecimento de nexo ocupacional.', ok: false,
+      why: 'Errada, e é o inverso: tumor raro com agente conhecido facilita o reconhecimento.' },
+    { t: 'O cloreto de vinila não tem carcinogenicidade reconhecida em humanos.', ok: false,
+      why: 'Errada. É agente com carcinogenicidade reconhecida.' },
+    { t: 'A ausência de hepatopatia crônica prévia afasta o nexo.', ok: false,
+      why: 'Errada. O tumor associado ao agente não exige hepatopatia prévia.' },
+    { t: 'Por ter cessado a exposição há anos, o nexo está afastado.', ok: false,
+      why: 'Errada. A latência longa é característica esperada em câncer ocupacional.' }
+  ],
+  comentario: 'Cloreto de vinila e angiossarcoma hepático é um dos pares mais bem estabelecidos da toxicologia ocupacional. Guarde a lógica: tumor raro + agente conhecido = nexo robusto, exatamente como mesotelioma e asbesto.',
+  pegadinha: 'Usar a raridade contra o nexo inverte o raciocínio de força de associação.',
+  refs: ['IARC Monographs', 'Buschinelli — Toxicologia Ocupacional'] },
+
+{ id: 'q-2.3-042', tema: '2.3', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre as vias de absorção dos agentes químicos no ambiente de trabalho, é CORRETO afirmar:',
+  alts: [
+    { t: 'A via respiratória é a principal na maioria das exposições ocupacionais, mas a cutânea pode ser predominante para agentes com notação de pele, e a digestiva ganha relevância quando há hábitos inadequados de higiene no setor produtivo.', ok: true,
+      why: 'Correta. As três vias coexistem e a avaliação do ar só enxerga a primeira, o que explica discrepâncias com o monitoramento biológico.' },
+    { t: 'A via respiratória é a única relevante em exposição ocupacional a agentes químicos.', ok: false,
+      why: 'Errada. Ignora a cutânea e a digestiva, que explicam boa parte das absorções não detectadas na avaliação do ar.' },
+    { t: 'A via digestiva é irrelevante em ambiente industrial.', ok: false,
+      why: 'Errada. Comer no setor e mãos contaminadas são vias reais, especialmente para metais.' },
+    { t: 'A absorção cutânea só ocorre quando há lesão de pele.', ok: false,
+      why: 'Errada. Diversos agentes atravessam pele íntegra, e a lesão apenas facilita.' },
+    { t: 'A avaliação ambiental do ar capta a exposição total do trabalhador.', ok: false,
+      why: 'Errada. Ela capta apenas a via respiratória.' }
+  ],
+  comentario: 'Três vias: respiratória (a mais comum), cutânea (decisiva quando há notação de pele) e digestiva (mãos e alimentação no setor). A avaliação do ar só vê a primeira — daí a importância do monitoramento biológico, que integra todas.',
+  pegadinha: 'Condicionar a absorção cutânea à existência de lesão ignora que muitos agentes atravessam pele íntegra.',
+  refs: ['Buschinelli — Toxicologia Ocupacional', 'ACGIH — TLVs e BEIs'] },
+
+{ id: 'q-2.4-040', tema: '2.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Trabalhador de frigorífico apresenta febre prolongada, sudorese noturna, artralgia e hepatoesplenomegalia, com história de manipulação de vísceras de bovinos. Sobre a hipótese, é CORRETO afirmar:',
+  alts: [
+    { t: 'A brucelose deve ser considerada, zoonose de transmissão ocupacional por contato com tecidos e secreções de animais infectados, com quadro febril prolongado e inespecífico que frequentemente atrasa o diagnóstico.', ok: true,
+      why: 'Correta. Febre prolongada, sudorese e artralgia em trabalhador de abate compõem o quadro clássico, e a inespecificidade é o que atrasa o diagnóstico.' },
+    { t: 'O quadro é incompatível com zoonose ocupacional, por não haver mordedura.', ok: false,
+      why: 'Errada. A transmissão se dá por contato com tecidos, secreções e produtos de origem animal, não por mordedura.' },
+    { t: 'A ausência de contato com animais vivos afasta o diagnóstico.', ok: false,
+      why: 'Errada. A manipulação de vísceras e carcaças é via reconhecida.' },
+    { t: 'Zoonoses ocupacionais não são passíveis de notificação.', ok: false,
+      why: 'Errada. Zoonoses de interesse ocupacional integram os agravos notificáveis.' },
+    { t: 'A prevenção se resume à vacinação dos trabalhadores.', ok: false,
+      why: 'Errada. Depende de controle do rebanho, equipamentos de proteção, higiene e organização do trabalho.' }
+  ],
+  comentario: 'Frigorífico e abate concentram zoonoses: brucelose, leptospirose, tuberculose bovina, dermatoses por contato. Quadro febril prolongado e inespecífico em quem manipula vísceras merece história ocupacional dirigida.',
+  pegadinha: 'Associar zoonose ocupacional exclusivamente a mordedura ignora a via de contato com tecidos e secreções.',
+  refs: ['Classificação de Risco dos Agentes Biológicos — Ministério da Saúde', 'NR-36'] },
+
+{ id: 'q-2.4-041', tema: '2.4', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre o descarte de resíduos de serviços de saúde e o risco ocupacional associado, é CORRETO afirmar:',
+  alts: [
+    { t: 'A segregação correta na origem é a medida que mais reduz o risco para os trabalhadores das etapas seguintes — coleta interna, transporte, armazenamento e destinação final —, pois erros na origem se propagam por toda a cadeia.', ok: true,
+      why: 'Correta. Perfurocortante descartado em saco comum expõe quem coleta, quem transporta e quem tria, muito além de quem descartou.' },
+    { t: 'O risco se restringe aos profissionais que geram o resíduo.', ok: false,
+      why: 'Errada. A cadeia envolve diversos trabalhadores, muitos deles de baixa qualificação e menor proteção.' },
+    { t: 'A responsabilidade pela segregação é do serviço de limpeza terceirizado.', ok: false,
+      why: 'Errada. A segregação ocorre na origem, por quem gera o resíduo.' },
+    { t: 'Recipientes de perfurocortantes podem ser preenchidos até a borda para reduzir custos.', ok: false,
+      why: 'Errada. O enchimento além do limite indicado é causa frequente de acidente.' },
+    { t: 'Resíduos químicos e biológicos podem ser descartados no mesmo recipiente, desde que identificado.', ok: false,
+      why: 'Errada. A segregação por tipo de resíduo é justamente o que orienta o manejo seguro de cada um.' }
+  ],
+  comentario: 'A segregação na origem protege quem vem depois. O erro de quem descarta cai sobre quem coleta e quem tria — trabalhadores frequentemente terceirizados e menos protegidos.',
+  pegadinha: 'Atribuir a segregação ao serviço de limpeza inverte a responsabilidade e é a causa da maioria dos acidentes na cadeia.',
+  refs: ['NR-32', 'Ministério da Saúde — resíduos de serviços de saúde'] },
+
+{ id: 'q-2.6-050', tema: '2.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Ao interpretar um valor-limite com notação de carcinogenicidade suspeita, o médico do trabalho precisa orientar a empresa. A orientação CORRETA é:',
+  alts: [
+    { t: 'A notação sinaliza que o agente tem evidência de carcinogenicidade, o que altera a lógica de gestão: prioriza-se substituição e redução ao menor nível tecnicamente viável, sem tratar o valor numérico como fronteira de segurança.', ok: true,
+      why: 'Correta. A notação muda o objetivo de gestão, deixando de ser "ficar abaixo do número" e passando a ser "reduzir continuamente".' },
+    { t: 'A notação é informativa e não altera as medidas de controle exigidas.', ok: false,
+      why: 'Errada. Ela muda a lógica de controle e a prioridade de substituição.' },
+    { t: 'A existência de valor numérico demonstra que há limiar seguro para o agente.', ok: false,
+      why: 'Errada. O valor é referência de gestão; para carcinogênicos sem limiar não representa fronteira de segurança.' },
+    { t: 'Agentes com notação de carcinogenicidade suspeita não exigem monitoramento dos expostos.', ok: false,
+      why: 'Errada. O acompanhamento dos expostos é ainda mais relevante, inclusive após o fim da exposição.' },
+    { t: 'A notação só se aplica a agentes com carcinogenicidade confirmada em humanos.', ok: false,
+      why: 'Errada. Há notações que sinalizam suspeita ou evidência em animais, com implicações preventivas próprias.' }
+  ],
+  comentario: 'Notação de carcinogenicidade é comando de gestão: substituir, e não podendo, reduzir ao mínimo viável, registrar a exposição e acompanhar os expostos — inclusive depois que a exposição termina.',
+  pegadinha: 'Tratar a existência do valor numérico como prova de que há nível seguro é o erro central em todo o bloco de carcinogênicos.',
+  refs: ['ACGIH — TLVs e BEIs', 'LINACH', 'IARC Monographs'] },
+
+{ id: 'q-2.6-051', tema: '2.6', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre o conceito de nível de ação em higiene ocupacional, é CORRETO afirmar:',
+  alts: [
+    { t: 'É o patamar, inferior ao limite de exposição, a partir do qual se disparam medidas preventivas como monitoramento periódico da exposição, controle médico dirigido e capacitação — antecipando a ação em vez de esperar a ultrapassagem do limite.', ok: true,
+      why: 'Correta. O nível de ação existe justamente para que a intervenção comece antes de o limite ser atingido.' },
+    { t: 'É sinônimo de limite de tolerância, apenas com outra denominação.', ok: false,
+      why: 'Errada. É inferior ao limite e tem finalidade distinta: disparar prevenção antecipada.' },
+    { t: 'Abaixo do nível de ação nenhuma medida é necessária.', ok: false,
+      why: 'Errada. Medidas básicas de controle e reconhecimento de riscos permanecem.' },
+    { t: 'O nível de ação só se aplica a agentes químicos.', ok: false,
+      why: 'Errada. Aplica-se também a agentes físicos, como o ruído.' },
+    { t: 'Atingir o nível de ação obriga ao afastamento imediato do trabalhador.', ok: false,
+      why: 'Errada. Ele dispara medidas preventivas e de monitoramento, não afastamento automático.' }
+  ],
+  comentario: 'Nível de ação é o gatilho antecipado: abaixo do limite, mas já suficiente para acionar monitoramento, controle médico dirigido e capacitação. É o conceito que separa prevenção de fiscalização de número.',
+  pegadinha: 'Confundi-lo com o limite de tolerância elimina justamente a antecipação que ele representa.',
+  refs: ['NR-9', 'NHO — Fundacentro'] },
+
+{ id: 'q-2.9-040', tema: '2.9', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Trabalhador de mineração apresenta quadro neuropsiquiátrico com alterações de comportamento, seguido de sinais extrapiramidais com rigidez e alteração da marcha. Sobre a hipótese, é CORRETO afirmar:',
+  alts: [
+    { t: 'O manganismo deve ser considerado, com fase inicial neuropsiquiátrica seguida de quadro extrapiramidal, cuja evolução pode persistir mesmo após o afastamento da exposição — o que torna o reconhecimento precoce decisivo.', ok: true,
+      why: 'Correta. A sequência psiquiátrica seguida de parkinsonismo é característica, e a irreversibilidade parcial torna a detecção precoce essencial.' },
+    { t: 'O quadro corresponde a intoxicação por chumbo, cuja manifestação típica é extrapiramidal.', ok: false,
+      why: 'Errada. O saturnismo cursa com cólica, anemia e neuropatia motora periférica, não com quadro extrapiramidal.' },
+    { t: 'Sinais extrapiramidais afastam causa ocupacional, indicando doença degenerativa primária.', ok: false,
+      why: 'Errada. O manganismo é causa ocupacional reconhecida de parkinsonismo secundário.' },
+    { t: 'O afastamento da exposição garante reversão completa do quadro.', ok: false,
+      why: 'Errada. A reversão pode ser apenas parcial, com persistência de sinais.' },
+    { t: 'A ausência de tremor de repouso exclui o diagnóstico.', ok: false,
+      why: 'Errada. O quadro por manganês tem particularidades e não reproduz exatamente a apresentação da doença de Parkinson idiopática.' }
+  ],
+  comentario: 'Manganismo: fase psiquiátrica inicial, depois extrapiramidal, com reversão apenas parcial após o afastamento. Não confunda com saturnismo (cólica, anemia, punho caído) nem com mercúrio metálico (tremor, eretismo, gengivoestomatite).',
+  pegadinha: 'Atribuir todo parkinsonismo a doença degenerativa primária faz perder a única causa que teria intervenção preventiva.',
+  refs: ['Buschinelli — Toxicologia Ocupacional', 'Mendes, R. — Patologia do Trabalho'] },
+
+{ id: 'q-2.9-041', tema: '2.9', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Trabalhador de garimpo apresenta tremor de extremidades, irritabilidade, alterações de memória e gengivite com sialorreia. Sobre a hipótese, é CORRETO afirmar:',
+  alts: [
+    { t: 'A intoxicação por mercúrio metálico deve ser considerada, com a tríade de tremor, alterações neuropsiquiátricas e gengivoestomatite, sendo o monitoramento biológico feito preferencialmente por dosagem urinária.', ok: true,
+      why: 'Correta. A tríade é característica da exposição ao mercúrio metálico, e a excreção urinária é a via de monitoramento adequada para essa forma.' },
+    { t: 'O quadro corresponde a intoxicação por manganês, cuja marca é a gengivoestomatite.', ok: false,
+      why: 'Errada. O manganismo cursa com quadro psiquiátrico e extrapiramidal, sem a estomatite característica.' },
+    { t: 'A dosagem sanguínea é o método de escolha para monitorar exposição crônica ao mercúrio metálico.', ok: false,
+      why: 'Errada. Para exposição crônica ao mercúrio metálico o indicador urinário é o mais adequado.' },
+    { t: 'O tremor descrito é de repouso e caracteriza síndrome extrapiramidal.', ok: false,
+      why: 'Errada. O tremor da intoxicação mercurial é tipicamente de intenção e postural, não de repouso.' },
+    { t: 'A exposição em garimpo se dá apenas por via digestiva, pelo consumo de peixes.', ok: false,
+      why: 'Errada. No garimpo a exposição ocupacional relevante é por inalação de vapores durante a queima do amálgama.' }
+  ],
+  comentario: 'Mercúrio metálico: tremor de intenção, eretismo (irritabilidade, alterações de memória e personalidade) e gengivoestomatite. Exposição ocupacional por inalação de vapor; monitoramento por dosagem urinária.',
+  pegadinha: 'A confusão entre exposição ocupacional a vapor de mercúrio e exposição ambiental por metilmercúrio em peixes troca via, forma química e quadro clínico.',
+  refs: ['Buschinelli — Toxicologia Ocupacional', 'ACGIH — BEIs'] },
+
+{ id: 'q-2.9-042', tema: '2.9', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre a interpretação de resultados de monitoramento biológico em grupo de trabalhadores, é CORRETO afirmar:',
+  alts: [
+    { t: 'A análise deve considerar a distribuição dos resultados no grupo, e não apenas casos isolados — a elevação de vários trabalhadores aponta falha de controle coletivo, enquanto um resultado isolado discrepante sugere fator individual ou de tarefa específica.', ok: true,
+      why: 'Correta. O padrão do grupo distingue falha sistêmica de particularidade individual, e cada situação exige resposta diferente.' },
+    { t: 'Cada resultado deve ser analisado isoladamente, sem comparação com o grupo.', ok: false,
+      why: 'Errada. A comparação com o grupo é o que revela falha coletiva de controle.' },
+    { t: 'Resultados elevados em vários trabalhadores indicam suscetibilidade coletiva incomum.', ok: false,
+      why: 'Errada. Indicam falha de controle da exposição, não suscetibilidade.' },
+    { t: 'Um resultado isolado muito elevado deve ser descartado como erro laboratorial.', ok: false,
+      why: 'Errada. Deve ser investigado: pode revelar tarefa específica de maior exposição ou hábito de higiene inadequado.' },
+    { t: 'A média do grupo é o parâmetro adequado para decidir sobre intervenção.', ok: false,
+      why: 'Errada. A média mascara os valores altos, que são justamente os que exigem ação.' }
+  ],
+  comentario: 'Leia o grupo, não só o indivíduo: vários elevados = falha de controle coletivo; um isolado = investigar tarefa, hábito ou fator individual. E nunca decida pela média — ela esconde exatamente quem precisa de ação.',
+  pegadinha: 'Descartar o valor isolado alto como erro de laboratório elimina a pista que revelaria uma tarefa de alta exposição.',
+  refs: ['ACGIH — BEIs', 'Buschinelli — Toxicologia Ocupacional'] },
+
+{ id: 'q-2.9-043', tema: '2.9', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a exposição combinada a solventes e o consumo de bebida alcoólica pelo trabalhador, é CORRETO afirmar:',
+  alts: [
+    { t: 'O álcool compete pelas mesmas vias de biotransformação de vários solventes, podendo alterar a toxicidade e interferir na interpretação do monitoramento biológico — o que exige considerar o consumo na avaliação, sem transformar essa informação em juízo moral ou em motivo de discriminação.', ok: true,
+      why: 'Correta. A interação é farmacocinética e relevante, e o dado precisa ser colhido com cuidado clínico, não como falta a ser punida.' },
+    { t: 'O consumo de álcool não interfere na toxicidade nem no monitoramento de solventes.', ok: false,
+      why: 'Errada. A competição por vias metabólicas é bem descrita.' },
+    { t: 'Constatado o consumo, a alteração no monitoramento deve ser atribuída a ele, encerrando a investigação da exposição.', ok: false,
+      why: 'Errada. Atribuir ao trabalhador encerra a investigação do processo de trabalho, que é o objeto principal.' },
+    { t: 'A informação sobre consumo de álcool deve ser comunicada ao empregador.', ok: false,
+      why: 'Errada. É dado clínico protegido pelo sigilo.' },
+    { t: 'A interação entre álcool e solventes só ocorre em consumo abusivo.', ok: false,
+      why: 'Errada. A competição metabólica pode ocorrer também com consumo moderado próximo à exposição.' }
+  ],
+  comentario: 'Interferentes individuais — álcool, medicamentos, tabagismo, polimorfismos — explicam boa parte das discrepâncias no monitoramento biológico. São dados clínicos a considerar, sob sigilo, e nunca justificativa para parar de investigar a exposição.',
+  pegadinha: 'Usar o hábito do trabalhador para encerrar a investigação é o desvio que protege o processo produtivo e desprotege a pessoa.',
+  refs: ['Buschinelli — Toxicologia Ocupacional', 'ACGIH — BEIs', 'Código de Ética Médica'] }
+
+);

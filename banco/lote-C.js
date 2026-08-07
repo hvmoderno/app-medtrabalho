@@ -1,0 +1,185 @@
+/* Lote C — 5.2, 5.4, 5.5, 4.3, 3.2. Questões AUTORAIS. */
+window.BANCO = window.BANCO || [];
+window.BANCO.push(
+
+{ id: 'q-5.2-030', tema: '5.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Uma empresa contesta administrativamente a aplicação do nexo epidemiológico a benefício concedido a empregado, alegando que adota todas as medidas de proteção previstas. Sobre o argumento, é CORRETO afirmar:',
+  alts: [
+    { t: 'A alegação genérica de cumprimento de normas não basta: a contestação exige demonstrar, no caso concreto, a inexistência de relação entre o agravo e o trabalho, com elementos técnicos sobre a exposição real daquele trabalhador.', ok: true,
+      why: 'Correta. A presunção é relativa, mas afastá-la exige prova concreta sobre aquele trabalhador e aquela exposição, não declaração de conformidade documental.' },
+    { t: 'A apresentação dos documentos de saúde e segurança da empresa é suficiente para afastar o nexo.', ok: false,
+      why: 'Errada. Documento de conformidade não demonstra ausência de exposição no caso concreto.' },
+    { t: 'A presunção do nexo epidemiológico é absoluta e não admite contestação.', ok: false,
+      why: 'Errada. É relativa e existe procedimento administrativo próprio de contestação.' },
+    { t: 'Afastado o nexo epidemiológico, ficam automaticamente afastadas as demais formas de nexo.', ok: false,
+      why: 'Errada. Permanecem o nexo profissional ou do trabalho e o nexo técnico individual.' },
+    { t: 'A contestação suspende automaticamente o benefício até a decisão.', ok: false,
+      why: 'Errada. A contestação discute a natureza do benefício, não a sua manutenção imediata.' }
+  ],
+  comentario: 'Presunção relativa significa que se pode afastá-la — mas com prova concreta sobre aquele trabalhador. E mesmo afastado o epidemiológico, restam o nexo profissional e o individual, que seguem caminhos próprios.',
+  pegadinha: 'Confundir conformidade documental com prova de ausência de exposição é a defesa padrão nessas contestações.',
+  refs: ['Lei nº 8.213/1991 — art. 21-A', 'Decreto nº 3.048/1999'] },
+
+{ id: 'q-5.2-031', tema: '5.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Ao aplicar a classificação de Schilling a um caso de asma em trabalhador de padaria exposto a farinha, é CORRETO afirmar:',
+  alts: [
+    { t: 'Quando a asma é desencadeada por sensibilização a agente presente exclusivamente no trabalho, o trabalho é causa necessária, enquadrando-se no grupo em que sem a exposição a doença não existiria naquela forma.', ok: true,
+      why: 'Correta. Asma ocupacional por sensibilização a agente específico do trabalho tem o trabalho como causa necessária daquele quadro.' },
+    { t: 'Toda asma em trabalhador exposto se enquadra como doença comum agravada pelo trabalho.', ok: false,
+      why: 'Errada. É preciso distinguir asma ocupacional (sensibilização a agente do trabalho) de asma preexistente agravada pelo trabalho.' },
+    { t: 'A classificação de Schilling não se aplica a doenças respiratórias.', ok: false,
+      why: 'Errada. É classificação geral, aplicável a qualquer agravo relacionado ao trabalho.' },
+    { t: 'A existência de atopia prévia impede o enquadramento como doença ocupacional.', ok: false,
+      why: 'Errada. Atopia é fator de suscetibilidade e, quando muito, concausa.' },
+    { t: 'A melhora nos períodos de férias é irrelevante para a classificação.', ok: false,
+      why: 'Errada. A relação temporal com o afastamento é um dos elementos que sustentam o nexo.' }
+  ],
+  comentario: 'Distinção fina e muito cobrada: asma OCUPACIONAL, por sensibilização a agente do trabalho (Schilling I), versus asma preexistente AGRAVADA pelo trabalho (Schilling III). A pergunta é: sem essa exposição, existiria esse quadro?',
+  pegadinha: 'Jogar toda asma em trabalhador no grupo de "doença comum agravada" apaga a asma ocupacional verdadeira.',
+  refs: ['Diretriz AMB — Asma e Trabalho', 'Mendes, R. — Patologia do Trabalho'] },
+
+{ id: 'q-5.4-050', tema: '5.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Em perícia de acidente do trabalho, o perito precisa se manifestar sobre a existência de nexo entre o evento e a sequela apresentada. Sobre a metodologia, é CORRETO afirmar:',
+  alts: [
+    { t: 'O raciocínio deve estabelecer a compatibilidade entre o mecanismo do trauma e a lesão apresentada, a temporalidade entre o evento e o quadro, e a análise da documentação assistencial contemporânea ao acidente — sendo esta última frequentemente decisiva.', ok: true,
+      why: 'Correta. Os registros feitos na época do acidente são a prova mais confiável do que ocorreu e do que se encontrou.' },
+    { t: 'A ausência de documentação contemporânea impede qualquer conclusão sobre nexo.', ok: false,
+      why: 'Errada. Dificulta, mas há outros elementos: mecanismo, temporalidade, evolução e testemunhos documentados.' },
+    { t: 'A compatibilidade entre mecanismo e lesão é irrelevante quando há registro de acidente.', ok: false,
+      why: 'Errada. É elemento central: nem toda lesão apresentada decorre do mecanismo descrito.' },
+    { t: 'A conclusão deve seguir o relato do periciando quando não houver documentação em contrário.', ok: false,
+      why: 'Errada. O relato é elemento a ser confrontado com os demais, não conclusão automática.' },
+    { t: 'Sequelas que se manifestam tardiamente nunca guardam nexo com o evento.', ok: false,
+      why: 'Errada. Há sequelas de instalação progressiva, como artrose pós-traumática.' }
+  ],
+  comentario: 'Nexo em acidente: mecanismo compatível com a lesão, temporalidade e documentação contemporânea. Esta última costuma decidir — o que torna o registro no atendimento inicial um ato de enorme consequência futura.',
+  pegadinha: 'Descartar sequela de manifestação tardia ignora quadros de instalação progressiva pós-traumática.',
+  refs: ['Resoluções do CFM sobre perícia médica', 'Tabela brasileira para apuração do dano corporal — ABMLPM'] },
+
+{ id: 'q-5.4-051', tema: '5.4', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre a perícia realizada por meio de análise documental, sem exame presencial do periciando, é CORRETO afirmar:',
+  alts: [
+    { t: 'É modalidade admissível em hipóteses específicas, como avaliação de período pretérito ou impossibilidade de exame, mas suas limitações devem ser expressamente registradas no laudo, e ela não substitui o exame quando este é possível e necessário.', ok: true,
+      why: 'Correta. Há situações em que só resta a análise documental, e a honestidade técnica exige declarar a limitação.' },
+    { t: 'A perícia documental tem o mesmo valor probatório da perícia com exame presencial em qualquer hipótese.', ok: false,
+      why: 'Errada. O exame presencial acrescenta elementos que a documentação não fornece.' },
+    { t: 'A perícia documental é vedada em qualquer circunstância.', ok: false,
+      why: 'Errada. É admissível em hipóteses específicas, como avaliação retrospectiva ou falecimento do periciando.' },
+    { t: 'As limitações da análise documental não precisam constar do laudo.', ok: false,
+      why: 'Errada. Declarar a limitação é condição de validade técnica da conclusão.' },
+    { t: 'Havendo documentação abundante, o exame presencial torna-se dispensável.', ok: false,
+      why: 'Errada. Volume de documentos não substitui a avaliação clínica quando ela é possível e pertinente.' }
+  ],
+  comentario: 'Perícia documental é recurso, não atalho. Cabe quando o exame é impossível ou quando se avalia período pretérito — e sempre com a limitação declarada. Volume de papel não substitui exame.',
+  pegadinha: 'Equiparar as duas modalidades em valor probatório ignora o que o exame acrescenta.',
+  refs: ['Resoluções do CFM sobre perícia médica', 'Código de Ética Médica'] },
+
+{ id: 'q-5.5-050', tema: '5.5', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Trabalhador apresenta sequela de amputação de membro inferior e recebeu prótese com boa adaptação funcional. Sobre a avaliação da incapacidade, é CORRETO afirmar:',
+  alts: [
+    { t: 'A avaliação considera a funcionalidade com o dispositivo em uso, mas também as limitações remanescentes, a necessidade de manutenção e substituição da prótese e as exigências específicas da atividade — a boa adaptação reduz, mas não elimina, a repercussão.', ok: true,
+      why: 'Correta. Avaliar com o dispositivo em uso é correto, e ignorar limitações remanescentes e dependência de manutenção seria incompleto.' },
+    { t: 'Com prótese bem adaptada, cessa qualquer repercussão a ser reconhecida.', ok: false,
+      why: 'Errada. Persistem limitações e dependência do dispositivo, além do dano anatômico consolidado.' },
+    { t: 'A avaliação deve ser feita sem o dispositivo, para medir o dano puro.', ok: false,
+      why: 'Errada. A funcionalidade real é a que se exerce com os recursos disponíveis; avaliar sem prótese superestima a incapacidade cotidiana.' },
+    { t: 'A necessidade futura de manutenção e substituição da prótese é irrelevante na avaliação.', ok: false,
+      why: 'Errada. É elemento de repercussão continuada e de dependência.' },
+    { t: 'A amputação implica sempre incapacidade omniprofissional.', ok: false,
+      why: 'Errada. A abrangência depende das exigências da atividade e da funcionalidade obtida.' }
+  ],
+  comentario: 'Avalie a funcionalidade COM o dispositivo — é assim que a pessoa vive — sem esquecer o que permanece limitado e a dependência de manutenção e substituição. Nem "com prótese está resolvido", nem "amputação é incapacidade total".',
+  pegadinha: 'Avaliar sem o dispositivo mede um dano que não corresponde ao cotidiano do trabalhador.',
+  refs: ['Tabela brasileira para apuração do dano corporal — ABMLPM', 'CIF'] },
+
+{ id: 'q-5.5-051', tema: '5.5', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre a avaliação de incapacidade em doenças de curso flutuante, como algumas condições reumatológicas e psiquiátricas, é CORRETO afirmar:',
+  alts: [
+    { t: 'A flutuação exige avaliar o padrão ao longo do tempo, e não apenas o estado no dia do exame, considerando frequência e duração dos períodos de agudização e sua compatibilidade com as exigências da atividade.', ok: true,
+      why: 'Correta. Avaliar apenas o momento pode captar um período de remissão e concluir por capacidade que não se sustenta ao longo do ano.' },
+    { t: 'O estado clínico no dia do exame é suficiente para concluir sobre a capacidade.', ok: false,
+      why: 'Errada. Em curso flutuante, o dia do exame pode não representar o padrão.' },
+    { t: 'Doenças de curso flutuante não geram incapacidade reconhecível.', ok: false,
+      why: 'Errada. A recorrência das agudizações pode ser incompatível com a continuidade da atividade.' },
+    { t: 'A avaliação deve sempre coincidir com período de agudização, para captar o pior estado.', ok: false,
+      why: 'Errada. Isso enviesaria no sentido oposto; o que se busca é o padrão, não o extremo.' },
+    { t: 'Períodos de remissão comprovam a inexistência da doença.', ok: false,
+      why: 'Errada. Remissão faz parte do curso natural de diversas condições.' }
+  ],
+  comentario: 'Em curso flutuante, o que importa é o padrão — frequência, duração e previsibilidade das crises — confrontado com as exigências da atividade. O dia do exame é uma amostra, não o retrato.',
+  pegadinha: 'Concluir por capacidade em dia de remissão é o erro que gera alta pericial seguida de novo afastamento em semanas.',
+  refs: ['Tabela brasileira para apuração do dano corporal — ABMLPM', 'Lei nº 8.213/1991'] },
+
+{ id: 'q-4.3-030', tema: '4.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Trabalhador de aviário apresenta, após meses de atividade, tosse seca, dispneia e febre baixa recorrentes que melhoram nos fins de semana e recidivam no retorno. A tomografia mostra padrão de vidro fosco com nódulos centrolobulares. Sobre a hipótese, é CORRETO afirmar:',
+  alts: [
+    { t: 'A pneumonite de hipersensibilidade deve ser considerada, resultante de resposta imunológica a antígenos orgânicos inalados, com padrão temporal ligado à exposição e evolução para fibrose se a exposição persistir — o afastamento do antígeno é a medida central.', ok: true,
+      why: 'Correta. O padrão de melhora no afastamento e recidiva no retorno, somado à imagem, é característico, e a manutenção da exposição leva à forma crônica fibrosante.' },
+    { t: 'Trata-se de asma ocupacional, cuja imagem típica é o padrão de vidro fosco com nódulos centrolobulares.', ok: false,
+      why: 'Errada. A asma cursa com obstrução variável e não com esse padrão tomográfico.' },
+    { t: 'A melhora nos fins de semana afasta a origem ocupacional.', ok: false,
+      why: 'Errada, e inverte: é justamente o traço que aponta para a exposição no trabalho.' },
+    { t: 'O tratamento se resume a corticoide, com manutenção do trabalhador na mesma exposição.', ok: false,
+      why: 'Errada. Sem afastar o antígeno o quadro recidiva e progride para fibrose.' },
+    { t: 'A pneumonite de hipersensibilidade não tem relação com exposição ocupacional a material orgânico.', ok: false,
+      why: 'Errada. Exposições a antígenos orgânicos em aviários, silos e cultivo de cogumelos são causas ocupacionais clássicas.' }
+  ],
+  comentario: 'Pneumonite de hipersensibilidade: antígeno orgânico, quadro que melhora no afastamento e recidiva no retorno, imagem com vidro fosco e nódulos centrolobulares, e progressão para fibrose se a exposição continuar. Afastar o antígeno é o tratamento.',
+  pegadinha: 'Confundir com asma ocupacional troca o mecanismo, a imagem e a conduta.',
+  refs: ['Santos, U.P. — Pneumologia Ocupacional', 'Mendes, R. — Patologia do Trabalho'] },
+
+{ id: 'q-4.3-031', tema: '4.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a espirometria no acompanhamento de trabalhadores expostos a poeiras, é CORRETO afirmar:',
+  alts: [
+    { t: 'A espirometria complementa a avaliação, mas pode estar normal em fases iniciais de pneumoconiose, cujo diagnóstico se apoia na história de exposição e na imagem — de modo que resultado normal não exclui a doença nem dispensa o acompanhamento.', ok: true,
+      why: 'Correta. Pneumoconiose se diagnostica por exposição e imagem; a função pulmonar mede repercussão, que pode ser tardia.' },
+    { t: 'Espirometria normal exclui pneumoconiose.', ok: false,
+      why: 'Errada. Em fases iniciais a função pode estar preservada apesar de alterações radiológicas.' },
+    { t: 'A espirometria é o exame de escolha para o diagnóstico de pneumoconiose.', ok: false,
+      why: 'Errada. O diagnóstico se apoia em história ocupacional e imagem; a espirometria avalia repercussão funcional.' },
+    { t: 'Padrão obstrutivo em exposto a poeira afasta relação ocupacional.', ok: false,
+      why: 'Errada. Há quadros obstrutivos ocupacionais, como bronquite industrial e DPOC ocupacional.' },
+    { t: 'A qualidade técnica do exame não influencia a interpretação.', ok: false,
+      why: 'Errada. Espirometria mal executada produz resultados não interpretáveis e é causa comum de erro.' }
+  ],
+  comentario: 'Divisão de papéis: história ocupacional e imagem diagnosticam a pneumoconiose; espirometria mede a repercussão funcional, que pode vir depois. Normal não exclui — e a qualidade técnica do exame é condição de interpretação.',
+  pegadinha: 'Usar espirometria normal para excluir pneumoconiose troca o exame de repercussão pelo exame de diagnóstico.',
+  refs: ['Santos, U.P. — Pneumologia Ocupacional', 'NR-7'] },
+
+{ id: 'q-3.2-040', tema: '3.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Uma empresa de logística implanta sistema de metas individuais medidas em tempo real, com ranking visível e alertas automáticos quando o trabalhador fica abaixo do ritmo esperado. Sobre a organização do trabalho descrita, é CORRETO afirmar:',
+  alts: [
+    { t: 'O monitoramento contínuo com metas individualizadas e ritmo imposto por sistema reduz a autonomia e a possibilidade de regulação da própria atividade, configurando fator de risco psicossocial e ergonômico que deve integrar o inventário de riscos.', ok: true,
+      why: 'Correta. Ritmo ditado por sistema com vigilância contínua elimina a margem de regulação — exatamente a combinação de alta demanda com baixo controle.' },
+    { t: 'Sistemas de medição em tempo real são neutros do ponto de vista de saúde, por apenas registrarem o desempenho.', ok: false,
+      why: 'Errada. A vigilância contínua e o alerta automático alteram o comportamento e a experiência do trabalho.' },
+    { t: 'O ranking visível é medida motivacional sem repercussão sobre a saúde.', ok: false,
+      why: 'Errada. Exposição pública do desempenho é fator de risco psicossocial reconhecido.' },
+    { t: 'Riscos psicossociais decorrentes de sistemas de gestão não integram o inventário de riscos.', ok: false,
+      why: 'Errada. Fatores psicossociais integram o gerenciamento de riscos ocupacionais.' },
+    { t: 'A existência de pausas previstas neutraliza integralmente o efeito do monitoramento contínuo.', ok: false,
+      why: 'Errada. Pausa prevista mas inviabilizada pelo ritmo e pelo alerta não produz recuperação.' }
+  ],
+  comentario: 'Gestão algorítmica do ritmo é o risco psicossocial contemporâneo: mede tudo, alerta em tempo real e elimina a margem de regulação. Entra no inventário de riscos como qualquer outro fator.',
+  pegadinha: 'A alegação de neutralidade do sistema — "ele só registra" — ignora que medir continuamente muda o trabalho medido.',
+  refs: ['NR-17', 'NR-1', 'De Lucca — Fatores Psicossociais e Saúde Mental no Trabalho'] },
+
+{ id: 'q-3.2-041', tema: '3.2', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre a participação dos trabalhadores na análise ergonômica do trabalho, é CORRETO afirmar:',
+  alts: [
+    { t: 'A verbalização do trabalhador durante a observação da atividade é fonte essencial, pois revela as estratégias de regulação e as dificuldades que a observação isolada não capta — sendo componente metodológico, e não cortesia.', ok: true,
+      why: 'Correta. O trabalhador explica por que faz diferente do prescrito, e é nessa explicação que aparecem os determinantes do risco.' },
+    { t: 'A participação do trabalhador compromete a objetividade da análise.', ok: false,
+      why: 'Errada. Sem ela a análise fica restrita ao prescrito e ao observável.' },
+    { t: 'Basta aplicar questionário, dispensando a observação da atividade.', ok: false,
+      why: 'Errada. Questionário e observação são complementares; a análise da atividade exige ver o trabalho acontecendo.' },
+    { t: 'A validação das recomendações com os trabalhadores é etapa dispensável.', ok: false,
+      why: 'Errada. Recomendação não validada com quem executa costuma ser inviável na prática.' },
+    { t: 'A análise ergonômica se encerra na entrega do relatório.', ok: false,
+      why: 'Errada. Ela se completa na transformação da situação e no acompanhamento dos resultados.' }
+  ],
+  comentario: 'Verbalização é método, não gentileza: é ela que revela por que o trabalho real difere do prescrito. E a análise só termina quando a situação muda — relatório entregue e nada alterado é análise inacabada.',
+  pegadinha: 'Tratar a participação como ameaça à objetividade elimina a única fonte sobre a atividade real.',
+  refs: ['NR-17', 'Couto — Ergonomia'] }
+
+);
