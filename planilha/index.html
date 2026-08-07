@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Log de erros</title>
+<link rel="stylesheet" href="../assets/app.css">
+<style>
+  body { padding-bottom: 40px; }
+
+  .grade { overflow-x: auto; -webkit-overflow-scrolling: touch;
+    border: 1px solid var(--borda); border-radius: var(--raio); background: var(--superficie); }
+  table.plan { border-collapse: collapse; width: 100%; min-width: 940px; font-size: .86rem; }
+  table.plan th, table.plan td { border: 1px solid var(--borda); padding: 0; vertical-align: middle; }
+  table.plan thead th { background: var(--superficie-2); padding: 7px 8px; font-size: .74rem;
+    text-transform: uppercase; letter-spacing: .03em; color: var(--texto-fraco);
+    position: sticky; top: 0; z-index: 2; text-align: left; white-space: nowrap; }
+  table.plan tbody td input, table.plan tbody td select, table.plan tbody td textarea {
+    border: none; border-radius: 0; background: transparent; width: 100%; min-height: 38px;
+    padding: 6px 8px; font-size: .86rem; }
+  table.plan tbody td textarea { resize: vertical; min-height: 38px; line-height: 1.4; }
+  table.plan tbody td input:focus, table.plan tbody td select:focus, table.plan tbody td textarea:focus {
+    outline: 2px solid var(--acento); outline-offset: -2px; background: var(--superficie); }
+  table.plan tbody tr.pendente { background: color-mix(in srgb, var(--erro-suave) 55%, transparent); }
+  table.plan tbody tr.revisado { background: color-mix(in srgb, var(--ok-suave) 45%, transparent); }
+  table.plan td.num { text-align: center; color: var(--texto-fraco); font-size: .78rem;
+    width: 34px; padding: 0 4px; }
+  table.plan td.acao { width: 38px; text-align: center; }
+  table.plan td.acao button { min-height: 30px; padding: 2px 7px; border: none;
+    background: transparent; color: var(--texto-fraco); font-size: 1rem; }
+  table.plan td.acao button:hover { color: var(--erro); background: transparent; }
+
+  .resumo-bar { height: 8px; background: var(--superficie-2); border-radius: 999px; overflow: hidden;
+    min-width: 70px; }
+  .resumo-bar > i { display: block; height: 100%; background: var(--erro); }
+  td.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+</style>
+</head>
+<body>
+<div class="envolt">
+
+  <div class="cartao">
+    <h1 style="margin:0 0 4px">Log de erros</h1>
+    <p class="pequeno fraco" style="margin:0">Registre aqui toda questão que você errar.
+      As colunas com lista suspensa usam a taxonomia do edital. O resumo abaixo recalcula
+      sozinho e mostra onde estão seus erros ainda não revisados.</p>
+    <div class="linha" style="margin-top:12px">
+      <button class="primario" id="btNova">+ Nova linha</button>
+      <button id="btXlsx">Exportar .xlsx</button>
+      <button id="btCsv">Exportar .csv</button>
+      <span style="flex:1"></span>
+      <select id="fFiltro" style="width:auto;min-width:150px">
+        <option value="todos">todas as linhas</option>
+        <option value="pendentes">só as não revisadas</option>
+        <option value="revisadas">só as revisadas</option>
+      </select>
+    </div>
+    <div class="linha pequeno" id="contadores" style="margin-top:10px"></div>
+  </div>
+
+  <div class="grade">
+    <table class="plan">
+      <thead><tr>
+        <th></th><th>Data</th><th>Tema do edital</th><th>Fonte</th>
+        <th>Descrição do erro</th><th>Motivo</th><th>Revisei?</th><th>Data revisão</th><th></th>
+      </tr></thead>
+      <tbody id="corpo"></tbody>
+    </table>
+  </div>
+
+  <div class="cartao" style="margin-top:12px">
+    <h2 style="margin-top:0">Resumo por tema do edital</h2>
+    <p class="pequeno fraco">Recalcula automaticamente. Ordenado pelos temas com mais
+      erros <b>pendentes</b> — é por onde você deve começar a revisar.</p>
+    <div class="tabela-rolagem">
+      <table><thead><tr><th>Cód.</th><th>Tema</th><th class="n">Erros</th>
+        <th class="n">Pendentes</th><th class="n">% pendente</th><th></th></tr></thead>
+        <tbody id="resumoTema"></tbody></table>
+    </div>
+  </div>
+
+  <div class="cartao">
+    <h2 style="margin-top:0">Resumo por motivo</h2>
+    <div class="tabela-rolagem">
+      <table><thead><tr><th>Motivo</th><th class="n">Erros</th><th class="n">Pendentes</th>
+        <th class="n">% do total</th></tr></thead><tbody id="resumoMotivo"></tbody></table>
+    </div>
+  </div>
+
+</div>
+
+<script src="../core/edital.js"></script>
+<script src="../core/storage.js"></script>
+<script src="../core/xlsx.js"></script>
+<script src="planilha.js"></script>
+</body>
+</html>

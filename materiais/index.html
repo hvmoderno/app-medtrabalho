@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Materiais</title>
+<link rel="stylesheet" href="../assets/app.css">
+<link rel="stylesheet" href="guia.css">
+<style>
+  body { padding-bottom: 40px; }
+  .lista .sec { margin: 18px 0 6px; font-size: .78rem; text-transform: uppercase;
+    letter-spacing: .04em; color: var(--texto-fraco); font-weight: 700; }
+  .item { display: flex; gap: 10px; align-items: center; padding: 10px 12px;
+    border: 1px solid var(--borda); border-radius: var(--raio); background: var(--superficie);
+    margin-bottom: 6px; cursor: pointer; text-align: left; width: 100%; min-height: 0; }
+  .item:disabled { cursor: default; opacity: .55; }
+  .item .cod { flex: 0 0 34px; font-weight: 700; font-size: .82rem; color: var(--acento); }
+  .item .nome { flex: 1; font-size: .92rem; line-height: 1.35; }
+  .item .est { flex: 0 0 auto; }
+  .voltar { margin-bottom: 12px; }
+</style>
+</head>
+<body>
+<div class="envolt">
+
+  <div id="telaLista">
+    <div class="cartao">
+      <h1 style="margin:0 0 4px">Guias de revisão por tema</h1>
+      <p class="pequeno fraco" style="margin:0">Um guia por tema do edital: tabelas,
+        fluxogramas, pegadinhas de prova e mnemônicos. Objetivo e denso — feito para
+        caber num bloco de 30 minutos.</p>
+      <div class="barra" style="margin:12px 0 6px"><i id="barraLidos" style="width:0"></i></div>
+      <div class="pequeno fraco" id="resumoLidos"></div>
+    </div>
+    <div class="lista" id="lista"></div>
+  </div>
+
+  <div id="telaGuia" class="oculto">
+    <div class="linha voltar">
+      <button id="btVoltar">← Todos os temas</button>
+      <span style="flex:1"></span>
+      <button id="btLido" class="primario">Marcar como revisado</button>
+    </div>
+    <div class="cartao guia" id="conteudoGuia"></div>
+    <div class="linha voltar" style="margin-top:12px">
+      <button id="btVoltar2">← Todos os temas</button>
+      <span style="flex:1"></span>
+      <button id="btQuestoes">Ir para as questões deste tema →</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="../core/edital.js"></script>
+<script src="../core/storage.js"></script>
+<script src="guias/indice.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  var elLista = document.getElementById('lista');
+  var telaLista = document.getElementById('telaLista');
+  var telaGuia = document.getElementById('telaGuia');
+  var elGuia = document.getElementById('conteudoGuia');
+  var atual = null;
+
+  function dados() {
+    var m = Store.get('materiais') || {};
+    if (!m.lidos) m.lidos = {};
+    return m;
+  }
+
+  function temGuia(id) { return GUIAS.indexOf(id) !== -1; }
+
+  function renderLista() {
+    var m = dados();
+    var comGuia = EDITAL.temas.filter(function (t) { return temGuia(t.id); });
+    var lidos = comGuia.filter(function (t) { return m.lidos[t.id]; }).length;
+
+    document.getElementById('barraLidos').style.width =
+      (comGuia.length ? lidos / comGuia.length * 100 : 0) + '%';
+    document.getElementById('resumoLidos').innerHTML =
+      '<b>' + lidos + '</b> de <b>' + comGuia.length + '</b> guias revisados · ' +
+      GUIAS.length + ' de ' + EDITAL.temas.length + ' temas já têm guia escrito';
+
+    elLista.innerHTML = '';
+    EDITAL.secoes.forEach(function (sec) {
+      var h = document.createElement('div');
+      h.className = 'sec';
+      h.textContent = 'Seção ' + sec.id + ' — ' + sec.nome;
+      elLista.appendChild(h);
+
+      EDITAL.daSecao(sec.id).forEach(function (t) {
+        var b = document.createElement('button');
+        b.className = 'item';
+        b.disabled = !temGuia(t.id);
+        var cod = document.createElement('span');
+        cod.className = 'cod'; cod.textContent = t.id;
+        var nome = document.createElement('span');
+        nome.className = 'nome'; nome.textContent = t.nome;
+        var est = document.createElement('span');
+        est.className = 'est';
+        if (!temGuia(t.id)) {
+          est.innerHTML = '<span class="rotulo cinza">em produção</span>';
+        } else if (m.lidos[t.id]) {
+          est.innerHTML = '<span class="rotulo ok">revisado</span>';
+        } else {
+          est.innerHTML = '<span class="rotulo">abrir</span>';
+        }
+        b.appendChild(cod); b.appendChild(nome); b.appendChild(est);
+        b.onclick = function () { abrir(t.id); };
+        elLista.appendChild(b);
+      });
+    });
+  }
+
+  function abrir(id) {
+    atual = id;
+    elGuia.innerHTML = '<p class="fraco">carregando…</p>';
+    telaLista.classList.add('oculto');
+    telaGuia.classList.remove('oculto');
+    window.scrollTo(0, 0);
+
+    fetch('guias/' + id + '.html').then(function (r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.text();
+    }).then(function (html) {
+      elGuia.innerHTML = html;
+      atualizarBotaoLido();
+    }).catch(function (e) {
+      elGuia.innerHTML = '<div class="faixa erro">Não consegui carregar o guia do tema ' +
+        id + '. ' + e.message + '</div>';
+      Store.avisar('erro', 'Falha ao carregar o guia do tema ' + id + '.', e.message);
+    });
+
+    Store.patch('materiais', function (m) { m = m || {}; m.ultimo = id; return m; });
+  }
+
+  function atualizarBotaoLido() {
+    var m = dados();
+    var b = document.getElementById('btLido');
+    if (m.lidos[atual]) {
+      b.textContent = 'Revisado ✓ (desmarcar)';
+      b.className = '';
+    } else {
+      b.textContent = 'Marcar como revisado';
+      b.className = 'primario';
+    }
+  }
+
+  document.getElementById('btLido').onclick = function () {
+    Store.patch('materiais', function (m) {
+      m = m || {}; if (!m.lidos) m.lidos = {};
+      if (m.lidos[atual]) { delete m.lidos[atual]; } else { m.lidos[atual] = Date.now(); }
+      return m;
+    });
+    atualizarBotaoLido();
+  };
+
+  function voltar() {
+    telaGuia.classList.add('oculto');
+    telaLista.classList.remove('oculto');
+    renderLista();
+    window.scrollTo(0, 0);
+  }
+  document.getElementById('btVoltar').onclick = voltar;
+  document.getElementById('btVoltar2').onclick = voltar;
+
+  document.getElementById('btQuestoes').onclick = function () {
+    // guarda o filtro e manda o shell trocar de aba
+    Store.patch('questoes', function (q) {
+      q = q || {}; if (!q.respostas) q.respostas = {};
+      q.ultimo = { tema: atual, modo: 'todas', idx: 0 };
+      return q;
+    });
+    try {
+      if (window.parent && window.parent !== window) { window.parent.location.hash = 'questoes'; }
+    } catch (e) { Store.avisar('aviso', 'Abra a aba Questões — o filtro já está no tema ' + atual + '.'); }
+  };
+
+  Store.init().then(function () {
+    renderLista();
+    var m = dados();
+    if (m.ultimo && temGuia(m.ultimo)) { /* fica na lista; abrir é escolha do usuário */ }
+  });
+})();
+</script>
+</body>
+</html>

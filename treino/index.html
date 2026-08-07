@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Treino</title>
+<link rel="stylesheet" href="../assets/app.css">
+<style>
+  body { padding-bottom: 40px; }
+
+  .hud { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; font-size: .85rem; }
+  .hud span { background: var(--superficie-2); padding: 4px 10px; border-radius: 999px; white-space: nowrap; }
+  .hud b { color: var(--acento); }
+  .vidas { letter-spacing: 2px; font-size: 1rem; }
+  .vidas .cheia { color: var(--erro); }
+  .vidas .vazia { opacity: .28; }
+
+  .trilha .sec { margin: 18px 0 6px; font-size: .78rem; text-transform: uppercase;
+    letter-spacing: .04em; color: var(--texto-fraco); font-weight: 700; }
+  .tema-linha { border: 1px solid var(--borda); border-radius: var(--raio);
+    background: var(--superficie); padding: 10px 12px; margin-bottom: 6px; }
+  .tema-linha .cab { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; }
+  .tema-linha .cab .cod { font-weight: 700; color: var(--acento); font-size: .84rem; flex: 0 0 auto; }
+  .tema-linha .cab .nome { flex: 1; font-size: .9rem; }
+  .fases { display: flex; gap: 6px; flex-wrap: wrap; }
+  .fases button { width: 44px; height: 44px; min-height: 44px; padding: 0; border-radius: 50%;
+    font-weight: 700; font-size: .85rem; }
+  .fases button.feita { background: var(--ok); border-color: var(--ok); color: #fff; }
+  .fases button.atual { border-color: var(--acento); border-width: 2px; color: var(--acento); }
+  .fases button:disabled { opacity: .35; }
+
+  .exerc { font-size: 1rem; line-height: 1.55; margin-bottom: 14px; }
+  .opcoes { display: grid; gap: 8px; }
+  .opcoes.duplas { grid-template-columns: 1fr 1fr; }
+  .opcoes button { text-align: left; padding: 11px 12px; line-height: 1.45; font-size: .93rem; }
+  .opcoes button.certa { border-color: var(--ok); background: var(--ok-suave); }
+  .opcoes button.errada { border-color: var(--erro); background: var(--erro-suave); }
+
+  .memoria { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+  .memoria button { min-height: 78px; font-size: .78rem; line-height: 1.35; padding: 8px;
+    text-align: left; align-items: flex-start; }
+  .memoria button.virada { border-color: var(--acento); background: var(--acento-suave); }
+  .memoria button.par { border-color: var(--ok); background: var(--ok-suave); opacity: .55; }
+
+  .mnemo { background: var(--acento-suave); border: 1px solid var(--acento); border-radius: var(--raio);
+    padding: 14px; margin-bottom: 12px; }
+  .mnemo .tit { display: block; font-weight: 700; font-size: .74rem; text-transform: uppercase;
+    letter-spacing: .05em; color: var(--acento); margin-bottom: 6px; }
+  .mnemo .sigla { font-weight: 800; letter-spacing: .06em; font-size: 1.1rem;
+    color: var(--acento); display: block; margin-bottom: 4px; }
+
+  .feedback { padding: 11px 13px; border-radius: var(--raio); margin-top: 12px; font-size: .9rem;
+    border: 1px solid; }
+  .feedback.ok { background: var(--ok-suave); border-color: var(--ok); }
+  .feedback.nao { background: var(--erro-suave); border-color: var(--erro); }
+  .feedback b { display: block; margin-bottom: 3px; }
+
+  .barra-fase { height: 8px; background: var(--superficie-2); border-radius: 999px;
+    overflow: hidden; margin-bottom: 12px; }
+  .barra-fase > i { display: block; height: 100%; background: var(--ok); }
+</style>
+</head>
+<body>
+<div class="envolt" id="raiz"></div>
+
+<script src="../core/edital.js"></script>
+<script src="../core/gabarito.js"></script>
+<script src="../core/banco-loader.js"></script>
+<script src="../core/storage.js"></script>
+<script src="treino.js"></script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cronograma</title>
+<link rel="stylesheet" href="../assets/app.css">
+<style>
+  body { padding-bottom: 40px; }
+  .resumo { display: flex; gap: 6px; flex-wrap: wrap; font-size: .82rem; margin-top: 8px; }
+  .resumo span { background: var(--superficie-2); padding: 3px 9px; border-radius: 999px; }
+  .resumo b { color: var(--acento); }
+
+  details.semana { border: 1px solid var(--borda); border-radius: var(--raio);
+    background: var(--superficie); margin-bottom: 8px; overflow: hidden; }
+  details.semana > summary {
+    padding: 11px 13px; cursor: pointer; list-style: none; display: flex;
+    align-items: center; gap: 8px; flex-wrap: wrap; font-size: .93rem;
+  }
+  details.semana > summary::-webkit-details-marker { display: none; }
+  details.semana > summary::before { content: '▸'; color: var(--texto-fraco); }
+  details.semana[open] > summary::before { content: '▾'; }
+  details.semana > summary .sem { font-weight: 650; }
+  details.semana .corpo { padding: 0 13px 12px; }
+  details.semana.completa > summary .sem { color: var(--ok); }
+
+  .mini { flex: 0 0 74px; height: 6px; }
+
+  .dia { border-top: 1px solid var(--borda); padding: 9px 0 4px; }
+  .dia > .cab { font-size: .78rem; color: var(--texto-fraco); text-transform: uppercase;
+    letter-spacing: .04em; margin-bottom: 5px; }
+  .dia.hoje > .cab { color: var(--acento); font-weight: 700; }
+  .dia.hoje { background: var(--acento-suave); margin: 0 -13px; padding-left: 13px; padding-right: 13px; }
+
+  label.bloco { display: flex; gap: 9px; align-items: flex-start; padding: 6px 0;
+    cursor: pointer; font-size: .9rem; line-height: 1.45; }
+  label.bloco input { flex: 0 0 auto; width: 20px; height: 20px; margin: 2px 0 0; min-height: 0; }
+  label.bloco .per { flex: 0 0 46px; font-size: .74rem; color: var(--texto-fraco);
+    text-transform: uppercase; padding-top: 3px; }
+  label.bloco .conteudo { flex: 1; }
+  label.bloco .det { display: block; font-size: .82rem; color: var(--texto-fraco); margin-top: 2px; }
+  label.bloco.feito .conteudo > b { text-decoration: line-through; opacity: .55; }
+
+  .tag { font-size: .68rem; padding: 1px 6px; border-radius: 4px; margin-right: 5px;
+    vertical-align: 1px; font-weight: 700; letter-spacing: .03em; }
+  .t-teoria { background: var(--acento-suave); color: var(--acento); }
+  .t-questoes { background: var(--ok-suave); color: var(--ok); }
+  .t-revisao, .t-flashcards { background: var(--superficie-2); color: var(--texto-fraco); }
+  .t-simulado, .t-revisao-simulado { background: var(--alerta-suave); color: var(--alerta); }
+  .t-reta-final { background: var(--erro-suave); color: var(--erro); }
+</style>
+</head>
+<body>
+<div class="envolt">
+
+  <div class="cartao">
+    <div class="linha">
+      <h1 style="margin:0;flex:1">Cronograma até a prova</h1>
+      <button id="btHoje">Ir para hoje</button>
+    </div>
+    <p class="pequeno fraco" style="margin:6px 0 0" id="linhaTopo"></p>
+    <div class="barra" style="margin:10px 0 6px"><i id="barraGeral" style="width:0"></i></div>
+    <div class="resumo" id="resumo"></div>
+  </div>
+
+  <div id="aviso5h" class="faixa alerta pequeno" style="display:none"></div>
+
+  <div id="semanas"></div>
+
+  <div class="cartao pequeno fraco">
+    <b>Como este plano foi montado.</b> Ele sai da taxonomia do edital, não de temas
+    inventados: os 49 temas entram todos, com 1 bloco de teoria + 2 de questões para os
+    20 temas de alto rendimento e 1 + 1 para os demais. Cada tema volta em revisão
+    espaçada em D+7 e D+21. A ordem não é a numérica do edital — começa pela espinha
+    dorsal (patologia do trabalho, nexo, concausa, acidente, PCMSO, NR e previdenciária),
+    porque o resto se pendura nela e assim os temas de maior peso recebem mais ciclos de
+    revisão. Os últimos 7 dias não têm conteúdo novo.
+    <div class="linha" style="margin-top:12px">
+      <button id="btRefazer">Refazer o plano a partir de hoje</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="../core/edital.js"></script>
+<script src="../core/storage.js"></script>
+<script src="cronograma.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  var hojeISO = (function () {
+    var d = new Date();
+    return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') +
+      '-' + String(d.getDate()).padStart(2, '0');
+  })();
+
+  var plano = null;
+
+  function dados() {
+    var c = Store.get('cronograma') || {};
+    if (!c.feitos) c.feitos = {};
+    return c;
+  }
+
+  function marcar(id, valor) {
+    Store.patch('cronograma', function (c) {
+      c = c || {}; if (!c.feitos) c.feitos = {};
+      if (valor) { c.feitos[id] = Date.now(); } else { delete c.feitos[id]; }
+      return c;
+    });
+  }
+
+  function construir() {
+    var c = dados();
+    if (!c.inicio) {
+      c.inicio = hojeISO;
+      Store.set('cronograma', c);
+    }
+    plano = PLANO.gerar(c.inicio);
+    render();
+  }
+
+  function render() {
+    var c = dados();
+    var feitos = c.feitos;
+    var total = 0, feito = 0;
+
+    plano.dias.forEach(function (d) {
+      d.blocos.forEach(function (b) { total++; if (feitos[b.id]) feito++; });
+    });
+
+    document.getElementById('linhaTopo').textContent =
+      'De ' + plano.dias[0].br + ' a ' + EDITAL.prova.dataBR + ' · ' +
+      plano.dias.length + ' dias · ' + plano.totalSemanas + ' semanas · ' +
+      total + ' blocos de 30 min (' + Math.round(total / 2) + ' horas no total)';
+
+    document.getElementById('barraGeral').style.width =
+      (total ? (feito / total * 100) : 0).toFixed(1) + '%';
+
+    var res = document.getElementById('resumo');
+    res.innerHTML = '';
+    [['cumprido', feito + ' / ' + total + ' blocos'],
+     ['progresso', (total ? Math.round(feito / total * 100) : 0) + '%'],
+     ['temas do edital', EDITAL.temas.length],
+     ['simulados completos', plano.simulados]
+    ].forEach(function (p) {
+      var s = document.createElement('span');
+      s.innerHTML = p[0] + ': <b>' + p[1] + '</b>';
+      res.appendChild(s);
+    });
+
+    var av = document.getElementById('aviso5h');
+    av.style.display = 'block';
+    av.innerHTML = '<b>Atenção ao encaixe dos simulados.</b> A prova tem 5 horas e os ' +
+      plano.simulados + ' simulados completos não cabem em um bloco de 30 minutos. ' +
+      'Eles estão marcados nos domingos e pedem a manhã inteira. Se não der, use os ' +
+      'simulados fracionados da aba Simulados nos blocos normais.';
+
+    var alvo = document.getElementById('semanas');
+    alvo.innerHTML = '';
+
+    plano.semanas.forEach(function (sem) {
+      var t = 0, f = 0;
+      sem.dias.forEach(function (d) {
+        d.blocos.forEach(function (b) { t++; if (feitos[b.id]) f++; });
+      });
+      var pc = t ? f / t : 0;
+
+      var det = document.createElement('details');
+      det.className = 'semana' + (pc === 1 ? ' completa' : '');
+      det.dataset.semana = sem.n;
+      if (sem.dias.some(function (d) { return d.data === hojeISO; })) { det.open = true; }
+
+      var sum = document.createElement('summary');
+      sum.innerHTML = '<span class="sem">Semana ' + sem.n + '</span>' +
+        '<span class="fraco pequeno">' + sem.de + ' – ' + sem.ate + '</span>' +
+        (sem.temSimulado ? '<span class="rotulo alerta">simulado</span>' : '') +
+        (sem.retaFinal ? '<span class="rotulo erro">reta final</span>' : '') +
+        '<span style="flex:1"></span>' +
+        '<span class="fraco pequeno">' + f + '/' + t + '</span>' +
+        '<span class="barra mini"><i style="width:' + (pc * 100) + '%"></i></span>';
+      det.appendChild(sum);
+
+      var corpo = document.createElement('div');
+      corpo.className = 'corpo';
+
+      sem.dias.forEach(function (dia) {
+        var dv = document.createElement('div');
+        dv.className = 'dia' + (dia.data === hojeISO ? ' hoje' : '');
+        if (dia.data === hojeISO) { dv.id = 'hoje'; }
+        var cab = document.createElement('div');
+        cab.className = 'cab';
+        cab.textContent = PLANO.DIAS[dia.dow] + ' ' + dia.br +
+          (dia.data === hojeISO ? ' — hoje' : '');
+        dv.appendChild(cab);
+
+        dia.blocos.forEach(function (b) {
+          var lab = document.createElement('label');
+          lab.className = 'bloco' + (feitos[b.id] ? ' feito' : '');
+          var chk = document.createElement('input');
+          chk.type = 'checkbox';
+          chk.checked = !!feitos[b.id];
+          chk.onchange = function () {
+            marcar(b.id, chk.checked);
+            lab.classList.toggle('feito', chk.checked);
+            atualizarBarras();
+          };
+          var per = document.createElement('span');
+          per.className = 'per';
+          per.textContent = b.periodo;
+          var cont = document.createElement('span');
+          cont.className = 'conteudo';
+          var tag = '<span class="tag t-' + b.tipo + '">' +
+            ({ teoria: 'TEORIA', questoes: 'QUESTÕES', revisao: 'REVISÃO',
+               flashcards: 'FLASH', simulado: 'SIMULADO',
+               'revisao-simulado': 'REVISÃO', 'reta-final': 'RETA FINAL' }[b.tipo] || b.tipo) +
+            '</span>';
+          cont.innerHTML = tag + '<b>' + (b.titulo || '') + '</b>' +
+            (b.detalhe ? '<span class="det">' + b.detalhe + '</span>' : '');
+          lab.appendChild(chk); lab.appendChild(per); lab.appendChild(cont);
+          dv.appendChild(lab);
+        });
+        corpo.appendChild(dv);
+      });
+
+      det.appendChild(corpo);
+      alvo.appendChild(det);
+    });
+  }
+
+  function atualizarBarras() {
+    var feitos = dados().feitos;
+    var total = 0, feito = 0;
+    plano.dias.forEach(function (d) {
+      d.blocos.forEach(function (b) { total++; if (feitos[b.id]) feito++; });
+    });
+    document.getElementById('barraGeral').style.width = (feito / total * 100).toFixed(1) + '%';
+    var res = document.getElementById('resumo').children;
+    if (res[0]) res[0].innerHTML = 'cumprido: <b>' + feito + ' / ' + total + ' blocos</b>';
+    if (res[1]) res[1].innerHTML = 'progresso: <b>' + Math.round(feito / total * 100) + '%</b>';
+
+    plano.semanas.forEach(function (sem) {
+      var t = 0, f = 0;
+      sem.dias.forEach(function (d) {
+        d.blocos.forEach(function (b) { t++; if (feitos[b.id]) f++; });
+      });
+      var det = document.querySelector('details[data-semana="' + sem.n + '"]');
+      if (!det) return;
+      det.classList.toggle('completa', t && f === t);
+      var spans = det.querySelector('summary').querySelectorAll('span');
+      var contador = spans[spans.length - 2];
+      var barra = det.querySelector('summary .barra > i');
+      if (contador) contador.textContent = f + '/' + t;
+      if (barra) barra.style.width = (t ? f / t * 100 : 0) + '%';
+    });
+  }
+
+  document.getElementById('btHoje').onclick = function () {
+    var el = document.getElementById('hoje');
+    if (el) {
+      var det = el.closest('details');
+      if (det) det.open = true;
+      el.scrollIntoView({ block: 'center' });
+    } else {
+      Store.avisar('aviso', 'Hoje está fora da janela do plano. Use "Refazer o plano a partir de hoje".');
+    }
+  };
+
+  document.getElementById('btRefazer').onclick = function () {
+    if (!confirm('Refazer o plano começando hoje?\n\nOs blocos já marcados como cumpridos ' +
+        'são preservados pelas datas que continuarem existindo.')) return;
+    Store.patch('cronograma', function (c) { c = c || {}; c.inicio = hojeISO; return c; });
+    construir();
+  };
+
+  Store.init().then(function () {
+    try {
+      construir();
+    } catch (e) {
+      Store.avisar('erro', 'Falha ao gerar o cronograma.', e.message);
+      document.getElementById('semanas').innerHTML =
+        '<div class="faixa erro">Não consegui gerar o cronograma: ' + e.message + '</div>';
+    }
+  });
+})();
+</script>
+</body>
+</html>

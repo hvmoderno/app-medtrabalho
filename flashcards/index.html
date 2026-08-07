@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flashcards</title>
+<link rel="stylesheet" href="../assets/app.css">
+<style>
+  body { padding-bottom: 40px; }
+  .placar { display: flex; gap: 6px; flex-wrap: wrap; font-size: .82rem; }
+  .placar span { background: var(--superficie-2); padding: 3px 9px; border-radius: 999px; white-space: nowrap; }
+  .placar b { color: var(--acento); }
+
+  .carta { min-height: 210px; display: flex; flex-direction: column; justify-content: center; }
+  .frente { font-size: 1.02rem; line-height: 1.6; }
+  .verso { border-top: 1px solid var(--borda); margin-top: 14px; padding-top: 14px; }
+  .verso .resp { background: var(--ok-suave); border-left: 4px solid var(--ok); border-radius: 8px;
+    padding: 11px 13px; font-size: .95rem; line-height: 1.55; margin-bottom: 12px; }
+  .verso h4 { margin: 0 0 4px; font-size: .76rem; text-transform: uppercase;
+    letter-spacing: .04em; color: var(--texto-fraco); }
+  .verso .bloco { margin-bottom: 10px; font-size: .9rem; line-height: 1.55; }
+
+  .avaliar { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-top: 6px; }
+  .avaliar button { flex-direction: column; min-height: 62px; font-weight: 650; }
+  .avaliar button small { display: block; font-weight: 400; font-size: .72rem; opacity: .75; margin-top: 2px; }
+  .avaliar .errei { border-color: var(--erro); color: var(--erro); }
+  .avaliar .quase { border-color: var(--alerta); color: var(--alerta); }
+  .avaliar .sabia { border-color: var(--ok); color: var(--ok); }
+
+  .vazio { text-align: center; padding: 40px 16px; color: var(--texto-fraco); }
+</style>
+</head>
+<body>
+<div class="envolt">
+  <div class="cartao">
+    <div class="linha" style="margin-bottom:8px">
+      <label for="fTema" class="pequeno fraco" style="flex:0 0 auto">Baralho</label>
+      <select id="fTema" style="flex:1;min-width:170px"></select>
+    </div>
+    <div class="placar" id="placar"></div>
+  </div>
+  <div id="area"></div>
+</div>
+
+<script src="../core/edital.js"></script>
+<script src="../core/gabarito.js"></script>
+<script src="../core/banco-loader.js"></script>
+<script src="../core/storage.js"></script>
+<script src="flashcards.js"></script>
+</body>
+</html>

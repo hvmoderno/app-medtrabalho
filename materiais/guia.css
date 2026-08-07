@@ -1,0 +1,65 @@
+/* =============================================================================
+   GUIA.CSS — estilo dos guias de revisão por tema
+   ========================================================================== */
+
+.guia h1 { font-size: 1.2rem; margin: 0 0 2px; }
+.guia .sub { color: var(--texto-fraco); font-size: .85rem; margin: 0 0 16px; }
+
+.guia h2 {
+  font-size: .8rem; text-transform: uppercase; letter-spacing: .05em;
+  color: var(--acento); border-bottom: 2px solid var(--acento-suave);
+  padding-bottom: 4px; margin: 22px 0 10px;
+}
+.guia h3 { font-size: .95rem; margin: 14px 0 6px; }
+.guia p, .guia li { font-size: .92rem; line-height: 1.6; }
+.guia ul, .guia ol { margin: 0 0 10px; padding-left: 20px; }
+.guia li { margin-bottom: 4px; }
+.guia strong { font-weight: 650; }
+
+/* tabelas ------------------------------------------------------------------ */
+.guia .tab { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 0 0 12px; }
+.guia table { border-collapse: collapse; width: 100%; font-size: .87rem; min-width: 340px; }
+.guia th, .guia td { border: 1px solid var(--borda); padding: 7px 9px; vertical-align: top;
+  text-align: left; }
+.guia thead th { background: var(--superficie-2); font-size: .76rem; text-transform: uppercase;
+  letter-spacing: .03em; color: var(--texto-fraco); }
+.guia tbody th { background: var(--superficie-2); font-weight: 650; white-space: nowrap; }
+
+/* fluxograma --------------------------------------------------------------- */
+.guia .fluxo { margin: 0 0 14px; }
+.guia .fluxo .passo {
+  border: 1px solid var(--borda); border-left: 4px solid var(--acento);
+  border-radius: 8px; padding: 9px 12px; background: var(--superficie-2);
+  font-size: .89rem; margin-bottom: 6px;
+}
+.guia .fluxo .passo b { color: var(--acento); }
+.guia .fluxo .seta { text-align: center; color: var(--texto-fraco); font-size: .95rem;
+  line-height: 1; margin: -1px 0 5px; }
+.guia .fluxo .ramo { display: grid; gap: 6px; grid-template-columns: 1fr; margin-bottom: 6px; }
+@media (min-width: 620px) { .guia .fluxo .ramo { grid-template-columns: 1fr 1fr; } }
+.guia .fluxo .ramo .passo { margin-bottom: 0; }
+.guia .fluxo .sim { border-left-color: var(--ok); }
+.guia .fluxo .sim b { color: var(--ok); }
+.guia .fluxo .nao { border-left-color: var(--erro); }
+.guia .fluxo .nao b { color: var(--erro); }
+
+/* caixas ------------------------------------------------------------------- */
+.guia .caixa { border-radius: var(--raio); padding: 11px 13px; margin: 0 0 12px;
+  border: 1px solid; font-size: .89rem; }
+.guia .caixa > .tit { display: block; font-weight: 700; font-size: .74rem;
+  text-transform: uppercase; letter-spacing: .05em; margin-bottom: 6px; }
+.guia .caixa ul { margin-bottom: 0; }
+
+.guia .pegadinha { background: var(--erro-suave); border-color: var(--erro); color: var(--texto); }
+.guia .pegadinha > .tit { color: var(--erro); }
+.guia .mnemonico { background: var(--acento-suave); border-color: var(--acento); color: var(--texto); }
+.guia .mnemonico > .tit { color: var(--acento); }
+.guia .mnemonico .sigla { font-weight: 800; letter-spacing: .06em; font-size: 1.05rem;
+  color: var(--acento); display: block; margin-bottom: 4px; }
+.guia .chave { background: var(--ok-suave); border-color: var(--ok); color: var(--texto); }
+.guia .chave > .tit { color: var(--ok); }
+.guia .atencao { background: var(--alerta-suave); border-color: var(--alerta); color: var(--texto); }
+.guia .atencao > .tit { color: var(--alerta); }
+
+.guia .fontes { font-size: .8rem; color: var(--texto-fraco); border-top: 1px solid var(--borda);
+  padding-top: 10px; margin-top: 20px; }

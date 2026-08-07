@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Questões</title>
+<link rel="stylesheet" href="../assets/app.css">
+<style>
+  body { padding-bottom: 40px; }
+
+  .filtros { position: sticky; top: 0; z-index: 5; background: var(--bg); padding-top: 4px; }
+  .filtros .cartao { margin-bottom: 8px; }
+
+  .placar { display: flex; gap: 6px; flex-wrap: wrap; font-size: .82rem; }
+  .placar span { background: var(--superficie-2); padding: 3px 9px; border-radius: 999px; white-space: nowrap; }
+  .placar b { color: var(--texto); }
+
+  .cabQ { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; margin-bottom: 10px; }
+  .enunciado { font-size: 1rem; line-height: 1.6; margin-bottom: 14px; }
+
+  ul.alts { list-style: none; margin: 0; padding: 0; }
+  ul.alts li { margin-bottom: 8px; }
+  button.alt {
+    display: flex; gap: 10px; width: 100%; text-align: left; align-items: flex-start;
+    padding: 11px 12px; line-height: 1.5; font-size: .95rem;
+  }
+  button.alt .letra {
+    flex: 0 0 26px; height: 26px; border-radius: 50%; background: var(--superficie-2);
+    display: grid; place-items: center; font-weight: 700; font-size: .82rem; margin-top: 1px;
+  }
+  button.alt .txt { flex: 1; }
+  button.alt.certa { border-color: var(--ok); background: var(--ok-suave); }
+  button.alt.certa .letra { background: var(--ok); color: #fff; }
+  button.alt.errada { border-color: var(--erro); background: var(--erro-suave); }
+  button.alt.errada .letra { background: var(--erro); color: #fff; }
+  button.alt .why {
+    display: block; margin-top: 6px; font-size: .85rem; color: var(--texto-fraco);
+    border-top: 1px dashed var(--borda); padding-top: 6px;
+  }
+
+  .explic { margin-top: 14px; border-top: 1px solid var(--borda); padding-top: 12px; }
+  .explic h4 { margin: 0 0 4px; font-size: .78rem; text-transform: uppercase;
+    letter-spacing: .04em; color: var(--texto-fraco); }
+  .explic .bloco { margin-bottom: 10px; font-size: .92rem; }
+  .refs { font-size: .8rem; color: var(--texto-fraco); }
+
+  .navq { display: flex; gap: 8px; align-items: center; margin-top: 14px; }
+  .navq .pos { font-size: .85rem; color: var(--texto-fraco); }
+
+  .vazio { text-align: center; padding: 40px 16px; color: var(--texto-fraco); }
+</style>
+</head>
+<body>
+<div class="envolt">
+
+  <div class="filtros">
+    <div class="cartao">
+      <label for="fTema" class="pequeno fraco">Tema do edital</label>
+      <select id="fTema" style="margin:4px 0 8px"></select>
+      <div class="linha" style="margin-bottom:8px">
+        <label for="fModo" class="pequeno fraco" style="flex:0 0 auto">Mostrar</label>
+        <select id="fModo" style="flex:1;min-width:150px">
+          <option value="todas">todas as questões</option>
+          <option value="naoRespondidas">só as não respondidas</option>
+          <option value="erradas">só as que eu errei</option>
+        </select>
+        <button id="btEmbaralhar" title="Embaralhar a ordem das questões">Embaralhar</button>
+      </div>
+      <div class="placar" id="placar"></div>
+    </div>
+  </div>
+
+  <div id="area"></div>
+
+</div>
+
+<script src="../core/edital.js"></script>
+<script src="../core/gabarito.js"></script>
+<script src="../core/banco-loader.js"></script>
+<script src="../core/storage.js"></script>
+<script src="questoes.js"></script>
+</body>
+</html>

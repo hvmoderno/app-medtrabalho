@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Auditoria do banco de questões</title>
+<link rel="stylesheet" href="../assets/app.css">
+<style>
+  .barra-tema { display: inline-block; height: 9px; background: var(--acento);
+    border-radius: 3px; vertical-align: middle; }
+  .barra-tema.zero { background: var(--erro); width: 3px !important; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  #erros li { color: var(--erro); margin-bottom: 4px; font-size: .88rem; }
+</style>
+</head>
+<body>
+<div class="envolt">
+  <h1>Auditoria do banco de questões</h1>
+  <p class="fraco pequeno">Roda inteiramente no navegador, sem dependência externa.
+    Verifica taxonomia, número de alternativas, gabarito único, duplicatas, citação de
+    alternativa por letra (o que quebraria o gabarito ao reposicionar) e distribuição A–E.</p>
+  <div id="saida"></div>
+</div>
+
+<script src="../core/edital.js"></script>
+<script src="../core/banco-loader.js"></script>
+<script src="../core/gabarito.js"></script>
+<script src="validador.js"></script>
+<script>
+BancoLoader.carregar("../banco/").then(function (BANCO) {
+  var r = validarBanco(EDITAL, BANCO);
+  var out = document.getElementById('saida');
+  var h = [];
+
+  var okGab = r.desvioGabarito <= 0.06;
+  h.push('<div class="faixa ' + (r.erros.length ? 'erro' : 'info') + '"><b>' +
+    (r.erros.length ? r.erros.length + ' PROBLEMA(S) ENCONTRADO(S)'
+      : 'OK — ' + r.total + ' questões validadas, 0 problemas') + '</b>' +
+    '<span class="detalhe">0 comentários citam alternativa por letra, ' +
+    'logo 0 comentários podem contradizer o gabarito.</span></div>');
+
+  if (r.erros.length) {
+    h.push('<div class="cartao"><h2>Problemas</h2><ul id="erros">' +
+      r.erros.map(function (e) { return '<li>' + e.replace(/</g, '&lt;') + '</li>'; }).join('') +
+      '</ul></div>');
+  }
+
+  // ---- distribuição por tema
+  var total = 0, meta = 0, zerados = 0, abaixo = 0;
+  var linhas = '';
+  EDITAL.secoes.forEach(function (sec) {
+    linhas += '<tr><th colspan="4" style="padding-top:14px;color:var(--texto)">Seção ' +
+      sec.id + ' — ' + sec.nome + '</th></tr>';
+    EDITAL.daSecao(sec.id).forEach(function (t) {
+      var n = r.porTema[t.id] || 0;
+      total += n; meta += t.meta;
+      if (n === 0) zerados++;
+      if (n < t.meta) abaixo++;
+      var larg = Math.max(2, Math.round(n / t.meta * 120));
+      linhas += '<tr><td>' + t.id + '</td><td>' + t.nome + '</td>' +
+        '<td class="num">' + n + ' / ' + t.meta + '</td>' +
+        '<td><span class="barra-tema' + (n ? '' : ' zero') + '" style="width:' + larg + 'px"></span></td></tr>';
+    });
+  });
+  h.push('<div class="cartao"><h2>Distribuição por tema do edital</h2>' +
+    '<p class="pequeno fraco">Total <b>' + total + '</b> de meta <b>' + meta + '</b> · ' +
+    'temas zerados: <b>' + zerados + '</b> · abaixo da meta: <b>' + abaixo + '</b></p>' +
+    '<div class="tabela-rolagem"><table><thead><tr><th>Cód.</th><th>Tema</th>' +
+    '<th class="num">Qtd/Meta</th><th></th></tr></thead><tbody>' + linhas +
+    '</tbody></table></div></div>');
+
+  // ---- gabarito
+  var somaL = 0;
+  'ABCDE'.split('').forEach(function (l) { somaL += r.porLetra[l]; });
+  var gl = 'ABCDE'.split('').map(function (l) {
+    var pc = somaL ? (r.porLetra[l] / somaL * 100) : 0;
+    return '<tr><td><b>' + l + '</b></td><td class="num">' + r.porLetra[l] + '</td>' +
+      '<td class="num">' + pc.toFixed(1) + '%</td>' +
+      '<td><span class="barra-tema" style="width:' + Math.round(pc * 4) + 'px"></span></td></tr>';
+  }).join('');
+  h.push('<div class="cartao"><h2>Distribuição do gabarito</h2>' +
+    '<p class="pequeno fraco">Posição em que a alternativa correta realmente aparece na tela ' +
+    '(o app reposiciona de forma determinística). Desvio máximo em relação a 20%: <b>' +
+    (r.desvioGabarito * 100).toFixed(1) + ' pontos percentuais</b> — <span class="rotulo ' +
+    (okGab ? 'ok">homogêneo' : 'alerta">precisa rebalancear') + '</span></p>' +
+    '<table><thead><tr><th>Letra</th><th class="num">Qtd</th><th class="num">%</th><th></th></tr></thead>' +
+    '<tbody>' + gl + '</tbody></table></div>');
+
+  // ---- tipos
+  h.push('<div class="cartao"><h2>Procedência das questões</h2><p class="pequeno">' +
+    'Autorais (escritas no estilo da banca): <b>' + (r.porTipo.autoral || 0) + '</b><br>' +
+    'Reais (transcritas de prova, com fonte): <b>' + (r.porTipo.real || 0) + '</b></p>' +
+    '<p class="pequeno fraco">O app marca cada questão na tela com o selo correspondente. ' +
+    'Nenhuma questão autoral é apresentada como real.</p></div>');
+
+  out.innerHTML = h.join('');
+  window.__RESULTADO__ = r;
+});
+</script>
+</body>
+</html>

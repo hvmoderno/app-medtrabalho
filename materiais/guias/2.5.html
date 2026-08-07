@@ -1,0 +1,152 @@
+<h1>2.5 Avaliação e Gerenciamento das Exposições Ocupacionais</h1>
+<p class="sub">Seção 2 · é o método por trás de toda medição · a banca cobra a decisão, não a conta</p>
+
+<div class="caixa chave">
+  <span class="tit">O que a banca cobra aqui</span>
+  <ul>
+    <li>O <b>ciclo</b> da estratégia da AIHA: caracterizar → avaliar → decidir → controlar → reavaliar.</li>
+    <li>Que a decisão tem <b>três saídas</b>, não duas: aceitável, <b>incerta</b> e inaceitável.</li>
+    <li>Por que a exposição ocupacional se distribui de forma <b>lognormal</b> e o que isso implica para a média.</li>
+    <li>Por que a decisão se apoia no <b>percentil superior</b> da distribuição, e não na média das medições.</li>
+    <li>Priorização de riscos e o que faz um plano de ação ser auditável.</li>
+  </ul>
+</div>
+
+<h2>O ciclo de gerenciamento de exposições</h2>
+<div class="fluxo">
+  <div class="passo"><b>1. Caracterização básica</b> — inventariar processo, agentes, tarefas, trabalhadores, ambiente e controles já existentes. É o levantamento que alimenta tudo</div>
+  <div class="seta">↓</div>
+  <div class="passo"><b>2. Formar os grupos similares de exposição (GSE)</b> — agrupar por semelhança de perfil de exposição, não por cargo</div>
+  <div class="seta">↓</div>
+  <div class="passo"><b>3. Avaliação da exposição</b> — julgamento qualitativo, semiquantitativo ou quantitativo por GSE e por agente</div>
+  <div class="seta">↓</div>
+  <div class="passo"><b>4. Decisão</b> — classificar cada par GSE/agente</div>
+  <div class="ramo">
+    <div class="passo sim"><b>Aceitável</b> — manter os controles, documentar e definir periodicidade de reavaliação</div>
+    <div class="passo nao"><b>Inaceitável</b> — controlar, com prioridade e prazo; controle não espera nova medição</div>
+  </div>
+  <div class="passo"><b>Incerta</b> — é a saída mais frequente na prática. Gera <b>coleta de mais informação</b>: mais amostras, melhor caracterização da tarefa, revisão do agrupamento. Enquanto perdura a incerteza, mantêm-se medidas de proteção</div>
+  <div class="seta">↓</div>
+  <div class="passo"><b>5. Controle</b> — pela hierarquia, com responsável, prazo e recurso definidos</div>
+  <div class="seta">↓</div>
+  <div class="passo"><b>6. Reavaliação</b> — verificar a <b>eficácia</b> do controle implantado e reiniciar o ciclo. Toda mudança de processo, insumo, layout ou ritmo reabre o ciclo</div>
+</div>
+
+<div class="caixa mnemonico">
+  <span class="tit">Mnemônico do ciclo</span>
+  <span class="sigla">C · A · D · C · R</span>
+  <b>C</b>aracterizar · <b>A</b>valiar · <b>D</b>ecidir · <b>C</b>ontrolar · <b>R</b>eavaliar.<br>
+  E as três saídas da decisão: <b>ACEITA · INCERTA · INACEITA</b>. Quem esquece a saída
+  "incerta" erra a questão que descreve poucos dados e alta variabilidade — nesse cenário a
+  resposta certa quase nunca é "exposição aceitável".
+</div>
+
+<h2>Grupos similares de exposição</h2>
+<div class="tab">
+<table>
+  <thead><tr><th>Critério de formação</th><th>O que observar</th><th>Erro típico</th></tr></thead>
+  <tbody>
+    <tr><th>Tarefa</th><td>O que a pessoa efetivamente faz, com que frequência e por quanto tempo</td><td>Usar a descrição formal do cargo em vez da atividade real</td></tr>
+    <tr><th>Processo e agente</th><td>Mesma fonte de emissão, mesmo agente, mesmas condições operacionais</td><td>Agrupar quem opera a mesma máquina em condições de produção muito distintas</td></tr>
+    <tr><th>Ambiente</th><td>Mesmo local, mesma ventilação, mesma proximidade da fonte</td><td>Juntar quem trabalha ao lado do captor com quem está a metros dele</td></tr>
+    <tr><th>Controles em uso</th><td>Mesmo conjunto de medidas coletivas efetivamente funcionando</td><td>Ignorar que metade do grupo trabalha com o exaustor desligado</td></tr>
+    <tr><th>Validação</th><td>Confirmar a homogeneidade com os <b>dados</b>: variabilidade interna muito alta indica grupo mal formado</td><td>Formar o grupo no papel e nunca revisá-lo depois das medições</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="pequeno fraco">O GSE é hipótese, não dogma. Se as medições mostram dispersão muito
+grande dentro do grupo, o correto é <b>desmembrá-lo</b> — não é aumentar o número de amostras
+de um grupo que não é homogêneo.</p>
+
+<h2>Interpretação estatística dos dados de exposição</h2>
+<div class="tab">
+<table>
+  <thead><tr><th>Conceito</th><th>O que significa</th><th>Por que importa na decisão</th></tr></thead>
+  <tbody>
+    <tr><th>Distribuição <b>lognormal</b></th><td>Os dados de exposição ocupacional costumam ter cauda longa à direita: muitos valores baixos e alguns muito altos</td><td>Não se usa a média aritmética simples como se a distribuição fosse normal; trabalha-se com os logaritmos</td></tr>
+    <tr><th>Média geométrica</th><td>Medida de tendência central adequada para dados lognormais</td><td>Descreve o "dia típico", mas <b>não</b> é o parâmetro de decisão</td></tr>
+    <tr><th>Desvio-padrão geométrico</th><td>Mede a <b>variabilidade</b> do grupo</td><td>Variabilidade alta = grupo pouco homogêneo e decisão menos confiável. É o principal termômetro da qualidade do GSE</td></tr>
+    <tr><th>Percentil superior (tipicamente o 95)</th><td>O valor abaixo do qual está a grande maioria das jornadas</td><td>É o <b>parâmetro de decisão</b>: protege quem trabalha nos dias piores, não no dia médio</td></tr>
+    <tr><th>Intervalo de confiança</th><td>Incerteza estatística da estimativa, ligada ao <b>número de amostras</b></td><td>Poucos dados alargam o intervalo e empurram a decisão para "incerta"</td></tr>
+    <tr><th>Variabilidade entre × dentro do trabalhador</th><td>Diferença entre pessoas × diferença entre dias da mesma pessoa</td><td>Se a variabilidade <b>entre</b> pessoas domina, o grupo não é homogêneo</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="caixa chave">
+  <span class="tit">A ideia que a banca quer ver</span>
+  A exposição de um GSE não é um número: é uma <b>distribuição</b>. Por isso a pergunta certa
+  não é "a média ficou abaixo do limite?", e sim "<b>que fração das jornadas</b> ultrapassa o
+  limite, e com que confiança eu sei disso?". Uma média confortável com desvio grande pode
+  significar que um em cada dez dias estoura o limite — e é nesse dia que a lesão acontece.
+</div>
+
+<h2>Estratégia de amostragem</h2>
+<div class="tab">
+<table>
+  <thead><tr><th>Decisão</th><th>Como se define</th></tr></thead>
+  <tbody>
+    <tr><th><b>Quem</b> amostrar</th><td>Trabalhadores do GSE escolhidos ao <b>acaso</b> quando o objetivo é caracterizar o grupo; escolha dirigida ao <b>pior caso</b> quando o objetivo é triagem</td></tr>
+    <tr><th><b>Quando</b> amostrar</th><td>Em condições representativas do trabalho real, incluindo picos de produção, partida, parada, manutenção e limpeza — momentos frequentemente ignorados e frequentemente os de maior exposição</td></tr>
+    <tr><th><b>Por quanto tempo</b></th><td>Amostragem de <b>jornada completa</b> para comparar com limite de longa duração; amostragem <b>curta</b> para valores de curta duração e teto</td></tr>
+    <tr><th><b>Quantas</b> amostras</th><td>Quanto maior a variabilidade e mais próxima do limite a exposição, <b>mais</b> amostras são necessárias para decidir com confiança</td></tr>
+    <tr><th><b>Amostragem individual × ambiental</b></th><td>A <b>individual</b>, na zona respiratória, é a que representa a exposição da pessoa. A ambiental (área) serve para caracterizar a fonte, avaliar controles e mapear o ambiente — não substitui a individual</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="caixa pegadinha">
+  <span class="tit">Pegadinhas de prova</span>
+  <ul>
+    <li><b>"Uma única medição abaixo do limite comprova exposição aceitável"</b> → falso. Uma amostra não caracteriza distribuição nenhuma; a variabilidade da exposição ocupacional é alta por natureza.</li>
+    <li><b>"Amostragem de área substitui a individual"</b> → falso. Só a amostragem na zona respiratória estima a dose do trabalhador.</li>
+    <li><b>"Como a exposição é lognormal, usa-se a média aritmética"</b> → falso e contraditório. Lognormal pede média geométrica para descrever e <b>percentil superior</b> para decidir.</li>
+    <li><b>"Amostrar o pior caso caracteriza o grupo"</b> → falso. Pior caso é <b>triagem</b>: se ele está muito abaixo do limite, o grupo está liberado; se não está, é preciso caracterizar.</li>
+    <li><b>"A decisão só pode ser aceitável ou inaceitável"</b> → falso. Existe a categoria <b>incerta</b>, que é a mais comum e a que exige mais dados enquanto se mantêm as proteções.</li>
+    <li><b>"Enquanto não houver medição, nada se faz"</b> → falso. Exposição evidentemente inaceitável exige controle <b>imediato</b>; medir depois serve para verificar eficácia.</li>
+    <li><b>"Reavaliar é repetir a medição no mesmo intervalo, sempre"</b> → incompleto. Mudança de processo, insumo, layout, ritmo ou de controle <b>reabre o ciclo</b> antes do prazo.</li>
+  </ul>
+</div>
+
+<h2>Priorização e plano de ação</h2>
+<div class="tab">
+<table>
+  <thead><tr><th>Fator de priorização</th><th>Pergunta orientadora</th></tr></thead>
+  <tbody>
+    <tr><th>Gravidade do desfecho</th><td>O agravo é irreversível, fatal ou cancerígeno? Cancerígeno e agente sem limiar sobem para o topo, mesmo com concentração baixa</td></tr>
+    <tr><th>Magnitude da exposição</th><td>Quão acima do limite, e em que fração das jornadas?</td></tr>
+    <tr><th>Número de expostos</th><td>Quantas pessoas o controle protege de uma só vez?</td></tr>
+    <tr><th>Probabilidade e frequência</th><td>Exposição contínua ou episódica? Depende de falha humana para ocorrer?</td></tr>
+    <tr><th>Viabilidade e prazo</th><td>Existe solução de engenharia disponível? Enquanto ela não chega, qual a medida interina?</td></tr>
+    <tr><th>Grupos suscetíveis</th><td>Gestantes, jovens, portadores de condição agravável, trabalhadores em uso de medicamentos que interagem com o agente</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="pequeno fraco">Plano de ação auditável tem, para cada item: <b>medida definida</b>,
+<b>responsável nominal</b>, <b>prazo</b>, <b>recurso</b> e, sobretudo, <b>critério de
+verificação de eficácia</b>. Plano sem verificação de eficácia é registro, não gestão.</p>
+
+<div class="caixa atencao">
+  <span class="tit">Onde isso se encaixa nas normas</span>
+  O ciclo aqui descrito é a espinha dorsal do gerenciamento de riscos ocupacionais da
+  <b>NR-1</b> (inventário de riscos e plano de ação) e da avaliação e controle das exposições
+  da <b>NR-9</b>. A estratégia de referência internacional é a da AIHA. Os critérios de
+  aceitabilidade, os níveis de ação e as periodicidades de reavaliação constam de norma e vêm
+  sendo revisados — confira a redação vigente e não decore percentual de memória.
+</div>
+
+<h2>Checklist de véspera</h2>
+<ul>
+  <li>Ciclo: caracterizar, formar GSE, avaliar, decidir, controlar, reavaliar — e a reavaliação verifica <b>eficácia</b>.</li>
+  <li>Três saídas da decisão: aceitável, <b>incerta</b>, inaceitável. Incerta gera mais dados, não conclusão otimista.</li>
+  <li>Exposição é distribuição lognormal: descreve-se com média geométrica, decide-se pelo <b>percentil superior</b>.</li>
+  <li>Desvio-padrão geométrico alto = GSE mal formado. Desmembrar, não apenas amostrar mais.</li>
+  <li>Amostragem individual na zona respiratória é a que vale para a dose; área serve para fonte e controle.</li>
+  <li>Priorização pesa gravidade do desfecho, magnitude, número de expostos e suscetíveis — cancerígeno vai para o topo.</li>
+</ul>
+
+<div class="fontes">
+  Base conceitual: AIHA — <i>A Strategy for Assessing and Managing Occupational Exposures</i>;
+  NR-1 (gerenciamento de riscos ocupacionais) e NR-9; NHO da Fundacentro;
+  Saliba, T.M. — <i>Manual Prático de Higiene Ocupacional e PPRA</i>.
+</div>

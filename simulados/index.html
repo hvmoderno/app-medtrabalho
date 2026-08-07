@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simulados</title>
+<link rel="stylesheet" href="../assets/app.css">
+<style>
+  body { padding-bottom: 40px; }
+
+  .cronometro { position: sticky; top: 0; z-index: 6; background: var(--superficie);
+    border: 1px solid var(--borda); border-radius: var(--raio); padding: 8px 12px;
+    display: flex; gap: 10px; align-items: center; margin-bottom: 10px; box-shadow: var(--sombra); }
+  .cronometro .tempo { font-variant-numeric: tabular-nums; font-weight: 700; font-size: 1.05rem; }
+  .cronometro .tempo.baixo { color: var(--erro); }
+  .cronometro .pos { font-size: .82rem; color: var(--texto-fraco); }
+
+  .vinheta { background: var(--superficie-2); border-left: 4px solid var(--acento);
+    border-radius: 8px; padding: 12px 14px; margin-bottom: 14px; font-size: .93rem; line-height: 1.6; }
+  .vinheta .rot { display: block; font-size: .72rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: .05em; color: var(--acento); margin-bottom: 6px; }
+
+  .enunciado { font-size: 1rem; line-height: 1.6; margin-bottom: 14px; }
+
+  ul.alts { list-style: none; margin: 0; padding: 0; }
+  ul.alts li { margin-bottom: 8px; }
+  button.alt { display: flex; gap: 10px; width: 100%; text-align: left; align-items: flex-start;
+    padding: 11px 12px; line-height: 1.5; font-size: .95rem; }
+  button.alt .letra { flex: 0 0 26px; height: 26px; border-radius: 50%; background: var(--superficie-2);
+    display: grid; place-items: center; font-weight: 700; font-size: .82rem; margin-top: 1px; }
+  button.alt .txt { flex: 1; }
+  button.alt.marcada { border-color: var(--acento); background: var(--acento-suave); }
+  button.alt.marcada .letra { background: var(--acento); color: #fff; }
+  button.alt.certa { border-color: var(--ok); background: var(--ok-suave); }
+  button.alt.certa .letra { background: var(--ok); color: #fff; }
+  button.alt.errada { border-color: var(--erro); background: var(--erro-suave); }
+  button.alt.errada .letra { background: var(--erro); color: #fff; }
+  button.alt .why { display: block; margin-top: 6px; font-size: .85rem; color: var(--texto-fraco);
+    border-top: 1px dashed var(--borda); padding-top: 6px; }
+
+  .grade { display: grid; grid-template-columns: repeat(auto-fill, minmax(46px, 1fr)); gap: 5px; }
+  .grade button { min-height: 38px; padding: 4px; font-size: .8rem; font-variant-numeric: tabular-nums; }
+  .grade button.resp { background: var(--acento-suave); border-color: var(--acento); color: var(--acento); font-weight: 700; }
+  .grade button.certa { background: var(--ok-suave); border-color: var(--ok); color: var(--ok); font-weight: 700; }
+  .grade button.errada { background: var(--erro-suave); border-color: var(--erro); color: var(--erro); font-weight: 700; }
+  .grade button.atual { outline: 2px solid var(--texto); outline-offset: 1px; }
+
+  .nota { text-align: center; padding: 8px 0 14px; }
+  .nota .val { font-size: 2.6rem; font-weight: 800; line-height: 1; }
+  .nota .val.ok { color: var(--ok); }
+  .nota .val.erro { color: var(--erro); }
+  .nota .de { color: var(--texto-fraco); font-size: .9rem; }
+
+  .explic { margin-top: 14px; border-top: 1px solid var(--borda); padding-top: 12px; }
+  .explic h4 { margin: 0 0 4px; font-size: .78rem; text-transform: uppercase;
+    letter-spacing: .04em; color: var(--texto-fraco); }
+  .explic .bloco { margin-bottom: 10px; font-size: .92rem; }
+</style>
+</head>
+<body>
+<div class="envolt" id="raiz"></div>
+
+<script src="../core/edital.js"></script>
+<script src="../core/gabarito.js"></script>
+<script src="../core/banco-loader.js"></script>
+<script src="../core/storage.js"></script>
+<script src="simulados.js"></script>
+</body>
+</html>

@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1f5f8b">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="TEMT 2026">
+<title>Título Medicina do Trabalho 2026</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="assets/icone-180.png">
+<link rel="icon" href="assets/icone-192.png">
+<link rel="stylesheet" href="assets/app.css">
+<style>
+  html, body { height: 100%; overflow: hidden; }
+  body { display: flex; flex-direction: column; }
+
+  header.topo {
+    background: var(--superficie);
+    border-bottom: 1px solid var(--borda);
+    padding: 8px 12px calc(8px + env(safe-area-inset-top)) 12px;
+    padding-top: calc(8px + env(safe-area-inset-top));
+    display: flex; align-items: center; gap: 10px; flex-shrink: 0;
+  }
+  .marca { font-weight: 700; font-size: .95rem; letter-spacing: -.01em; }
+  .contagem {
+    font-size: .78rem; color: var(--texto-fraco);
+    background: var(--superficie-2); padding: 3px 9px; border-radius: 999px; white-space: nowrap;
+  }
+  .contagem b { color: var(--acento); }
+  header.topo button { min-height: 36px; padding: 6px 11px; font-size: .85rem; }
+
+  #avisos { flex-shrink: 0; padding: 8px 12px 0; max-height: 34vh; overflow-y: auto; }
+  #avisos:empty { display: none; }
+  .faixa { position: relative; padding-right: 34px; }
+  .faixa .fechar {
+    position: absolute; top: 4px; right: 4px; min-height: 26px; padding: 2px 8px;
+    background: transparent; border: none; color: inherit; font-size: 1rem; line-height: 1;
+  }
+
+  nav.abas {
+    display: flex; gap: 2px; overflow-x: auto; flex-shrink: 0;
+    background: var(--superficie); border-bottom: 1px solid var(--borda);
+    padding: 0 6px; -webkit-overflow-scrolling: touch; scrollbar-width: none;
+  }
+  nav.abas::-webkit-scrollbar { display: none; }
+  nav.abas button {
+    border: none; background: transparent; border-radius: 0; white-space: nowrap;
+    padding: 11px 13px; min-height: 44px; font-size: .9rem; color: var(--texto-fraco);
+    border-bottom: 2.5px solid transparent; font-weight: 550;
+  }
+  nav.abas button[aria-selected="true"] { color: var(--acento); border-bottom-color: var(--acento); }
+  nav.abas button:hover { background: transparent; color: var(--texto); }
+
+  #palco { flex: 1; position: relative; min-height: 0; }
+  #palco iframe {
+    position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: var(--bg);
+  }
+  #palco iframe[hidden] { display: none; }
+
+  .carregando {
+    position: absolute; inset: 0; display: grid; place-items: center;
+    color: var(--texto-fraco); font-size: .9rem;
+  }
+
+  dialog.painel {
+    border: 1px solid var(--borda); border-radius: 14px; background: var(--superficie);
+    color: var(--texto); padding: 0; max-width: 480px; width: calc(100% - 28px);
+    box-shadow: 0 12px 40px rgba(0,0,0,.25);
+  }
+  dialog.painel::backdrop { background: rgba(0,0,0,.45); }
+  dialog.painel .corpo { padding: 16px; }
+  dialog.painel h2 { margin-top: 0; }
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <span class="marca">Título&nbsp;MT&nbsp;2026</span>
+  <span class="contagem" id="contagem">—</span>
+  <span class="espaco" style="flex:1"></span>
+  <button id="btBackup" title="Backup completo em arquivo">Backup</button>
+</header>
+
+<div id="avisos" role="status" aria-live="polite"></div>
+
+<nav class="abas" role="tablist" id="abas"></nav>
+
+<main id="palco">
+  <div class="carregando" id="carregando">carregando…</div>
+</main>
+
+<dialog class="painel" id="dlgBackup">
+  <div class="corpo">
+    <h2>Backup completo</h2>
+    <p class="pequeno fraco">O backup em arquivo <b>.json</b> é a única cópia que sobrevive
+      se o iPad/Safari apagar o armazenamento do site. Cobre todos os módulos: questões,
+      cronograma, materiais, simulados, flashcards, treino e planilha de erros.</p>
+    <p class="pequeno" id="infoBackup"></p>
+    <div class="linha" style="margin-bottom:10px">
+      <button class="primario" id="btExportar">Exportar .json</button>
+      <button id="btImportar">Restaurar de arquivo</button>
+      <input type="file" id="arqBackup" accept="application/json,.json" hidden>
+    </div>
+    <h3 style="margin-top:16px">Backups automáticos internos</h3>
+    <p class="pequeno fraco" style="margin-bottom:6px">Cópias datadas guardadas dentro do
+      navegador (últimas 12). Servem se algo se perder sem o site ser limpo.</p>
+    <div id="listaBackups" class="pequeno"></div>
+    <div class="linha" style="margin-top:16px">
+      <span class="espaco" style="flex:1"></span>
+      <button id="btFecharDlg">Fechar</button>
+    </div>
+  </div>
+</dialog>
+
+<script src="core/edital.js"></script>
+<script src="core/storage.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  var ABAS = [
+    { id: 'questoes',   titulo: 'Questões',   src: 'questoes/index.html' },
+    { id: 'cronograma', titulo: 'Cronograma', src: 'cronograma/index.html' },
+    { id: 'materiais',  titulo: 'Materiais',  src: 'materiais/index.html' },
+    { id: 'simulados',  titulo: 'Simulados',  src: 'simulados/index.html' },
+    { id: 'flashcards', titulo: 'Flashcards', src: 'flashcards/index.html' },
+    { id: 'treino',     titulo: 'Treino',     src: 'treino/index.html' },
+    { id: 'planilha',   titulo: 'Log de erros', src: 'planilha/index.html' }
+  ];
+
+  var elAbas = document.getElementById('abas');
+  var elPalco = document.getElementById('palco');
+  var elCarregando = document.getElementById('carregando');
+  var elAvisos = document.getElementById('avisos');
+  var frames = {};
+  var atual = null;
+
+  /* ------------------------------------------------------------- avisos --- */
+  // Exposto globalmente: storage.js dentro dos iframes chama parent.MTB_AVISO.
+  var vistos = {};
+  window.MTB_AVISO = function (a) {
+    var chave = a.nivel + '|' + a.texto;
+    if (vistos[chave]) return;
+    vistos[chave] = true;
+    var div = document.createElement('div');
+    div.className = 'faixa ' + (a.nivel === 'erro' ? 'erro' : a.nivel === 'aviso' ? 'alerta' : 'info');
+    var txt = document.createElement('span');
+    txt.textContent = a.texto;
+    div.appendChild(txt);
+    if (a.detalhe) {
+      var d = document.createElement('span');
+      d.className = 'detalhe';
+      d.textContent = a.detalhe;
+      div.appendChild(d);
+    }
+    var x = document.createElement('button');
+    x.className = 'fechar';
+    x.setAttribute('aria-label', 'Fechar aviso');
+    x.textContent = '×';
+    x.onclick = function () { div.remove(); };
+    div.appendChild(x);
+    elAvisos.appendChild(div);
+  };
+
+  /* --------------------------------------------------------------- abas --- */
+  function abrir(id, forcar) {
+    if (atual === id && !forcar) return;
+    var cfg = ABAS.filter(function (a) { return a.id === id; })[0];
+    if (!cfg) return;
+
+    if (!frames[id]) {
+      var f = document.createElement('iframe');
+      f.src = cfg.src;                       // lazy: só carrega no primeiro acesso
+      f.title = cfg.titulo;
+      f.setAttribute('loading', 'lazy');
+      frames[id] = f;
+      elPalco.appendChild(f);
+    }
+    Object.keys(frames).forEach(function (k) { frames[k].hidden = (k !== id); });
+    elCarregando.hidden = true;
+
+    Array.prototype.forEach.call(elAbas.children, function (b) {
+      b.setAttribute('aria-selected', String(b.dataset.aba === id));
+    });
+    atual = id;
+    try {
+      Store.patch('meta', function (m) { m = m || {}; m.ultimaAba = id; return m; });
+    } catch (e) { console.warn('[shell] não consegui salvar a aba atual', e); }
+    if (location.hash.slice(1) !== id) { history.replaceState(null, '', '#' + id); }
+  }
+
+  ABAS.forEach(function (a) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.setAttribute('role', 'tab');
+    b.setAttribute('aria-selected', 'false');
+    b.dataset.aba = a.id;
+    b.textContent = a.titulo;
+    b.onclick = function () { abrir(a.id); };
+    elAbas.appendChild(b);
+  });
+
+  window.addEventListener('hashchange', function () {
+    var h = location.hash.slice(1);
+    if (h) abrir(h);
+  });
+
+  /* ------------------------------------------------------------ contagem -- */
+  function atualizarContagem() {
+    var el = document.getElementById('contagem');
+    var hoje = new Date();
+    hoje.setHours(0, 0, 0, 0);
+    var prova = new Date(EDITAL.prova.data + 'T00:00:00');
+    var dias = Math.round((prova - hoje) / 86400000);
+    el.innerHTML = dias > 1 ? 'faltam <b>' + dias + '</b> dias'
+      : dias === 1 ? 'é <b>amanhã</b>'
+      : dias === 0 ? '<b>é hoje</b>' : 'prova realizada';
+    el.title = 'Prova: ' + EDITAL.prova.dataBR + ' — ' + EDITAL.prova.local;
+  }
+
+  /* -------------------------------------------------------------- backup -- */
+  var dlg = document.getElementById('dlgBackup');
+  document.getElementById('btBackup').onclick = function () {
+    var st = Store.status();
+    var ub = st.ultimoBackupArquivo;
+    document.getElementById('infoBackup').innerHTML = ub
+      ? 'Último backup em arquivo: <b>' + new Date(ub).toLocaleString('pt-BR') + '</b>'
+      : '<b class="rotulo alerta">Você ainda não exportou nenhum backup em arquivo.</b>';
+    Store.listarBackups().then(function (ids) {
+      var alvo = document.getElementById('listaBackups');
+      alvo.innerHTML = '';
+      if (!ids.length) { alvo.innerHTML = '<span class="fraco">nenhum ainda</span>'; return; }
+      ids.forEach(function (id) {
+        var l = document.createElement('div');
+        l.className = 'linha';
+        l.style.padding = '3px 0';
+        var s = document.createElement('span');
+        s.style.flex = '1';
+        s.textContent = new Date(id).toLocaleString('pt-BR');
+        var b = document.createElement('button');
+        b.textContent = 'Restaurar';
+        b.style.minHeight = '30px';
+        b.style.padding = '3px 9px';
+        b.onclick = function () {
+          if (!confirm('Restaurar o backup de ' + new Date(id).toLocaleString('pt-BR') +
+              '?\n\nIsto substitui os dados atuais de TODOS os módulos.')) return;
+          Store.restaurarBackup(id).then(function () { location.reload(); });
+        };
+        l.appendChild(s); l.appendChild(b);
+        alvo.appendChild(l);
+      });
+    });
+    dlg.showModal();
+  };
+  document.getElementById('btFecharDlg').onclick = function () { dlg.close(); };
+  document.getElementById('btExportar').onclick = function () {
+    var nome = Store.exportarArquivo();
+    Store.avisar('info', 'Backup exportado: ' + nome);
+    dlg.close();
+  };
+  document.getElementById('btImportar').onclick = function () {
+    document.getElementById('arqBackup').click();
+  };
+  document.getElementById('arqBackup').onchange = function (ev) {
+    var f = ev.target.files[0];
+    if (!f) return;
+    if (!confirm('Restaurar o backup "' + f.name + '"?\n\nIsto substitui os dados atuais.')) {
+      ev.target.value = ''; return;
+    }
+    Store.importarArquivo(f).then(function () {
+      dlg.close();
+      setTimeout(function () { location.reload(); }, 900);
+    }).catch(function (e) {
+      Store.avisar('erro', 'Falha ao restaurar o backup.', e.message);
+    });
+    ev.target.value = '';
+  };
+
+  /* ------------------------------------------------- service worker / PWA -- */
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js').then(function (reg) {
+      reg.addEventListener('updatefound', function () {
+        var novo = reg.installing;
+        if (!novo) return;
+        novo.addEventListener('statechange', function () {
+          if (novo.state === 'installed' && navigator.serviceWorker.controller) {
+            novo.postMessage({ tipo: 'ATIVAR_AGORA' });
+          }
+        });
+      });
+      setInterval(function () { reg.update(); }, 60 * 60 * 1000);
+    }).catch(function (e) {
+      console.warn('[shell] service worker não registrou (normal em file://):', e.message);
+    });
+    var recarregando = false;
+    navigator.serviceWorker.addEventListener('controllerchange', function () {
+      if (recarregando) return;
+      recarregando = true;
+      location.reload();
+    });
+  }
+
+  /* ---------------------------------------------------------------- init -- */
+  Store.onAviso(window.MTB_AVISO);
+  Store.init().then(function () {
+    atualizarContagem();
+    var meta = Store.get('meta') || {};
+    var inicial = location.hash.slice(1) || meta.ultimaAba || 'questoes';
+    if (!ABAS.some(function (a) { return a.id === inicial; })) { inicial = 'questoes'; }
+    abrir(inicial);
+  });
+})();
+</script>
+</body>
+</html>
