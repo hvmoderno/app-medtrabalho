@@ -1,0 +1,185 @@
+/* Lote H — 7.4, 7.2, 4.4, 2.3. AUTORAIS. */
+window.BANCO = window.BANCO || [];
+window.BANCO.push(
+
+{ id: 'q-7.4-040', tema: '7.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Uma construtora executa obra com trabalhadores próprios e de três subempreiteiras no mesmo canteiro. Sobre as obrigações de segurança e saúde, é CORRETO afirmar:',
+  alts: [
+    { t: 'A empresa responsável pelo canteiro deve garantir a implementação das medidas de proteção coletiva e a harmonização dos procedimentos entre todas as empresas atuantes, não se eximindo por serem os trabalhadores vinculados a terceiros.', ok: true,
+      why: 'Correta. Quem controla o canteiro responde pelas condições que oferece a todos que nele trabalham.' },
+    { t: 'Cada subempreiteira responde isoladamente, sem qualquer obrigação da contratante sobre o canteiro.', ok: false,
+      why: 'Errada. As proteções coletivas do canteiro são responsabilidade de quem o organiza.' },
+    { t: 'A exigência de documentos das subempreiteiras esgota a obrigação da contratante.', ok: false,
+      why: 'Errada. Verificar documento sem verificar a execução é o padrão que precede acidentes com terceirizados.' },
+    { t: 'Trabalhadores de subempreiteiras não integram os indicadores de acidentalidade da obra.', ok: false,
+      why: 'Errada. Excluí-los distorce o retrato do risco do canteiro.' },
+    { t: 'A harmonização de procedimentos entre empresas é boa prática sem previsão normativa.', ok: false,
+      why: 'Errada. Há previsão expressa de harmonização e de informação recíproca de riscos.' }
+  ],
+  comentario: 'Canteiro com múltiplas empresas: quem organiza responde pelas proteções coletivas e pela harmonização. Conferir papel das subempreiteiras não substitui verificar a execução — e os terceirizados contam nos indicadores.',
+  pegadinha: 'A alegação de responsabilidade isolada de cada subempreiteira é a defesa padrão em acidentes de canteiro.',
+  refs: ['NR-18', 'NR-1'] },
+
+{ id: 'q-7.4-041', tema: '7.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a caracterização de insalubridade por agente para o qual não há limite de tolerância fixado em norma, é CORRETO afirmar:',
+  alts: [
+    { t: 'Existem anexos que preveem avaliação qualitativa, baseada em inspeção do local e na natureza da atividade, e não em medição — sendo a caracterização feita pela presença da atividade ou operação descrita na norma.', ok: true,
+      why: 'Correta. Nem toda insalubridade se caracteriza por medição: há anexos de avaliação qualitativa, como os de agentes biológicos.' },
+    { t: 'Sem limite de tolerância fixado, é impossível caracterizar insalubridade.', ok: false,
+      why: 'Errada. A avaliação qualitativa existe justamente para essas hipóteses.' },
+    { t: 'A avaliação qualitativa dispensa a inspeção do local de trabalho.', ok: false,
+      why: 'Errada. É na inspeção que se verifica a atividade efetivamente realizada.' },
+    { t: 'A avaliação qualitativa é sempre menos confiável que a quantitativa.', ok: false,
+      why: 'Errada. Para determinados agentes, sobretudo biológicos, é o método adequado.' },
+    { t: 'O fornecimento de equipamento de proteção individual sempre elimina a caracterização de insalubridade.', ok: false,
+      why: 'Errada. A eliminação ou neutralização precisa ser demonstrada tecnicamente, e para alguns agentes o equipamento não a produz.' }
+  ],
+  comentario: 'Insalubridade tem duas rotas: quantitativa, por medição contra limite, e qualitativa, pela natureza da atividade descrita em anexo — típica dos agentes biológicos. Ausência de limite numérico não impede a caracterização.',
+  pegadinha: 'Supor que só há caracterização com medição elimina de saída todos os anexos qualitativos.',
+  refs: ['NR-15'] },
+
+{ id: 'q-7.4-042', tema: '7.4', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre a capacitação em segurança e saúde no trabalho, é CORRETO afirmar:',
+  alts: [
+    { t: 'Ela deve ser compatível com os riscos da atividade, ministrada por profissional capacitado, com registro e carga horária adequadas, e periodicamente atualizada — sendo a mudança de função ou de processo um gatilho para nova capacitação.', ok: true,
+      why: 'Correta. Capacitação não é evento único de admissão: mudança de risco exige nova capacitação.' },
+    { t: 'A capacitação inicial na admissão dispensa qualquer atualização posterior.', ok: false,
+      why: 'Errada. Há periodicidade prevista e gatilhos por mudança.' },
+    { t: 'A entrega de material escrito substitui a capacitação presencial ou supervisionada.', ok: false,
+      why: 'Errada. Material informativo é apoio, não substituto do treinamento.' },
+    { t: 'O registro da capacitação é dispensável quando ela é ministrada internamente.', ok: false,
+      why: 'Errada. O registro é exigência independente de quem ministra.' },
+    { t: 'A capacitação é obrigação do trabalhador, que deve buscá-la por conta própria.', ok: false,
+      why: 'Errada. É obrigação do empregador, sem custo para o trabalhador.' }
+  ],
+  comentario: 'Capacitação: compatível com o risco, por profissional capacitado, registrada, com carga adequada, periódica e refeita quando muda a função ou o processo. E custeada pelo empregador, como tudo em saúde e segurança.',
+  pegadinha: 'Substituir treinamento por entrega de cartilha é o cumprimento formal mais comum e o menos eficaz.',
+  refs: ['NR-1', 'NR-6'] },
+
+{ id: 'q-7.2-040', tema: '7.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Trabalhador teve benefício por incapacidade concedido como previdenciário, mas entende que se trata de doença ocupacional. Sobre as consequências da natureza do benefício, é CORRETO afirmar:',
+  alts: [
+    { t: 'A natureza acidentária traz consequências próprias — dispensa de carência, manutenção do recolhimento do fundo de garantia durante o afastamento e garantia de emprego após a alta —, o que torna relevante buscar a conversão quando há elementos de nexo.', ok: true,
+      why: 'Correta. As diferenças são concretas e patrimoniais, e é por isso que a espécie do benefício importa tanto.' },
+    { t: 'A natureza do benefício é irrelevante, pois o valor é o mesmo.', ok: false,
+      why: 'Errada. Carência, fundo de garantia e estabilidade diferem substancialmente.' },
+    { t: 'A conversão da espécie do benefício é impossível após a concessão.', ok: false,
+      why: 'Errada. Há vias administrativas e judiciais para o reconhecimento da natureza acidentária.' },
+    { t: 'A garantia de emprego existe igualmente nos benefícios previdenciários comuns.', ok: false,
+      why: 'Errada. A garantia decorre da natureza acidentária.' },
+    { t: 'O recolhimento do fundo de garantia durante o afastamento ocorre em ambas as espécies.', ok: false,
+      why: 'Errada. A manutenção do recolhimento é característica do afastamento acidentário.' }
+  ],
+  comentario: 'A espécie do benefício não é detalhe burocrático: acidentária dispensa carência, mantém o recolhimento do fundo de garantia e gera estabilidade de doze meses após a alta. É o que está em jogo na discussão de nexo.',
+  pegadinha: '"O valor é o mesmo" ignora três consequências patrimoniais relevantes.',
+  refs: ['Lei nº 8.213/1991 — arts. 20, 26, 118', 'Lei nº 8.036/1990'] },
+
+{ id: 'q-7.2-041', tema: '7.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a documentação que instrui o requerimento de aposentadoria especial, é CORRETO afirmar:',
+  alts: [
+    { t: 'A empresa emite documento próprio descrevendo a exposição do trabalhador, lastreado em laudo técnico de condições ambientais elaborado por profissional habilitado — sendo a fidedignidade desse documento responsabilidade da empresa e dos profissionais que o subsidiam.', ok: true,
+      why: 'Correta. O documento individual se apoia no laudo técnico, e informação inexata tem consequências previdenciárias e legais.' },
+    { t: 'O documento é preenchido pelo próprio trabalhador com base em seu relato.', ok: false,
+      why: 'Errada. É emitido pela empresa, com base em laudo técnico.' },
+    { t: 'A emissão do documento é facultativa e depende de solicitação judicial.', ok: false,
+      why: 'Errada. É obrigação da empresa, com prazos e situações definidos.' },
+    { t: 'O documento pode descrever a exposição de forma genérica por setor.', ok: false,
+      why: 'Errada. A descrição é individualizada por trabalhador, função e período.' },
+    { t: 'A ausência do laudo técnico não compromete a validade do documento emitido.', ok: false,
+      why: 'Errada. O documento sem lastro técnico perde a base que o sustenta.' }
+  ],
+  comentario: 'A cadeia é: laudo técnico de condições ambientais → documento individual de exposição → reconhecimento de tempo especial. Informação genérica ou sem lastro técnico prejudica o trabalhador décadas depois.',
+  pegadinha: 'Descrição genérica por setor é a prática que mais compromete aposentadorias especiais.',
+  refs: ['Lei nº 8.213/1991', 'Decreto nº 3.048/1999', 'eSocial — eventos de SST'] },
+
+{ id: 'q-7.2-042', tema: '7.2', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre a perícia médica previdenciária e a conclusão do médico assistente, é CORRETO afirmar:',
+  alts: [
+    { t: 'O atestado do assistente é elemento de instrução relevante, mas a decisão sobre a concessão do benefício cabe à perícia, que avalia a incapacidade frente às exigências da atividade — divergência é possível e deve ser fundamentada.', ok: true,
+      why: 'Correta. São funções distintas com objetos distintos; a divergência não desqualifica nenhum dos dois.' },
+    { t: 'O atestado do assistente vincula a decisão da perícia.', ok: false,
+      why: 'Errada. É elemento de instrução, não decisão.' },
+    { t: 'A perícia deve desconsiderar documentos apresentados pelo segurado.', ok: false,
+      why: 'Errada. Devem ser analisados e comentados na fundamentação.' },
+    { t: 'A divergência entre assistente e perito indica má-fé de um deles.', ok: false,
+      why: 'Errada. Decorre da diferença de objeto entre assistência e avaliação de capacidade.' },
+    { t: 'O médico assistente não deve descrever a repercussão funcional em seus relatórios.', ok: false,
+      why: 'Errada. É justamente a descrição funcional que torna o relatório útil à perícia.' }
+  ],
+  comentario: 'Assistente descreve doença e repercussão; perito decide sobre incapacidade para a atividade. Relatório assistencial que descreve função — o que o paciente consegue e não consegue fazer — é o que mais ajuda na perícia.',
+  pegadinha: 'Interpretar a divergência como má-fé desqualifica um processo que é normal e esperado.',
+  refs: ['Lei nº 8.213/1991', 'Resoluções do CFM sobre perícia médica'] },
+
+{ id: 'q-4.4-050', tema: '4.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Pedreiro apresenta lesões eczematosas em mãos e antebraços, com fissuras e áreas de ulceração, após anos de contato com cimento úmido. Sobre o quadro, é CORRETO afirmar:',
+  alts: [
+    { t: 'O cimento produz dermatose por dois mecanismos que podem coexistir: irritação e queimadura química pelo pH alcalino, e sensibilização ao cromo hexavalente presente como contaminante — o que explica quadros graves e de difícil resolução sem afastamento do contato.', ok: true,
+      why: 'Correta. Alcalinidade e cromo hexavalente atuam juntos, e é isso que torna a dermatose do cimento particularmente rebelde.' },
+    { t: 'O cimento causa apenas irritação, sem potencial sensibilizante.', ok: false,
+      why: 'Errada. O cromo hexavalente presente como contaminante é sensibilizante reconhecido.' },
+    { t: 'A ulceração descrita afasta origem ocupacional.', ok: false,
+      why: 'Errada. Queimadura química por cimento úmido é causa reconhecida de ulceração em trabalhadores da construção.' },
+    { t: 'O uso de luvas de tecido é proteção adequada para o contato com cimento úmido.', ok: false,
+      why: 'Errada. Luva de tecido absorve e mantém o cimento em contato prolongado com a pele, agravando o quadro.' },
+    { t: 'A redução do teor de cromo no cimento não tem efeito preventivo demonstrado.', ok: false,
+      why: 'Errada. A redução do cromo hexavalente é medida preventiva reconhecida internacionalmente.' }
+  ],
+  comentario: 'Dermatose do cimento tem dois motores: pH alcalino, que queima, e cromo hexavalente, que sensibiliza. Por isso é grave e recidivante. E luva de tecido piora — absorve o cimento e prolonga o contato.',
+  pegadinha: 'A luva de tecido é a proteção mais usada em canteiro e a que mais agrava a dermatose.',
+  refs: ['Salim — Dermatoses Ocupacionais', 'NR-18'] },
+
+{ id: 'q-4.4-051', tema: '4.4', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre o diagnóstico diferencial entre dermatose ocupacional e dermatose comum agravada pelo trabalho, é CORRETO afirmar:',
+  alts: [
+    { t: 'A distinção importa para o enquadramento do nexo — causa necessária versus doença comum agravada —, mas em ambos os casos há relação com o trabalho a ser reconhecida, e a conduta de afastamento do agente permanece.', ok: true,
+      why: 'Correta. O enquadramento muda; a existência de relação com o trabalho e a necessidade de afastar o agente, não.' },
+    { t: 'Dermatose preexistente agravada pelo trabalho não guarda relação com o trabalho.', ok: false,
+      why: 'Errada. É hipótese expressa de doença relacionada ao trabalho por agravamento.' },
+    { t: 'A distinção é irrelevante do ponto de vista prático.', ok: false,
+      why: 'Errada. Ela orienta o enquadramento e a discussão de nexo, ainda que a conduta clínica seja semelhante.' },
+    { t: 'A presença de atopia impede qualquer reconhecimento de nexo.', ok: false,
+      why: 'Errada. Atopia é fator de suscetibilidade e, quando muito, concausa.' },
+    { t: 'Dermatose comum agravada pelo trabalho dispensa afastamento do agente.', ok: false,
+      why: 'Errada. Sem afastar o agente agravante o quadro persiste.' }
+  ],
+  comentario: 'Duas rotas de nexo em dermatologia ocupacional: causa necessária (dermatose ocupacional propriamente dita) e agravamento de dermatose comum. Muda o enquadramento; não muda a existência de relação com o trabalho nem a conduta.',
+  pegadinha: 'Usar a preexistência ou a atopia para negar qualquer relação com o trabalho ignora a hipótese de agravamento.',
+  refs: ['Salim — Dermatoses Ocupacionais', 'Mendes, R. — Patologia do Trabalho'] },
+
+{ id: 'q-2.3-050', tema: '2.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Trabalhador de indústria de baterias apresenta plumbemia elevada. O médico avalia a necessidade de afastamento. Sobre a conduta, é CORRETO afirmar:',
+  alts: [
+    { t: 'O afastamento da exposição deve ocorrer conforme critérios definidos em protocolo, com acompanhamento até a redução dos indicadores, e o retorno depende tanto da recuperação do trabalhador quanto da correção efetiva das condições que produziram a absorção excessiva.', ok: true,
+      why: 'Correta. Devolver o trabalhador ao mesmo ambiente após a queda do indicador reproduz o ciclo.' },
+    { t: 'O afastamento é desnecessário enquanto não houver sintomas clínicos.', ok: false,
+      why: 'Errada. O indicador biológico existe para agir antes do sintoma.' },
+    { t: 'O retorno pode ocorrer assim que o indicador normalizar, independentemente das condições do setor.', ok: false,
+      why: 'Errada. Sem correção das condições, a absorção excessiva se repete.' },
+    { t: 'A decisão de afastamento cabe ao setor de recursos humanos.', ok: false,
+      why: 'Errada. É decisão técnica médica, ainda que operacionalizada pela empresa.' },
+    { t: 'A quelação permite manter o trabalhador exposto durante o tratamento.', ok: false,
+      why: 'Errada. Tratamento não viabiliza continuidade de exposição não controlada.' }
+  ],
+  comentario: 'Afastar da exposição, acompanhar a queda do indicador e — condição essencial — só devolver depois de corrigir o que produziu a absorção. Retorno sem correção é garantia de repetição.',
+  pegadinha: 'Condicionar o retorno apenas à normalização do indicador ignora metade do problema.',
+  refs: ['Buschinelli — Toxicologia Ocupacional', 'NR-7', 'ACGIH — BEIs'] },
+
+{ id: 'q-2.3-051', tema: '2.3', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre o rótulo e a sinalização de produtos químicos no ambiente de trabalho, é CORRETO afirmar:',
+  alts: [
+    { t: 'A rotulagem preventiva deve identificar o produto, os perigos, as precauções e os primeiros socorros de forma padronizada e compreensível, e produtos transferidos para recipientes menores devem ser igualmente identificados — recipiente sem identificação é risco por si.', ok: true,
+      why: 'Correta. O fracionamento sem rotulagem é causa frequente de exposição e de atendimento sem saber a que agente.' },
+    { t: 'Apenas os recipientes originais precisam de rotulagem.', ok: false,
+      why: 'Errada. Recipientes de fracionamento também devem ser identificados.' },
+    { t: 'O rótulo substitui integralmente a ficha de informações de segurança.', ok: false,
+      why: 'Errada. São documentos complementares, com níveis de detalhe distintos.' },
+    { t: 'A padronização internacional da rotulagem não se aplica no país.', ok: false,
+      why: 'Errada. O sistema harmonizado de classificação e rotulagem foi adotado como referência.' },
+    { t: 'A capacitação dos trabalhadores sobre a rotulagem é dispensável quando os rótulos são autoexplicativos.', ok: false,
+      why: 'Errada. A compreensão dos pictogramas e frases padronizadas exige capacitação.' }
+  ],
+  comentario: 'Rótulo identifica e alerta; ficha detalha. Ambos necessários. E o ponto que mais falha na prática: recipiente fracionado sem identificação — que foi exatamente o cenário do trabalhador rural intoxicado por produto sem rótulo.',
+  pegadinha: 'Limitar a rotulagem aos recipientes originais deixa sem identificação justamente os que o trabalhador manuseia.',
+  refs: ['NR-26', 'Buschinelli — Toxicologia Ocupacional'] }
+
+);

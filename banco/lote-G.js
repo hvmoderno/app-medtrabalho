@@ -1,0 +1,185 @@
+/* Lote G — 2.2, 1.3, 2.6, 2.4. AUTORAIS. */
+window.BANCO = window.BANCO || [];
+window.BANCO.push(
+
+{ id: 'q-2.2-050', tema: '2.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Operador de britadeira portátil e motorista de caminhão fora de estrada trabalham na mesma pedreira. Sobre a exposição a vibração, é CORRETO afirmar:',
+  alts: [
+    { t: 'O primeiro está exposto a vibração de mãos e braços, com risco de síndrome vascular, neurológica e osteomuscular de membro superior; o segundo, a vibração de corpo inteiro, associada sobretudo a alterações de coluna lombar — exigindo avaliações e desfechos distintos.', ok: true,
+      why: 'Correta. A via de entrada da vibração define o órgão-alvo, o método de avaliação e o desfecho esperado.' },
+    { t: 'Ambos estão expostos ao mesmo tipo de vibração, variando apenas a intensidade.', ok: false,
+      why: 'Errada. Ferramenta manual e assento de veículo transmitem vibração por vias e a segmentos distintos.' },
+    { t: 'A vibração de corpo inteiro produz o fenômeno de Raynaud ocupacional.', ok: false,
+      why: 'Errada. O fenômeno vascular dos dedos decorre de vibração de mãos e braços.' },
+    { t: 'A vibração de mãos e braços é a principal causa ocupacional de lombalgia.', ok: false,
+      why: 'Errada. A associação com lombalgia é da vibração de corpo inteiro.' },
+    { t: 'A avaliação da exposição a vibração dispensa a consideração da postura adotada.', ok: false,
+      why: 'Errada. Postura, especialmente sentada com flexão de tronco, modula o efeito da vibração de corpo inteiro.' }
+  ],
+  comentario: 'Ferramenta na mão → vibração de mãos e braços → dedos brancos, parestesia, perda de destreza. Assento de veículo → corpo inteiro → coluna lombar. Métodos de medição, órgão-alvo e desfecho: tudo diferente.',
+  pegadinha: 'Tratar as duas como uma só exposição, variando só a intensidade, elimina a distinção que organiza todo o tema.',
+  refs: ['Normas de Higiene Ocupacional — Fundacentro', 'NR-15', 'Couto — Ergonomia'] },
+
+{ id: 'q-2.2-051', tema: '2.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Trabalhadores de uma caldeiraria relatam que, ao fim do turno, os sons parecem abafados, com recuperação durante a noite. Sobre o fenômeno, é CORRETO afirmar:',
+  alts: [
+    { t: 'Trata-se de mudança temporária de limiar auditivo, reversível com repouso, mas cuja ocorrência repetida indica exposição não controlada e antecede a instalação da perda permanente — sendo sinal de alerta, e não fenômeno banal.', ok: true,
+      why: 'Correta. O deslocamento temporário repetido é a antessala da perda permanente e sinaliza que o controle falhou.' },
+    { t: 'O fenômeno é esperado e não indica necessidade de revisão do controle de exposição.', ok: false,
+      why: 'Errada. Sua ocorrência sistemática é indicador de exposição excessiva.' },
+    { t: 'A recuperação durante a noite demonstra que não há risco de dano permanente.', ok: false,
+      why: 'Errada. A reversão do episódio não impede o acúmulo de dano com a repetição.' },
+    { t: 'O fenômeno só ocorre com exposição acima do limite de tolerância.', ok: false,
+      why: 'Errada. Pode ocorrer também abaixo do limite, conforme a suscetibilidade e o padrão de exposição.' },
+    { t: 'A audiometria realizada nessa condição reflete adequadamente a audição basal do trabalhador.', ok: false,
+      why: 'Errada. É exatamente a condição que o repouso auditivo prévio existe para evitar.' }
+  ],
+  comentario: 'Sensação de audição abafada ao fim do turno é deslocamento temporário de limiar. Reverte, mas repetido todo dia antecede a perda permanente — é indicador de que a exposição não está controlada.',
+  pegadinha: 'A reversibilidade é usada para tranquilizar e é justamente o que precede o dano irreversível.',
+  refs: ['NHO 01 — Fundacentro', 'Gândara — Doenças Otorrinolaringológicas Relacionadas ao Trabalho'] },
+
+{ id: 'q-2.2-052', tema: '2.2', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre a exposição ocupacional a radiação ultravioleta em atividades a céu aberto, é CORRETO afirmar:',
+  alts: [
+    { t: 'A exposição é cumulativa ao longo dos anos e o controle prioriza sombreamento, reorganização de horários e vestimenta adequada, com o protetor solar como medida complementar — e os efeitos incluem dano cutâneo, ocular e imunossupressão local.', ok: true,
+      why: 'Correta. A hierarquia se aplica também aqui: sombra e horário antes de vestimenta, e vestimenta antes de protetor solar.' },
+    { t: 'A proteção adequada se resume ao fornecimento de protetor solar.', ok: false,
+      why: 'Errada. É a última medida da hierarquia e depende de reaplicação frequente para funcionar.' },
+    { t: 'Dias nublados dispensam medidas de proteção.', ok: false,
+      why: 'Errada. Parcela relevante da radiação ultravioleta atravessa a cobertura de nuvens.' },
+    { t: 'Os efeitos se restringem à pele, sem repercussão ocular.', ok: false,
+      why: 'Errada. Há efeitos oculares agudos e crônicos, incluindo catarata.' },
+    { t: 'A exposição ocupacional à radiação solar não tem reconhecimento como fator de risco de câncer.', ok: false,
+      why: 'Errada. A radiação solar é reconhecida como carcinogênica para a pele.' }
+  ],
+  comentario: 'Trabalho a céu aberto é exposição ocupacional a radiação ultravioleta: cumulativa, com efeitos cutâneos, oculares e imunológicos. Controle por sombra e horário primeiro; protetor solar é complemento, não solução.',
+  pegadinha: 'A crença de que dia nublado protege é comum entre trabalhadores rurais e de construção.',
+  refs: ['IARC Monographs', 'Salim — Dermatoses Ocupacionais', 'NR-31'] },
+
+{ id: 'q-1.3-050', tema: '1.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Um estudo transversal em uma indústria encontrou associação entre tempo de exposição a um agente e prevalência de sintomas. Sobre as limitações do desenho, é CORRETO afirmar:',
+  alts: [
+    { t: 'O estudo transversal mede exposição e desfecho simultaneamente, o que dificulta estabelecer temporalidade e o torna vulnerável ao efeito do trabalhador sadio — trabalhadores mais afetados podem já ter saído, reduzindo a associação observada.', ok: true,
+      why: 'Correta. É a limitação central do transversal em saúde ocupacional: quem adoeceu e saiu não está lá para ser contado.' },
+    { t: 'O estudo transversal permite estabelecer relação temporal entre exposição e desfecho.', ok: false,
+      why: 'Errada. Medindo os dois ao mesmo tempo, a temporalidade não se estabelece.' },
+    { t: 'O efeito do trabalhador sadio tende a superestimar a associação em estudos transversais ocupacionais.', ok: false,
+      why: 'Errada, é o oposto: tende a subestimar, porque os mais afetados saíram.' },
+    { t: 'O transversal permite calcular incidência da doença na população estudada.', ok: false,
+      why: 'Errada. Ele mede prevalência, não incidência.' },
+    { t: 'A ausência de grupo de comparação inviabiliza qualquer análise em estudo transversal.', ok: false,
+      why: 'Errada. É possível comparar estratos de exposição dentro da própria população estudada.' }
+  ],
+  comentario: 'Transversal mede prevalência, não incidência, e não estabelece temporalidade. Em população ocupacional ainda sofre o efeito do trabalhador sadio, que subestima a associação — quem adoeceu já não está no setor para responder.',
+  pegadinha: 'Inverter o sentido do viés — dizer que superestima — é o erro mais frequente sobre o efeito do trabalhador sadio.',
+  refs: ['Fletcher — Epidemiologia Clínica', 'Hulley — Delineando a pesquisa clínica'] },
+
+{ id: 'q-1.3-051', tema: '1.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Ao avaliar a qualidade de um estudo que sustenta o nexo entre um agente e uma doença, o médico do trabalho considera os critérios de causalidade. Sobre eles, é CORRETO afirmar:',
+  alts: [
+    { t: 'São critérios de julgamento e não uma lista de verificação obrigatória: temporalidade é o único indispensável, enquanto força de associação, gradiente dose-resposta, consistência, plausibilidade e reversibilidade reforçam o julgamento sem serem individualmente necessários.', ok: true,
+      why: 'Correta. Temporalidade é condição lógica; os demais aumentam a confiança sem serem requisitos isolados.' },
+    { t: 'Todos os critérios precisam estar presentes para que se admita relação causal.', ok: false,
+      why: 'Errada. Exigir todos inviabilizaria o reconhecimento de praticamente qualquer causalidade em saúde.' },
+    { t: 'A força de associação é o único critério indispensável.', ok: false,
+      why: 'Errada. O indispensável é a temporalidade: a causa precede o efeito.' },
+    { t: 'O gradiente dose-resposta é sempre observável em doenças ocupacionais.', ok: false,
+      why: 'Errada. Em fenômenos com limiar ou saturação, o gradiente pode não aparecer.' },
+    { t: 'A plausibilidade biológica depende de mecanismo completamente elucidado.', ok: false,
+      why: 'Errada. Plausibilidade não exige mecanismo totalmente conhecido; exige compatibilidade com o conhecimento disponível.' }
+  ],
+  comentario: 'Os critérios de causalidade são ferramenta de julgamento, não checklist. Temporalidade é o único logicamente indispensável. Exigir todos os demais é a forma mais elegante de nunca reconhecer nexo algum.',
+  pegadinha: 'Transformar os critérios em requisitos cumulativos é o argumento técnico mais sofisticado contra o reconhecimento de doenças ocupacionais.',
+  refs: ['Fletcher — Epidemiologia Clínica'] },
+
+{ id: 'q-1.3-052', tema: '1.3', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre a interpretação de uma revisão sistemática que conclui pela ausência de evidência de associação entre um agente e um desfecho, é CORRETO afirmar:',
+  alts: [
+    { t: 'Ausência de evidência de associação não equivale a evidência de ausência de associação — a conclusão pode refletir escassez de estudos, poder insuficiente ou limitações metodológicas dos trabalhos incluídos.', ok: true,
+      why: 'Correta. Distinguir as duas coisas é decisivo em saúde ocupacional, onde muitos agentes simplesmente não foram bem estudados.' },
+    { t: 'A conclusão demonstra que o agente é seguro.', ok: false,
+      why: 'Errada. Não estudado ou mal estudado não é sinônimo de seguro.' },
+    { t: 'Revisões sistemáticas eliminam a necessidade de considerar a qualidade dos estudos incluídos.', ok: false,
+      why: 'Errada. A qualidade dos estudos incluídos determina a confiança na conclusão.' },
+    { t: 'A ausência de estudos sobre um agente autoriza dispensar medidas de controle.', ok: false,
+      why: 'Errada. Na ausência de conhecimento, a prudência recomenda manter o controle.' },
+    { t: 'Revisão sistemática e metanálise são sinônimos.', ok: false,
+      why: 'Errada. A metanálise é a combinação estatística dos resultados, que nem toda revisão sistemática comporta.' }
+  ],
+  comentario: 'Em saúde ocupacional, "não há evidência" costuma significar "não foi estudado". Converter isso em "é seguro" é o erro que sustentou décadas de exposição a agentes hoje reconhecidos como perigosos.',
+  pegadinha: 'A conversão de ausência de evidência em prova de segurança é o argumento histórico da indústria do asbesto.',
+  refs: ['Fletcher — Epidemiologia Clínica', 'Hulley — Delineando a pesquisa clínica'] },
+
+{ id: 'q-2.6-060', tema: '2.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a relação entre limites de exposição ocupacional e suscetibilidade individual, é CORRETO afirmar:',
+  alts: [
+    { t: 'Os valores-limite são estabelecidos para proteger a maioria dos trabalhadores em condições definidas, mas não garantem proteção a todos — indivíduos hipersuscetíveis, com doenças preexistentes ou sensibilizados podem apresentar efeito abaixo do limite.', ok: true,
+      why: 'Correta. É a limitação declarada nas próprias documentações de referência e a razão de o acompanhamento médico ser individual.' },
+    { t: 'Os valores-limite garantem proteção a todos os trabalhadores expostos.', ok: false,
+      why: 'Errada. Nenhuma documentação de referência faz essa afirmação.' },
+    { t: 'A existência de suscetibilidade individual justifica excluir esses trabalhadores da contratação.', ok: false,
+      why: 'Errada e discriminatória. A resposta é controlar a exposição e acompanhar individualmente, não selecionar pessoas.' },
+    { t: 'A suscetibilidade individual é irrelevante quando a exposição está controlada.', ok: false,
+      why: 'Errada. É justamente ela que explica efeitos em situações consideradas controladas.' },
+    { t: 'O acompanhamento médico individual é dispensável quando a exposição está abaixo do limite.', ok: false,
+      why: 'Errada. O acompanhamento existe em boa parte para detectar quem responde diferente do esperado.' }
+  ],
+  comentario: 'Limite protege a maioria, não todos. Daí a existência do acompanhamento médico individual: ele é a rede que pega quem responde fora do padrão. E a resposta ao hipersuscetível é proteger, nunca excluir.',
+  pegadinha: 'Usar a suscetibilidade individual para justificar seleção na admissão inverte a proteção em discriminação.',
+  refs: ['ACGIH — TLVs e BEIs', 'NR-7'] },
+
+{ id: 'q-2.6-061', tema: '2.6', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre a aplicação de valores-limite a agentes com notação de risco reprodutivo ou de efeito sobre o desenvolvimento, é CORRETO afirmar:',
+  alts: [
+    { t: 'A notação sinaliza risco específico para a reprodução ou o desenvolvimento, exigindo atenção particular a trabalhadoras gestantes ou que planejam engravidar e a trabalhadores em idade reprodutiva — com afastamento das exposições incompatíveis e sem que isso justifique exclusão de mulheres da função.', ok: true,
+      why: 'Correta. A proteção é da exposição, não das pessoas: excluir mulheres da função é discriminação, e o risco reprodutivo também alcança homens.' },
+    { t: 'A notação justifica a não contratação de mulheres em idade fértil para a função.', ok: false,
+      why: 'Errada e discriminatória. A solução é controlar a exposição, não selecionar por sexo.' },
+    { t: 'O risco reprodutivo ocupacional afeta apenas trabalhadoras mulheres.', ok: false,
+      why: 'Errada. Há efeitos sobre a fertilidade masculina documentados para diversos agentes.' },
+    { t: 'A notação de risco reprodutivo é irrelevante quando a exposição está abaixo do limite.', ok: false,
+      why: 'Errada. Para alguns efeitos sobre o desenvolvimento a janela de vulnerabilidade é estreita e o limite geral pode não proteger.' },
+    { t: 'A comunicação desse risco às trabalhadoras é dispensável.', ok: false,
+      why: 'Errada. A informação é condição para decisões conscientes e para o exercício de direitos.' }
+  ],
+  comentario: 'Risco reprodutivo alcança homens e mulheres. A resposta é sempre a mesma: controlar a exposição e informar — nunca selecionar pessoas por sexo ou por planos reprodutivos, o que é discriminação e não protege ninguém.',
+  pegadinha: 'A exclusão de mulheres da função aparece como proteção e é a forma clássica de discriminação em saúde ocupacional.',
+  refs: ['ACGIH — TLVs e BEIs', 'CLT — proteção à maternidade', 'Lei nº 13.146/2015'] },
+
+{ id: 'q-2.4-050', tema: '2.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Trabalhador de laboratório de pesquisa manipula cultura de agente de classe de risco 3 em procedimento que gera aerossol. Sobre a contenção necessária, é CORRETO afirmar:',
+  alts: [
+    { t: 'O procedimento gerador de aerossol exige contenção primária em cabine de segurança biológica adequada, somada às práticas laboratoriais e à instalação compatíveis com o nível exigido — a classe do agente define o piso, e o procedimento pode elevar a exigência.', ok: true,
+      why: 'Correta. Contenção resulta de práticas, equipamento e instalação, e o procedimento muda a via de exposição.' },
+    { t: 'A classe do agente define integralmente o nível de contenção, independentemente do procedimento.', ok: false,
+      why: 'Errada. Procedimentos geradores de aerossol podem exigir contenção adicional.' },
+    { t: 'O uso de equipamento de proteção individual substitui a contenção primária.', ok: false,
+      why: 'Errada. Contenção primária é barreira entre o agente e o trabalhador; o equipamento individual é complementar.' },
+    { t: 'Cabine de segurança biológica e capela de exaustão química são equipamentos intercambiáveis.', ok: false,
+      why: 'Errada. Têm princípios de funcionamento e finalidades distintas; a capela química não protege contra risco biológico.' },
+    { t: 'A validação periódica do desempenho da cabine é dispensável.', ok: false,
+      why: 'Errada. A certificação periódica é condição para que a contenção continue existindo.' }
+  ],
+  comentario: 'Contenção = prática + equipamento + instalação. A classe do agente dá o piso; o procedimento gerador de aerossol pode elevar. E cabine de segurança biológica não é capela química — confundir as duas é erro grave e comum.',
+  pegadinha: 'Tratar equipamento individual como substituto da contenção primária inverte a hierarquia de proteção.',
+  refs: ['Classificação de Risco dos Agentes Biológicos — Ministério da Saúde', 'NR-32'] },
+
+{ id: 'q-2.4-051', tema: '2.4', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre o risco biológico em atividades funerárias e de necropsia, é CORRETO afirmar:',
+  alts: [
+    { t: 'Há exposição a agentes de transmissão sanguínea e por aerossóis, com risco associado a perfurocortantes e a procedimentos que geram partículas, exigindo precauções padrão, equipamentos adequados e protocolo de acidente com material biológico como em qualquer serviço de saúde.', ok: true,
+      why: 'Correta. O corpo sem vida não elimina o risco infeccioso, e procedimentos com serra e instrumentos cortantes geram aerossol e ferimentos.' },
+    { t: 'O risco biológico cessa com o óbito do paciente.', ok: false,
+      why: 'Errada. Diversos agentes permanecem viáveis por período variável após a morte.' },
+    { t: 'Precauções padrão não se aplicam a atividades funerárias.', ok: false,
+      why: 'Errada. Aplicam-se integralmente, pelo mesmo motivo de sempre: o estado infeccioso frequentemente é desconhecido.' },
+    { t: 'Acidente com material biológico nessas atividades não segue o protocolo dos serviços de saúde.', ok: false,
+      why: 'Errada. A conduta pós-exposição segue a mesma lógica.' },
+    { t: 'Procedimentos com serra não geram risco de aerossol.', ok: false,
+      why: 'Errada. São procedimentos reconhecidamente geradores de partículas e aerossóis.' }
+  ],
+  comentario: 'Atividade funerária e necropsia são serviços de saúde para efeito de risco biológico: precauções padrão, proteção contra perfurocortante e aerossol, e o mesmo protocolo de acidente com material biológico.',
+  pegadinha: 'A ideia de que o risco cessa com o óbito é intuitiva e falsa para vários agentes.',
+  refs: ['NR-32', 'Classificação de Risco dos Agentes Biológicos — Ministério da Saúde'] }
+
+);
