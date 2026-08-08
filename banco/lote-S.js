@@ -1,4 +1,4 @@
-/* Lote S — 5.4, 5.3, 2.9, 4.9, 4.7, 6.2, 6.3, 6.4, 7.3. AUTORAIS. */
+/* Lote S — 5.4, 5.3, 2.9, 4.9, 4.7, 6.2, 1.2, 7.1, 7.8. AUTORAIS. */
 window.BANCO = window.BANCO || [];
 window.BANCO.push(
 
@@ -110,7 +110,7 @@ window.BANCO.push(
   pegadinha: 'Avaliar o posto sem adaptações produz inaptidão para praticamente toda deficiência.',
   refs: ['Lei nº 13.146/2015 — Estatuto da Pessoa com Deficiência', 'Lei nº 8.213/1991 — art. 93'] },
 
-{ id: 'q-6.3-060', tema: '6.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
+{ id: 'q-1.2-032', tema: '1.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a saúde da trabalhadora e as especificidades de gênero no trabalho, é CORRETO afirmar:',
   alts: [
     { t: 'A dupla jornada, a segregação ocupacional e a maior exposição a assédio compõem determinantes específicos, e o desenho de postos e equipamentos baseado em antropometria masculina produz sobrecarga adicional às mulheres nas mesmas tarefas.', ok: true,
@@ -128,7 +128,7 @@ window.BANCO.push(
   pegadinha: 'Supor exposição idêntica na mesma tarefa ignora que o posto foi dimensionado para outro percentil antropométrico.',
   refs: ['OIT — gênero e trabalho', 'NR-17', 'PNSTT'] },
 
-{ id: 'q-6.4-060', tema: '6.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
+{ id: 'q-7.1-054', tema: '7.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o trabalho de adolescentes e sua proteção, é CORRETO afirmar:',
   alts: [
     { t: 'Há vedação de trabalho noturno, perigoso ou insalubre a menores de dezoito anos, e a lista de piores formas de trabalho infantil orienta a identificação das atividades proibidas — proteção que decorre da vulnerabilidade do desenvolvimento em curso.', ok: true,
@@ -146,7 +146,7 @@ window.BANCO.push(
   pegadinha: 'O adicional de insalubridade compra tempo de exposição de adulto e não torna lícito nada em relação a menores.',
   refs: ['CLT — arts. 402 a 441', 'ECA', 'Decreto sobre piores formas de trabalho infantil'] },
 
-{ id: 'q-7.3-060', tema: '7.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
+{ id: 'q-7.8-033', tema: '7.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a proteção de dados de saúde de trabalhadores, é CORRETO afirmar:',
   alts: [
     { t: 'Dados de saúde são categoria sensível, com exigência de finalidade específica, minimização e segurança — de modo que prontuários ocupacionais não podem ser acessados por setores administrativos nem armazenados sem controle de acesso e registro.', ok: true,

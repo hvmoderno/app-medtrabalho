@@ -1,8 +1,8 @@
-/* Lote M — 7.1, 7.3, 7.5, 7.8, 6.2, 6.3, 6.4. AUTORAIS. */
+/* Lote M — 6.1, 7.1, 7.6, 7.8, 3.2, 6.3, 5.1. AUTORAIS. */
 window.BANCO = window.BANCO || [];
 window.BANCO.push(
 
-{ id: 'q-7.1-050', tema: '7.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
+{ id: 'q-6.1-071', tema: '6.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o programa de controle médico de saúde ocupacional e sua articulação com o gerenciamento de riscos, é CORRETO afirmar:',
   alts: [
     { t: 'Os exames e sua periodicidade devem decorrer dos riscos efetivamente identificados no inventário, e não de uma lista padronizada aplicada indistintamente — exame sem relação com o risco consome recurso e não detecta o que importa.', ok: true,
@@ -20,7 +20,7 @@ window.BANCO.push(
   pegadinha: 'A bateria padronizada para todos parece cuidado e é gasto que não detecta o risco real de cada função.',
   refs: ['NR-7', 'NR-1', 'Código de Ética Médica'] },
 
-{ id: 'q-7.1-051', tema: '7.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
+{ id: 'q-6.1-072', tema: '6.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o exame demissional, é CORRETO afirmar:',
   alts: [
     { t: 'Ele documenta o estado de saúde do trabalhador ao término do vínculo e é peça central em discussões posteriores de nexo — sua omissão prejudica tanto o trabalhador, que perde o registro, quanto a empresa, que fica sem elemento de defesa.', ok: true,
@@ -38,7 +38,7 @@ window.BANCO.push(
   pegadinha: 'Assinar apto para não travar a rescisão transforma o exame em formalidade e apaga o achado.',
   refs: ['NR-7', 'Lei nº 8.213/1991'] },
 
-{ id: 'q-7.3-032', tema: '7.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
+{ id: 'q-7.1-053', tema: '7.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o poder diretivo do empregador e os limites impostos pela proteção à saúde e à intimidade do trabalhador, é CORRETO afirmar:',
   alts: [
     { t: 'O poder diretivo não alcança a exigência de exames ou informações sem relação com o risco da função — como testes de gravidez, sorologias sem indicação ocupacional ou dados genéticos —, práticas que configuram discriminação e violação da intimidade.', ok: true,
@@ -56,7 +56,7 @@ window.BANCO.push(
   pegadinha: 'Justificar a exclusão pela proteção da própria pessoa é o argumento clássico da discriminação em medicina do trabalho.',
   refs: ['CLT — art. 373-A', 'Lei nº 9.029/1995', 'Código de Ética Médica'] },
 
-{ id: 'q-7.5-032', tema: '7.5', tipo: 'autoral', fonte: null, nivel: 'dificil',
+{ id: 'q-5.1-054', tema: '5.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a responsabilidade civil do empregador por acidente do trabalho, é CORRETO afirmar:',
   alts: [
     { t: 'A regra geral é a responsabilidade subjetiva, dependente de dolo ou culpa, mas admite-se a responsabilidade objetiva quando a atividade desenvolvida implica, por sua natureza, risco especial aos trabalhadores — e o benefício previdenciário não exclui a reparação civil.', ok: true,
@@ -92,7 +92,7 @@ window.BANCO.push(
   pegadinha: '"Só para o recursos humanos" é a formulação que faz a quebra de sigilo parecer contida.',
   refs: ['Código de Ética Médica', 'Resoluções do CFM sobre medicina do trabalho', 'LGPD'] },
 
-{ id: 'q-6.2-032', tema: '6.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
+{ id: 'q-3.2-061', tema: '3.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o trabalho em turnos e noturno e seus efeitos sobre a saúde, é CORRETO afirmar:',
   alts: [
     { t: 'A dessincronização circadiana se associa a distúrbios do sono, alterações metabólicas e cardiovasculares e maior risco de acidentes, e medidas como sentido de rotação e velocidade da escala, iluminação e organização das pausas modificam a magnitude do efeito.', ok: true,
@@ -110,7 +110,7 @@ window.BANCO.push(
   pegadinha: 'Tratar o adicional como compensação do dano confunde reparação econômica com prevenção.',
   refs: ['IARC — trabalho em turnos', 'Fischer, F. M. — trabalho em turnos e saúde'] },
 
-{ id: 'q-6.3-032', tema: '6.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
+{ id: 'q-7.1-052', tema: '7.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a proteção da trabalhadora gestante e lactante no ambiente de trabalho, é CORRETO afirmar:',
   alts: [
     { t: 'A conduta correta é afastar a exposição ao agente de risco, com garantia de remuneração e de retorno à função, e não afastar a trabalhadora do emprego — o risco reprodutivo é motivo para controlar o ambiente, jamais para restringir o acesso ao trabalho.', ok: true,
@@ -128,7 +128,7 @@ window.BANCO.push(
   pegadinha: 'A proteção reprodutiva é o pretexto mais usado para excluir mulheres de postos melhor remunerados.',
   refs: ['CLT — art. 394-A', 'NR-15', 'Lei nº 9.029/1995'] },
 
-{ id: 'q-6.4-032', tema: '6.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
+{ id: 'q-6.3-061', tema: '6.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a saúde do trabalhador idoso e o envelhecimento da população trabalhadora, é CORRETO afirmar:',
   alts: [
     { t: 'O envelhecimento traz redução de algumas capacidades e ganho de experiência e estratégia operatória, e a resposta adequada é adequar o posto e a organização do trabalho — a idade isolada não é critério legítimo de restrição de função.', ok: true,
