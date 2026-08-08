@@ -53,6 +53,7 @@
 
 <script src="../core/edital.js"></script>
 <script src="../core/storage.js"></script>
+<script src="../core/desempenho.js"></script>
 <script src="guias/indice.js"></script>
 <script>
 (function () {
@@ -84,9 +85,22 @@
       GUIAS.length + ' de ' + EDITAL.temas.length + ' temas já têm guia escrito';
 
     elLista.innerHTML = '';
+
+    // Desempenho por tema: a lista vira mapa de calor em vez de 49 linhas iguais.
+    var desemp = DESEMPENHO.porTema();
+    var leg = document.createElement('div');
+    leg.className = 'legenda';
+    leg.innerHTML =
+      '<span><i class="fragil"></i>frágil (abaixo de 60%)</span>' +
+      '<span><i class="construcao"></i>em construção (60–79%)</span>' +
+      '<span><i class="firme"></i>firme (80% ou mais)</span>' +
+      '<span><i class="neutro"></i>ainda sem questões respondidas</span>';
+    elLista.appendChild(leg);
+
     EDITAL.secoes.forEach(function (sec) {
       var h = document.createElement('div');
       h.className = 'sec';
+      h.setAttribute('data-sec', sec.id);
       h.textContent = 'Seção ' + sec.id + ' — ' + sec.nome;
       elLista.appendChild(h);
 
@@ -94,19 +108,43 @@
         var b = document.createElement('button');
         b.className = 'item';
         b.disabled = !temGuia(t.id);
+
+        var d = DESEMPENHO.aplicar(b, t.id, desemp);
+
         var cod = document.createElement('span');
         cod.className = 'cod'; cod.textContent = t.id;
         var nome = document.createElement('span');
         nome.className = 'nome'; nome.textContent = t.nome;
+
         var est = document.createElement('span');
-        est.className = 'est';
-        if (!temGuia(t.id)) {
-          est.innerHTML = '<span class="rotulo cinza">em produção</span>';
-        } else if (m.lidos[t.id]) {
-          est.innerHTML = '<span class="rotulo ok">revisado</span>';
-        } else {
-          est.innerHTML = '<span class="rotulo">abrir</span>';
+        est.className = 'est linha';
+
+        // Peso na prova, para orientar onde gastar o tempo que resta.
+        if (t.peso === 'alto') {
+          var pe = document.createElement('span');
+          pe.className = 'selo-peso alto';
+          pe.textContent = 'peso alto';
+          pe.title = 'Tema de peso alto no edital';
+          est.appendChild(pe);
         }
+
+        // Taxa de acerto do tema.
+        var sd = document.createElement('span');
+        sd.className = 'selo-desemp ' + d.faixa;
+        sd.textContent = d.curto;
+        sd.title = d.titulo;
+        est.appendChild(sd);
+
+        var r = document.createElement('span');
+        if (!temGuia(t.id)) {
+          r.className = 'rotulo cinza'; r.textContent = 'em produção';
+        } else if (m.lidos[t.id]) {
+          r.className = 'rotulo ok'; r.textContent = 'revisado';
+        } else {
+          r.className = 'rotulo'; r.textContent = 'abrir';
+        }
+        est.appendChild(r);
+
         b.appendChild(cod); b.appendChild(nome); b.appendChild(est);
         b.onclick = function () { abrir(t.id); };
         elLista.appendChild(b);

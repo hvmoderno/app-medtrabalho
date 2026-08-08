@@ -37,6 +37,7 @@
   function montarSelectTemas() {
     var contagem = {};
     BANCO.forEach(function (q) { contagem[q.tema] = (contagem[q.tema] || 0) + 1; });
+    var desemp = DESEMPENHO.porTema();
 
     elTema.innerHTML = '';
     var optAll = document.createElement('option');
@@ -60,7 +61,18 @@
         var o = document.createElement('option');
         o.value = t.id;
         o.textContent = t.id + ' ' + t.nome + ' (' + n + ')';
-        if (n === 0) { o.textContent += ' — sem questões'; }
+        if (n === 0) {
+          o.textContent += ' — sem questões';
+        } else {
+          // Taxa de acerto no próprio rótulo: em <select> o Safari/iOS ignora
+          // cor, então a informação tem de vir como texto.
+          var d = desemp[t.id];
+          if (d && d.total) {
+            o.textContent += d.suficiente
+              ? ' · ' + d.pct + '%'
+              : ' · ' + d.total + 'q';
+          }
+        }
         grupo.appendChild(o);
       });
       elTema.appendChild(grupo);
@@ -120,6 +132,43 @@
       var s = document.createElement('span');
       s.innerHTML = par[0] + ': <b>' + par[1] + '</b>';
       elPlacar.appendChild(s);
+    });
+
+    atualizarFracos();
+  }
+
+  /* Painel dos temas mais frágeis: leva direto ao treino do ponto fraco.
+   * Só considera temas com amostra suficiente — apontar "0%" por causa de uma
+   * única questão errada mandaria você estudar o tema errado. */
+  function atualizarFracos() {
+    var caixa = document.getElementById('cartaoFracos');
+    var lista = document.getElementById('listaFracos');
+    if (!caixa || !lista) return;
+
+    var d = DESEMPENHO.porTema();
+    var fracos = Object.keys(d)
+      .filter(function (t) { return d[t].suficiente && d[t].pct < 80 && EDITAL.valido(t); })
+      .sort(function (a, b) { return d[a].pct - d[b].pct; })
+      .slice(0, 6);
+
+    if (!fracos.length) { caixa.hidden = true; return; }
+    caixa.hidden = false;
+    lista.innerHTML = '';
+    fracos.forEach(function (t) {
+      var b = document.createElement('button');
+      b.className = 'selo-desemp ' + DESEMPENHO.faixa(d[t]);
+      b.style.cursor = 'pointer';
+      b.style.minWidth = 'auto';
+      b.textContent = t + ' · ' + d[t].pct + '%';
+      b.title = EDITAL.nome(t) + ' — ' + DESEMPENHO.rotulo(d[t]);
+      b.onclick = function () {
+        elTema.value = t;
+        estado.tema = t;
+        estado.idx = 0;
+        salvarFiltro();
+        render();
+      };
+      lista.appendChild(b);
     });
   }
 

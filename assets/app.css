@@ -157,3 +157,78 @@ th { font-weight: 650; color: var(--texto-fraco); font-size: .8rem; text-transfo
 .barra > i { display: block; height: 100%; background: var(--acento); border-radius: 999px; }
 
 .oculto { display: none !important; }
+
+/* ------------------------------------------- desempenho por tema (mapa de calor)
+ * A cor aqui informa: mostra onde você está firme e onde está frágil, para a
+ * lista de 49 temas deixar de ser plana. Sempre acompanhada de número ou texto,
+ * porque cor sozinha exclui quem não a distingue.
+ */
+.item {
+  border-left: 4px solid transparent;
+}
+.item.faixa-neutro     { border-left-color: var(--borda); }
+.item.faixa-pouco      { border-left-color: var(--acento); }
+.item.faixa-fragil     { border-left-color: var(--erro); }
+.item.faixa-construcao { border-left-color: var(--alerta); }
+.item.faixa-firme      { border-left-color: var(--ok); }
+
+/* Selo com a taxa de acerto do tema. */
+.selo-desemp {
+  display: inline-block;
+  min-width: 3.1em;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  font-size: .72rem;
+  font-weight: 700;
+  padding: 3px 7px;
+  border-radius: 999px;
+  background: var(--superficie-2);
+  color: var(--texto-fraco);
+  border: 1px solid var(--borda);
+}
+.selo-desemp.fragil     { background: var(--erro-suave);   color: var(--erro);   border-color: transparent; }
+.selo-desemp.construcao { background: var(--alerta-suave); color: var(--alerta); border-color: transparent; }
+.selo-desemp.firme      { background: var(--ok-suave);     color: var(--ok);     border-color: transparent; }
+.selo-desemp.pouco      { background: var(--acento-suave); color: var(--acento); border-color: transparent; }
+
+/* Peso do tema na prova: orienta onde gastar as 30 horas que restam. */
+.selo-peso {
+  display: inline-block;
+  font-size: .66rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: var(--superficie-2);
+  color: var(--texto-fraco);
+}
+.selo-peso.alto { background: var(--acento-suave); color: var(--acento); }
+
+/* Legenda do mapa de calor. */
+.legenda {
+  display: flex; flex-wrap: wrap; gap: 12px;
+  font-size: .78rem; color: var(--texto-fraco);
+  margin: 10px 0 4px;
+}
+.legenda span { display: inline-flex; align-items: center; gap: 5px; }
+.legenda i {
+  width: 10px; height: 10px; border-radius: 3px; display: inline-block;
+}
+.legenda i.fragil     { background: var(--erro); }
+.legenda i.construcao { background: var(--alerta); }
+.legenda i.firme      { background: var(--ok); }
+.legenda i.neutro     { background: var(--borda); }
+
+/* Cabeçalho de seção: barra colorida para separar as 7 seções ao rolar. */
+.sec {
+  border-left: 4px solid var(--acento);
+  padding-left: 10px;
+}
+.sec[data-sec="1"] { border-left-color: #1f5f8b; }
+.sec[data-sec="2"] { border-left-color: #7a4fa3; }
+.sec[data-sec="3"] { border-left-color: #0f766e; }
+.sec[data-sec="4"] { border-left-color: #b3261e; }
+.sec[data-sec="5"] { border-left-color: #a35a00; }
+.sec[data-sec="6"] { border-left-color: #1d7a4c; }
+.sec[data-sec="7"] { border-left-color: #52606d; }
