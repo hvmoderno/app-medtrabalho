@@ -80,6 +80,7 @@
   <span class="marca">Título&nbsp;MT&nbsp;2026</span>
   <span class="contagem" id="contagem">—</span>
   <span class="espaco" style="flex:1"></span>
+  <button id="btInstalar" hidden title="Instalar como aplicativo neste aparelho">Instalar</button>
   <button id="btBackup" title="Backup completo em arquivo">Backup</button>
 </header>
 
@@ -290,6 +291,45 @@
     });
     ev.target.value = '';
   };
+
+  /* ------------------------------------------------------------ instalação ---
+   * O Chrome só oferece a instalação por um menu que muita gente não encontra.
+   * Guardando o evento, o botão "Instalar" aparece no próprio app e abre o
+   * diálogo nativo com um toque. No Safari do iPhone o evento não existe — lá
+   * a instalação continua sendo Compartilhar > Adicionar à Tela de Início, e o
+   * botão simplesmente não aparece.
+   */
+  (function () {
+    var btIns = document.getElementById('btInstalar');
+    var evtGuardado = null;
+
+    window.addEventListener('beforeinstallprompt', function (e) {
+      e.preventDefault();
+      evtGuardado = e;
+      btIns.hidden = false;
+    });
+
+    btIns.onclick = function () {
+      if (!evtGuardado) return;
+      evtGuardado.prompt();
+      evtGuardado.userChoice.then(function (escolha) {
+        if (escolha.outcome === 'accepted') {
+          btIns.hidden = true;
+          Store.avisar('info', 'Aplicativo instalado neste aparelho.');
+        }
+        evtGuardado = null;
+      });
+    };
+
+    window.addEventListener('appinstalled', function () {
+      btIns.hidden = true;
+    });
+
+    // Já instalado e aberto pelo ícone: não faz sentido oferecer de novo.
+    if (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) {
+      btIns.hidden = true;
+    }
+  })();
 
   /* ------------------------------------------------- service worker / PWA -- */
   if ('serviceWorker' in navigator) {
