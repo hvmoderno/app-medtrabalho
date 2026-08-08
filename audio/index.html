@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Áudio</title>
+<link rel="stylesheet" href="../assets/app.css">
+<style>
+  .faixa {
+    display: flex; align-items: center; gap: 10px;
+    width: 100%; text-align: left;
+    background: var(--superficie); border: 1px solid var(--borda);
+    border-left: 4px solid transparent;
+    border-radius: var(--raio); padding: 11px 13px; margin: 0 0 8px;
+    color: var(--texto); cursor: pointer; font: inherit;
+  }
+  .faixa:hover { border-color: var(--acento); }
+  .faixa.tocando { border-left-color: var(--acento); background: var(--acento-suave); }
+  .faixa .cod { font-weight: 700; color: var(--acento); flex: 0 0 3.2em; font-variant-numeric: tabular-nums; }
+  .faixa .nome { flex: 1; }
+  .faixa .dur { font-size: .8rem; color: var(--texto-fraco); font-variant-numeric: tabular-nums; }
+  .faixa .ouvido { color: var(--ok); font-weight: 700; font-size: .78rem; }
+
+  /* Barra do tocador: fica fixa no rodapé para não sumir ao rolar a lista. */
+  .tocador {
+    position: sticky; bottom: 0; z-index: 5;
+    background: var(--superficie); border: 1px solid var(--borda);
+    border-radius: var(--raio); box-shadow: var(--sombra);
+    padding: 12px 14px; margin-top: 14px;
+  }
+  .tocador .titulo { font-weight: 650; margin-bottom: 8px; }
+  .tocador audio { width: 100%; }
+  .controles { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-top: 8px; }
+  .controles select { min-width: 5.5em; }
+</style>
+</head>
+<body>
+<div class="envolt">
+
+  <div class="cartao">
+    <h3 style="margin-top:0">Resumos em áudio</h3>
+    <p class="pequeno fraco" style="margin:0 0 8px">
+      Uma faixa por tema do edital, para ouvir no carro ou caminhando. Abre o
+      tema, dá o essencial, numera as pegadinhas e repete as três principais no
+      fim. Use como revisão do que já estudou: tabela e fluxograma não se
+      escutam — para esses, os guias da aba Materiais.
+    </p>
+    <div class="placar" id="resumo"></div>
+    <div class="linha" style="margin-top:10px">
+      <button id="btBaixarTudo">Baixar todas para ouvir sem internet</button>
+      <span class="pequeno fraco" id="estadoBaixar"></span>
+    </div>
+  </div>
+
+  <div id="lista"></div>
+
+  <div class="tocador" id="tocador" hidden>
+    <div class="titulo" id="tocandoNome">—</div>
+    <audio id="player" controls preload="none"></audio>
+    <div class="controles">
+      <button id="btAnt">← Anterior</button>
+      <button id="btProx">Próxima →</button>
+      <label class="pequeno fraco" for="vel">Velocidade</label>
+      <select id="vel">
+        <option value="0.9">0,9×</option>
+        <option value="1" selected>1×</option>
+        <option value="1.25">1,25×</option>
+        <option value="1.5">1,5×</option>
+        <option value="1.75">1,75×</option>
+        <option value="2">2×</option>
+      </select>
+      <span class="espaco"></span>
+      <button id="btMarcar">Marcar como ouvida</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="../core/edital.js"></script>
+<script src="../core/storage.js"></script>
+<script src="indice.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  var elLista = document.getElementById('lista');
+  var elResumo = document.getElementById('resumo');
+  var elTocador = document.getElementById('tocador');
+  var elNome = document.getElementById('tocandoNome');
+  var player = document.getElementById('player');
+  var atual = -1;
+
+  function prog() {
+    var a = Store.get('audio') || {};
+    if (!a.ouvidas) a.ouvidas = {};
+    if (!a.posicao) a.posicao = {};
+    return a;
+  }
+  function salvar(a) { Store.set('audio', a); }
+
+  function mmss(seg) {
+    if (!seg && seg !== 0) return '';
+    var m = Math.floor(seg / 60), s = Math.round(seg % 60);
+    return m + ':' + (s < 10 ? '0' : '') + s;
+  }
+
+  function montar() {
+    var a = prog();
+    elLista.innerHTML = '';
+    var ouvidas = 0, totalSeg = 0;
+
+    AUDIO_FAIXAS.forEach(function (f, i) {
+      totalSeg += f.seg || 0;
+      if (a.ouvidas[f.tema]) ouvidas++;
+
+      var b = document.createElement('button');
+      b.className = 'faixa' + (i === atual ? ' tocando' : '');
+      b.setAttribute('data-i', i);
+
+      var cod = document.createElement('span');
+      cod.className = 'cod'; cod.textContent = f.tema;
+      var nome = document.createElement('span');
+      nome.className = 'nome'; nome.textContent = f.nome;
+      var dir = document.createElement('span');
+      dir.className = 'linha';
+
+      if (a.ouvidas[f.tema]) {
+        var ok = document.createElement('span');
+        ok.className = 'ouvido'; ok.textContent = 'ouvida';
+        dir.appendChild(ok);
+      }
+      var d = document.createElement('span');
+      d.className = 'dur'; d.textContent = mmss(f.seg);
+      dir.appendChild(d);
+
+      b.appendChild(cod); b.appendChild(nome); b.appendChild(dir);
+      b.onclick = function () { tocar(i); };
+      elLista.appendChild(b);
+    });
+
+    elResumo.innerHTML = '';
+    [['faixas', AUDIO_FAIXAS.length],
+     ['ouvidas', ouvidas + ' de ' + AUDIO_FAIXAS.length],
+     ['duração total', Math.round(totalSeg / 60) + ' min']
+    ].forEach(function (p) {
+      var s = document.createElement('span');
+      s.innerHTML = p[0] + ': <b>' + p[1] + '</b>';
+      elResumo.appendChild(s);
+    });
+  }
+
+  function tocar(i) {
+    if (i < 0 || i >= AUDIO_FAIXAS.length) return;
+    var f = AUDIO_FAIXAS[i];
+    var a = prog();
+    atual = i;
+    elTocador.hidden = false;
+    elNome.textContent = f.tema + ' — ' + f.nome;
+    player.src = f.arq;
+    player.playbackRate = parseFloat(document.getElementById('vel').value);
+
+    // Retoma de onde parou: quem ouve no carro é interrompido o tempo todo.
+    var pos = a.posicao[f.tema];
+    player.onloadedmetadata = function () {
+      if (pos && pos > 3 && pos < player.duration - 5) player.currentTime = pos;
+    };
+    player.play().catch(function () { /* iOS exige gesto; o botão já é um */ });
+    montar();
+  }
+
+  // Guarda a posição periodicamente, não só ao sair: o app pode ser fechado
+  // de repente e o ponto de escuta é o que mais irrita perder.
+  var ultimoSalvo = 0;
+  player.addEventListener('timeupdate', function () {
+    if (atual < 0) return;
+    var agora = Date.now();
+    if (agora - ultimoSalvo < 5000) return;
+    ultimoSalvo = agora;
+    var a = prog();
+    a.posicao[AUDIO_FAIXAS[atual].tema] = player.currentTime;
+    salvar(a);
+  });
+
+  player.addEventListener('ended', function () {
+    if (atual < 0) return;
+    var a = prog();
+    a.ouvidas[AUDIO_FAIXAS[atual].tema] = Date.now();
+    delete a.posicao[AUDIO_FAIXAS[atual].tema];
+    salvar(a);
+    if (atual + 1 < AUDIO_FAIXAS.length) tocar(atual + 1); else montar();
+  });
+
+  document.getElementById('btAnt').onclick = function () { tocar(atual - 1); };
+  document.getElementById('btProx').onclick = function () { tocar(atual + 1); };
+  document.getElementById('vel').onchange = function () {
+    player.playbackRate = parseFloat(this.value);
+    var a = prog(); a.velocidade = this.value; salvar(a);
+  };
+  document.getElementById('btMarcar').onclick = function () {
+    if (atual < 0) return;
+    var a = prog();
+    var t = AUDIO_FAIXAS[atual].tema;
+    if (a.ouvidas[t]) delete a.ouvidas[t]; else a.ouvidas[t] = Date.now();
+    salvar(a); montar();
+  };
+
+  /* ---------------------------------------------------- baixar para offline ---
+   * O player pede pedaços do arquivo (Range), e pedaço não vira cópia utilizável.
+   * Aqui o arquivo é buscado inteiro, de uma vez, para o service worker guardar.
+   */
+  var CACHE_AUDIO = 'mtb-audio-v1';
+  var elEstado = document.getElementById('estadoBaixar');
+  var btTudo = document.getElementById('btBaixarTudo');
+
+  function temCache() { return 'caches' in window; }
+
+  function jaBaixadas() {
+    if (!temCache()) return Promise.resolve({});
+    return caches.open(CACHE_AUDIO).then(function (c) {
+      return c.keys().then(function (ks) {
+        var m = {};
+        ks.forEach(function (r) {
+          var n = r.url.split('/').pop();
+          m[n] = true;
+        });
+        return m;
+      });
+    }).catch(function () { return {}; });
+  }
+
+  function baixarTudo() {
+    if (!temCache()) {
+      Store.avisar('aviso', 'Este navegador não permite guardar as faixas para ouvir sem internet.');
+      return;
+    }
+    btTudo.disabled = true;
+    var falhas = 0, feitas = 0;
+    caches.open(CACHE_AUDIO).then(function (c) {
+      var fila = AUDIO_FAIXAS.slice();
+      function proxima() {
+        if (!fila.length) {
+          btTudo.disabled = false;
+          elEstado.textContent = falhas
+            ? feitas + ' baixadas, ' + falhas + ' falharam — tente de novo com melhor sinal.'
+            : 'Todas as ' + feitas + ' faixas disponíveis sem internet.';
+          if (falhas) {
+            Store.avisar('aviso', falhas + ' faixa(s) não baixaram. Repita com sinal melhor.');
+          }
+          montar();
+          return;
+        }
+        var f = fila.shift();
+        elEstado.textContent = 'Baixando ' + (feitas + 1) + ' de ' + AUDIO_FAIXAS.length + '…';
+        // cache: 'reload' força buscar inteiro, sem reaproveitar pedaço parcial.
+        fetch(f.arq, { cache: 'reload' }).then(function (r) {
+          if (!r.ok) throw new Error('HTTP ' + r.status);
+          return c.put(f.arq, r);
+        }).then(function () { feitas++; }).catch(function () { falhas++; })
+          .then(proxima);
+      }
+      proxima();
+    }).catch(function (e) {
+      btTudo.disabled = false;
+      Store.avisar('erro', 'Não consegui abrir o espaço de guarda das faixas.', e.message);
+    });
+  }
+
+  btTudo.onclick = baixarTudo;
+
+  Store.init().then(function () {
+    var a = prog();
+    if (a.velocidade) document.getElementById('vel').value = a.velocidade;
+    montar();
+    jaBaixadas().then(function (m) {
+      var n = AUDIO_FAIXAS.filter(function (f) {
+        return m[f.arq.split('/').pop()];
+      }).length;
+      if (n === AUDIO_FAIXAS.length) {
+        elEstado.textContent = 'Todas disponíveis sem internet.';
+        btTudo.disabled = true;
+      } else if (n > 0) {
+        elEstado.textContent = n + ' de ' + AUDIO_FAIXAS.length + ' já baixadas.';
+      }
+    });
+  }).catch(function (e) {
+    Store.avisar('erro', 'Não consegui carregar o progresso do áudio.', e.message);
+    montar();
+  });
+})();
+</script>
+</body>
+</html>

@@ -37,6 +37,7 @@ print(f'banco/indice.js: {len(bancos)} arquivos de questões')
 
 # ------------------------------------------------------------------- precache
 arquivos = ['./', './index.html']
+pulados_audio = 0
 for p in sorted(RAIZ.rglob('*')):
     if not p.is_file():
         continue
@@ -44,6 +45,15 @@ for p in sorted(RAIZ.rglob('*')):
     if rel.parts[0] in IGNORAR_DIRS or p.suffix in IGNORAR_EXT:
         continue
     if p.name == 'sw.js' or rel.as_posix() == 'index.html':
+        continue
+    # Arquivos ocultos (.DS_Store, .gitignore, .nojekyll) não são do app.
+    if any(parte.startswith('.') for parte in rel.parts):
+        continue
+    # As faixas de áudio somam dezenas de MB. No precache, instalar o app
+    # baixaria tudo de uma vez, no 4G, sem o usuário pedir. Elas ficam de fora
+    # e são guardadas sob demanda, conforme ele ouve (ver sw.js).
+    if rel.as_posix().startswith('audio/faixas/'):
+        pulados_audio += 1
         continue
     arquivos.append('./' + rel.as_posix())
 
@@ -62,3 +72,5 @@ txt = re.sub(r'const ARQUIVOS = \[.*?\n\];',
              'const ARQUIVOS = [\n' + lista + '\n];', txt, flags=re.S)
 sw.write_text(txt)
 print(f'sw.js: {len(arquivos)} arquivos no precache · versão v{atual} -> v{novo}')
+if pulados_audio:
+    print(f'         {pulados_audio} faixas de áudio fora do precache (cache sob demanda)')

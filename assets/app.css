@@ -232,3 +232,12 @@ th { font-weight: 650; color: var(--texto-fraco); font-size: .8rem; text-transfo
 .sec[data-sec="5"] { border-left-color: #a35a00; }
 .sec[data-sec="6"] { border-left-color: #1d7a4c; }
 .sec[data-sec="7"] { border-left-color: #52606d; }
+
+/* Placar de contadores: usado em Questões e em Áudio. Estava só no módulo
+   Questões, o que deixou os itens colados na aba nova. */
+.placar { display: flex; gap: 6px; flex-wrap: wrap; font-size: .82rem; }
+.placar span {
+  background: var(--superficie-2); padding: 3px 9px;
+  border-radius: 999px; white-space: nowrap;
+}
+.placar b { color: var(--texto); }

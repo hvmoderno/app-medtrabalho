@@ -33,6 +33,7 @@
     'flashcards',   // agendamento SM-2
     'treino',       // XP, vidas, ofensiva, fases concluídas
     'planilha',     // log de erros
+    'audio',        // faixas ouvidas, posição de escuta e velocidade
     'meta'          // preferências, datas de backup, versão
   ];
 
