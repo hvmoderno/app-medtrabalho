@@ -175,33 +175,73 @@
     }
   }
 
-  function audioMediaSession() {
+  /* Os controladores de ação são registrados UMA vez. Reatribuí-los a cada
+   * faixa fazia o iOS descartar e recriar a sessão, e era por isso que o
+   * título na tela bloqueada não acompanhava a troca de faixa. */
+  var audioAcoesProntas = false;
+
+  function audioRegistrarAcoes() {
+    if (audioAcoesProntas || !('mediaSession' in navigator)) return;
+    var ms = navigator.mediaSession;
+    function por(nome, fn) {
+      try { ms.setActionHandler(nome, fn); }
+      catch (e) { /* ação não suportada neste navegador — segue sem ela */ }
+    }
+    por('play', function () { playerG.play(); });
+    por('pause', function () { playerG.pause(); });
+    por('previoustrack', function () { window.MTB_AUDIO.tocar(audioIdx - 1); });
+    por('nexttrack', function () { window.MTB_AUDIO.tocar(audioIdx + 1); });
+    // Sem 'seekto' a tela bloqueada não deixa arrastar para o meio do áudio.
+    por('seekto', function (d) {
+      if (d && typeof d.seekTime === 'number') {
+        if (d.fastSeek && playerG.fastSeek) playerG.fastSeek(d.seekTime);
+        else playerG.currentTime = d.seekTime;
+        audioPosicaoSessao();
+      }
+    });
+    por('seekbackward', function (d) {
+      var passo = (d && d.seekOffset) || 15;
+      playerG.currentTime = Math.max(0, playerG.currentTime - passo);
+      audioPosicaoSessao();
+    });
+    por('seekforward', function (d) {
+      var passo = (d && d.seekOffset) || 15;
+      playerG.currentTime = Math.min(playerG.duration || 0, playerG.currentTime + passo);
+      audioPosicaoSessao();
+    });
+    audioAcoesProntas = true;
+  }
+
+  /* Sem setPositionState o iOS não conhece duração nem posição, e por isso não
+   * desenha a barra arrastável — só os botões. É esta função que faz a tela
+   * bloqueada virar um controle de verdade. */
+  function audioPosicaoSessao() {
+    if (!('mediaSession' in navigator) || !navigator.mediaSession.setPositionState) return;
+    var dur = playerG.duration;
+    if (!isFinite(dur) || dur <= 0) return;
+    try {
+      navigator.mediaSession.setPositionState({
+        duration: dur,
+        playbackRate: playerG.playbackRate || 1,
+        position: Math.min(Math.max(playerG.currentTime, 0), dur)
+      });
+    } catch (e) {
+      console.warn('[shell] não consegui informar a posição à Media Session:', e.message);
+    }
+  }
+
+  function audioMetadados() {
     if (!('mediaSession' in navigator) || audioIdx < 0) return;
     var f = audioFaixas[audioIdx];
     try {
       navigator.mediaSession.metadata = new MediaMetadata({
         title: f.tema + ' — ' + f.nome,
-        artist: 'Medicina do Trabalho 2026',
-        album: 'Resumos por tema do edital',
+        artist: 'Resumos por tema · Medicina do Trabalho 2026',
+        album: 'Faixa ' + (audioIdx + 1) + ' de ' + audioFaixas.length,
         artwork: [
           { src: 'assets/icone-192.png', sizes: '192x192', type: 'image/png' },
           { src: 'assets/icone-512.png', sizes: '512x512', type: 'image/png' }
         ]
-      });
-      navigator.mediaSession.setActionHandler('play', function () { playerG.play(); });
-      navigator.mediaSession.setActionHandler('pause', function () { playerG.pause(); });
-      navigator.mediaSession.setActionHandler('previoustrack', function () {
-        window.MTB_AUDIO.tocar(audioIdx - 1);
-      });
-      navigator.mediaSession.setActionHandler('nexttrack', function () {
-        window.MTB_AUDIO.tocar(audioIdx + 1);
-      });
-      // Avançar e voltar 15 s: no volante, é o controle que mais se usa.
-      navigator.mediaSession.setActionHandler('seekbackward', function () {
-        playerG.currentTime = Math.max(0, playerG.currentTime - 15);
-      });
-      navigator.mediaSession.setActionHandler('seekforward', function () {
-        playerG.currentTime = Math.min(playerG.duration || 0, playerG.currentTime + 15);
       });
     } catch (e) {
       console.warn('[shell] Media Session indisponível:', e.message);
@@ -215,10 +255,29 @@
     return a;
   }
 
+  /* A duração só existe depois que o arquivo carrega. É aqui — e não no clique
+   * — que os metadados e a posição têm de ser informados, senão o iOS registra
+   * a sessão sem duração e a barra da tela bloqueada não aparece. */
+  playerG.addEventListener('loadedmetadata', function () {
+    audioMetadados();
+    audioPosicaoSessao();
+  });
+  playerG.addEventListener('durationchange', audioPosicaoSessao);
+  playerG.addEventListener('seeked', audioPosicaoSessao);
+  playerG.addEventListener('ratechange', audioPosicaoSessao);
+
   var audioUltimoSalvo = 0;
+  var audioUltimaPos = 0;
   playerG.addEventListener('timeupdate', function () {
     if (audioIdx < 0) return;
     var agora = Date.now();
+
+    // A barra da tela bloqueada precisa ser realimentada; a cada segundo basta.
+    if (agora - audioUltimaPos > 1000) {
+      audioUltimaPos = agora;
+      audioPosicaoSessao();
+    }
+
     if (agora - audioUltimoSalvo < 5000) return;
     audioUltimoSalvo = agora;
     var a = audioProg();
@@ -228,10 +287,13 @@
 
   playerG.addEventListener('play', function () {
     if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'playing';
+    audioMetadados();
+    audioPosicaoSessao();
     audioAvisarAba();
   });
   playerG.addEventListener('pause', function () {
     if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'paused';
+    audioPosicaoSessao();
     if (audioIdx >= 0) {
       var a = audioProg();
       a.posicao[audioFaixas[audioIdx].tema] = playerG.currentTime;
@@ -271,18 +333,29 @@
       if (i < 0 || i >= audioFaixas.length) return;
       var f = audioFaixas[i];
       audioIdx = i;
+      audioRegistrarAcoes();          // uma vez só, na primeira faixa
+      audioMetadados();               // título imediato; reconfirmado ao carregar
+
       // O caminho vem relativo à pasta audio/; aqui estamos na raiz.
       playerG.src = 'audio/' + f.arq;
       var a = audioProg();
       var pos = a.posicao[f.tema];
-      playerG.onloadedmetadata = function () {
-        if (pos && pos > 3 && pos < playerG.duration - 5) playerG.currentTime = pos;
+
+      // Retomar precisa esperar a duração existir. O listener é de uso único
+      // para não reaplicar a posição antiga nas faixas seguintes.
+      var retomar = function () {
+        playerG.removeEventListener('loadedmetadata', retomar);
+        if (pos && pos > 3 && isFinite(playerG.duration) && pos < playerG.duration - 5) {
+          playerG.currentTime = pos;
+        }
+        audioPosicaoSessao();
       };
+      playerG.addEventListener('loadedmetadata', retomar);
+
       if (a.velocidade) playerG.playbackRate = parseFloat(a.velocidade);
       playerG.play().catch(function (e) {
         console.warn('[shell] reprodução recusada:', e.message);
       });
-      audioMediaSession();
       audioAvisarAba();
     },
     alternar: function () {
