@@ -1,0 +1,185 @@
+/* Lote AB — 7.1, 7.2, 7.3, 7.4, 7.5, 7.6, 7.7, 7.8. AUTORAIS. */
+window.BANCO = window.BANCO || [];
+window.BANCO.push(
+
+{ id: 'q-7.1-070', tema: '7.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a estabilidade acidentária prevista na legislação, é CORRETO afirmar:',
+  alts: [
+    { t: 'Decorre da percepção de benefício acidentário e assegura manutenção do contrato pelo prazo mínimo previsto após a cessação do auxílio, sendo reconhecida também quando a doença ocupacional é constatada após a dispensa, desde que o nexo se estabeleça com o período contratual.', ok: true,
+      why: 'Correta. O reconhecimento posterior do nexo pode gerar o direito.' },
+    { t: 'A estabilidade depende de pedido expresso do trabalhador durante o afastamento.', ok: false,
+      why: 'Errada. Decorre da situação jurídica, independentemente de requerimento.' },
+    { t: 'Constatada a doença ocupacional após a dispensa, não há qualquer direito.', ok: false,
+      why: 'Errada. O reconhecimento posterior, com nexo no período contratual, pode gerar o direito.' },
+    { t: 'A estabilidade se aplica a qualquer afastamento por doença, independentemente da natureza.', ok: false,
+      why: 'Errada. Decorre da natureza acidentária do benefício.' },
+    { t: 'O período de estabilidade se conta a partir do início do afastamento.', ok: false,
+      why: 'Errada. Conta-se a partir da cessação do benefício.' }
+  ],
+  comentario: 'Estabilidade acidentária: doze meses após a cessação do auxílio-doença acidentário, decorrente da natureza do benefício e não de requerimento — e alcança doença ocupacional reconhecida depois da dispensa, se o nexo é do período contratual.',
+  pegadinha: 'Contar o prazo a partir do afastamento, e não da alta, é o erro de leitura mais frequente do dispositivo.',
+  refs: ['Lei nº 8.213/1991 — art. 118', 'Súmulas do TST sobre estabilidade acidentária'] },
+
+{ id: 'q-7.1-071', tema: '7.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a jornada de trabalho e seus intervalos na perspectiva da saúde do trabalhador, é CORRETO afirmar:',
+  alts: [
+    { t: 'Intervalos intrajornada e interjornada existem para permitir recuperação fisiológica, e sua supressão sistemática compromete a recuperação mesmo quando compensada financeiramente — razão pela qual a prorrogação habitual em atividades insalubres recebe tratamento normativo próprio.', ok: true,
+      why: 'Correta. Intervalo tem função fisiológica que dinheiro não substitui.' },
+    { t: 'A supressão do intervalo é compensável integralmente por pagamento adicional.', ok: false,
+      why: 'Errada. O pagamento repara economicamente, mas não devolve a recuperação perdida.' },
+    { t: 'A prorrogação de jornada em atividade insalubre não recebe tratamento normativo específico.', ok: false,
+      why: 'Errada. Há previsão específica, pela sobreposição de exposição prolongada e menor recuperação.' },
+    { t: 'O intervalo interjornada não guarda relação com risco de acidentes.', ok: false,
+      why: 'Errada. A privação de sono é fator de risco reconhecido para acidentes.' },
+    { t: 'Regimes de compensação de jornada não têm repercussão em saúde.', ok: false,
+      why: 'Errada. Alteram a distribuição do esforço e dos períodos de recuperação.' }
+  ],
+  comentario: 'Intervalo é recuperação fisiológica, não benefício negociável: suprimi-lo e pagar por isso repara o bolso e não a fadiga. Por isso a prorrogação habitual em insalubre tem tratamento próprio — soma mais exposição a menos recuperação.',
+  pegadinha: 'A compensação financeira do intervalo suprimido é reparação econômica, nunca prevenção.',
+  refs: ['CLT — arts. 66, 71 e 60', 'NR-17'] },
+
+{ id: 'q-7.2-080', tema: '7.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre o fator acidentário de prevenção e as alíquotas de contribuição por acidentalidade, é CORRETO afirmar:',
+  alts: [
+    { t: 'O mecanismo faz a contribuição variar conforme o desempenho da empresa em acidentalidade comparado ao de seu setor, criando incentivo econômico à prevenção — e também incentivo perverso à subnotificação, que precisa ser considerado ao interpretar melhoras súbitas de indicador.', ok: true,
+      why: 'Correta. O mesmo mecanismo que premia a prevenção pode premiar o silêncio.' },
+    { t: 'A alíquota é fixa por setor, sem variação por desempenho individual da empresa.', ok: false,
+      why: 'Errada. Há variação conforme o desempenho relativo da empresa.' },
+    { t: 'O mecanismo não gera qualquer incentivo à subnotificação.', ok: false,
+      why: 'Errada. O incentivo perverso é reconhecido e deve ser considerado na interpretação dos dados.' },
+    { t: 'A comparação é feita com a média nacional de todos os setores.', ok: false,
+      why: 'Errada. A comparação é dentro da mesma atividade econômica.' },
+    { t: 'Melhora súbita do indicador comprova eficácia das medidas preventivas adotadas.', ok: false,
+      why: 'Errada. Exige verificação, pois pode refletir mudança na notificação.' }
+  ],
+  comentario: 'A contribuição varia conforme o desempenho da empresa dentro do próprio setor — bom incentivo à prevenção e, ao mesmo tempo, incentivo à subnotificação. Melhora abrupta de indicador merece verificação antes de comemoração.',
+  pegadinha: 'Ler queda súbita de acidentalidade como sucesso preventivo ignora o incentivo econômico ao não registro.',
+  refs: ['Lei nº 10.666/2003', 'Decreto nº 3.048/1999 — FAP e RAT'] },
+
+{ id: 'q-7.2-081', tema: '7.2', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre a carência para benefícios por incapacidade, é CORRETO afirmar:',
+  alts: [
+    { t: 'A regra geral exige número mínimo de contribuições para o benefício por incapacidade de natureza previdenciária, mas há dispensa nas hipóteses de acidente de qualquer natureza e de doenças especificadas em lista própria — o que torna a caracterização da natureza do evento decisiva.', ok: true,
+      why: 'Correta. As hipóteses de dispensa são o que mais frequentemente decide o acesso ao benefício.' },
+    { t: 'Todos os benefícios por incapacidade exigem carência sem exceção.', ok: false,
+      why: 'Errada. Há hipóteses expressas de dispensa.' },
+    { t: 'A dispensa de carência alcança apenas acidentes do trabalho típicos.', ok: false,
+      why: 'Errada. Alcança acidente de qualquer natureza.' },
+    { t: 'A lista de doenças que dispensam carência é idêntica à lista de doenças ocupacionais.', ok: false,
+      why: 'Errada. São listas distintas, com finalidades diferentes.' },
+    { t: 'A carência é exigida também nos benefícios de natureza acidentária.', ok: false,
+      why: 'Errada. O benefício acidentário dispensa carência.' }
+  ],
+  comentario: 'Carência: exigida na regra geral previdenciária, dispensada em acidente de qualquer natureza, nos benefícios acidentários e nas doenças de lista própria — que não se confunde com a lista de doenças ocupacionais.',
+  pegadinha: 'Confundir as duas listas leva a esperar dispensa de carência onde ela não existe.',
+  refs: ['Lei nº 8.213/1991 — arts. 25 e 26', 'Portaria interministerial sobre doenças que dispensam carência'] },
+
+{ id: 'q-7.3-080', tema: '7.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a interface entre vigilância sanitária e vigilância em saúde do trabalhador, é CORRETO afirmar:',
+  alts: [
+    { t: 'Um mesmo estabelecimento pode ser objeto das duas vigilâncias com focos distintos — a sanitária voltada ao produto e ao risco à população, a do trabalhador voltada ao processo produtivo e à exposição de quem trabalha —, e a ação conjunta amplia o alcance de ambas.', ok: true,
+      why: 'Correta. Focos distintos sobre o mesmo objeto, com ganho na articulação.' },
+    { t: 'As duas vigilâncias são sinônimas e têm o mesmo objeto.', ok: false,
+      why: 'Errada. Os focos são distintos, ainda que se sobreponham parcialmente.' },
+    { t: 'A vigilância em saúde do trabalhador se ocupa do produto final e de sua qualidade.', ok: false,
+      why: 'Errada. Seu foco é o processo produtivo e a exposição de quem trabalha.' },
+    { t: 'A atuação conjunta é vedada por conflito de competências.', ok: false,
+      why: 'Errada. É recomendada e amplia o alcance da fiscalização.' },
+    { t: 'A vigilância sanitária não considera a exposição de trabalhadores em suas inspeções.', ok: false,
+      why: 'Errada. Trabalhadores são pessoas expostas e podem ser alcançados por sua atuação.' }
+  ],
+  comentario: 'Mesmo estabelecimento, focos distintos: sanitária olha produto e população, do trabalhador olha processo e exposição de quem produz. Atuar junto amplia as duas.',
+  pegadinha: 'Tratar as duas vigilâncias como sinônimas apaga a especificidade do olhar sobre o processo produtivo.',
+  refs: ['Lei nº 8.080/1990', 'PNSTT'] },
+
+{ id: 'q-7.4-080', tema: '7.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre o programa de gerenciamento de riscos ocupacionais e o inventário de riscos, é CORRETO afirmar:',
+  alts: [
+    { t: 'O inventário consolida a identificação dos perigos e a avaliação dos riscos, e o plano de ação decorre dele com prazos e responsáveis — devendo o conjunto ser revisto em situações definidas, como acidentes, mudanças de processo e inadequação identificada.', ok: true,
+      why: 'Correta. Inventário e plano de ação são partes de um mesmo programa, com gatilhos de revisão.' },
+    { t: 'O inventário de riscos é documento estático, revisado apenas no prazo máximo previsto.', ok: false,
+      why: 'Errada. Há gatilhos de revisão antecipada, como acidentes e mudanças de processo.' },
+    { t: 'O plano de ação é documento opcional dentro do programa.', ok: false,
+      why: 'Errada. É componente exigido e decorre do inventário.' },
+    { t: 'Riscos ergonômicos e psicossociais não integram o inventário.', ok: false,
+      why: 'Errada. Integram expressamente o conjunto de riscos a inventariar.' },
+    { t: 'O programa dispensa a participação dos trabalhadores em sua elaboração.', ok: false,
+      why: 'Errada. A participação é prevista e melhora a identificação dos perigos reais.' }
+  ],
+  comentario: 'Inventário identifica e avalia; plano de ação sai dele com prazo e responsável. Riscos ergonômicos e psicossociais entram, os trabalhadores participam, e acidente ou mudança de processo dispara revisão antes do prazo.',
+  pegadinha: 'Tratar o inventário como documento de prateleira revisado anualmente perde os gatilhos que importam.',
+  refs: ['NR-1 — gerenciamento de riscos ocupacionais'] },
+
+{ id: 'q-7.5-050', tema: '7.5', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre prazos, retificações e penalidades nos eventos de segurança e saúde do eSocial, é CORRETO afirmar:',
+  alts: [
+    { t: 'Os eventos têm prazos próprios de envio, admitem retificação, e a informação incorreta ou intempestiva pode gerar penalidade — sendo a divergência entre o que se informa e o que se constata em fiscalização um risco concreto para a empresa e para quem assina o ato médico.', ok: true,
+      why: 'Correta. O sistema torna a divergência visível e verificável.' },
+    { t: 'Não há prazo definido para envio dos eventos de saúde e segurança.', ok: false,
+      why: 'Errada. Cada evento tem prazo próprio.' },
+    { t: 'Informações enviadas não podem ser retificadas em nenhuma hipótese.', ok: false,
+      why: 'Errada. A retificação é prevista.' },
+    { t: 'Informação incorreta não gera consequência enquanto não houver fiscalização.', ok: false,
+      why: 'Errada. A inconsistência é detectável por cruzamento automático, sem inspeção presencial.' },
+    { t: 'A responsabilidade pelo conteúdo técnico é do contador da empresa.', ok: false,
+      why: 'Errada. O conteúdo técnico de saúde é de responsabilidade de quem o produz.' }
+  ],
+  comentario: 'Prazo por evento, retificação possível, penalidade por erro e intempestividade — e cruzamento automático que dispensa inspeção para achar inconsistência. O conteúdo técnico de saúde responde quem o produz.',
+  pegadinha: 'Contar com a ausência de fiscalização presencial ignora que o sistema cruza dados sozinho.',
+  refs: ['eSocial — manual de orientação', 'Legislação sobre penalidades administrativas'] },
+
+{ id: 'q-7.6-050', tema: '7.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a relação do médico do trabalho com o médico assistente do trabalhador, é CORRETO afirmar:',
+  alts: [
+    { t: 'A comunicação entre eles é desejável e deve ocorrer com autorização do paciente, voltada ao esclarecimento de restrições e condições de trabalho — e a crítica pública ao colega, assim como o desmerecimento de sua conduta perante o trabalhador, configura infração ética.', ok: true,
+      why: 'Correta. Comunicação com autorização, e sem desqualificação do colega.' },
+    { t: 'A comunicação direta entre os dois médicos dispensa autorização do paciente.', ok: false,
+      why: 'Errada. O compartilhamento de informação clínica depende da autorização do titular.' },
+    { t: 'A divergência técnica autoriza a crítica pública à conduta do assistente.', ok: false,
+      why: 'Errada. A divergência se resolve tecnicamente, sem desqualificação do colega.' },
+    { t: 'O médico do trabalho pode alterar prescrição feita pelo assistente.', ok: false,
+      why: 'Errada. Não lhe cabe alterar conduta terapêutica de outro profissional.' },
+    { t: 'Informar ao assistente as exigências reais da função é conduta desnecessária.', ok: false,
+      why: 'Errada. É justamente a informação que qualifica o atestado e as recomendações do assistente.' }
+  ],
+  comentario: 'Comunicar-se com o assistente, com autorização do paciente, informando as exigências reais da função — é o que melhora a qualidade do atestado que virá. Sem alterar prescrição e sem crítica pública ao colega.',
+  pegadinha: 'Comunicação direta entre médicos parece inofensiva e ainda assim depende de autorização do titular.',
+  refs: ['Código de Ética Médica'] },
+
+{ id: 'q-7.7-050', tema: '7.7', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a telemedicina aplicada à medicina do trabalho, é CORRETO afirmar:',
+  alts: [
+    { t: 'Há atos que exigem exame presencial por sua natureza, como avaliações que dependem de exame físico dirigido ao risco, e o uso remoto deve observar requisitos de registro, sigilo e segurança da informação — não sendo o meio, por si, o que define a licitude do ato.', ok: true,
+      why: 'Correta. O critério é a adequação do meio ao ato praticado.' },
+    { t: 'Todos os atos da medicina do trabalho podem ser realizados remotamente.', ok: false,
+      why: 'Errada. Atos que dependem de exame físico exigem presença.' },
+    { t: 'A telemedicina é vedada em qualquer atividade de medicina do trabalho.', ok: false,
+      why: 'Errada. Há atos compatíveis com a modalidade remota.' },
+    { t: 'O registro em prontuário é dispensável no atendimento remoto.', ok: false,
+      why: 'Errada. O registro é exigência independente do meio.' },
+    { t: 'A segurança da informação não é requisito específico da modalidade remota.', ok: false,
+      why: 'Errada. É requisito reforçado, pela transmissão de dados sensíveis.' }
+  ],
+  comentario: 'O que decide não é o meio, é o ato: avaliação que depende de exame físico dirigido ao risco não se faz por tela. Registro e segurança da informação valem em qualquer modalidade — reforçados na remota.',
+  pegadinha: 'Os dois extremos erram: liberar tudo remotamente e proibir a modalidade inteira.',
+  refs: ['Resoluções do CFM sobre telemedicina', 'Código de Ética Médica'] },
+
+{ id: 'q-7.8-050', tema: '7.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre incidentes de segurança envolvendo dados de saúde de trabalhadores, é CORRETO afirmar:',
+  alts: [
+    { t: 'Incidentes com risco relevante aos titulares devem ser comunicados à autoridade e aos afetados em prazo razoável, com descrição do ocorrido e das medidas adotadas — e a existência de plano de resposta prévio reduz o dano e o tempo de reação.', ok: true,
+      why: 'Correta. Comunicação e plano de resposta são exigências práticas, não formalidades.' },
+    { t: 'Incidentes só precisam ser comunicados quando há dano financeiro comprovado.', ok: false,
+      why: 'Errada. O critério é o risco relevante aos titulares, e dado de saúde é sensível.' },
+    { t: 'A comunicação aos titulares afetados é facultativa.', ok: false,
+      why: 'Errada. É devida quando há risco relevante.' },
+    { t: 'Dados de saúde vazados não representam risco relevante por não terem valor comercial.', ok: false,
+      why: 'Errada. São dados sensíveis com alto potencial de discriminação e constrangimento.' },
+    { t: 'A existência de plano de resposta a incidentes não influencia as consequências.', ok: false,
+      why: 'Errada. Reduz o dano, encurta a reação e é considerada na avaliação de responsabilidade.' }
+  ],
+  comentario: 'Vazamento de dado de saúde: comunicar autoridade e afetados quando há risco relevante, com o que houve e o que foi feito. Plano prévio reduz dano e conta a favor na avaliação de responsabilidade.',
+  pegadinha: 'Exigir dano financeiro para comunicar ignora que o dano do dado de saúde é discriminação e constrangimento.',
+  refs: ['LGPD — arts. 48 e 50', 'Código de Ética Médica'] }
+
+);
