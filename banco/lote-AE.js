@@ -1,0 +1,203 @@
+/* Lote AE — 6.1, 6.2, 6.3, 6.4, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 1.10. AUTORAIS. */
+window.BANCO = window.BANCO || [];
+window.BANCO.push(
+
+{ id: 'q-6.1-090', tema: '6.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre o relatório analítico do programa de controle médico, é CORRETO afirmar:',
+  alts: [
+    { t: 'Ele consolida os resultados por grupo e por risco, sem identificação individual, e deve apontar o planejamento do período seguinte — sendo o documento que transforma exames isolados em informação capaz de orientar mudanças no ambiente.', ok: true,
+      why: 'Correta. É a peça que fecha o ciclo entre vigilância da saúde e ação sobre o ambiente.' },
+    { t: 'O relatório deve conter os resultados individuais de cada trabalhador.', ok: false,
+      why: 'Errada. É documento consolidado, sem identificação individual.' },
+    { t: 'Sua elaboração é dispensável quando não houve alterações no período.', ok: false,
+      why: 'Errada. É obrigatório, e a ausência de alterações também é resultado a analisar.' },
+    { t: 'O relatório se limita a listar quantitativos de exames realizados.', ok: false,
+      why: 'Errada. Deve analisar os achados e propor o planejamento seguinte.' },
+    { t: 'A empresa não precisa ter acesso ao relatório.', ok: false,
+      why: 'Errada. É documento destinado a orientar as ações da empresa, no formato consolidado.' }
+  ],
+  comentario: 'O relatório analítico é o que transforma exames em informação de gestão: consolidado por grupo e risco, sem nomes, com análise dos achados e planejamento do período seguinte. Contagem de exames realizados não é relatório analítico.',
+  pegadinha: 'Entregar quantitativos no lugar de análise cumpre a formalidade e não fecha o ciclo com o ambiente.',
+  refs: ['NR-7', 'Código de Ética Médica'] },
+
+{ id: 'q-6.2-090', tema: '6.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a acessibilidade e a adaptação razoável no ambiente de trabalho, é CORRETO afirmar:',
+  alts: [
+    { t: 'A adaptação razoável consiste em modificações necessárias e adequadas que não imponham ônus desproporcional, e sua recusa injustificada configura discriminação — sendo o custo alegado um argumento que precisa ser demonstrado, e não presumido.', ok: true,
+      why: 'Correta. Ônus desproporcional se demonstra; não se alega genericamente.' },
+    { t: 'A adaptação é obrigatória apenas quando não gera qualquer custo.', ok: false,
+      why: 'Errada. O critério é a desproporcionalidade do ônus, não a ausência de custo.' },
+    { t: 'A recusa de adaptação é decisão discricionária do empregador.', ok: false,
+      why: 'Errada. A recusa injustificada configura discriminação.' },
+    { t: 'Acessibilidade se restringe a adaptações arquitetônicas.', ok: false,
+      why: 'Errada. Abrange comunicação, tecnologia assistiva, mobiliário e organização do trabalho.' },
+    { t: 'A adaptação beneficia exclusivamente o trabalhador com deficiência.', ok: false,
+      why: 'Errada. Muitas adaptações beneficiam o conjunto dos trabalhadores.' }
+  ],
+  comentario: 'Adaptação razoável: necessária, adequada e sem ônus desproporcional — que precisa ser demonstrado. Acessibilidade vai além de rampa: comunicação, tecnologia assistiva, mobiliário e organização do trabalho.',
+  pegadinha: 'Alegar custo sem demonstrá-lo é a forma mais comum de recusa disfarçada.',
+  refs: ['Lei nº 13.146/2015', 'Convenção sobre os Direitos das Pessoas com Deficiência'] },
+
+{ id: 'q-6.3-090', tema: '6.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a epilepsia e a avaliação de aptidão para atividades de risco, é CORRETO afirmar:',
+  alts: [
+    { t: 'A avaliação considera o tipo de crise, o tempo sem crises, a adesão ao tratamento e a presença de fatores desencadeantes na atividade — sendo o diagnóstico isolado insuficiente para concluir por inaptidão em qualquer função.', ok: true,
+      why: 'Correta. Tempo livre de crises e tipo de crise são os determinantes, não o rótulo diagnóstico.' },
+    { t: 'O diagnóstico de epilepsia implica inaptidão para qualquer atividade laboral.', ok: false,
+      why: 'Errada. A maioria das funções não apresenta risco incompatível.' },
+    { t: 'O tempo sem crises não influencia a avaliação de aptidão.', ok: false,
+      why: 'Errada. É um dos principais determinantes da decisão.' },
+    { t: 'Privação de sono e trabalho em turnos não interferem no controle das crises.', ok: false,
+      why: 'Errada. São fatores desencadeantes reconhecidos e relevantes na organização da escala.' },
+    { t: 'A omissão do diagnóstico pelo trabalhador impede qualquer responsabilidade da empresa em caso de acidente.', ok: false,
+      why: 'Errada. As medidas de proteção coletiva no posto permanecem exigíveis independentemente disso.' }
+  ],
+  comentario: 'Epilepsia: decide tipo de crise, tempo livre de crises, adesão e desencadeantes na atividade — não o diagnóstico. Privação de sono e turnos são fatores desencadeantes que a escala pode evitar.',
+  pegadinha: 'Concluir pelo diagnóstico afasta do trabalho pessoas com anos sem crise e boa adesão.',
+  refs: ['Diretrizes de epilepsia e aptidão laboral', 'NR-7'] },
+
+{ id: 'q-6.4-090', tema: '6.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre o plano de resposta a emergências em empresas com riscos de processo, é CORRETO afirmar:',
+  alts: [
+    { t: 'O plano deve prever cenários específicos, recursos, fluxo de comunicação e articulação com serviços externos, com simulados periódicos — e a realização dos simulados é o que revela as falhas antes que o evento real as revele.', ok: true,
+      why: 'Correta. Plano nunca testado falha no primeiro uso real.' },
+    { t: 'O plano genérico é preferível por cobrir qualquer situação.', ok: false,
+      why: 'Errada. Cenários específicos permitem preparo concreto de recursos e fluxos.' },
+    { t: 'Simulados são dispensáveis quando o plano está bem documentado.', ok: false,
+      why: 'Errada. É o simulado que testa o plano e treina as pessoas.' },
+    { t: 'A articulação prévia com serviços externos de emergência é desnecessária.', ok: false,
+      why: 'Errada. O tempo de resposta e a preparação externa dependem dessa articulação.' },
+    { t: 'A revisão do plano após um evento real é opcional.', ok: false,
+      why: 'Errada. É a oportunidade mais valiosa de aprendizado e correção.' }
+  ],
+  comentario: 'Plano de emergência: cenários específicos, recursos definidos, fluxo de comunicação, articulação externa prévia e simulados periódicos. Plano documentado e nunca testado descobre suas falhas no pior momento.',
+  pegadinha: 'O plano genérico dá conforto documental e não prepara ninguém para o cenário concreto.',
+  refs: ['NR-1', 'Diretrizes de gerenciamento de emergências'] },
+
+{ id: 'q-1.4-080', tema: '1.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a integração entre o serviço de saúde ocupacional e a comissão interna de prevenção de acidentes, é CORRETO afirmar:',
+  alts: [
+    { t: 'A comissão é canal privilegiado de informação sobre condições reais de trabalho e sua articulação com o serviço médico qualifica tanto a investigação de acidentes quanto o mapeamento de riscos — desperdiçá-la reduz o serviço a uma rotina de exames.', ok: true,
+      why: 'Correta. A comissão traz a informação que o exame não produz.' },
+    { t: 'A comissão e o serviço médico devem atuar separadamente para preservar a imparcialidade.', ok: false,
+      why: 'Errada. A articulação é prevista e aumenta a efetividade de ambos.' },
+    { t: 'O médico do trabalho não deve participar de reuniões da comissão.', ok: false,
+      why: 'Errada. A participação técnica é prevista e desejável.' },
+    { t: 'A comissão tem função meramente formal, sem contribuição técnica relevante.', ok: false,
+      why: 'Errada. Os representantes conhecem o trabalho real como ninguém no organograma.' },
+    { t: 'As informações da comissão dispensam verificação técnica.', ok: false,
+      why: 'Errada. São ponto de partida valioso que deve ser verificado tecnicamente.' }
+  ],
+  comentario: 'A comissão traz o que o exame não mostra: como o trabalho acontece de fato. Articular o serviço médico com ela qualifica investigação e mapeamento — sem dispensar a verificação técnica do que é relatado.',
+  pegadinha: 'Manter os dois separados "por imparcialidade" priva o serviço médico da sua melhor fonte de informação.',
+  refs: ['NR-5', 'NR-4', 'NR-1'] },
+
+{ id: 'q-1.5-080', tema: '1.5', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre auditorias de sistemas de gestão de segurança e saúde, é CORRETO afirmar:',
+  alts: [
+    { t: 'A auditoria deve verificar a implementação efetiva e não apenas a existência documental, o que exige observação do trabalho e entrevista com quem executa — auditoria restrita a documentos certifica o sistema descrito, não o praticado.', ok: true,
+      why: 'Correta. É a diferença entre auditar o papel e auditar a prática.' },
+    { t: 'A conformidade documental é evidência suficiente de implementação.', ok: false,
+      why: 'Errada. Documento conforme convive com prática divergente.' },
+    { t: 'A entrevista com trabalhadores não é método válido de auditoria.', ok: false,
+      why: 'Errada. É método reconhecido e frequentemente o mais revelador.' },
+    { t: 'Auditorias internas não têm valor por falta de independência.', ok: false,
+      why: 'Errada. Têm valor quando conduzidas com independência em relação à área auditada.' },
+    { t: 'Não conformidades identificadas dispensam plano de ação quando são de baixa gravidade.', ok: false,
+      why: 'Errada. Toda não conformidade deve gerar tratamento proporcional.' }
+  ],
+  comentario: 'Auditar é verificar a prática: observar o trabalho, entrevistar quem executa, comparar com o documentado. Auditoria de gaveta certifica o sistema que está escrito, não o que acontece no chão de fábrica.',
+  pegadinha: 'Sistema com documentação impecável e prática divergente passa em qualquer auditoria só documental.',
+  refs: ['ISO 45001', 'ISO 19011'] },
+
+{ id: 'q-1.6-080', tema: '1.6', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre o controle social nas políticas de saúde do trabalhador, é CORRETO afirmar:',
+  alts: [
+    { t: 'Ele se exerce por instâncias com participação de trabalhadores e suas entidades na formulação e no acompanhamento das ações, e sua efetividade depende de acesso à informação — participação sem informação qualificada é participação apenas formal.', ok: true,
+      why: 'Correta. Informação é condição de participação real.' },
+    { t: 'O controle social se limita à eleição de representantes.', ok: false,
+      why: 'Errada. Envolve formulação, acompanhamento e fiscalização das ações.' },
+    { t: 'A participação de entidades sindicais é vedada nessas instâncias.', ok: false,
+      why: 'Errada. É expressamente prevista.' },
+    { t: 'O acesso à informação não é condição para o exercício do controle social.', ok: false,
+      why: 'Errada. Sem informação, a participação se esvazia.' },
+    { t: 'O controle social é incompatível com a autonomia técnica dos serviços.', ok: false,
+      why: 'Errada. São dimensões complementares e não excludentes.' }
+  ],
+  comentario: 'Controle social é participar da formulação e do acompanhamento — com informação qualificada, sem a qual a presença nas instâncias é figurativa. Não compete com a autonomia técnica: complementa.',
+  pegadinha: 'Garantir assento sem garantir informação produz participação decorativa.',
+  refs: ['Lei nº 8.142/1990', 'PNSTT'] },
+
+{ id: 'q-1.7-080', tema: '1.7', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre o financiamento das ações de saúde do trabalhador no sistema público, é CORRETO afirmar:',
+  alts: [
+    { t: 'As ações integram o financiamento do sistema de saúde, com repasses específicos para determinadas estruturas — e a dependência de financiamento induzido torna a sustentação dessas ações vulnerável a mudanças de prioridade na gestão.', ok: true,
+      why: 'Correta. Estruturas mantidas por incentivo específico são as primeiras a sofrer com mudança de prioridade.' },
+    { t: 'As ações são financiadas exclusivamente por recursos previdenciários.', ok: false,
+      why: 'Errada. Integram o financiamento do sistema de saúde.' },
+    { t: 'O financiamento não influencia a continuidade das ações.', ok: false,
+      why: 'Errada. É determinante da sustentação e da capilaridade das estruturas.' },
+    { t: 'Municípios não têm responsabilidade no financiamento dessas ações.', ok: false,
+      why: 'Errada. O financiamento é tripartite.' },
+    { t: 'Empresas financiam diretamente as ações públicas de vigilância em saúde do trabalhador.', ok: false,
+      why: 'Errada. Elas custeiam suas próprias obrigações; a vigilância pública tem financiamento público.' }
+  ],
+  comentario: 'Financiamento tripartite dentro do sistema de saúde, com incentivos específicos para certas estruturas — e é justamente essa dependência de indução que torna a rede vulnerável a mudanças de prioridade.',
+  pegadinha: 'Atribuir o financiamento à previdência confunde quem paga benefício com quem custeia vigilância.',
+  refs: ['Lei nº 8.080/1990', 'RENAST', 'PNSTT'] },
+
+{ id: 'q-1.8-080', tema: '1.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a investigação de óbito relacionado ao trabalho, é CORRETO afirmar:',
+  alts: [
+    { t: 'A investigação envolve notificação, análise das circunstâncias e do processo de trabalho, e articulação entre saúde, trabalho e ministério público — e o preenchimento adequado da declaração de óbito, informando a relação com o trabalho, é elemento que sustenta toda a cadeia seguinte.', ok: true,
+      why: 'Correta. Declaração mal preenchida apaga o caso de todas as bases.' },
+    { t: 'A declaração de óbito não comporta informação sobre relação com o trabalho.', ok: false,
+      why: 'Errada. Há campo específico para essa informação.' },
+    { t: 'A investigação é atribuição exclusiva da fiscalização do trabalho.', ok: false,
+      why: 'Errada. Envolve articulação entre setores, com competências próprias de cada um.' },
+    { t: 'Óbitos por doença ocupacional não são objeto de investigação, apenas os por acidente.', ok: false,
+      why: 'Errada. Ambos são objeto de vigilância.' },
+    { t: 'A investigação deve se concentrar na conduta do trabalhador falecido.', ok: false,
+      why: 'Errada. O objeto é o processo de trabalho e as falhas de barreira que permitiram o evento.' }
+  ],
+  comentario: 'Óbito relacionado ao trabalho: notificação, análise do processo de trabalho e articulação intersetorial — com a declaração de óbito informando a relação com o trabalho, sem a qual o caso desaparece das estatísticas.',
+  pegadinha: 'Investigar a conduta do falecido em vez do processo de trabalho encerra a apuração onde ela deveria começar.',
+  refs: ['Portarias de vigilância de óbitos relacionados ao trabalho', 'SINAN', 'PNSTT'] },
+
+{ id: 'q-1.9-080', tema: '1.9', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a qualidade e a completitude dos dados em sistemas de informação de agravos, é CORRETO afirmar:',
+  alts: [
+    { t: 'Duplicidade de registros, campos em branco e inconsistência entre variáveis comprometem a análise, o que torna a rotina de crítica e depuração da base parte do trabalho de vigilância — e não etapa administrativa acessória.', ok: true,
+      why: 'Correta. Base não depurada produz análise que descreve o erro de registro, não o fenômeno.' },
+    { t: 'O volume de notificações é o principal indicador de qualidade do sistema.', ok: false,
+      why: 'Errada. Volume sem completitude e sem consistência não sustenta análise.' },
+    { t: 'A depuração da base é etapa administrativa sem relação com a vigilância.', ok: false,
+      why: 'Errada. É condição para que a informação oriente ação.' },
+    { t: 'Registros duplicados não interferem nas taxas calculadas.', ok: false,
+      why: 'Errada. Inflam numeradores e distorcem comparações entre territórios e períodos.' },
+    { t: 'A inconsistência entre variáveis deve ser corrigida apenas na publicação anual.', ok: false,
+      why: 'Errada. A crítica deve ser contínua, para que o dado sirva à ação no tempo certo.' }
+  ],
+  comentario: 'Base de vigilância exige crítica contínua: duplicidade infla taxa, campo em branco inviabiliza estratificação e inconsistência entre variáveis produz análise do erro. Depurar é vigilância, não burocracia.',
+  pegadinha: 'Medir o sistema pelo número de notificações premia volume e ignora a qualidade que sustenta a análise.',
+  refs: ['SINAN', 'Ministério da Saúde — avaliação de sistemas de informação'] },
+
+{ id: 'q-1.10-080', tema: '1.10', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre programas de apoio ao trabalhador para cessação do tabagismo, é CORRETO afirmar:',
+  alts: [
+    { t: 'O ambiente de trabalho é espaço favorável a essas ações, que devem combinar apoio terapêutico com ambiente livre de fumo — e a abordagem não pode assumir caráter punitivo, sob pena de afastar quem mais precisa de apoio.', ok: true,
+      why: 'Correta. Punição afasta o trabalhador do programa.' },
+    { t: 'A proibição de fumar nas dependências é suficiente como programa de cessação.', ok: false,
+      why: 'Errada. Ambiente livre de fumo é medida complementar, não substitui o apoio terapêutico.' },
+    { t: 'A adesão pode ser exigida como condição para manutenção de benefícios.', ok: false,
+      why: 'Errada. Condicionar benefício converte apoio em coação.' },
+    { t: 'Programas no ambiente de trabalho não apresentam vantagem sobre a busca individual.', ok: false,
+      why: 'Errada. Proximidade, apoio de pares e continuidade favorecem a adesão.' },
+    { t: 'A informação sobre a participação pode ser compartilhada com a chefia.', ok: false,
+      why: 'Errada. É informação de saúde, protegida por sigilo.' }
+  ],
+  comentario: 'Cessação de tabagismo no trabalho: apoio terapêutico mais ambiente livre de fumo, sem punição, sem condicionar benefício e com sigilo sobre a participação. Proibir sem apoiar não é programa.',
+  pegadinha: 'O componente punitivo afasta exatamente o trabalhador com maior dependência.',
+  refs: ['INCA — programa de controle do tabagismo', 'OMS'] }
+
+);
