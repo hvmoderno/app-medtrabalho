@@ -1,0 +1,185 @@
+/* Lote W — 6.2, 6.3, 6.4, 7.4, 7.2, 7.1. AUTORAIS. */
+window.BANCO = window.BANCO || [];
+window.BANCO.push(
+
+{ id: 'q-6.2-070', tema: '6.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a avaliação biopsicossocial da deficiência, é CORRETO afirmar:',
+  alts: [
+    { t: 'Ela considera impedimentos de longo prazo em interação com barreiras que obstruem a participação em igualdade de condições, de modo que a deficiência não é atributo isolado do corpo, mas resultado dessa interação — o que desloca parte da resposta para a remoção de barreiras.', ok: true,
+      why: 'Correta. É a definição adotada no estatuto e a base do modelo social.' },
+    { t: 'A deficiência é definida exclusivamente pelo grau de comprometimento anatômico ou funcional.', ok: false,
+      why: 'Errada. A definição legal inclui a interação com barreiras.' },
+    { t: 'A avaliação biopsicossocial dispensa a análise de fatores ambientais.', ok: false,
+      why: 'Errada. As barreiras ambientais são elemento central da definição.' },
+    { t: 'Impedimentos temporários caracterizam deficiência para os fins do estatuto.', ok: false,
+      why: 'Errada. A definição se refere a impedimentos de longo prazo.' },
+    { t: 'A avaliação deve ser realizada exclusivamente por médico.', ok: false,
+      why: 'Errada. A avaliação biopsicossocial é multiprofissional por definição.' }
+  ],
+  comentario: 'Deficiência é impedimento de longo prazo em interação com barreiras — não é medida só no corpo. Por isso a avaliação é multiprofissional e parte da resposta é remover barreira, não tratar pessoa.',
+  pegadinha: 'Avaliar apenas o comprometimento corporal aplica um modelo que a lei brasileira já superou.',
+  refs: ['Lei nº 13.146/2015 — art. 2º', 'CIF — OMS'] },
+
+{ id: 'q-6.2-071', tema: '6.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre o cumprimento da cota legal de pessoas com deficiência e reabilitados, é CORRETO afirmar:',
+  alts: [
+    { t: 'O percentual varia conforme o número de empregados da empresa, e a dispensa de trabalhador enquadrado na cota, quando por prazo indeterminado, condiciona-se à contratação de substituto em condição semelhante.', ok: true,
+      why: 'Correta. A condição de substituição é o que dá efetividade à reserva.' },
+    { t: 'O percentual da cota é único para empresas de qualquer porte.', ok: false,
+      why: 'Errada. Varia por faixa de número de empregados.' },
+    { t: 'A dispensa de trabalhador da cota não tem condição legal específica.', ok: false,
+      why: 'Errada. Há condicionamento expresso à contratação de substituto.' },
+    { t: 'Trabalhadores reabilitados pela previdência não contam para o preenchimento da cota.', ok: false,
+      why: 'Errada. A reserva legal alcança expressamente os reabilitados.' },
+    { t: 'A empresa pode alocar todos os contratados pela cota em uma única função de menor complexidade.', ok: false,
+      why: 'Errada. Concentrar em funções desvalorizadas contraria a finalidade inclusiva da norma.' }
+  ],
+  comentario: 'Cota: percentual por faixa de empregados, alcança reabilitados, e a dispensa por prazo indeterminado exige substituto em condição semelhante. Concentrar os contratados em uma função de menor valor cumpre o texto da norma e nega sua finalidade.',
+  pegadinha: 'Esquecer que reabilitados contam para a cota é omissão frequente na leitura do dispositivo.',
+  refs: ['Lei nº 8.213/1991 — art. 93', 'Lei nº 13.146/2015'] },
+
+{ id: 'q-6.3-070', tema: '6.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Motorista profissional com diabetes em uso de insulina apresenta bom controle e nenhum episódio de hipoglicemia grave. Sobre a conduta, é CORRETO afirmar:',
+  alts: [
+    { t: 'A avaliação deve considerar o controle metabólico, o histórico de hipoglicemias, a percepção dos sintomas de hipoglicemia e a adesão ao monitoramento — sendo o uso de insulina, isoladamente, insuficiente para concluir por inaptidão.', ok: true,
+      why: 'Correta. O que decide é o risco de hipoglicemia incapacitante, não a via de tratamento.' },
+    { t: 'O uso de insulina implica inaptidão automática para condução profissional.', ok: false,
+      why: 'Errada. A avaliação é individualizada e considera o controle e o histórico.' },
+    { t: 'A hipoglicemia assintomática não altera a avaliação de aptidão.', ok: false,
+      why: 'Errada. A perda da percepção dos sintomas é justamente o achado de maior risco.' },
+    { t: 'O controle glicêmico dispensa reavaliações periódicas mais frequentes.', ok: false,
+      why: 'Errada. A condição exige acompanhamento com periodicidade adequada ao risco.' },
+    { t: 'A decisão pode ser tomada sem informação sobre os episódios prévios de hipoglicemia.', ok: false,
+      why: 'Errada. O histórico de episódios é o dado mais relevante da avaliação.' }
+  ],
+  comentario: 'Insulina não decide aptidão; hipoglicemia decide. E o achado mais preocupante é a perda da percepção dos sintomas — quem não sente a hipoglicemia chegando não consegue parar o veículo a tempo.',
+  pegadinha: 'Concluir pela via de tratamento em vez do risco funcional exclui trabalhadores bem controlados.',
+  refs: ['Diretrizes de diabetes e direção veicular', 'NR-7', 'Resoluções sobre exame de motorista profissional'] },
+
+{ id: 'q-6.3-071', tema: '6.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre os limites do rastreamento de doenças no exame ocupacional, é CORRETO afirmar:',
+  alts: [
+    { t: 'Exames sem indicação para o risco da função ampliam achados incidentais, ansiedade e investigações desnecessárias, sem benefício demonstrado — de modo que ampliar a bateria não equivale a cuidar melhor do trabalhador.', ok: true,
+      why: 'Correta. Rastreamento sem indicação produz dano próprio.' },
+    { t: 'Quanto mais exames o programa inclui, maior a proteção conferida ao trabalhador.', ok: false,
+      why: 'Errada. Exame sem indicação gera achado incidental e investigação sem benefício.' },
+    { t: 'Achados incidentais são sempre benéficos por permitirem diagnóstico precoce.', ok: false,
+      why: 'Errada. Muitos levam a investigação e tratamento de condições que nunca causariam dano.' },
+    { t: 'O rastreamento populacional deve seguir os mesmos critérios do rastreamento ocupacional por risco.', ok: false,
+      why: 'Errada. São lógicas distintas: uma parte do risco populacional, a outra do risco da exposição.' },
+    { t: 'O custo do exame é o principal critério para decidir sua inclusão no programa.', ok: false,
+      why: 'Errada. O critério é a indicação técnica frente ao risco e a evidência de benefício.' }
+  ],
+  comentario: 'Check-up ampliado não é cuidado ampliado: produz achado incidental, ansiedade e cascata de investigação. A indicação vem do risco da função e da evidência de benefício — não do desejo de parecer completo.',
+  pegadinha: 'A bateria extensa é vendida como benefício e frequentemente é sobrediagnóstico com aparência de zelo.',
+  refs: ['NR-7', 'Critérios de rastreamento — literatura de medicina preventiva'] },
+
+{ id: 'q-6.4-070', tema: '6.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a queimadura química ocular no ambiente de trabalho, é CORRETO afirmar:',
+  alts: [
+    { t: 'A irrigação abundante e imediata com água ou solução salina é a medida de maior impacto no prognóstico e deve ser iniciada no local, antes do transporte — e queimaduras por álcalis tendem a ser mais graves que as por ácidos pela penetração progressiva no tecido.', ok: true,
+      why: 'Correta. Tempo até a irrigação é o principal determinante do desfecho.' },
+    { t: 'Deve-se aguardar avaliação especializada antes de iniciar a irrigação.', ok: false,
+      why: 'Errada. O atraso é o que determina a gravidade da lesão final.' },
+    { t: 'Queimaduras por ácidos são sistematicamente mais graves que as por álcalis.', ok: false,
+      why: 'Errada. Os álcalis penetram progressivamente e tendem a produzir lesão mais profunda.' },
+    { t: 'A neutralização química com substância de pH oposto é a conduta indicada.', ok: false,
+      why: 'Errada. A reação de neutralização libera calor e agrava a lesão.' },
+    { t: 'A ausência de dor intensa indica lesão leve.', ok: false,
+      why: 'Errada. Lesões graves podem cursar com pouca dor por destruição de terminações nervosas.' }
+  ],
+  comentario: 'Olho com respingo químico: irrigar já, no local, em abundância. Álcali é pior que ácido pela penetração progressiva. Nada de neutralizar — a reação libera calor. E pouca dor pode significar lesão profunda, não lesão leve.',
+  pegadinha: 'Tentar neutralizar quimicamente parece técnico e agrava a queimadura.',
+  refs: ['Protocolos de queimadura química ocular', 'NR-1'] },
+
+{ id: 'q-6.4-071', tema: '6.4', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre o uso do desfibrilador externo automático em emergências cardiovasculares no trabalho, é CORRETO afirmar:',
+  alts: [
+    { t: 'Sua eficácia depende do tempo até o choque, o que justifica disponibilidade próxima e treinamento de leigos — e o equipamento analisa o ritmo e só libera choque quando indicado, o que o torna seguro nas mãos de pessoal capacitado.', ok: true,
+      why: 'Correta. Cada minuto de atraso reduz substancialmente a sobrevida.' },
+    { t: 'O equipamento só pode ser operado por profissional de saúde.', ok: false,
+      why: 'Errada. É projetado para uso por leigos treinados.' },
+    { t: 'O choque deve ser aplicado independentemente da análise de ritmo.', ok: false,
+      why: 'Errada. O aparelho analisa e só libera quando o ritmo é passível de choque.' },
+    { t: 'As compressões torácicas devem ser interrompidas enquanto se busca o equipamento.', ok: false,
+      why: 'Errada. As compressões devem continuar até o momento da análise do ritmo.' },
+    { t: 'A disponibilidade do equipamento dispensa o acionamento do serviço de emergência.', ok: false,
+      why: 'Errada. O acionamento é simultâneo e indispensável.' }
+  ],
+  comentario: 'Desfibrilador: tempo até o choque é tudo, por isso disponibilidade próxima e leigos treinados. Compressões não param enquanto o aparelho é buscado, e o acionamento da emergência é simultâneo.',
+  pegadinha: 'Reservar o equipamento a profissionais de saúde anula a razão de ele existir em ambiente de trabalho.',
+  refs: ['Diretrizes de suporte básico de vida', 'NR-1'] },
+
+{ id: 'q-7.4-070', tema: '7.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre o trabalho em espaços confinados, é CORRETO afirmar:',
+  alts: [
+    { t: 'A entrada exige permissão específica com avaliação prévia e contínua da atmosfera, vigia permanente do lado externo, equipe de resgate preparada e procedimentos definidos — sendo a maioria das mortes decorrente de tentativas de resgate improvisadas.', ok: true,
+      why: 'Correta. O segundo e o terceiro a morrer costumam ser os socorristas.' },
+    { t: 'A avaliação inicial da atmosfera é suficiente para toda a permanência.', ok: false,
+      why: 'Errada. As condições mudam durante o trabalho e exigem monitoramento contínuo.' },
+    { t: 'A presença de vigia externo é recomendação e não requisito.', ok: false,
+      why: 'Errada. É requisito da permissão de entrada e trabalho.' },
+    { t: 'O uso de respirador com filtro é adequado quando há dúvida sobre a atmosfera.', ok: false,
+      why: 'Errada. Diante de dúvida, exige-se ar fornecido ou equipamento autônomo.' },
+    { t: 'A capacitação para trabalho em espaço confinado é única e não requer reciclagem.', ok: false,
+      why: 'Errada. Há previsão de capacitação periódica.' }
+  ],
+  comentario: 'Espaço confinado: permissão específica, atmosfera avaliada antes e durante, vigia externo permanente, resgate preparado e capacitação periódica. A causa mais comum de múltiplas mortes é o resgate improvisado.',
+  pegadinha: 'Medir a atmosfera só na entrada ignora que ela muda com o próprio trabalho executado dentro.',
+  refs: ['NR-33'] },
+
+{ id: 'q-7.4-071', tema: '7.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a segurança em instalações e serviços em eletricidade, é CORRETO afirmar:',
+  alts: [
+    { t: 'A regra é a desenergização com procedimento de bloqueio e sinalização, com verificação de ausência de tensão antes do início — e o trabalho energizado é exceção, autorizada apenas mediante justificativa e medidas de controle específicas.', ok: true,
+      why: 'Correta. Desenergizar é a regra; energizado é exceção justificada.' },
+    { t: 'O trabalho em instalações energizadas é a regra quando há equipe treinada.', ok: false,
+      why: 'Errada. É exceção, condicionada a justificativa técnica e a controles adicionais.' },
+    { t: 'O bloqueio e a sinalização podem ser dispensados em intervenções rápidas.', ok: false,
+      why: 'Errada. A brevidade não dispensa o procedimento; é justamente onde ocorrem acidentes graves.' },
+    { t: 'A verificação de ausência de tensão é dispensável após o desligamento do disjuntor.', ok: false,
+      why: 'Errada. A verificação é etapa obrigatória e independente do desligamento.' },
+    { t: 'O risco de arco elétrico não exige medidas específicas de proteção.', ok: false,
+      why: 'Errada. Exige vestimenta adequada e análise específica desse risco.' }
+  ],
+  comentario: 'Eletricidade: desenergizar, bloquear, sinalizar e verificar ausência de tensão — nessa ordem e sem atalho por brevidade. Energizado é exceção justificada, e arco elétrico tem proteção própria.',
+  pegadinha: 'A intervenção rápida sem bloqueio é a situação em que a religação por terceiro mata.',
+  refs: ['NR-10'] },
+
+{ id: 'q-7.2-070', tema: '7.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a ação regressiva acidentária, é CORRETO afirmar:',
+  alts: [
+    { t: 'Permite à previdência cobrar do empregador os valores despendidos com benefícios acidentários quando há negligência quanto às normas de segurança e saúde, o que torna a documentação das medidas adotadas relevante também para a defesa da empresa.', ok: true,
+      why: 'Correta. É a via pela qual o custo do benefício volta a quem descumpriu a norma.' },
+    { t: 'A concessão do benefício acidentário impede qualquer cobrança posterior ao empregador.', ok: false,
+      why: 'Errada. A ação regressiva existe justamente para essa cobrança.' },
+    { t: 'A ação independe da demonstração de descumprimento de normas de segurança.', ok: false,
+      why: 'Errada. A negligência quanto às normas é seu fundamento.' },
+    { t: 'A ação é proposta pelo trabalhador acidentado.', ok: false,
+      why: 'Errada. É proposta pela autarquia previdenciária.' },
+    { t: 'Valores obtidos na ação regressiva são destinados ao trabalhador.', ok: false,
+      why: 'Errada. Ressarcem os cofres da previdência, sem prejuízo da ação indenizatória do trabalhador.' }
+  ],
+  comentario: 'Ação regressiva: a previdência cobra do empregador negligente o que gastou com o benefício. Não substitui a indenização civil do trabalhador — e a documentação das medidas de segurança é o que a empresa tem para se defender.',
+  pegadinha: 'Confundir a ação regressiva com a indenização do trabalhador troca autor, fundamento e destinatário.',
+  refs: ['Lei nº 8.213/1991 — art. 120', 'Decreto nº 3.048/1999'] },
+
+{ id: 'q-7.1-060', tema: '7.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre o adicional de insalubridade e o adicional de periculosidade, é CORRETO afirmar:',
+  alts: [
+    { t: 'São verbas distintas com fundamentos e bases de cálculo próprios, não cumuláveis entre si — cabendo ao trabalhador optar pela mais favorável quando presentes as duas hipóteses —, e a eliminação ou neutralização do agente cessa o direito ao adicional.', ok: true,
+      why: 'Correta. Não cumulação com direito de opção, e o adicional acompanha a existência da condição.' },
+    { t: 'Os dois adicionais são cumuláveis quando presentes ambas as condições.', ok: false,
+      why: 'Errada. A regra é a não cumulação com opção pelo mais favorável.' },
+    { t: 'O adicional de insalubridade é permanente após concedido, ainda que o agente seja eliminado.', ok: false,
+      why: 'Errada. Cessada a condição, cessa o adicional.' },
+    { t: 'A insalubridade e a periculosidade têm a mesma base de cálculo.', ok: false,
+      why: 'Errada. As bases de cálculo são distintas.' },
+    { t: 'O pagamento do adicional exime a empresa de adotar medidas de controle do agente.', ok: false,
+      why: 'Errada. O dever de eliminar ou neutralizar o risco é independente do pagamento.' }
+  ],
+  comentario: 'Insalubridade e periculosidade: fundamentos e bases distintos, não cumuláveis, com opção pelo mais favorável, e o adicional cessa quando a condição é eliminada. Pagar adicional nunca substitui controlar o risco.',
+  pegadinha: 'Tratar o adicional como preço da exposição inverte a lógica: ele é compensação temporária, não licença para manter o risco.',
+  refs: ['CLT — arts. 189 a 197', 'NR-15', 'NR-16'] }
+
+);

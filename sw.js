@@ -10,7 +10,7 @@
    abre offline, mas pega a versão nova assim que houver rede.
    ========================================================================== */
 
-const VERSAO = 'v53';
+const VERSAO = 'v56';
 const CACHE = 'medtrabalho-' + VERSAO;
 
 const ARQUIVOS = [
@@ -49,6 +49,8 @@ const ARQUIVOS = [
   './banco/lote-S.js',
   './banco/lote-T.js',
   './banco/lote-U.js',
+  './banco/lote-V.js',
+  './banco/lote-W.js',
   './banco/misc-alto.js',
   './banco/misc-alto2.js',
   './banco/misc-alto3.js',

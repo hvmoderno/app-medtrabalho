@@ -1,0 +1,203 @@
+/* Lote V — 7.5 (eSocial), 7.3 (legislação sanitária), 7.6 (CEM), 7.7 (CFM), 7.8 (LGPD). AUTORAIS. */
+window.BANCO = window.BANCO || [];
+window.BANCO.push(
+
+{ id: 'q-7.5-040', tema: '7.5', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a finalidade e a estrutura do eSocial no que se refere a segurança e saúde no trabalho, é CORRETO afirmar:',
+  alts: [
+    { t: 'Ele unifica em um único envio informações antes prestadas a órgãos distintos, incluindo eventos de monitoramento da saúde, de condições ambientais e de comunicação de acidente — o que aumenta a rastreabilidade e faz da qualidade do dado informado uma responsabilidade com consequências.', ok: true,
+      why: 'Correta. A unificação torna o dado cruzável entre fisco, previdência e fiscalização do trabalho.' },
+    { t: 'Trata-se apenas de um sistema de folha de pagamento, sem informações de saúde e segurança.', ok: false,
+      why: 'Errada. Há eventos específicos de segurança e saúde no trabalho.' },
+    { t: 'As informações prestadas não podem ser retificadas após o envio.', ok: false,
+      why: 'Errada. Há procedimento de retificação previsto.' },
+    { t: 'A prestação de informações de saúde e segurança é facultativa para empresas de menor porte.', ok: false,
+      why: 'Errada. Há cronogramas distintos de obrigatoriedade, não dispensa da obrigação.' },
+    { t: 'A informação prestada no eSocial não repercute em outras esferas administrativas.', ok: false,
+      why: 'Errada. Cruzamentos com previdência e fiscalização do trabalho são justamente a finalidade do sistema.' }
+  ],
+  comentario: 'O eSocial unifica envios que antes iam a órgãos separados, incluindo os eventos de saúde e segurança. Isso torna a informação cruzável — e o erro de preenchimento passa a ter consequência em mais de uma esfera.',
+  pegadinha: 'Tratar o eSocial como assunto de folha de pagamento deixa os eventos de saúde e segurança sem responsável técnico.',
+  refs: ['eSocial — leiaute de eventos de SST', 'Manual de orientação do eSocial'] },
+
+{ id: 'q-7.5-041', tema: '7.5', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a responsabilidade do médico do trabalho nas informações de monitoramento da saúde enviadas pelo eSocial, é CORRETO afirmar:',
+  alts: [
+    { t: 'O evento reproduz dados do atestado de saúde ocupacional — tipo de exame, data, avaliações complementares e conclusão de aptidão —, e o médico responde pela veracidade do que atesta, ainda que o envio seja operacionalizado por outro setor da empresa.', ok: true,
+      why: 'Correta. Quem opera o envio não assume a responsabilidade pelo conteúdo do ato médico.' },
+    { t: 'A responsabilidade pelo conteúdo é integralmente do setor que faz o envio.', ok: false,
+      why: 'Errada. O conteúdo médico permanece sob responsabilidade de quem o atesta.' },
+    { t: 'O evento deve informar o diagnóstico do trabalhador.', ok: false,
+      why: 'Errada. Informa-se a conclusão de aptidão e os exames realizados, não o diagnóstico.' },
+    { t: 'O registro do profissional que emitiu o atestado é dado dispensável no evento.', ok: false,
+      why: 'Errada. A identificação do médico responsável integra o evento.' },
+    { t: 'Erros no envio não podem ser corrigidos após o prazo.', ok: false,
+      why: 'Errada. Há retificação prevista, ainda que possa haver consequências pela intempestividade.' }
+  ],
+  comentario: 'O evento de monitoramento reproduz o atestado de saúde ocupacional e identifica o médico responsável. Diagnóstico não entra — entra a conclusão de aptidão. E terceirizar o envio não terceiriza a responsabilidade pelo conteúdo.',
+  pegadinha: 'Informar diagnóstico em campo de sistema é quebra de sigilo com registro permanente.',
+  refs: ['eSocial — evento de monitoramento da saúde do trabalhador', 'NR-7', 'Código de Ética Médica'] },
+
+{ id: 'q-7.5-042', tema: '7.5', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre a comunicação de acidente de trabalho por meio do eSocial, é CORRETO afirmar:',
+  alts: [
+    { t: 'O evento próprio substitui o formulário anterior para as empresas obrigadas, mantidos os prazos legais de comunicação e a obrigatoriedade também nos casos sem afastamento — e a via alternativa permanece disponível aos demais legitimados.', ok: true,
+      why: 'Correta. Muda o meio de transmissão, não a obrigação nem os legitimados concorrentes.' },
+    { t: 'A migração para o eSocial alterou os prazos legais de comunicação do acidente.', ok: false,
+      why: 'Errada. Os prazos permanecem os previstos em lei.' },
+    { t: 'Com o eSocial, apenas a empresa pode comunicar o acidente.', ok: false,
+      why: 'Errada. Os demais legitimados mantêm a possibilidade por outras vias.' },
+    { t: 'Acidentes sem afastamento deixaram de ser comunicáveis pelo sistema.', ok: false,
+      why: 'Errada. Permanecem sujeitos a comunicação.' },
+    { t: 'O envio do evento substitui a investigação interna do acidente.', ok: false,
+      why: 'Errada. São obrigações distintas e ambas subsistem.' }
+  ],
+  comentario: 'O eSocial mudou o meio, não a substância: prazos legais mantidos, casos sem afastamento incluídos, legitimados concorrentes preservados. E comunicar não substitui investigar.',
+  pegadinha: 'Supor que a mudança de sistema alterou prazo ou legitimados é confusão entre meio e obrigação.',
+  refs: ['eSocial — evento de comunicação de acidente de trabalho', 'Lei nº 8.213/1991 — art. 22'] },
+
+{ id: 'q-7.3-070', tema: '7.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a atuação da vigilância sanitária em ambientes de trabalho, é CORRETO afirmar:',
+  alts: [
+    { t: 'A competência sanitária alcança o ambiente de trabalho porque ele é também ambiente de exposição de pessoas, e a atuação pode incluir inspeção, exigência de adequação e interdição diante de risco à saúde — competência que coexiste com a da fiscalização do trabalho, sem se confundir com ela.', ok: true,
+      why: 'Correta. Coexistência de competências, não sobreposição excludente.' },
+    { t: 'A vigilância sanitária não tem competência sobre ambientes de trabalho.', ok: false,
+      why: 'Errada. A competência decorre da lei orgânica da saúde.' },
+    { t: 'A atuação sanitária substitui a fiscalização do trabalho.', ok: false,
+      why: 'Errada. São competências distintas que coexistem e podem atuar de forma articulada.' },
+    { t: 'A interdição sanitária depende de prévia autuação pela fiscalização do trabalho.', ok: false,
+      why: 'Errada. É medida autônoma, cabível diante de risco à saúde.' },
+    { t: 'A vigilância sanitária só pode atuar em estabelecimentos de saúde e de alimentos.', ok: false,
+      why: 'Errada. Sua competência alcança ambientes que exponham a saúde de pessoas, incluindo os de trabalho.' }
+  ],
+  comentario: 'Ambiente de trabalho é ambiente de exposição de pessoas — e por isso é objeto de vigilância sanitária, com poder de inspeção e interdição autônomo em relação à fiscalização do trabalho.',
+  pegadinha: 'Achar que só o órgão do trabalho atua sobre ambientes laborais ignora uma competência concorrente prevista em lei.',
+  refs: ['Lei nº 8.080/1990', 'Legislação sanitária estadual e municipal', 'PNSTT'] },
+
+{ id: 'q-7.3-071', tema: '7.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre o controle sanitário de produtos e substâncias perigosas com repercussão sobre trabalhadores, é CORRETO afirmar:',
+  alts: [
+    { t: 'O registro, a rotulagem e as restrições de uso de agrotóxicos e saneantes envolvem competências sanitárias, ambientais e agrícolas simultaneamente, e as decisões de banimento ou restrição repercutem diretamente sobre a exposição ocupacional.', ok: true,
+      why: 'Correta. A tríplice competência é uma característica marcante desse controle.' },
+    { t: 'O registro de agrotóxicos é competência exclusiva do órgão agrícola.', ok: false,
+      why: 'Errada. Envolve também as áreas de saúde e de meio ambiente.' },
+    { t: 'Decisões sobre banimento de substâncias não têm efeito sobre exposição ocupacional.', ok: false,
+      why: 'Errada. Retirar o produto do mercado é a medida de prevenção de maior alcance.' },
+    { t: 'A rotulagem de saneantes não é objeto de controle sanitário.', ok: false,
+      why: 'Errada. É objeto expresso de regulação sanitária.' },
+    { t: 'O médico do trabalho não tem papel na comunicação de eventos adversos relacionados a esses produtos.', ok: false,
+      why: 'Errada. A notificação de intoxicações alimenta justamente o sistema que sustenta as decisões regulatórias.' }
+  ],
+  comentario: 'Agrotóxicos e saneantes têm controle compartilhado entre saúde, meio ambiente e agricultura. Banimento e restrição são as medidas de prevenção mais amplas que existem — e a notificação médica de intoxicações é o que as sustenta.',
+  pegadinha: 'Ver o registro como assunto agrícola apaga a competência sanitária que protege quem aplica o produto.',
+  refs: ['Legislação de agrotóxicos', 'Anvisa — saneantes', 'Lei nº 8.080/1990'] },
+
+{ id: 'q-7.6-040', tema: '7.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre o conflito de interesses do médico do trabalho contratado pela empresa, é CORRETO afirmar:',
+  alts: [
+    { t: 'O médico atende ao trabalhador com os mesmos deveres éticos de qualquer relação médica, e a remuneração pela empresa não cria dever de lealdade que se sobreponha ao interesse da saúde do trabalhador — o código internacional de ética da área explicita essa independência.', ok: true,
+      why: 'Correta. Quem paga não é quem o médico serve nesse ato.' },
+    { t: 'O vínculo contratual com a empresa estabelece dever de lealdade prevalente ao contratante.', ok: false,
+      why: 'Errada. O dever ético primário é com a saúde do trabalhador examinado.' },
+    { t: 'O médico do trabalho não estabelece relação médica com o trabalhador examinado.', ok: false,
+      why: 'Errada. Estabelece, com deveres de sigilo, informação e cuidado.' },
+    { t: 'Achados clínicos relevantes podem deixar de ser comunicados ao trabalhador quando não afetam a aptidão.', ok: false,
+      why: 'Errada. O trabalhador tem direito de conhecer sua condição de saúde e ser orientado.' },
+    { t: 'A independência técnica é recomendação sem respaldo em documento internacional da área.', ok: false,
+      why: 'Errada. O código internacional de ética para profissionais de saúde ocupacional a estabelece expressamente.' }
+  ],
+  comentario: 'Há relação médica com o trabalhador examinado, com sigilo, informação e cuidado — e independência técnica frente a quem contrata. Achado relevante se comunica ao trabalhador mesmo quando não muda a aptidão.',
+  pegadinha: 'A ideia de que não há relação médica no exame ocupacional é o que abre caminho para omitir achados e quebrar sigilo.',
+  refs: ['Código de Ética Médica', 'ICOH — Código Internacional de Ética'] },
+
+{ id: 'q-7.6-041', tema: '7.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre o prontuário do trabalhador sob guarda do serviço médico da empresa, é CORRETO afirmar:',
+  alts: [
+    { t: 'É documento sob responsabilidade do médico, com guarda separada dos registros administrativos, acesso restrito à equipe de saúde e prazos de conservação prolongados — e o trabalhador tem direito de acesso ao seu conteúdo.', ok: true,
+      why: 'Correta. O titular tem acesso; o empregador, não.' },
+    { t: 'O empregador tem direito de acesso ao prontuário por custear o serviço.', ok: false,
+      why: 'Errada. Custeio não confere acesso a conteúdo clínico.' },
+    { t: 'O trabalhador não pode acessar o próprio prontuário ocupacional.', ok: false,
+      why: 'Errada. O acesso do titular é direito reconhecido.' },
+    { t: 'O prontuário pode ser descartado imediatamente após o desligamento.', ok: false,
+      why: 'Errada. Os prazos de guarda são longos, o que é essencial em exposições de latência prolongada.' },
+    { t: 'Em caso de encerramento das atividades da empresa, os prontuários podem ser destruídos.', ok: false,
+      why: 'Errada. É preciso providenciar guarda adequada, preservando o acesso futuro.' }
+  ],
+  comentario: 'Prontuário ocupacional: guarda pelo médico, separada do arquivo funcional, acesso do titular garantido e do empregador vedado, prazos longos — inclusive quando a empresa encerra atividades.',
+  pegadinha: 'Descartar prontuários no encerramento da empresa elimina a prova de exposição justamente de quem vai adoecer depois.',
+  refs: ['Código de Ética Médica', 'Resoluções do CFM sobre prontuário', 'NR-7'] },
+
+{ id: 'q-7.7-040', tema: '7.7', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a relação entre resoluções do Conselho Federal de Medicina e normas trabalhistas, é CORRETO afirmar:',
+  alts: [
+    { t: 'As resoluções disciplinam a conduta ética do médico e o vinculam profissionalmente, de modo que exigência normativa ou contratual que colida com dever ético não afasta a responsabilidade disciplinar do profissional que a cumpre.', ok: true,
+      why: 'Correta. Cumprir ordem incompatível com dever ético não exime o médico.' },
+    { t: 'Norma trabalhista prevalece sobre resolução do conselho em matéria de conduta ética médica.', ok: false,
+      why: 'Errada. A conduta ética do médico é disciplinada pelo conselho profissional.' },
+    { t: 'Resoluções do conselho não vinculam médicos contratados por empresas privadas.', ok: false,
+      why: 'Errada. Vinculam todo médico inscrito, qualquer que seja o vínculo.' },
+    { t: 'A existência de exigência contratual afasta a responsabilidade disciplinar do médico.', ok: false,
+      why: 'Errada. A responsabilidade pessoal pelo ato médico permanece.' },
+    { t: 'Resoluções do conselho podem criar obrigações trabalhistas para as empresas.', ok: false,
+      why: 'Errada. Elas disciplinam a conduta médica, não relações de trabalho entre empresa e empregado.' }
+  ],
+  comentario: 'Resolução do conselho disciplina a conduta do médico; norma trabalhista disciplina a relação de emprego. Quando uma exigência da empresa colide com dever ético, cumprir não protege o médico da responsabilidade disciplinar.',
+  pegadinha: '"Foi ordem da empresa" não é excludente de responsabilidade ética pelo ato médico.',
+  refs: ['Resoluções do CFM', 'Código de Ética Médica'] },
+
+{ id: 'q-7.7-041', tema: '7.7', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre exames toxicológicos com finalidade laboral, é CORRETO afirmar:',
+  alts: [
+    { t: 'Sua realização exige finalidade legítima definida, procedimento técnico adequado com confirmação de resultados positivos e tratamento do resultado como informação de saúde sob sigilo — não podendo servir de triagem indiscriminada nem de fundamento isolado para punição.', ok: true,
+      why: 'Correta. Positivo de triagem exige confirmação e o resultado é dado de saúde.' },
+    { t: 'Resultado positivo em triagem dispensa exame confirmatório.', ok: false,
+      why: 'Errada. Falsos-positivos são frequentes e a confirmação é indispensável.' },
+    { t: 'O resultado pode ser divulgado ao setor de pessoal com o detalhamento da substância detectada.', ok: false,
+      why: 'Errada. É informação de saúde sob sigilo.' },
+    { t: 'A testagem pode ser aplicada a qualquer função por decisão da empresa.', ok: false,
+      why: 'Errada. Exige finalidade legítima ligada à segurança da atividade.' },
+    { t: 'O uso de medicamento prescrito não interfere na interpretação do resultado.', ok: false,
+      why: 'Errada. Diversos medicamentos interferem e a interpretação deve considerá-los.' }
+  ],
+  comentario: 'Toxicológico laboral: finalidade legítima, triagem seguida de confirmação, atenção a medicamentos que interferem, sigilo do resultado. Positivo de triagem tratado como conclusão é injustiça com aparência técnica.',
+  pegadinha: 'Agir sobre o resultado de triagem sem confirmação penaliza quem tomou um medicamento prescrito.',
+  refs: ['Resoluções do CFM sobre exames toxicológicos', 'Código de Ética Médica'] },
+
+{ id: 'q-7.8-040', tema: '7.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre as bases legais para o tratamento de dados de saúde de trabalhadores, é CORRETO afirmar:',
+  alts: [
+    { t: 'Dados de saúde são sensíveis e seu tratamento se apoia preferencialmente em hipóteses como o cumprimento de obrigação legal e a tutela da saúde por profissional de saúde — sendo o consentimento base frágil na relação de emprego pela assimetria entre as partes.', ok: true,
+      why: 'Correta. A assimetria compromete a livre manifestação de vontade.' },
+    { t: 'O consentimento do empregado é a base legal preferencial no contexto do emprego.', ok: false,
+      why: 'Errada. A assimetria da relação o torna base frágil.' },
+    { t: 'Dados de saúde recebem o mesmo tratamento dos demais dados pessoais.', ok: false,
+      why: 'Errada. São categoria sensível, com regime mais restritivo.' },
+    { t: 'A anonimização não é aplicável a relatórios de saúde ocupacional.', ok: false,
+      why: 'Errada. Relatórios agregados e anonimizados são exatamente o formato adequado para a empresa.' },
+    { t: 'A empresa, como controladora, pode acessar todos os dados tratados pelo serviço médico.', ok: false,
+      why: 'Errada. O acesso é limitado pelo sigilo profissional e pela minimização.' }
+  ],
+  comentario: 'Dado de saúde é sensível: base legal preferencial em obrigação legal e tutela da saúde por profissional, não em consentimento — que na relação de emprego nasce comprometido. À empresa vai o agregado anonimizado.',
+  pegadinha: 'Colher assinatura de consentimento na admissão dá aparência de legalidade a um tratamento que a base escolhida não sustenta.',
+  refs: ['LGPD — arts. 7º e 11', 'Código de Ética Médica'] },
+
+{ id: 'q-7.8-041', tema: '7.8', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre o conteúdo do atestado de saúde ocupacional à luz da proteção de dados, é CORRETO afirmar:',
+  alts: [
+    { t: 'O documento entregue à empresa deve conter os riscos avaliados, os exames realizados e a conclusão de aptidão, sem diagnósticos ou resultados detalhados — aplicando na prática o princípio da minimização dos dados.', ok: true,
+      why: 'Correta. Minimização: só o necessário à finalidade, que é a decisão sobre alocação.' },
+    { t: 'O documento deve trazer os resultados detalhados dos exames complementares.', ok: false,
+      why: 'Errada. Os resultados permanecem no prontuário sob guarda do médico.' },
+    { t: 'A inclusão de diagnóstico é obrigatória para fundamentar restrições.', ok: false,
+      why: 'Errada. Fundamenta-se a restrição funcionalmente, sem revelar diagnóstico.' },
+    { t: 'A minimização de dados não se aplica a documentos exigidos por norma.', ok: false,
+      why: 'Errada. Aplica-se ao conteúdo, mesmo quando o documento é obrigatório.' },
+    { t: 'O trabalhador não precisa receber via do documento.', ok: false,
+      why: 'Errada. A entrega de via ao trabalhador é exigência.' }
+  ],
+  comentario: 'No atestado vão riscos avaliados, exames feitos e conclusão de aptidão. Diagnóstico e resultado detalhado ficam no prontuário. É a minimização aplicada a um documento que a norma exige — e o trabalhador recebe a sua via.',
+  pegadinha: 'Detalhar resultados no documento que circula pela empresa transforma exigência normativa em vazamento.',
+  refs: ['LGPD — minimização', 'NR-7', 'Código de Ética Médica'] }
+
+);
