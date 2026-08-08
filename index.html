@@ -92,6 +92,12 @@
   <div class="carregando" id="carregando">carregando…</div>
 </main>
 
+<!-- O player vive AQUI, no documento principal, e não dentro do iframe da aba
+     Áudio. O iOS trata mídia de iframe como secundária e a interrompe ao
+     bloquear a tela; mídia do documento de topo é a que ele mantém tocando e
+     a que aparece nos controles da tela bloqueada. -->
+<audio id="playerGlobal" preload="none" playsinline></audio>
+
 <dialog class="painel" id="dlgBackup">
   <div class="corpo">
     <h2>Backup completo</h2>
@@ -138,6 +144,160 @@
   var elAvisos = document.getElementById('avisos');
   var frames = {};
   var atual = null;
+
+  /* -------------------------------------------------------------- áudio ---
+   * O player fica no documento de topo por dois motivos:
+   *   1. O iOS interrompe mídia de iframe ao bloquear a tela; mídia do topo ele
+   *      mantém tocando.
+   *   2. A Media Session — controles na tela bloqueada e no CarPlay — só
+   *      registra de forma confiável a partir do documento principal.
+   *
+   * A aba Áudio comanda por window.parent.MTB_AUDIO e recebe o estado de volta
+   * por callback, para desenhar a lista sem duplicar a lógica de reprodução.
+   */
+  var playerG = document.getElementById('playerGlobal');
+  var audioFaixas = [];
+  var audioIdx = -1;
+  var audioObs = null;          // callback da aba, para ela redesenhar
+
+  function audioAvisarAba() {
+    if (typeof audioObs === 'function') {
+      try {
+        audioObs({
+          idx: audioIdx,
+          tocando: !playerG.paused,
+          posicao: playerG.currentTime,
+          duracao: playerG.duration || 0
+        });
+      } catch (e) {
+        console.warn('[shell] a aba Áudio falhou ao receber o estado:', e.message);
+      }
+    }
+  }
+
+  function audioMediaSession() {
+    if (!('mediaSession' in navigator) || audioIdx < 0) return;
+    var f = audioFaixas[audioIdx];
+    try {
+      navigator.mediaSession.metadata = new MediaMetadata({
+        title: f.tema + ' — ' + f.nome,
+        artist: 'Medicina do Trabalho 2026',
+        album: 'Resumos por tema do edital',
+        artwork: [
+          { src: 'assets/icone-192.png', sizes: '192x192', type: 'image/png' },
+          { src: 'assets/icone-512.png', sizes: '512x512', type: 'image/png' }
+        ]
+      });
+      navigator.mediaSession.setActionHandler('play', function () { playerG.play(); });
+      navigator.mediaSession.setActionHandler('pause', function () { playerG.pause(); });
+      navigator.mediaSession.setActionHandler('previoustrack', function () {
+        window.MTB_AUDIO.tocar(audioIdx - 1);
+      });
+      navigator.mediaSession.setActionHandler('nexttrack', function () {
+        window.MTB_AUDIO.tocar(audioIdx + 1);
+      });
+      // Avançar e voltar 15 s: no volante, é o controle que mais se usa.
+      navigator.mediaSession.setActionHandler('seekbackward', function () {
+        playerG.currentTime = Math.max(0, playerG.currentTime - 15);
+      });
+      navigator.mediaSession.setActionHandler('seekforward', function () {
+        playerG.currentTime = Math.min(playerG.duration || 0, playerG.currentTime + 15);
+      });
+    } catch (e) {
+      console.warn('[shell] Media Session indisponível:', e.message);
+    }
+  }
+
+  function audioProg() {
+    var a = Store.get('audio') || {};
+    if (!a.ouvidas) a.ouvidas = {};
+    if (!a.posicao) a.posicao = {};
+    return a;
+  }
+
+  var audioUltimoSalvo = 0;
+  playerG.addEventListener('timeupdate', function () {
+    if (audioIdx < 0) return;
+    var agora = Date.now();
+    if (agora - audioUltimoSalvo < 5000) return;
+    audioUltimoSalvo = agora;
+    var a = audioProg();
+    a.posicao[audioFaixas[audioIdx].tema] = playerG.currentTime;
+    Store.set('audio', a);
+  });
+
+  playerG.addEventListener('play', function () {
+    if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'playing';
+    audioAvisarAba();
+  });
+  playerG.addEventListener('pause', function () {
+    if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'paused';
+    if (audioIdx >= 0) {
+      var a = audioProg();
+      a.posicao[audioFaixas[audioIdx].tema] = playerG.currentTime;
+      Store.set('audio', a);
+    }
+    audioAvisarAba();
+  });
+  playerG.addEventListener('ended', function () {
+    if (audioIdx < 0) return;
+    var a = audioProg();
+    a.ouvidas[audioFaixas[audioIdx].tema] = Date.now();
+    delete a.posicao[audioFaixas[audioIdx].tema];
+    Store.set('audio', a);
+    if (audioIdx + 1 < audioFaixas.length) {
+      window.MTB_AUDIO.tocar(audioIdx + 1);
+    } else {
+      audioIdx = -1;
+      audioAvisarAba();
+    }
+  });
+  playerG.addEventListener('error', function () {
+    var f = audioIdx >= 0 ? audioFaixas[audioIdx] : null;
+    window.MTB_AVISO({
+      nivel: 'erro',
+      texto: 'Não consegui tocar a faixa' + (f ? ' ' + f.tema : '') + '.',
+      detalhe: 'Sem rede e sem cópia baixada, ou o arquivo falhou.'
+    });
+  });
+
+  window.MTB_AUDIO = {
+    registrar: function (faixas, observador) {
+      audioFaixas = faixas || [];
+      audioObs = observador || null;
+      audioAvisarAba();
+    },
+    tocar: function (i) {
+      if (i < 0 || i >= audioFaixas.length) return;
+      var f = audioFaixas[i];
+      audioIdx = i;
+      // O caminho vem relativo à pasta audio/; aqui estamos na raiz.
+      playerG.src = 'audio/' + f.arq;
+      var a = audioProg();
+      var pos = a.posicao[f.tema];
+      playerG.onloadedmetadata = function () {
+        if (pos && pos > 3 && pos < playerG.duration - 5) playerG.currentTime = pos;
+      };
+      if (a.velocidade) playerG.playbackRate = parseFloat(a.velocidade);
+      playerG.play().catch(function (e) {
+        console.warn('[shell] reprodução recusada:', e.message);
+      });
+      audioMediaSession();
+      audioAvisarAba();
+    },
+    alternar: function () {
+      if (audioIdx < 0) return;
+      if (playerG.paused) playerG.play(); else playerG.pause();
+    },
+    velocidade: function (v) {
+      playerG.playbackRate = parseFloat(v);
+      var a = audioProg(); a.velocidade = String(v); Store.set('audio', a);
+    },
+    estado: function () {
+      return { idx: audioIdx, tocando: !playerG.paused,
+               posicao: playerG.currentTime, duracao: playerG.duration || 0 };
+    }
+  };
 
   /* ------------------------------------------------------------- avisos --- */
   // Exposto globalmente: storage.js dentro dos iframes chama parent.MTB_AVISO.
