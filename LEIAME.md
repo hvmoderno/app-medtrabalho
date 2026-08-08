@@ -101,3 +101,21 @@ de gravação é engolido: todo erro vira faixa vermelha na tela.
 **O backup em arquivo `.json` (botão "Backup", no topo) é a única cópia que
 sobrevive se o Safari/iOS limpar o armazenamento do site.** O app cobra um novo
 backup a cada 7 dias.
+
+## Publicar no GitHub Pages
+
+Rode uma vez, no Terminal:
+
+```
+bash ~/Downloads/app-medtrabalho/tools/publicar-github.sh
+```
+
+O script cuida de tudo: login no GitHub (pelo navegador, no site do próprio
+GitHub), criação do repositório público, envio dos commits, ativação do Pages e
+conferência do endereço final. O token fica guardado pelo GitHub CLI; não passa
+pelo script nem aparece na tela.
+
+Ao final ele imprime o endereço, no formato
+`https://SEU-USUARIO.github.io/app-medtrabalho/`.
+Para instalar no iPad: abra pelo Safari e use Compartilhar > Adicionar à Tela de
+Início.
