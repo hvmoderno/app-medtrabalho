@@ -1,0 +1,185 @@
+/* Lote J — 5.4, 4.8, 2.9, 4.3. AUTORAIS. */
+window.BANCO = window.BANCO || [];
+window.BANCO.push(
+
+{ id: 'q-5.4-052', tema: '5.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Em perícia judicial, o assistente técnico de uma das partes apresenta parecer divergente do laudo pericial. Sobre a conduta do perito, é CORRETO afirmar:',
+  alts: [
+    { t: 'O perito deve responder tecnicamente aos pontos divergentes, mantendo ou revendo sua conclusão conforme o mérito dos argumentos — a revisão fundamentada não desabona o laudo, e a recusa em enfrentar a divergência, sim.', ok: true,
+      why: 'Correta. Enfrentar o contraditório técnico é parte do trabalho pericial.' },
+    { t: 'O perito deve ignorar o parecer, por ser produzido por parte interessada.', ok: false,
+      why: 'Errada. O assistente técnico é figura processual legítima e seus pontos devem ser respondidos.' },
+    { t: 'A revisão da conclusão diante de argumento procedente compromete a idoneidade do perito.', ok: false,
+      why: 'Errada. Rever diante de argumento consistente é exatamente o comportamento técnico correto.' },
+    { t: 'O perito deve adotar a conclusão do assistente para evitar prolongar o feito.', ok: false,
+      why: 'Errada. A conclusão pericial se fundamenta em técnica, não em conveniência processual.' },
+    { t: 'A divergência entre perito e assistente indica erro necessário de um dos dois.', ok: false,
+      why: 'Errada. Pode decorrer de premissas e do peso atribuído a elementos distintos.' }
+  ],
+  comentario: 'O perito responde os pontos divergentes, e revê se o argumento procede. Rever com fundamento fortalece o laudo; ignorar a divergência o enfraquece. Aderir por conveniência é o pior dos caminhos.',
+  pegadinha: 'Tratar a mudança de conclusão como sinal de fragilidade pressiona o perito a manter erro identificado.',
+  refs: ['Código de Processo Civil — prova pericial', 'Resoluções do CFM sobre perícia médica'] },
+
+{ id: 'q-5.4-053', tema: '5.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre o exame pericial e o acesso a documentos e informações do periciando, é CORRETO afirmar:',
+  alts: [
+    { t: 'O perito acessa o que é necessário e pertinente ao objeto da perícia, comunicando previamente ao periciando a natureza do ato e a ausência de relação assistencial — e o sigilo permanece quanto ao que não integra o objeto pericial.', ok: true,
+      why: 'Correta. Pertinência ao objeto e esclarecimento prévio delimitam eticamente o ato pericial.' },
+    { t: 'A perícia autoriza acesso irrestrito a todo o prontuário do periciando.', ok: false,
+      why: 'Errada. O acesso se limita ao que é pertinente ao objeto da perícia.' },
+    { t: 'O perito deve prestar orientação terapêutica ao periciando durante o exame.', ok: false,
+      why: 'Errada. Ele não é o assistente; orientar terapeuticamente cria vínculo incompatível com a função.' },
+    { t: 'O periciando não precisa ser informado sobre a finalidade do exame.', ok: false,
+      why: 'Errada. O esclarecimento prévio sobre a natureza pericial do ato é dever ético.' },
+    { t: 'O sigilo médico não se aplica à relação pericial em qualquer extensão.', ok: false,
+      why: 'Errada. O sigilo persiste quanto ao que extrapola o objeto da perícia.' }
+  ],
+  comentario: 'A perícia abre uma exceção limitada ao sigilo: só o pertinente ao quesito, e com o periciando informado de que ali não há relação assistencial. Achado incidental relevante à saúde se comunica ao periciando para que busque assistência — sem virar consulta.',
+  pegadinha: '"Perícia autoriza acesso a tudo" é a leitura mais comum e mais errada da exceção ao sigilo.',
+  refs: ['Código de Ética Médica', 'Resoluções do CFM sobre perícia médica'] },
+
+{ id: 'q-4.8-053', tema: '4.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a vigilância de trabalhadores expostos a agentes cancerígenos, é CORRETO afirmar:',
+  alts: [
+    { t: 'O acompanhamento deve continuar após o fim da exposição, porque o período de latência pode ultrapassar décadas — e o registro histórico das exposições é o que torna possível relacionar o câncer diagnosticado anos depois ao trabalho anterior.', ok: true,
+      why: 'Correta. Sem registro histórico preservado, o nexo se perde no tempo.' },
+    { t: 'O acompanhamento pode ser encerrado com o fim da exposição.', ok: false,
+      why: 'Errada. A latência longa é a característica que exige a continuidade.' },
+    { t: 'A ausência de sintomas ao término do vínculo permite descartar risco futuro.', ok: false,
+      why: 'Errada. A ausência de sintoma na latência não informa sobre o risco.' },
+    { t: 'O rastreamento periódico está disponível e é eficaz para a maioria dos cânceres ocupacionais.', ok: false,
+      why: 'Errada. Para a maioria não há rastreamento eficaz — o que reforça a primazia da prevenção da exposição.' },
+    { t: 'O registro de exposições pode ser descartado após o desligamento do trabalhador.', ok: false,
+      why: 'Errada. Os registros devem ser conservados por prazos longos justamente pela latência.' }
+  ],
+  comentario: 'Cancerígeno tem latência de décadas: a vigilância não termina com o vínculo e o registro da exposição precisa sobreviver ao trabalhador na empresa. E como rastreamento eficaz é exceção, prevenir a exposição continua sendo a única medida de alto rendimento.',
+  pegadinha: 'Descartar registros após o desligamento inviabiliza o nexo exatamente quando ele apareceria.',
+  refs: ['IARC — monografias', 'NR-7', 'INCA — câncer relacionado ao trabalho'] },
+
+{ id: 'q-4.8-054', tema: '4.8', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre a hierarquia de medidas frente a agentes reconhecidamente cancerígenos para humanos, é CORRETO afirmar:',
+  alts: [
+    { t: 'A prioridade é a substituição do agente ou do processo; quando inviável, adota-se sistema fechado e demais controles de engenharia, ficando a proteção individual como complemento — e não se admite tratar o limite de exposição como zona segura.', ok: true,
+      why: 'Correta. Para cancerígeno sem limiar demonstrado, não existe patamar seguro presumido.' },
+    { t: 'Manter a exposição abaixo do limite estabelecido é medida suficiente.', ok: false,
+      why: 'Errada. Para agentes sem limiar, reduzir ao mínimo exequível é o critério, não o cumprimento do limite.' },
+    { t: 'A proteção respiratória é a medida de primeira linha para cancerígenos.', ok: false,
+      why: 'Errada. É a última linha, dependente de ajuste, uso correto e manutenção.' },
+    { t: 'A substituição só deve ser considerada quando o custo for equivalente.', ok: false,
+      why: 'Errada. A substituição é a prioridade técnica; custo é fator de viabilidade, não critério de hierarquia.' },
+    { t: 'O rodízio de trabalhadores reduz o risco individual de câncer de forma proporcional.', ok: false,
+      why: 'Errada. Rodízio dilui a dose por pessoa mas expõe mais gente, sem redução do risco populacional para agentes sem limiar.' }
+  ],
+  comentario: 'Cancerígeno: substituir primeiro, engenharia depois, individual por último. Duas armadilhas conceituais — tomar o limite como zona segura e usar rodízio, que apenas distribui a exposição por mais pessoas.',
+  pegadinha: 'O rodízio parece medida de proteção e, para agente sem limiar, aumenta o número de expostos.',
+  refs: ['IARC', 'ACGIH — TLVs', 'NR-9'] },
+
+{ id: 'q-2.9-050', tema: '2.9', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a interpretação de indicadores biológicos de exposição, é CORRETO afirmar:',
+  alts: [
+    { t: 'O momento da coleta é determinante e varia conforme a meia-vida do agente e do indicador — fim de jornada, fim de semana de trabalho ou antes da próxima jornada —, e coleta em momento inadequado inviabiliza a interpretação do resultado.', ok: true,
+      why: 'Correta. O mesmo trabalhador dá resultados diferentes conforme o momento da coleta.' },
+    { t: 'O momento da coleta é irrelevante desde que o método analítico seja adequado.', ok: false,
+      why: 'Errada. Método correto em momento errado produz número sem significado.' },
+    { t: 'Resultado abaixo do valor de referência garante ausência de dano.', ok: false,
+      why: 'Errada. Os valores de referência são populacionais e não asseguram ausência de efeito individual.' },
+    { t: 'Um único resultado alterado autoriza conclusão definitiva sobre a exposição.', ok: false,
+      why: 'Errada. Confirma-se com nova coleta e se investigam fontes não ocupacionais.' },
+    { t: 'Exposição extraocupacional não interfere nos indicadores biológicos.', ok: false,
+      why: 'Errada. Tabagismo, hobbies, dieta e medicamentos interferem em vários indicadores.' }
+  ],
+  comentario: 'Indicador biológico exige o momento certo de coleta, confirmação de resultado alterado e investigação de fonte extraocupacional. E o mais importante: valor dentro da referência não significa ausência de dano no indivíduo.',
+  pegadinha: 'Tratar o valor de referência como certificado de segurança individual é o erro clássico de leitura.',
+  refs: ['ACGIH — BEIs', 'NR-7', 'Buschinelli — Toxicologia Ocupacional'] },
+
+{ id: 'q-2.9-051', tema: '2.9', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre o efeito da exposição simultânea a mais de um agente químico, é CORRETO afirmar:',
+  alts: [
+    { t: 'Agentes com o mesmo órgão-alvo ou mecanismo tendem a efeito aditivo, e a avaliação deve considerar a soma das frações de exposição em vez de comparar cada agente isoladamente ao seu limite.', ok: true,
+      why: 'Correta. Cada agente pode estar abaixo do próprio limite e a mistura, acima do aceitável.' },
+    { t: 'Cada agente deve ser sempre avaliado isoladamente contra seu limite.', ok: false,
+      why: 'Errada. A avaliação isolada não detecta o efeito combinado.' },
+    { t: 'Interação sinérgica entre agentes ocupacionais não é reconhecida.', ok: false,
+      why: 'Errada. Há exemplos consagrados, como asbesto e tabagismo no câncer de pulmão.' },
+    { t: 'O álcool e os solventes não apresentam interação relevante.', ok: false,
+      why: 'Errada. A interação com solventes é conhecida e clinicamente relevante.' },
+    { t: 'A avaliação de misturas exige método analítico exclusivo, sem uso dos limites individuais.', ok: false,
+      why: 'Errada. O procedimento usual parte justamente das frações relativas aos limites individuais.' }
+  ],
+  comentario: 'Mistura com mesmo alvo: soma-se a fração de cada agente em relação ao seu limite. Três abaixo do limite podem somar acima do aceitável. E o sinergismo clássico da área é asbesto com tabagismo.',
+  pegadinha: 'Avaliar agente por agente é o procedimento que faz uma mistura perigosa passar como conforme.',
+  refs: ['ACGIH — TLVs, misturas', 'Buschinelli — Toxicologia Ocupacional'] },
+
+{ id: 'q-2.9-052', tema: '2.9', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre as vias de absorção de agentes químicos no trabalho, é CORRETO afirmar:',
+  alts: [
+    { t: 'A via cutânea pode ser significativa para determinados agentes, e nesses casos a proteção respiratória isolada é insuficiente — daí a existência de notação específica sinalizando contribuição cutânea relevante nas listas de limites.', ok: true,
+      why: 'Correta. A notação de absorção cutânea existe justamente para alertar que o ar não é a única porta.' },
+    { t: 'A via respiratória é a única relevante no ambiente ocupacional.', ok: false,
+      why: 'Errada. Cutânea e, em situações específicas, digestiva também são relevantes.' },
+    { t: 'A via digestiva não tem relevância ocupacional.', ok: false,
+      why: 'Errada. Alimentação ou fumo no posto de trabalho e higiene inadequada das mãos a tornam relevante.' },
+    { t: 'A notação de absorção cutânea indica apenas risco de irritação local.', ok: false,
+      why: 'Errada. Indica absorção sistêmica pela pele com contribuição significativa à dose interna.' },
+    { t: 'A pele íntegra impede a absorção de qualquer agente químico.', ok: false,
+      why: 'Errada. Diversos agentes atravessam pele íntegra, e a pele lesada apenas aumenta a absorção.' }
+  ],
+  comentario: 'Três vias: respiratória, cutânea e digestiva. A notação de pele nas listas de limites avisa que a absorção sistêmica pela pele é relevante — e nessas situações medir o ar e proteger a respiração não basta.',
+  pegadinha: 'Ler a notação cutânea como aviso de irritação local subestima justamente a dose sistêmica.',
+  refs: ['ACGIH — TLVs, notação Skin', 'Buschinelli — Toxicologia Ocupacional'] },
+
+{ id: 'q-4.3-050', tema: '4.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a asma relacionada ao trabalho, é CORRETO afirmar:',
+  alts: [
+    { t: 'Ela abrange a asma ocupacional propriamente dita, com sensibilização a agente do trabalho, e a asma preexistente agravada pelo trabalho — e a melhora em períodos de afastamento com piora no retorno é achado de alto valor na suspeita.', ok: true,
+      why: 'Correta. O padrão temporal de melhora fora do trabalho é o dado clínico mais sugestivo.' },
+    { t: 'Apenas a asma com sensibilização a agente específico é considerada relacionada ao trabalho.', ok: false,
+      why: 'Errada. A asma agravada pelo trabalho também integra o espectro.' },
+    { t: 'A ausência de sensibilização identificada afasta a origem ocupacional.', ok: false,
+      why: 'Errada. Há asma induzida por irritantes em exposição intensa, sem sensibilização.' },
+    { t: 'Espirometria normal em consulta afasta o diagnóstico.', ok: false,
+      why: 'Errada. A asma cursa com função pulmonar normal fora das crises; a avaliação seriada é que informa.' },
+    { t: 'Confirmado o diagnóstico, a manutenção da exposição com proteção respiratória é a conduta preferencial.', ok: false,
+      why: 'Errada. Na asma por sensibilização, o afastamento do agente é a conduta que muda o prognóstico.' }
+  ],
+  comentario: 'Asma relacionada ao trabalho tem dois ramos: por sensibilização e por agravamento. Espirometria normal não afasta nada, e a chave clínica é o padrão de melhora nas férias com piora no retorno. Confirmada a sensibilização, afastar o agente — a proteção individual não substitui isso.',
+  pegadinha: 'Usar uma espirometria normal para encerrar a investigação é o erro que mais atrasa o diagnóstico.',
+  refs: ['Mendes, R. — Patologia do Trabalho', 'Diretrizes de pneumologia ocupacional'] },
+
+{ id: 'q-4.3-051', tema: '4.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a doença pulmonar obstrutiva crônica de origem ocupacional, é CORRETO afirmar:',
+  alts: [
+    { t: 'Parcela relevante dos casos tem contribuição ocupacional por poeiras, gases, fumos e vapores, o que não é afastado pela existência de tabagismo — que pode atuar como fator concorrente e não excludente.', ok: true,
+      why: 'Correta. Tabagismo e exposição ocupacional somam efeitos; um não exclui o outro.' },
+    { t: 'O tabagismo afasta a contribuição ocupacional para a doença.', ok: false,
+      why: 'Errada. É o argumento mais usado para negar nexo e não se sustenta tecnicamente.' },
+    { t: 'A doença ocupacional obstrutiva só ocorre em não fumantes.', ok: false,
+      why: 'Errada. Ocorre em ambos, com efeitos que se somam.' },
+    { t: 'A exposição a poeiras minerais causa apenas doença restritiva.', ok: false,
+      why: 'Errada. Há componente obstrutivo documentado em diversas exposições.' },
+    { t: 'A ausência de alteração radiológica exclui a doença obstrutiva ocupacional.', ok: false,
+      why: 'Errada. O diagnóstico da obstrução é funcional; a imagem pode ser pouco alterada.' }
+  ],
+  comentario: 'Fração significativa da doença obstrutiva crônica tem contribuição ocupacional, e o tabagismo é concorrente, não excludente. Diagnóstico funcional, não radiológico — e a exposição a poeiras não produz só restrição.',
+  pegadinha: '"É fumante, logo não é do trabalho" é a negação de nexo mais frequente e mais frágil.',
+  refs: ['ATS/ERS — DPOC ocupacional', 'Mendes, R. — Patologia do Trabalho'] },
+
+{ id: 'q-4.3-052', tema: '4.3', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre a espirometria em programas de vigilância respiratória ocupacional, é CORRETO afirmar:',
+  alts: [
+    { t: 'Seu valor está na comparação seriada ao longo do tempo, que identifica declínio funcional acelerado antes que o valor absoluto saia da faixa de referência — motivo pelo qual a padronização técnica e a preservação dos exames anteriores são essenciais.', ok: true,
+      why: 'Correta. A vigilância vive da tendência individual, não do exame isolado.' },
+    { t: 'O exame isolado dentro da faixa de referência descarta dano funcional.', ok: false,
+      why: 'Errada. O trabalhador pode ter perdido muito e ainda estar na faixa de referência populacional.' },
+    { t: 'A comparação seriada dispensa padronização técnica entre exames.', ok: false,
+      why: 'Errada. Sem padronização, a variação medida reflete o método e não o pulmão.' },
+    { t: 'A espirometria substitui a avaliação da exposição no ambiente.', ok: false,
+      why: 'Errada. Vigilância da saúde não substitui vigilância do ambiente.' },
+    { t: 'Exames anteriores podem ser descartados após a emissão do laudo atual.', ok: false,
+      why: 'Errada. A série histórica é o que dá sentido ao exame atual.' }
+  ],
+  comentario: 'A espirometria de vigilância só rende comparada consigo mesma ao longo dos anos: queda acelerada aparece antes de o valor sair da faixa de referência. Exige padronização e guarda dos exames antigos — e não substitui a avaliação do ambiente.',
+  pegadinha: 'Interpretar cada exame contra a referência populacional perde exatamente o declínio individual que se quer detectar.',
+  refs: ['ATS/ERS — padronização da espirometria', 'NR-7'] }
+
+);
