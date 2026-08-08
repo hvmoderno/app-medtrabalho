@@ -1,0 +1,203 @@
+/* Lote Q — 1.4, 1.6, 1.7, 1.9, 1.10, 2.7, 4.10, 2.8, 2.5, 1.5, 1.8. AUTORAIS. */
+window.BANCO = window.BANCO || [];
+window.BANCO.push(
+
+{ id: 'q-1.4-060', tema: '1.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a análise de custos em saúde e segurança do trabalho apresentada à direção de uma empresa, é CORRETO afirmar:',
+  alts: [
+    { t: 'Os custos indiretos do acidente — parada de produção, substituição e treinamento, investigação, perda de qualidade, impacto sobre a equipe — costumam superar os diretos, e a análise que considera apenas despesa médica subestima grosseiramente o prejuízo.', ok: true,
+      why: 'Correta. É o argumento econômico que sustenta o investimento em prevenção.' },
+    { t: 'Os custos diretos representam a maior parte do prejuízo do acidente.', ok: false,
+      why: 'Errada. Os indiretos costumam ser maiores e são os menos contabilizados.' },
+    { t: 'Investimento em prevenção deve ser justificado apenas por obrigação legal.', ok: false,
+      why: 'Errada. Há também justificativa econômica e ética, e depender só da obrigação legal fragiliza o programa.' },
+    { t: 'A alíquota variável de contribuição por acidentalidade não representa custo relevante para a empresa.', ok: false,
+      why: 'Errada. A variação por desempenho em acidentalidade tem impacto financeiro direto.' },
+    { t: 'A análise de custos substitui os indicadores de saúde na avaliação do programa.', ok: false,
+      why: 'Errada. São dimensões complementares e a econômica não mede proteção.' }
+  ],
+  comentario: 'Custo indireto supera o direto e é o que raramente aparece na planilha. Somado ao efeito da alíquota variável por acidentalidade, forma o argumento econômico da prevenção — que complementa, mas não substitui, o indicador de saúde.',
+  pegadinha: 'Contabilizar apenas a despesa médica faz a prevenção parecer cara e o acidente, barato.',
+  refs: ['OIT — custos dos acidentes de trabalho', 'Legislação sobre alíquotas de acidentalidade'] },
+
+{ id: 'q-1.6-060', tema: '1.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a intersetorialidade nas ações de saúde do trabalhador, é CORRETO afirmar:',
+  alts: [
+    { t: 'Ela decorre da distribuição de competências entre saúde, trabalho, previdência, meio ambiente e ministério público, exigindo articulação — e a fragmentação entre esses setores é uma das principais causas de invisibilidade e de impunidade em agravos ocupacionais.', ok: true,
+      why: 'Correta. Cada setor vê um pedaço; sem articulação, nenhum vê o conjunto.' },
+    { t: 'A saúde do trabalhador é campo de competência exclusiva do sistema de saúde.', ok: false,
+      why: 'Errada. As competências são compartilhadas entre vários setores.' },
+    { t: 'A articulação intersetorial é desejável mas não altera resultados concretos.', ok: false,
+      why: 'Errada. Ações articuladas produzem alcance que nenhum setor obtém isoladamente.' },
+    { t: 'O ministério público não tem atuação em saúde do trabalhador.', ok: false,
+      why: 'Errada. Atua por meio de inquéritos, termos de ajustamento de conduta e ações civis públicas.' },
+    { t: 'A área ambiental não tem interface com a saúde do trabalhador.', ok: false,
+      why: 'Errada. Contaminações frequentemente atingem trabalhadores e comunidade do entorno simultaneamente.' }
+  ],
+  comentario: 'Saúde, trabalho, previdência, ambiente e ministério público têm competências que se cruzam. A fragmentação entre eles é o que faz o mesmo evento aparecer parcialmente em cada base e integralmente em nenhuma.',
+  pegadinha: 'Tratar a intersetorialidade como recomendação retórica ignora que é dela que depende a efetividade das ações.',
+  refs: ['PNSTT', 'Lei nº 8.080/1990'] },
+
+{ id: 'q-1.7-060', tema: '1.7', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre os princípios do Sistema Único de Saúde aplicados à saúde do trabalhador, é CORRETO afirmar:',
+  alts: [
+    { t: 'A integralidade implica articular assistência, vigilância e promoção para o mesmo sujeito, de modo que atender o trabalhador adoecido sem investigar e intervir no ambiente que o adoeceu representa cumprimento parcial do princípio.', ok: true,
+      why: 'Correta. Integralidade não é apenas ampliar a oferta de serviços, é articular as dimensões.' },
+    { t: 'A integralidade se refere apenas à oferta de todos os níveis de complexidade assistencial.', ok: false,
+      why: 'Errada. Abrange também a articulação entre assistência, prevenção e vigilância.' },
+    { t: 'A equidade significa oferecer exatamente o mesmo a todos os trabalhadores.', ok: false,
+      why: 'Errada. Equidade é tratar desigualmente os desiguais conforme a necessidade.' },
+    { t: 'A universalidade exclui trabalhadores com plano de saúde privado.', ok: false,
+      why: 'Errada. O direito é universal, independentemente de cobertura privada.' },
+    { t: 'O controle social não se aplica ao campo da saúde do trabalhador.', ok: false,
+      why: 'Errada. É princípio expresso e tem instâncias próprias nesse campo.' }
+  ],
+  comentario: 'Integralidade articula assistência, vigilância e promoção — tratar sem intervir no ambiente é cumprimento pela metade. Equidade é responder por necessidade, não oferecer o mesmo a todos. Universalidade não exclui quem tem plano.',
+  pegadinha: 'Reduzir integralidade a níveis de complexidade perde justamente a articulação com a vigilância.',
+  refs: ['Lei nº 8.080/1990', 'PNSTT'] },
+
+{ id: 'q-1.9-060', tema: '1.9', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre o preenchimento das fichas de notificação de agravos relacionados ao trabalho, é CORRETO afirmar:',
+  alts: [
+    { t: 'Campos como ocupação, atividade econômica do empregador e situação no mercado de trabalho são o que permite a análise por setor e por vínculo — e seu preenchimento incompleto inutiliza a notificação para fins de vigilância, mesmo estando ela registrada.', ok: true,
+      why: 'Correta. Notificação sem esses campos entra na contagem e não informa nada sobre onde intervir.' },
+    { t: 'O preenchimento do campo de ocupação é opcional.', ok: false,
+      why: 'Errada. É o campo que dá sentido à notificação em saúde do trabalhador.' },
+    { t: 'A ficha deve ser preenchida apenas em casos confirmados.', ok: false,
+      why: 'Errada. A notificação se faz por suspeita.' },
+    { t: 'Notificações de trabalhadores informais não devem registrar a atividade econômica.', ok: false,
+      why: 'Errada. É justamente o dado que dá visibilidade ao trabalho informal.' },
+    { t: 'A qualidade do preenchimento não afeta a utilidade da base de dados.', ok: false,
+      why: 'Errada. Campos em branco produzem base incapaz de orientar ação.' }
+  ],
+  comentario: 'Ocupação, atividade econômica e situação no mercado de trabalho são o coração da ficha. Notificação registrada com esses campos em branco cumpre a obrigação e não serve à vigilância.',
+  pegadinha: 'Contar notificações emitidas como medida de qualidade da vigilância ignora o preenchimento efetivo.',
+  refs: ['SINAN — fichas de agravos relacionados ao trabalho', 'Ministério da Saúde'] },
+
+{ id: 'q-1.10-060', tema: '1.10', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre a promoção da saúde em ambientes de trabalho segundo o modelo proposto pela Organização Mundial da Saúde, é CORRETO afirmar:',
+  alts: [
+    { t: 'O modelo abrange quatro planos de ação — ambiente físico, ambiente psicossocial, recursos de saúde pessoal e participação na comunidade —, com envolvimento de trabalhadores e liderança, superando a lógica de campanhas isoladas de comportamento.', ok: true,
+      why: 'Correta. São quatro avenidas de ação, não apenas mudança de hábito individual.' },
+    { t: 'O modelo se concentra exclusivamente em hábitos individuais de saúde.', ok: false,
+      why: 'Errada. Ambiente físico e psicossocial são dois de seus quatro planos.' },
+    { t: 'A participação dos trabalhadores é etapa opcional do modelo.', ok: false,
+      why: 'Errada. É elemento estruturante em todas as etapas.' },
+    { t: 'A liderança da alta direção não influencia os resultados do programa.', ok: false,
+      why: 'Errada. O compromisso da direção é apontado como condição de sustentabilidade.' },
+    { t: 'A relação com a comunidade do entorno não integra o modelo.', ok: false,
+      why: 'Errada. Constitui um dos quatro planos de ação.' }
+  ],
+  comentario: 'Quatro planos: ambiente físico, ambiente psicossocial, recursos pessoais de saúde e comunidade — com participação dos trabalhadores e compromisso da direção. Campanha de hábito isolada cobre um quarto do modelo, na melhor das hipóteses.',
+  pegadinha: 'Programas de promoção que só oferecem palestra e ginástica ficam presos ao plano dos recursos pessoais.',
+  refs: ['OMS — Healthy Workplace Framework'] },
+
+{ id: 'q-2.7-060', tema: '2.7', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a avaliação da exposição ocupacional ao ruído conforme as normas de higiene ocupacional de referência técnica, é CORRETO afirmar:',
+  alts: [
+    { t: 'A avaliação de exposição a ruído contínuo ou intermitente considera o nível equivalente ponderado ao longo da jornada, e a de ruído de impacto segue procedimento próprio — sendo o incremento de duplicação de dose adotado um parâmetro que difere entre referências técnicas e normativas.', ok: true,
+      why: 'Correta. O parâmetro de duplicação de dose não é o mesmo em todas as referências, e isso altera o resultado.' },
+    { t: 'Ruído contínuo e de impacto seguem exatamente o mesmo procedimento de avaliação.', ok: false,
+      why: 'Errada. O ruído de impacto tem procedimento e critérios próprios.' },
+    { t: 'O incremento de duplicação de dose é idêntico em todas as referências utilizadas no país.', ok: false,
+      why: 'Errada. Há diferença entre referências, com efeito direto sobre a dose calculada.' },
+    { t: 'A medição pontual com decibelímetro caracteriza adequadamente a exposição da jornada.', ok: false,
+      why: 'Errada. Exposições variáveis exigem dosimetria ao longo da jornada.' },
+    { t: 'O registro das atividades durante a medição é dispensável.', ok: false,
+      why: 'Errada. Sem ele o resultado não se interpreta nem se reproduz.' }
+  ],
+  comentario: 'Ruído: nível equivalente na jornada por dosimetria, procedimento próprio para impacto, e atenção ao incremento de duplicação de dose — que difere entre referências e muda o número final. Medição pontual não representa jornada variável.',
+  pegadinha: 'Comparar resultados obtidos com incrementos de duplicação diferentes é comparar números que não se equivalem.',
+  refs: ['NHO 01 — Fundacentro', 'NR-15 — Anexos 1 e 2', 'ACGIH'] },
+
+{ id: 'q-4.10-060', tema: '4.10', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre a vacinação contra hepatite B em trabalhadores de saúde, é CORRETO afirmar:',
+  alts: [
+    { t: 'A verificação da resposta sorológica após o esquema completo é recomendada nesse grupo, pois identifica os não respondedores — informação que muda a conduta diante de um acidente com material biológico.', ok: true,
+      why: 'Correta. Saber quem não respondeu é o que permite decidir corretamente na exposição.' },
+    { t: 'A conclusão do esquema vacinal dispensa qualquer verificação de resposta.', ok: false,
+      why: 'Errada. Em grupo de risco, a verificação é recomendada.' },
+    { t: 'Não respondedores devem ser afastados definitivamente da assistência.', ok: false,
+      why: 'Errada. A conduta é revacinação e, persistindo a não resposta, manejo específico na exposição.' },
+    { t: 'A vacinação dispensa as precauções padrão no manuseio de material biológico.', ok: false,
+      why: 'Errada. Protege contra um agente e não cobre os demais.' },
+    { t: 'A vacinação contra hepatite B protege igualmente contra hepatite C.', ok: false,
+      why: 'Errada. Não há vacina disponível contra hepatite C.' }
+  ],
+  comentario: 'Hepatite B em profissional de saúde: esquema completo mais verificação de resposta, porque o não respondedor precisa de conduta diferente no acidente. E não existe vacina para hepatite C — o que reforça que a barreira é insubstituível.',
+  pegadinha: 'A vacina cobre um agente e é frequentemente lida como se cobrisse o risco biológico inteiro.',
+  refs: ['NR-32', 'Programa Nacional de Imunizações', 'Protocolos de exposição a material biológico'] },
+
+{ id: 'q-2.8-060', tema: '2.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a seleção de respiradores para atmosferas com deficiência de oxigênio ou concentração imediatamente perigosa à vida e à saúde, é CORRETO afirmar:',
+  alts: [
+    { t: 'Nessas condições exige-se respirador de adução de ar ou autônomo, pois filtros dependem da existência de oxigênio suficiente e da capacidade do elemento filtrante frente à concentração presente — situação em que a escolha errada é fatal.', ok: true,
+      why: 'Correta. Filtro não gera oxigênio e não sustenta concentrações extremas.' },
+    { t: 'Respiradores com filtro químico são adequados em atmosferas com deficiência de oxigênio.', ok: false,
+      why: 'Errada. Filtro não supre oxigênio; a atmosfera precisa ser respirável.' },
+    { t: 'A concentração do contaminante não influencia a escolha do tipo de respirador.', ok: false,
+      why: 'Errada. É determinante, junto do fator de proteção requerido.' },
+    { t: 'O ingresso em espaço confinado dispensa avaliação prévia da atmosfera quando há uso de respirador.', ok: false,
+      why: 'Errada. A avaliação prévia e contínua da atmosfera é exigência independente.' },
+    { t: 'A verificação de oxigênio é dispensável quando não há odor perceptível.', ok: false,
+      why: 'Errada. Deficiência de oxigênio não tem odor nem aviso sensorial.' }
+  ],
+  comentario: 'Deficiência de oxigênio ou atmosfera imediatamente perigosa exige ar fornecido ou equipamento autônomo — filtro não cria oxigênio. E deficiência de oxigênio é inodora: só a medição informa.',
+  pegadinha: 'Confiar na ausência de odor em espaço confinado é a sequência que produz vítimas e depois socorristas vitimados.',
+  refs: ['NR-33', 'NR-6', 'Programa de Proteção Respiratória — Fundacentro'] },
+
+{ id: 'q-2.5-060', tema: '2.5', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a priorização de ações em um programa de gerenciamento de riscos ocupacionais, é CORRETO afirmar:',
+  alts: [
+    { t: 'A priorização combina severidade da consequência e probabilidade de ocorrência, mas riscos de consequência catastrófica exigem tratamento mesmo com baixa probabilidade — e riscos com controle simples e imediato devem ser resolvidos sem aguardar o ciclo de priorização.', ok: true,
+      why: 'Correta. A matriz orienta; ela não pode adiar o que é catastrófico nem o que é trivialmente corrigível.' },
+    { t: 'A priorização deve seguir estritamente a ordem numérica da matriz de risco.', ok: false,
+      why: 'Errada. A matriz é ferramenta de apoio, não regra que sobrepõe o julgamento técnico.' },
+    { t: 'Riscos de baixa probabilidade e alta severidade podem ser postergados indefinidamente.', ok: false,
+      why: 'Errada. São exatamente os que produzem eventos catastróficos.' },
+    { t: 'O plano de ação dispensa prazos e responsáveis definidos.', ok: false,
+      why: 'Errada. Sem prazo e responsável, o plano não se implementa nem se cobra.' },
+    { t: 'A verificação de eficácia das medidas implementadas é etapa opcional.', ok: false,
+      why: 'Errada. Sem verificação, não se sabe se o risco foi efetivamente reduzido.' }
+  ],
+  comentario: 'Severidade e probabilidade orientam a fila, mas duas coisas furam a fila: o catastrófico de baixa probabilidade e o que se corrige hoje com pouco esforço. Plano sem prazo e responsável não vira ação, e sem verificação de eficácia não se sabe se funcionou.',
+  pegadinha: 'Seguir a matriz ao pé da letra empurra o evento raro e catastrófico para o fim da lista.',
+  refs: ['NR-1 — gerenciamento de riscos ocupacionais', 'ISO 45001'] },
+
+{ id: 'q-1.5-060', tema: '1.5', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre indicadores proativos e reativos em gestão de segurança e saúde, é CORRETO afirmar:',
+  alts: [
+    { t: 'Indicadores reativos medem o que já ocorreu, como taxas de acidentes, enquanto os proativos medem ações preventivas e condições, como inspeções realizadas e desvios corrigidos — e um programa avaliado apenas por indicadores reativos aprende só depois do dano.', ok: true,
+      why: 'Correta. O indicador reativo chega tarde por definição.' },
+    { t: 'Indicadores reativos são suficientes para avaliar um sistema de gestão.', ok: false,
+      why: 'Errada. Informam apenas sobre o que já falhou.' },
+    { t: 'Ausência de acidentes em um período demonstra sistema de gestão eficaz.', ok: false,
+      why: 'Errada. Pode refletir acaso, subnotificação ou baixa exposição no período.' },
+    { t: 'Indicadores proativos não podem ser quantificados objetivamente.', ok: false,
+      why: 'Errada. São quantificáveis, como percentual de ações concluídas no prazo.' },
+    { t: 'A premiação por ausência de acidentes é estratégia recomendada de gestão.', ok: false,
+      why: 'Errada. Ela induz subnotificação e esconde justamente a informação de que o sistema depende.' }
+  ],
+  comentario: 'Reativo mede o dano ocorrido; proativo mede a prevenção em curso. Zero acidente no trimestre pode ser sorte ou silêncio — e premiar ausência de acidente é a forma mais eficaz de comprar subnotificação.',
+  pegadinha: 'A campanha de dias sem acidente é popular e produz o incentivo errado para quem se acidenta.',
+  refs: ['ISO 45001', 'OIT — indicadores de desempenho em SST'] },
+
+{ id: 'q-1.8-060', tema: '1.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a análise coletiva do trabalho como método de vigilância em saúde do trabalhador, é CORRETO afirmar:',
+  alts: [
+    { t: 'Ela parte do saber dos trabalhadores sobre o próprio trabalho, reconstituindo coletivamente o processo real e seus riscos — método que revela o trabalho como efetivamente executado, frequentemente distinto do descrito nos documentos da empresa.', ok: true,
+      why: 'Correta. A distância entre trabalho prescrito e trabalho real é onde os riscos costumam estar.' },
+    { t: 'A análise deve se basear exclusivamente nos documentos técnicos apresentados pela empresa.', ok: false,
+      why: 'Errada. O documento descreve o trabalho prescrito, não o executado.' },
+    { t: 'O relato dos trabalhadores é fonte pouco confiável e deve ser evitado.', ok: false,
+      why: 'Errada. É a fonte primária sobre como o trabalho realmente acontece.' },
+    { t: 'O método dispensa a observação direta da atividade.', ok: false,
+      why: 'Errada. Observação e relato se complementam.' },
+    { t: 'Os resultados da análise não devem ser devolvidos ao coletivo de trabalhadores.', ok: false,
+      why: 'Errada. A devolução é parte do método e condição de sua legitimidade.' }
+  ],
+  comentario: 'Análise coletiva: o trabalhador como sujeito que conhece o processo, reconstituição coletiva do trabalho real, observação direta e devolução dos resultados ao grupo. O documento mostra o prescrito; o risco mora na diferença.',
+  pegadinha: 'Auditar só documentos produz relatório conforme sobre um trabalho que ninguém executa daquele jeito.',
+  refs: ['PNSTT', 'Ergonomia da atividade — trabalho prescrito e trabalho real'] }
+
+);
