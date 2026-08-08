@@ -1,0 +1,185 @@
+/* Lote AH — 4.4, 4.5, 4.6, 4.8, 5.4, 5.5, 1.3, 4.10, 6.2, 6.3. AUTORAIS. */
+window.BANCO = window.BANCO || [];
+window.BANCO.push(
+
+{ id: 'q-4.4-110', tema: '4.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a acne ocupacional e a cloracne, é CORRETO afirmar:',
+  alts: [
+    { t: 'A acne por óleos e graxas afeta áreas de contato e melhora com a higiene e a troca de vestimenta, enquanto a cloracne, associada a hidrocarbonetos halogenados, é marcador de exposição sistêmica significativa e tem curso arrastado mesmo após o afastamento.', ok: true,
+      why: 'Correta. Cloracne não é apenas dermatose: é sinalizador de absorção sistêmica relevante.' },
+    { t: 'Cloracne e acne por óleos têm o mesmo significado clínico e prognóstico.', ok: false,
+      why: 'Errada. A cloracne indica exposição sistêmica e tem curso mais prolongado.' },
+    { t: 'A cloracne regride rapidamente com o afastamento da exposição.', ok: false,
+      why: 'Errada. Costuma persistir por longo período após o afastamento.' },
+    { t: 'A acne por óleos não guarda relação com o vestuário de trabalho.', ok: false,
+      why: 'Errada. Roupas impregnadas mantêm o contato e perpetuam o quadro.' },
+    { t: 'A presença de cloracne dispensa investigação de outros efeitos sistêmicos.', ok: false,
+      why: 'Errada. Deve motivar investigação ampliada, por indicar absorção significativa.' }
+  ],
+  comentario: 'Acne por óleos é local e melhora com higiene e troca de roupa. Cloracne é outra coisa: marca exposição sistêmica a hidrocarbonetos halogenados, persiste após o afastamento e exige investigar outros órgãos.',
+  pegadinha: 'Tratar cloracne como problema dermatológico isolado perde o alerta de absorção sistêmica que ela representa.',
+  refs: ['Salim — Dermatoses Ocupacionais', 'Buschinelli — Toxicologia Ocupacional'] },
+
+{ id: 'q-4.5-100', tema: '4.5', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a interpretação de audiometrias sequenciais em programa de conservação auditiva, é CORRETO afirmar:',
+  alts: [
+    { t: 'Uma piora significativa em relação à audiometria de referência exige confirmação após repouso auditivo adequado, avaliação otorrinolaringológica e revisão da exposição e da proteção — sendo o achado um evento a investigar, não apenas um número a registrar.', ok: true,
+      why: 'Correta. O desencadeamento identificado deve gerar ação, não apenas anotação.' },
+    { t: 'A piora identificada deve ser registrada e reavaliada apenas no próximo exame anual.', ok: false,
+      why: 'Errada. Exige confirmação e ação imediata sobre exposição e proteção.' },
+    { t: 'Uma única audiometria alterada confirma o desencadeamento da perda.', ok: false,
+      why: 'Errada. É necessária confirmação com repouso auditivo adequado.' },
+    { t: 'A revisão da proteção auditiva não faz parte da conduta.', ok: false,
+      why: 'Errada. É componente central da resposta ao achado.' },
+    { t: 'A comparação deve ser feita com a audiometria imediatamente anterior, e não com a de referência.', ok: false,
+      why: 'Errada. A comparação com a referência é o que revela a tendência acumulada.' }
+  ],
+  comentario: 'Piora em relação à referência: confirma-se com repouso, avalia-se o ouvido e revisa-se exposição e proteção — no mesmo mês, não no próximo ciclo anual. Comparar só com o exame anterior esconde a tendência.',
+  pegadinha: 'Registrar a piora e aguardar o próximo periódico desperdiça o único sinal precoce que o programa produz.',
+  refs: ['NR-7 — Anexo I', 'Diretrizes de audiologia ocupacional'] },
+
+{ id: 'q-4.6-100', tema: '4.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a avaliação de riscos psicossociais no âmbito do gerenciamento de riscos ocupacionais, é CORRETO afirmar:',
+  alts: [
+    { t: 'A avaliação deve identificar fatores como demandas, autonomia, clareza de papel, suporte, relações e reconhecimento, com instrumentos aplicados de forma que preserve o anonimato — pois respostas sem garantia de sigilo tendem a subestimar o problema.', ok: true,
+      why: 'Correta. Sem anonimato, o instrumento mede o medo de responder.' },
+    { t: 'A avaliação psicossocial se resume à aplicação de questionários de estresse individual.', ok: false,
+      why: 'Errada. O objeto são as condições organizacionais, não o estado psíquico individual.' },
+    { t: 'A identificação nominal dos respondentes melhora a qualidade dos dados.', ok: false,
+      why: 'Errada. Inibe respostas e subestima os problemas relatados.' },
+    { t: 'Resultados desfavoráveis dispensam plano de ação quando não há afastamentos registrados.', ok: false,
+      why: 'Errada. O objetivo é agir antes do adoecimento aparecer nos afastamentos.' },
+    { t: 'Fatores psicossociais não podem ser objeto de medidas de controle organizacionais.', ok: false,
+      why: 'Errada. Redesenho de metas, pausas, clareza de papel e suporte são medidas de controle.' }
+  ],
+  comentario: 'Avaliar psicossocial é avaliar a organização — demandas, autonomia, papel, suporte, reconhecimento — com anonimato garantido. E resultado ruim gera plano de ação antes de aparecer afastamento.',
+  pegadinha: 'Aplicar questionário identificado mede a disposição de responder, não a condição de trabalho.',
+  refs: ['NR-1 — fatores psicossociais', 'OIT', 'Karasek & Theorell'] },
+
+{ id: 'q-4.8-100', tema: '4.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a exposição ocupacional à radiação solar e o risco de câncer de pele, é CORRETO afirmar:',
+  alts: [
+    { t: 'A radiação solar é classificada como cancerígena para humanos, e trabalhadores a céu aberto acumulam dose muito superior à população geral — o que torna a exposição ocupacional ao sol um risco a gerenciar como qualquer outro agente cancerígeno.', ok: true,
+      why: 'Correta. Sol é agente ocupacional, com hierarquia de controle aplicável.' },
+    { t: 'A exposição solar ocupacional não é considerada exposição a agente cancerígeno.', ok: false,
+      why: 'Errada. A radiação solar tem classificação de cancerígeno para humanos.' },
+    { t: 'A dose acumulada por trabalhadores a céu aberto é semelhante à da população geral.', ok: false,
+      why: 'Errada. É substancialmente maior pela duração diária e pelos anos de atividade.' },
+    { t: 'A prevenção se resume à orientação individual sobre protetor solar.', ok: false,
+      why: 'Errada. Sombreamento e organização das tarefas por horário vêm antes.' },
+    { t: 'A vigilância dermatológica dos expostos não tem indicação.', ok: false,
+      why: 'Errada. O exame de pele periódico nesses grupos tem indicação clara.' }
+  ],
+  comentario: 'Sol é agente cancerígeno ocupacional para quem trabalha a céu aberto — com dose muito acima da população geral. Aplica-se hierarquia de controle: sombra e horário antes do protetor, com vigilância dermatológica.',
+  pegadinha: 'Não reconhecer o sol como agente ocupacional deixa milhões de trabalhadores fora de qualquer programa.',
+  refs: ['IARC — radiação solar', 'INCA', 'NR-21'] },
+
+{ id: 'q-5.4-110', tema: '5.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a perícia em pedido de auxílio-acidente por sequela auditiva, é CORRETO afirmar:',
+  alts: [
+    { t: 'A avaliação deve verificar a consolidação da perda, o grau de comprometimento e a redução da capacidade para o trabalho habitual — considerando que perdas em frequências agudas podem comprometer a comunicação em ambiente ruidoso mesmo com média tonal pouco alterada.', ok: true,
+      why: 'Correta. A média tonal esconde o prejuízo de discriminação nas agudas.' },
+    { t: 'A média tonal isolada descreve adequadamente a repercussão funcional da perda.', ok: false,
+      why: 'Errada. Pode estar pouco alterada com prejuízo relevante de discriminação.' },
+    { t: 'Qualquer perda auditiva ocupacional gera direito ao benefício.', ok: false,
+      why: 'Errada. É preciso demonstrar redução da capacidade para o trabalho habitual.' },
+    { t: 'A perda auditiva não pode gerar auxílio-acidente por não impedir o trabalho.', ok: false,
+      why: 'Errada. O benefício se destina justamente à redução de capacidade, não à incapacidade.' },
+    { t: 'A avaliação dispensa a análise das exigências comunicativas da função.', ok: false,
+      why: 'Errada. É o que determina a repercussão concreta da perda.' }
+  ],
+  comentario: 'Sequela auditiva e auxílio-acidente: consolidação, grau e redução da capacidade para o trabalho habitual — analisada contra as exigências comunicativas da função. Média tonal normal não afasta prejuízo de discriminação.',
+  pegadinha: 'Concluir pela média tonal despreza justamente a faixa em que a perda por ruído se instala.',
+  refs: ['Lei nº 8.213/1991 — art. 86', 'Diretrizes de audiologia ocupacional'] },
+
+{ id: 'q-5.5-100', tema: '5.5', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a avaliação de capacidade em trabalhadores com dor crônica musculoesquelética, é CORRETO afirmar:',
+  alts: [
+    { t: 'O desempenho funcional pode variar ao longo do dia e entre dias, o que exige avaliação que considere a sustentabilidade da atividade ao longo da jornada — e não apenas a capacidade de executar o gesto uma vez durante o exame.', ok: true,
+      why: 'Correta. Conseguir uma vez não é o mesmo que sustentar por oito horas.' },
+    { t: 'A capacidade de executar o movimento durante o exame demonstra aptidão para a jornada completa.', ok: false,
+      why: 'Errada. Repetição e sustentação ao longo do turno são o que determina a viabilidade.' },
+    { t: 'A variabilidade do desempenho indica inconsistência do relato.', ok: false,
+      why: 'Errada. É característica esperada em quadros de dor crônica.' },
+    { t: 'Exames de imagem normais afastam a limitação funcional relatada.', ok: false,
+      why: 'Errada. A correlação entre imagem e dor crônica é fraca.' },
+    { t: 'O condicionamento físico e o descondicionamento não influenciam a capacidade avaliada.', ok: false,
+      why: 'Errada. O descondicionamento pelo afastamento prolongado é fator relevante e reversível.' }
+  ],
+  comentario: 'Dor crônica: o que importa é sustentar a atividade na jornada, não executar o gesto uma vez na sala. Variabilidade é característica do quadro, não sinal de inconsistência — e descondicionamento por afastamento é reversível.',
+  pegadinha: 'Interpretar a variação de desempenho como incoerência transforma característica clínica em suspeita.',
+  refs: ['CIF — OMS', 'Diretrizes de dor crônica e trabalho'] },
+
+{ id: 'q-1.3-100', tema: '1.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre a interpretação de estudos que não encontram associação entre exposição ocupacional e desfecho, é CORRETO afirmar:',
+  alts: [
+    { t: 'É preciso avaliar o poder do estudo, a qualidade da caracterização da exposição e o tempo de seguimento frente à latência esperada — pois estudo pequeno, com exposição mal classificada ou seguimento curto tende a não encontrar associação mesmo quando ela existe.', ok: true,
+      why: 'Correta. Não achar não é o mesmo que não existir.' },
+    { t: 'Resultado negativo demonstra ausência de risco.', ok: false,
+      why: 'Errada. Pode refletir limitações do estudo.' },
+    { t: 'O tempo de seguimento não influencia a detecção de desfechos de longa latência.', ok: false,
+      why: 'Errada. Seguimento inferior à latência não permite observar o desfecho.' },
+    { t: 'A classificação errônea não diferencial da exposição tende a inflar a associação observada.', ok: false,
+      why: 'Errada. Tende a aproximar a estimativa do valor nulo.' },
+    { t: 'Estudos negativos não devem ser considerados em revisões sistemáticas.', ok: false,
+      why: 'Errada. Devem ser incluídos, e sua exclusão produz viés de publicação.' }
+  ],
+  comentario: 'Estudo negativo pede três perguntas: tinha poder? mediu bem a exposição? seguiu tempo suficiente para a latência? Classificação errônea não diferencial dilui em direção ao nulo — e é o que mais produz falso negativo em estudo ocupacional.',
+  pegadinha: 'Usar estudo negativo pequeno como prova de segurança é o argumento mais frequente contra o reconhecimento de risco.',
+  refs: ['Rothman — Epidemiologia Moderna', 'Checkoway'] },
+
+{ id: 'q-4.10-090', tema: '4.10', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre a vacinação de trabalhadores expostos a risco de exposição a agentes de zoonoses, é CORRETO afirmar:',
+  alts: [
+    { t: 'A profilaxia pré-exposição antirrábica é indicada a grupos com exposição ocupacional continuada a animais, com verificação sorológica periódica conforme o risco — e sua existência não dispensa a conduta pós-exposição diante de acidente.', ok: true,
+      why: 'Correta. Pré-exposição simplifica a conduta posterior, mas não a elimina.' },
+    { t: 'A profilaxia pré-exposição elimina a necessidade de conduta após acidente com animal.', ok: false,
+      why: 'Errada. A conduta pós-exposição permanece, ainda que simplificada.' },
+    { t: 'Não há indicação de profilaxia pré-exposição por motivo ocupacional.', ok: false,
+      why: 'Errada. Veterinários, tratadores e trabalhadores de laboratório têm indicação.' },
+    { t: 'A verificação sorológica periódica não tem papel nesse grupo.', ok: false,
+      why: 'Errada. É indicada conforme o nível de risco da atividade.' },
+    { t: 'Trabalhadores de zoonoses não requerem esquema vacinal específico além do calendário comum.', ok: false,
+      why: 'Errada. O risco ocupacional define indicações adicionais.' }
+  ],
+  comentario: 'Pré-exposição antirrábica é indicada por risco ocupacional continuado, com sorologia periódica conforme o risco — e não dispensa a conduta pós-exposição, apenas a simplifica.',
+  pegadinha: 'Supor que a pré-exposição encerra o assunto leva a não conduzir o acidente adequadamente.',
+  refs: ['Programa Nacional de Imunizações', 'Ministério da Saúde — profilaxia da raiva'] },
+
+{ id: 'q-6.2-100', tema: '6.2', tipo: 'autoral', fonte: null, nivel: 'intermediario',
+  enunciado: 'Sobre o laudo caracterizador de deficiência para fins de enquadramento, é CORRETO afirmar:',
+  alts: [
+    { t: 'Ele deve descrever o impedimento, sua natureza e a repercussão funcional segundo os critérios normativos aplicáveis, sendo documento técnico com finalidade específica — e não pode ser usado como instrumento para restringir a alocação do trabalhador dentro da empresa.', ok: true,
+      why: 'Correta. O laudo caracteriza para inclusão; não é ferramenta de limitação de carreira.' },
+    { t: 'O laudo deve indicar as funções que o trabalhador não pode exercer na empresa.', ok: false,
+      why: 'Errada. Restrições funcionais, quando existirem, são objeto de outro documento e outra avaliação.' },
+    { t: 'A caracterização depende exclusivamente do diagnóstico clínico.', ok: false,
+      why: 'Errada. Depende dos critérios normativos de impedimento e da avaliação funcional.' },
+    { t: 'O laudo pode ser emitido sem exame do trabalhador, com base em documentos.', ok: false,
+      why: 'Errada. A avaliação presencial é necessária para caracterizar a repercussão.' },
+    { t: 'A caracterização como pessoa com deficiência implica presunção de menor capacidade produtiva.', ok: false,
+      why: 'Errada. É justamente a presunção que a legislação de inclusão combate.' }
+  ],
+  comentario: 'O laudo caracteriza o impedimento segundo critério normativo, com avaliação presencial — e serve à inclusão. Restrição funcional, se houver, é outro documento; e caracterizar não presume menor produtividade.',
+  pegadinha: 'Usar o laudo caracterizador para listar o que o trabalhador não pode fazer converte instrumento de inclusão em barreira.',
+  refs: ['Lei nº 13.146/2015', 'Lei nº 8.213/1991 — art. 93'] },
+
+{ id: 'q-6.3-100', tema: '6.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
+  enunciado: 'Sobre os distúrbios do sono e a sonolência ocupacional, é CORRETO afirmar:',
+  alts: [
+    { t: 'A apneia obstrutiva do sono não tratada aumenta o risco de acidentes, sobretudo em condução e operação de máquinas, e a suspeita deve considerar ronco, pausas respiratórias observadas e sonolência diurna — sendo o tratamento efetivo, e não o afastamento definitivo, a resposta adequada.', ok: true,
+      why: 'Correta. Tratada e com adesão demonstrada, a condição deixa de ser impedimento.' },
+    { t: 'O diagnóstico de apneia obstrutiva implica inaptidão definitiva para condução profissional.', ok: false,
+      why: 'Errada. Tratamento eficaz com adesão comprovada permite o exercício da função.' },
+    { t: 'A sonolência diurna relatada é queixa subjetiva sem valor na avaliação de aptidão.', ok: false,
+      why: 'Errada. É um dos preditores mais relevantes de risco de acidente.' },
+    { t: 'A obesidade não guarda relação com o risco de apneia obstrutiva.', ok: false,
+      why: 'Errada. É um dos principais fatores de risco.' },
+    { t: 'A adesão ao tratamento não precisa ser verificada nas reavaliações.', ok: false,
+      why: 'Errada. A adesão é justamente o que sustenta a manutenção da aptidão.' }
+  ],
+  comentario: 'Apneia não tratada aumenta acidente; apneia tratada com adesão verificada não impede a função. A resposta é diagnosticar e tratar — e reavaliar a adesão, que é o que sustenta a aptidão.',
+  pegadinha: 'Inabilitar definitivamente pelo diagnóstico desestimula o trabalhador a relatar os sintomas.',
+  refs: ['Diretrizes de distúrbios do sono', 'Resoluções sobre exame de motorista profissional', 'NR-7'] }
+
+);
