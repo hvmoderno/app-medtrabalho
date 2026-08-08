@@ -10,7 +10,7 @@
    abre offline, mas pega a versão nova assim que houver rede.
    ========================================================================== */
 
-const VERSAO = 'v85';
+const VERSAO = 'v87';
 const CACHE = 'medtrabalho-' + VERSAO;
 
 const ARQUIVOS = [

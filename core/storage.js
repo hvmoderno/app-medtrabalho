@@ -511,7 +511,104 @@
     return a.download;
   }
 
-  function importarArquivo(file) {
+  /* ------------------------------------------------------------- mesclagem ---
+   * Quem estuda em dois aparelhos (por exemplo Mac e iPhone) precisa somar o
+   * progresso, não trocar um pelo outro. Substituir apagaria o que foi feito no
+   * aparelho que recebe o arquivo — por isso a mesclagem é o padrão.
+   *
+   * Regra geral: na dúvida, preserva. Uma questão respondida em qualquer um dos
+   * lados continua respondida; um bloco cumprido continua cumprido.
+   */
+  function maisRecente(a, b, campo) {
+    var ta = (a && a[campo]) || 0, tb = (b && b[campo]) || 0;
+    return tb > ta ? b : a;
+  }
+
+  function unirMapa(destino, origem, resolver) {
+    destino = destino || {}; origem = origem || {};
+    Object.keys(origem).forEach(function (k) {
+      destino[k] = (k in destino && resolver) ? resolver(destino[k], origem[k]) : (
+        (k in destino) ? destino[k] : origem[k]
+      );
+    });
+    return destino;
+  }
+
+  function unirListaPorId(destino, origem, campoTempo) {
+    destino = destino || []; origem = origem || [];
+    var idx = {};
+    destino.forEach(function (x, i) { if (x && x.id != null) idx[x.id] = i; });
+    origem.forEach(function (x) {
+      if (!x || x.id == null) return;
+      if (!(x.id in idx)) { destino.push(x); return; }
+      var atual = destino[idx[x.id]];
+      if (campoTempo) destino[idx[x.id]] = maisRecente(atual, x, campoTempo);
+    });
+    return destino;
+  }
+
+  function mesclarModulo(mod, meu, dele) {
+    meu = meu || {}; dele = dele || {};
+    switch (mod) {
+      case 'questoes':
+        meu.respostas = unirMapa(meu.respostas, dele.respostas, function (a, b) {
+          return maisRecente(a, b, 'ts');
+        });
+        if (!meu.ultimo) meu.ultimo = dele.ultimo;
+        return meu;
+
+      case 'cronograma':
+        // Bloco cumprido em qualquer aparelho permanece cumprido.
+        meu.feitos = unirMapa(meu.feitos, dele.feitos, function (a, b) { return a || b; });
+        if (!meu.inicio) meu.inicio = dele.inicio;
+        return meu;
+
+      case 'materiais':
+        meu.lidos = unirMapa(meu.lidos, dele.lidos, function (a, b) { return a || b; });
+        return meu;
+
+      case 'simulados':
+        meu.provas = unirListaPorId(meu.provas, dele.provas, 'terminadoEm');
+        if (!meu.atual) meu.atual = dele.atual;
+        return meu;
+
+      case 'flashcards':
+        // Vale a revisão mais recente: é ela que reflete o estado real da memória.
+        meu.cartoes = unirMapa(meu.cartoes, dele.cartoes, function (a, b) {
+          return maisRecente(a, b, 'ultimo');
+        });
+        return meu;
+
+      case 'treino':
+        meu.fases = unirMapa(meu.fases, dele.fases, function (a, b) {
+          return ((b && b.xp) || 0) > ((a && a.xp) || 0) ? b : a;
+        });
+        meu.xp = Math.max(meu.xp || 0, dele.xp || 0);
+        var oa = meu.ofensiva || { dias: [], atual: 0, recorde: 0 };
+        var ob = dele.ofensiva || { dias: [], atual: 0, recorde: 0 };
+        var dias = {};
+        (oa.dias || []).concat(ob.dias || []).forEach(function (d) { dias[d] = 1; });
+        meu.ofensiva = {
+          dias: Object.keys(dias).sort(),
+          atual: Math.max(oa.atual || 0, ob.atual || 0),
+          recorde: Math.max(oa.recorde || 0, ob.recorde || 0)
+        };
+        return meu;
+
+      case 'planilha':
+        meu.linhas = unirListaPorId(meu.linhas, dele.linhas, 'em');
+        return meu;
+
+      default:
+        // meta e futuros módulos: preserva o que já existe, completa o que falta.
+        Object.keys(dele).forEach(function (k) { if (!(k in meu)) meu[k] = dele[k]; });
+        return meu;
+    }
+  }
+
+  /* modo: 'mesclar' (padrão) ou 'substituir'. */
+  function importarArquivo(file, modo) {
+    modo = modo === 'substituir' ? 'substituir' : 'mesclar';
     return new Promise(function (resolve, reject) {
       var fr = new FileReader();
       fr.onerror = function () { reject(new Error('Não consegui ler o arquivo.')); };
@@ -522,18 +619,42 @@
         if (!snap || snap._app !== 'medtrabalho-2026' || !snap.dados) {
           return reject(new Error('Este arquivo não é um backup deste aplicativo.'));
         }
+
+        // Antes de tocar em qualquer coisa, guarda o estado atual: se a
+        // mesclagem estiver errada, o usuário ainda tem para onde voltar.
+        try { gravarBackupRotativo(); } catch (e) {
+          avisar('erro', 'Não consegui guardar um backup antes de importar.', String(e));
+        }
+
         var restaurados = [];
-        MODULOS.forEach(function (m) {
-          var env = snap.dados[m];
-          if (env && typeof env === 'object' && 'd' in env) {
-            mem[m] = env;
-            lsGravar(m, env);
-            idbPut('kv', { k: m, env: env });
-            if (!vazio(env)) restaurados.push(m);
-          }
-        });
+        try {
+          MODULOS.forEach(function (m) {
+            var env = snap.dados[m];
+            if (!env || typeof env !== 'object' || !('d' in env)) return;
+            var novo;
+            if (modo === 'substituir') {
+              novo = env;
+            } else {
+              var atual = mem[m] && mem[m].d ? JSON.parse(JSON.stringify(mem[m].d)) : {};
+              novo = { _v: env._v || '1', _t: String(Date.now()),
+                       d: mesclarModulo(m, atual, env.d) };
+            }
+            mem[m] = novo;
+            lsGravar(m, novo);
+            idbPut('kv', { k: m, env: novo });
+            if (!vazio(novo)) restaurados.push(m);
+          });
+        } catch (e) {
+          avisar('erro', 'Falha ao importar o backup. Nada foi perdido: ' +
+            'seu estado anterior está nos backups automáticos.', String(e));
+          return reject(e);
+        }
+
         gravarBackupRotativo();
-        avisar('info', 'Backup restaurado: ' + restaurados.length + ' módulo(s) com dados.',
+        avisar('info',
+          (modo === 'mesclar' ? 'Backup mesclado com o que já havia aqui: '
+                              : 'Backup restaurado por substituição: ') +
+          restaurados.length + ' módulo(s) com dados.',
           restaurados.join(', '));
         resolve(restaurados);
       };

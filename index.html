@@ -266,10 +266,23 @@
   document.getElementById('arqBackup').onchange = function (ev) {
     var f = ev.target.files[0];
     if (!f) return;
-    if (!confirm('Restaurar o backup "' + f.name + '"?\n\nIsto substitui os dados atuais.')) {
-      ev.target.value = ''; return;
+    // Mesclar é o padrão: quem estuda em mais de um aparelho perderia progresso
+    // se o arquivo simplesmente substituísse o que já existe aqui.
+    var mesclar = confirm(
+      'Restaurar o backup "' + f.name + '"\n\n' +
+      'OK — SOMAR ao que já existe neste aparelho (recomendado)\n' +
+      'Cancelar — escolher substituir tudo'
+    );
+    var modo = 'mesclar';
+    if (!mesclar) {
+      if (!confirm('SUBSTITUIR tudo por este arquivo?\n\n' +
+                   'O progresso feito neste aparelho e que não estiver no arquivo será perdido.\n' +
+                   'Um backup automático do estado atual é guardado antes.')) {
+        ev.target.value = ''; return;
+      }
+      modo = 'substituir';
     }
-    Store.importarArquivo(f).then(function () {
+    Store.importarArquivo(f, modo).then(function () {
       dlg.close();
       setTimeout(function () { location.reload(); }, 900);
     }).catch(function (e) {

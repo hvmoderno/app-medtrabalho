@@ -119,3 +119,22 @@ Ao final ele imprime o endereço, no formato
 `https://SEU-USUARIO.github.io/app-medtrabalho/`.
 Para instalar no iPad: abra pelo Safari e use Compartilhar > Adicionar à Tela de
 Início.
+
+## Estudar em mais de um aparelho
+
+Não há sincronização automática — o app funciona offline e sem serviço
+externo. A troca é por arquivo, e a importação **soma** por padrão:
+
+1. No aparelho onde estudou, toque em **Backup** > **Exportar .json**
+2. Mande o arquivo para o outro aparelho (AirDrop, iCloud, e-mail)
+3. Lá, toque em **Backup** > **Restaurar de arquivo** e confirme **OK** para
+   somar ao que já existe
+
+O que a mesclagem faz: questão respondida em qualquer aparelho continua
+respondida (vale a resposta mais recente); bloco cumprido continua cumprido;
+flashcard fica com a revisão mais recente; XP e ofensiva ficam com o maior
+valor; linhas do log de erros são unidas por identificador.
+
+Antes de qualquer importação o app guarda um backup automático do estado
+atual — se a importação sair errada, dá para voltar por
+**Backup > Backups automáticos internos**.
