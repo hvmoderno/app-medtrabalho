@@ -30,11 +30,23 @@
   }
   .tocador .titulo { font-weight: 650; margin-bottom: 6px; }
   .tocador .tempo { font-size: .82rem; color: var(--texto-fraco); font-variant-numeric: tabular-nums; }
+  /* A barra é um controle, não enfeite: toca-se nela para pular no áudio.
+     Altura generosa e área de toque folgada porque o uso é no carro. */
   .barra {
-    height: 6px; background: var(--superficie-2); border-radius: 999px;
-    overflow: hidden; margin: 8px 0;
+    position: relative;
+    height: 10px; background: var(--superficie-2); border-radius: 999px;
+    overflow: hidden; margin: 10px 0;
+    cursor: pointer; touch-action: none;
   }
-  .barra i { display: block; height: 100%; background: var(--acento); width: 0; }
+  .barra::before {
+    /* Amplia a área de toque sem engordar o traço. */
+    content: ''; position: absolute; inset: -12px 0; display: block;
+  }
+  .barra i {
+    display: block; height: 100%; background: var(--acento); width: 0;
+    pointer-events: none;
+  }
+  .barra:focus-visible { outline: 2px solid var(--acento); outline-offset: 3px; }
   .controles { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
   .controles select { min-width: 5.5em; }
   #btTocar { min-width: 6.5em; font-weight: 650; }
@@ -63,9 +75,13 @@
   <div class="tocador" id="tocador" hidden>
     <div class="titulo" id="tocandoNome">—</div>
     <div class="tempo" id="tempo">0:00 / 0:00</div>
-    <div class="barra"><i id="progresso"></i></div>
+    <div class="barra" id="barra" role="slider" tabindex="0"
+         aria-label="Posição no áudio" aria-valuemin="0" aria-valuemax="100"
+         aria-valuenow="0"><i id="progresso"></i></div>
     <div class="controles">
+      <button id="btVoltar15" title="Voltar 15 segundos">↺ 15s</button>
       <button id="btTocar">Pausar</button>
+      <button id="btAvancar15" title="Avançar 15 segundos">15s ↻</button>
       <button id="btAnt">← Anterior</button>
       <button id="btProx">Próxima →</button>
       <label class="pequeno fraco" for="vel">Velocidade</label>
@@ -204,6 +220,51 @@
   btTocar.onclick = function () { if (API) API.alternar(); };
   document.getElementById('btAnt').onclick = function () { if (API) API.tocar(idxAtual - 1); };
   document.getElementById('btProx').onclick = function () { if (API) API.tocar(idxAtual + 1); };
+  document.getElementById('btVoltar15').onclick = function () { if (API) API.pular(-15); };
+  document.getElementById('btAvancar15').onclick = function () { if (API) API.pular(15); };
+
+  /* ------------------------------------------------------- barra arrastável ---
+   * Ela existia só como desenho: mostrava o progresso e não recebia toque, de
+   * modo que dentro do app não havia como pular para o meio da faixa — só pela
+   * tela bloqueada. Agora aceita toque, arrasto e teclado.
+   */
+  (function () {
+    var barra = document.getElementById('barra');
+    var arrastando = false;
+
+    function fracaoDoEvento(ev) {
+      var r = barra.getBoundingClientRect();
+      var x = (ev.touches && ev.touches[0] ? ev.touches[0].clientX : ev.clientX);
+      return Math.min(Math.max((x - r.left) / r.width, 0), 1);
+    }
+
+    function aplicar(ev) {
+      if (!API || idxAtual < 0) return;
+      var f = fracaoDoEvento(ev);
+      elProg.style.width = (f * 100) + '%';       // resposta imediata ao dedo
+      barra.setAttribute('aria-valuenow', Math.round(f * 100));
+      API.irPara(f);
+    }
+
+    barra.addEventListener('pointerdown', function (ev) {
+      arrastando = true;
+      barra.setPointerCapture && barra.setPointerCapture(ev.pointerId);
+      aplicar(ev);
+      ev.preventDefault();
+    });
+    barra.addEventListener('pointermove', function (ev) {
+      if (arrastando) aplicar(ev);
+    });
+    barra.addEventListener('pointerup', function () { arrastando = false; });
+    barra.addEventListener('pointercancel', function () { arrastando = false; });
+
+    // Teclado: setas movem 5 s, para quem usa no computador.
+    barra.addEventListener('keydown', function (ev) {
+      if (!API || idxAtual < 0) return;
+      if (ev.key === 'ArrowRight') { API.pular(5); ev.preventDefault(); }
+      else if (ev.key === 'ArrowLeft') { API.pular(-5); ev.preventDefault(); }
+    });
+  })();
   document.getElementById('vel').onchange = function () { if (API) API.velocidade(this.value); };
   document.getElementById('btMarcar').onclick = function () {
     if (idxAtual < 0) return;

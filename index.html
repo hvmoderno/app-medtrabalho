@@ -369,6 +369,23 @@
     estado: function () {
       return { idx: audioIdx, tocando: !playerG.paused,
                posicao: playerG.currentTime, duracao: playerG.duration || 0 };
+    },
+    /* Pular para um ponto, comandado pela barra da aba. Recebe a fração
+     * (0 a 1) porque quem toca na barra sabe a proporção, não o segundo. */
+    irPara: function (fracao) {
+      var d = playerG.duration;
+      if (!isFinite(d) || d <= 0) return;
+      var f = Math.min(Math.max(fracao, 0), 1);
+      playerG.currentTime = f * d;
+      audioPosicaoSessao();
+      audioAvisarAba();
+    },
+    pular: function (segundos) {
+      var d = playerG.duration;
+      if (!isFinite(d) || d <= 0) return;
+      playerG.currentTime = Math.min(Math.max(playerG.currentTime + segundos, 0), d);
+      audioPosicaoSessao();
+      audioAvisarAba();
     }
   };
 
