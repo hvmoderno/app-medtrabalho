@@ -47,33 +47,64 @@
   .navq { display: flex; gap: 8px; align-items: center; margin-top: 14px; }
   .navq .pos { font-size: .85rem; color: var(--texto-fraco); }
 
+
+  /* Filtros recolhíveis: abertos ocupavam 273 px numa tela de 812 px. */
+  .filtroCartao { padding: 0; }
+  .resumoFiltro {
+    display: flex; align-items: center; gap: 8px;
+    padding: 10px 13px; cursor: pointer; list-style: none;
+    min-height: 44px;
+  }
+  .resumoFiltro::-webkit-details-marker { display: none; }
+  .resumoTexto {
+    flex: 1; font-weight: 600; font-size: .9rem;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
+  .abrirFecha {
+    font-size: .72rem; font-weight: 700; letter-spacing: .03em;
+    text-transform: uppercase; color: var(--acento);
+    background: var(--acento-suave); padding: 3px 9px; border-radius: 999px;
+  }
+  details[open] .abrirFecha::after { content: ' ▲'; }
+  details:not([open]) .abrirFecha::after { content: ' ▼'; }
+  .conteudoFiltro { padding: 0 13px 4px; }
+  .placar { padding: 0 13px 11px; }
+
   .vazio { text-align: center; padding: 40px 16px; color: var(--texto-fraco); }
 </style>
 </head>
 <body>
 <div class="envolt">
 
+  <!-- Os controles ficam recolhidos: no celular eles comiam 273 px e empurravam
+       a questão para fora da tela. Aberto fica só o resumo do que está ativo. -->
   <div class="filtros">
-    <div class="cartao">
-      <label for="fTema" class="pequeno fraco">Tema do edital</label>
-      <select id="fTema" style="margin:4px 0 8px"></select>
-      <div class="linha" style="margin-bottom:8px">
-        <label for="fModo" class="pequeno fraco" style="flex:0 0 auto">Mostrar</label>
-        <select id="fModo" style="flex:1;min-width:150px">
-          <option value="todas">todas as questões</option>
-          <option value="naoRespondidas">só as não respondidas</option>
-          <option value="erradas">só as que eu errei</option>
-        </select>
-        <button id="btEmbaralhar" title="Embaralhar a ordem das questões">Embaralhar</button>
+    <details class="cartao filtroCartao" id="dlgFiltros">
+      <summary class="resumoFiltro">
+        <span class="resumoTexto" id="resumoFiltro">todos os temas</span>
+        <span class="abrirFecha" aria-hidden="true">filtros</span>
+      </summary>
+      <div class="conteudoFiltro">
+        <label for="fTema" class="pequeno fraco">Tema do edital</label>
+        <select id="fTema" style="margin:4px 0 8px"></select>
+        <div class="linha" style="margin-bottom:8px">
+          <label for="fModo" class="pequeno fraco" style="flex:0 0 auto">Mostrar</label>
+          <select id="fModo" style="flex:1;min-width:150px">
+            <option value="todas">todas as questões</option>
+            <option value="naoRespondidas">só as não respondidas</option>
+            <option value="erradas">só as que eu errei</option>
+          </select>
+          <button id="btEmbaralhar" title="Embaralhar a ordem das questões">Embaralhar</button>
+        </div>
+        <div class="linha" id="linhaFracos" hidden>
+          <span class="pequeno fraco" style="flex:0 0 100%">
+            Onde você está mais frágil — toque para treinar só esse tema
+          </span>
+          <span class="linha" id="listaFracos"></span>
+        </div>
       </div>
       <div class="placar" id="placar"></div>
-    </div>
-    <div class="cartao" id="cartaoFracos" hidden>
-      <div class="pequeno fraco" style="margin-bottom:6px">
-        Onde você está mais frágil — toque para treinar só esse tema
-      </div>
-      <div class="linha" id="listaFracos"></div>
-    </div>
+    </details>
   </div>
 
   <div id="area"></div>

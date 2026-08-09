@@ -135,13 +135,32 @@
     });
 
     atualizarFracos();
+    atualizarResumoFiltro(alvo.length, resp);
+  }
+
+  /* Com os filtros recolhidos, esta linha é a única pista do que está ativo.
+   * Ela precisa dizer o tema e o modo sem obrigar a abrir o painel. */
+  function atualizarResumoFiltro(total, respondidas) {
+    var el = document.getElementById('resumoFiltro');
+    if (!el) return;
+    var tema;
+    if (estado.tema === 'todos') {
+      tema = 'Todos os temas';
+    } else if (estado.tema.indexOf('sec:') === 0) {
+      tema = 'Seção ' + estado.tema.slice(4);
+    } else {
+      tema = estado.tema + ' ' + EDITAL.nome(estado.tema);
+    }
+    var modo = estado.modo === 'naoRespondidas' ? ' · não respondidas'
+             : estado.modo === 'erradas' ? ' · só as que errei' : '';
+    el.textContent = tema + ' (' + respondidas + '/' + total + ')' + modo;
   }
 
   /* Painel dos temas mais frágeis: leva direto ao treino do ponto fraco.
    * Só considera temas com amostra suficiente — apontar "0%" por causa de uma
    * única questão errada mandaria você estudar o tema errado. */
   function atualizarFracos() {
-    var caixa = document.getElementById('cartaoFracos');
+    var caixa = document.getElementById('linhaFracos');
     var lista = document.getElementById('listaFracos');
     if (!caixa || !lista) return;
 
@@ -166,6 +185,9 @@
         estado.tema = t;
         estado.idx = 0;
         salvarFiltro();
+        // Escolheu o tema: recolhe para a questão aparecer sem rolagem.
+        var dlg = document.getElementById('dlgFiltros');
+        if (dlg) dlg.open = false;
         render();
       };
       lista.appendChild(b);
@@ -219,7 +241,9 @@
 
     var rNivel = document.createElement('span');
     rNivel.className = 'rotulo cinza';
-    rNivel.textContent = q.nivel;
+    // O identificador no banco é sem acento (serve de chave); o que aparece na
+    // tela é a palavra escrita corretamente.
+    rNivel.textContent = ({ dificil: 'difícil', intermediario: 'intermediário' })[q.nivel] || q.nivel;
     cab.appendChild(rNivel);
     card.appendChild(cab);
 
@@ -368,8 +392,17 @@
   }
 
   /* ---------------------------------------------------------------- init --- */
-  elTema.onchange = function () { estado.tema = elTema.value; estado.idx = 0; salvarFiltro(); render(); };
-  elModo.onchange = function () { estado.modo = elModo.value; estado.idx = 0; salvarFiltro(); render(); };
+  // Trocar tema ou modo recolhe o painel: quem escolheu já quer ver a questão.
+  function recolherFiltros() {
+    var dlg = document.getElementById('dlgFiltros');
+    if (dlg) dlg.open = false;
+  }
+  elTema.onchange = function () {
+    estado.tema = elTema.value; estado.idx = 0; salvarFiltro(); recolherFiltros(); render();
+  };
+  elModo.onchange = function () {
+    estado.modo = elModo.value; estado.idx = 0; salvarFiltro(); recolherFiltros(); render();
+  };
   document.getElementById('btEmbaralhar').onclick = function () {
     estado.embaralhado = String(Date.now());
     estado.idx = 0;

@@ -44,6 +44,9 @@
   var avisos = [];
   var escutasAviso = [];
   var escritasDesdeSnapshot = 0;
+  // Guardado para reforçar o texto do lembrete de backup, em vez de virar um
+  // segundo aviso na tela dizendo a mesma coisa.
+  var persistenciaNegada = false;
 
   // ---------------------------------------------------------------- avisos --
   function avisar(nivel, texto, detalhe) {
@@ -320,9 +323,11 @@
       return navigator.storage.persist();
     }).then(function (ok) {
       if (!ok) {
-        avisar('aviso', 'O navegador NÃO garantiu armazenamento persistente. ' +
-          'No Safari/iOS os dados podem ser apagados sozinhos — exporte o backup .json ' +
-          'em arquivo regularmente.');
+        // Não vira faixa na tela: o único conselho útil daqui é "faça backup",
+        // e quem cobra isso é o lembrete de backup, com texto mais direto.
+        // Dois avisos dizendo o mesmo comiam 228 px do celular.
+        persistenciaNegada = true;
+        console.warn('[storage] armazenamento persistente não garantido pelo navegador');
       }
       return ok;
     }).catch(function (e) {
@@ -417,8 +422,10 @@
       // Só cobra depois que já houver algum uso real.
       var temUso = MODULOS.some(function (m) { return m !== 'meta' && !vazio(mem[m]); });
       if (temUso) {
-        avisar('aviso', 'Você ainda não exportou nenhum BACKUP em arquivo. ' +
-          'Use o botão "Backup" no topo — é o que sobrevive se o iPad limpar o site.');
+        avisar('aviso', 'Exporte um backup: toque em "Backup" no topo.' +
+          (persistenciaNegada
+            ? ' Este navegador não garantiu guardar seus dados, e o arquivo é a única cópia que sobrevive.'
+            : ' É a única cópia que sobrevive se o navegador limpar o site.'));
       }
       return;
     }
