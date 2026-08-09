@@ -10,7 +10,7 @@
    abre offline, mas pega a versão nova assim que houver rede.
    ========================================================================== */
 
-const VERSAO = 'v94';
+const VERSAO = 'v95';
 const CACHE = 'medtrabalho-' + VERSAO;
 
 const ARQUIVOS = [
@@ -275,6 +275,74 @@ function ehFaixa(url) {
   return url.pathname.indexOf('/audio/faixas/') >= 0;
 }
 
+/* Serve um trecho a partir da cópia inteira guardada no cache.
+ *
+ * Ao arrastar a barra, o player pede `Range: bytes=inicio-fim`. Devolver a
+ * cópia inteira com status 200 e sem Content-Range faz o Safari engasgar e
+ * parar a reprodução depois de alguns segundos — e, como o áudio PARA em vez
+ * de TERMINAR, o evento 'ended' nunca dispara e a faixa seguinte não entra.
+ * Era a causa de "para depois de um tempo" e de "o título não muda sozinho".
+ */
+function trechoDoCache(respCheia, cabecalhoRange) {
+  return respCheia.arrayBuffer().then(function (buf) {
+    var total = buf.byteLength;
+    var m = /bytes=(\d*)-(\d*)/.exec(cabecalhoRange || '');
+    if (!m) return respCheia;
+
+    var ini = m[1] ? parseInt(m[1], 10) : 0;
+    var fim = m[2] ? parseInt(m[2], 10) : total - 1;
+    if (isNaN(ini) || ini < 0) ini = 0;
+    if (isNaN(fim) || fim >= total) fim = total - 1;
+
+    if (ini > fim || ini >= total) {
+      return new Response(null, {
+        status: 416,
+        headers: { 'Content-Range': 'bytes */' + total }
+      });
+    }
+
+    var pedaco = buf.slice(ini, fim + 1);
+    return new Response(pedaco, {
+      status: 206,
+      statusText: 'Partial Content',
+      headers: {
+        'Content-Type': respCheia.headers.get('Content-Type') || 'audio/mp4',
+        'Content-Length': String(pedaco.byteLength),
+        'Content-Range': 'bytes ' + ini + '-' + fim + '/' + total,
+        'Accept-Ranges': 'bytes'
+      }
+    });
+  });
+}
+
+function responderFaixa(req, url) {
+  var range = req.headers.get('range');
+  return caches.open(CACHE_AUDIO).then(function (c) {
+    return c.match(req, { ignoreVary: true, ignoreSearch: true }).then(function (hit) {
+      if (hit) {
+        // Com cópia local: monta o trecho pedido, ou entrega inteira se não
+        // houver Range.
+        return range ? trechoDoCache(hit, range) : hit;
+      }
+      // Sem cópia: vai à rede. A resposta parcial (206) é repassada ao player,
+      // mas não serve de cópia — quem guarda é o botão de baixar, que busca o
+      // arquivo inteiro.
+      return fetch(req).then(function (resp) {
+        if (resp && resp.status === 200) {
+          c.put(req, resp.clone()).catch(function (e) {
+            console.warn('[sw] não guardei a faixa', url.pathname, e.message);
+          });
+        }
+        return resp;
+      }).catch(function () {
+        return new Response('Faixa indisponível offline. Baixe-a quando tiver rede.', {
+          status: 503, headers: { 'Content-Type': 'text/plain; charset=utf-8' }
+        });
+      });
+    });
+  });
+}
+
 self.addEventListener('fetch', function (ev) {
   var req = ev.request;
   if (req.method !== 'GET') return;
@@ -283,26 +351,7 @@ self.addEventListener('fetch', function (ev) {
 
   // Faixas: cache primeiro. Se já foi baixada, toca sem rede e sem gastar dados.
   if (ehFaixa(url)) {
-    ev.respondWith(
-      caches.open(CACHE_AUDIO).then(function (c) {
-        return c.match(req, { ignoreVary: true, ignoreSearch: true }).then(function (hit) {
-          if (hit) return hit;
-          return fetch(req).then(function (resp) {
-            // Só guarda resposta inteira; 206 é pedaço e não serve de cópia.
-            if (resp && resp.status === 200) {
-              c.put(req, resp.clone()).catch(function (e) {
-                console.warn('[sw] não guardei a faixa', url.pathname, e.message);
-              });
-            }
-            return resp;
-          }).catch(function () {
-            return new Response('Faixa indisponível offline. Baixe-a quando tiver rede.', {
-              status: 503, headers: { 'Content-Type': 'text/plain; charset=utf-8' }
-            });
-          });
-        });
-      })
-    );
+    ev.respondWith(responderFaixa(req, url));
     return;
   }
 
