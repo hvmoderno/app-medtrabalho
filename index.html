@@ -127,15 +127,29 @@
 (function () {
   'use strict';
 
+  /* Ordem definida por uso real, não por gosto.
+   *
+   * A barra rola horizontalmente e no iPhone só três abas aparecem sem rolar —
+   * medido: 375 px de tela para 734 px de abas. Ou seja, as três primeiras são
+   * as únicas que existem na prática; o resto depende de o usuário descobrir
+   * que dá para arrastar.
+   *
+   * Por isso as três primeiras são as do uso diário, na ordem em que a sessão
+   * acontece: o cronograma diz o que fazer hoje, e o bloco do dia é sempre
+   * questões (69 dos 170 blocos) ou teoria (49). As demais entram por
+   * frequência decrescente: flashcards quase todo dia, simulados em 4 domingos,
+   * erros depois de errar, áudio no tempo morto do carro, treino como
+   * complemento.
+   */
   var ABAS = [
-    { id: 'questoes',   titulo: 'Questões',   src: 'questoes/index.html' },
     { id: 'cronograma', titulo: 'Cronograma', src: 'cronograma/index.html' },
+    { id: 'questoes',   titulo: 'Questões',   src: 'questoes/index.html' },
     { id: 'materiais',  titulo: 'Materiais',  src: 'materiais/index.html' },
-    { id: 'simulados',  titulo: 'Simulados',  src: 'simulados/index.html' },
     { id: 'flashcards', titulo: 'Flashcards', src: 'flashcards/index.html' },
-    { id: 'treino',     titulo: 'Treino',     src: 'treino/index.html' },
+    { id: 'simulados',  titulo: 'Simulados',  src: 'simulados/index.html' },
+    { id: 'planilha',   titulo: 'Erros',      src: 'planilha/index.html' },
     { id: 'audio',      titulo: 'Áudio',      src: 'audio/index.html' },
-    { id: 'planilha',   titulo: 'Log de erros', src: 'planilha/index.html' }
+    { id: 'treino',     titulo: 'Treino',     src: 'treino/index.html' }
   ];
 
   var elAbas = document.getElementById('abas');
@@ -611,8 +625,11 @@
   Store.init().then(function () {
     atualizarContagem();
     var meta = Store.get('meta') || {};
-    var inicial = location.hash.slice(1) || meta.ultimaAba || 'questoes';
-    if (!ABAS.some(function (a) { return a.id === inicial; })) { inicial = 'questoes'; }
+    // Na primeira abertura cai no cronograma: a pergunta de quem senta para
+    // estudar é "o que faço hoje?", e é ele quem responde. Depois disso o app
+    // volta sempre para a última aba usada.
+    var inicial = location.hash.slice(1) || meta.ultimaAba || 'cronograma';
+    if (!ABAS.some(function (a) { return a.id === inicial; })) { inicial = 'cronograma'; }
     abrir(inicial);
   });
 })();
