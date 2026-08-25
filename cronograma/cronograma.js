@@ -79,8 +79,11 @@
     var totalSemanas = dias[dias.length - 1].semana;
 
     // --- 2. reservas: reta final e simulados completos
-    var RETA_FINAL = 7;                       // últimos 7 dias: só revisão dirigida
-    var inicioReta = dias.length - RETA_FINAL;
+    // Últimos dias sem conteúdo novo. Com pouquíssimo tempo até a prova, reservar
+    // 7 dias inteiros deixaria quase nada para estudar — e com menos de 7 dias o
+    // índice ficava negativo e o gerador quebrava. Escala com o que resta.
+    var RETA_FINAL = Math.max(1, Math.min(7, Math.floor(dias.length / 3)));
+    var inicioReta = Math.max(1, dias.length - RETA_FINAL);
 
     // domingos para simulado completo: 4 melhores domingos antes da reta final
     var domingos = [];
@@ -121,22 +124,58 @@
       revisoes[alvo].push(temaId);
     }
 
-    var fila = [];
-    ORDEM.forEach(function (id) {
-      var t = EDITAL.tema(id);
-      fila.push({ tema: id, tipo: 'teoria' });
-      fila.push({ tema: id, tipo: 'questoes' });
-      if (t.peso === 'alto') { fila.push({ tema: id, tipo: 'questoes' }); }
-    });
+    /* Monta a fila de estudo e a comprime até caber no tempo que resta.
+     *
+     * Antes isto lançava erro quando não cabia, e quem começava o plano mais
+     * tarde ficava SEM cronograma nenhum — pior do que um plano apertado.
+     * Agora degrada em etapas, da menos dolorosa para a mais, e avisa o que
+     * foi comprimido. Os 49 temas sempre entram: o que encolhe é a folga.
+     */
+    var avisosPlano = [];
 
-    // Os blocos de revisão espaçada NÃO podem espremer o conteúdo: primeiro
-    // garantimos um bloco para cada item da fila (todos os 49 temas entram),
-    // e só o que sobrar vira revisão, distribuído por igual ao longo do período.
-    if (fila.length > livres.length) {
-      throw new Error('Não há blocos suficientes até a prova para cobrir os ' +
-        EDITAL.temas.length + ' temas: precisa de ' + fila.length +
-        ' blocos e só existem ' + livres.length + '.');
+    function montarFila(nivel) {
+      var f = [];
+      ORDEM.forEach(function (id) {
+        var t = EDITAL.tema(id);
+        if (nivel >= 2) {
+          // Teoria e questões no mesmo bloco: metade do tempo por tema.
+          f.push({ tema: id, tipo: 'combinado' });
+          return;
+        }
+        f.push({ tema: id, tipo: 'teoria' });
+        f.push({ tema: id, tipo: 'questoes' });
+        // Nível 1 abre mão do bloco extra dos temas de peso alto.
+        if (nivel === 0 && t.peso === 'alto') { f.push({ tema: id, tipo: 'questoes' }); }
+      });
+      return f;
     }
+
+    var fila = montarFila(0);
+    if (fila.length > livres.length) {
+      fila = montarFila(1);
+      avisosPlano.push('O tempo restante não comporta o bloco extra de questões dos ' +
+        'temas de peso alto. Cada tema tem agora um bloco de teoria e um de questões.');
+    }
+    if (fila.length > livres.length) {
+      fila = montarFila(2);
+      avisosPlano.push('O tempo ficou curto: teoria e questões de cada tema foram unidas ' +
+        'num único bloco de 30 minutos. Leia o guia em 10 minutos e use os 20 restantes ' +
+        'em questões do tema.');
+    }
+    if (fila.length > livres.length) {
+      // Último recurso: prioriza peso alto e diz exatamente o que ficou fora.
+      var ordenadaPorPeso = fila.slice().sort(function (a, b) {
+        var pa = EDITAL.tema(a.tema).peso === 'alto' ? 0 : 1;
+        var pb = EDITAL.tema(b.tema).peso === 'alto' ? 0 : 1;
+        return pa - pb;
+      });
+      var cortados = ordenadaPorPeso.slice(livres.length).map(function (x) { return x.tema; });
+      fila = ordenadaPorPeso.slice(0, livres.length);
+      avisosPlano.push('Não há blocos para todos os 49 temas até a prova. O plano prioriza ' +
+        'os de peso alto. Ficaram fora, e você precisa encaixá-los por conta: ' +
+        cortados.join(', ') + '.');
+    }
+
     var sobra = livres.length - fila.length;
     var passoRev = sobra > 0 ? livres.length / sobra : Infinity;
 
@@ -152,7 +191,17 @@
       var t = EDITAL.tema(item.tema);
       slot.bloco.tipo = item.tipo;
       slot.bloco.tema = item.tema;
-      if (item.tipo === 'teoria') {
+      if (item.tipo === 'combinado') {
+        slot.bloco.titulo = 'Teoria + questões — ' + item.tema + ' ' + t.nome;
+        slot.bloco.detalhe = 'Bloco comprimido: 10 minutos no guia da aba Materiais ' +
+          '(tabelas, pegadinhas e mnemônicos) e 20 minutos de questões do tema ' +
+          item.tema + '. Registre no Log de erros o que errar.';
+        if (primeiroEstudo[item.tema] === undefined) {
+          primeiroEstudo[item.tema] = slot.dia;
+          agendarRevisao(slot.dia, item.tema, 7);
+          agendarRevisao(slot.dia, item.tema, 21);
+        }
+      } else if (item.tipo === 'teoria') {
         slot.bloco.titulo = 'Teoria — ' + item.tema + ' ' + t.nome;
         slot.bloco.detalhe = 'Guia de revisão do tema na aba Materiais. Foque nas tabelas, ' +
           'nas pegadinhas de prova e nos mnemônicos.';
@@ -261,7 +310,10 @@
     });
 
     return { dias: dias, semanas: semanas, prova: prova, totalSemanas: totalSemanas,
-             totalBlocos: dias.length * 2, simulados: simulados.length };
+             totalBlocos: dias.length * 2, simulados: simulados.length,
+             // O que foi comprimido para caber no tempo restante. A tela mostra
+             // isto para o plano nunca encolher em silêncio.
+             avisos: avisosPlano };
   }
 
   root.PLANO = { gerar: gerar, ORDEM: ORDEM, DIAS: DIAS };
