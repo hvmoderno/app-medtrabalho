@@ -23,7 +23,7 @@ window.BANCO.push(
 { id: 'q-4.5-080', tema: '4.5', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a repercussão funcional da perda auditiva induzida por ruído, é CORRETO afirmar:',
   alts: [
-    { t: 'A dificuldade de fala em ruído precede a queixa de ouvir pouco, pois as agudas levam as consoantes.', ok: true,
+    { t: 'A dificuldade de fala em ruído precede a queixa de ouvir pouco, pois as agudas levam as consoantes', ok: true,
       why: 'Correta. A perda começa onde estão as consoantes, não no volume percebido.' },
     { t: 'A primeira queixa é a redução do volume percebido dos sons ambientes ao longo da jornada de trabalho.', ok: false,
       why: 'Errada. A dificuldade de discriminação em ambiente ruidoso costuma vir antes.' },
@@ -41,7 +41,7 @@ window.BANCO.push(
 { id: 'q-4.6-080', tema: '4.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o suicídio e a tentativa de suicídio relacionados ao trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'Há situações em que fatores ocupacionais são determinantes, e a investigação deve alcançá-los.', ok: true,
+    { t: 'Há situações em que os fatores ocupacionais são determinantes, e a investigação deve alcançá-los', ok: true,
       why: 'Correta. Investigar só a história pessoal reproduz a omissão que permitiu o desfecho.' },
     { t: 'O suicídio é evento de determinação exclusivamente individual, ligado à história pessoal de cada um.', ok: false,
       why: 'Errada. Fatores ocupacionais podem ser determinantes ou contribuintes relevantes.' },
@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-5.4-090', tema: '5.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a diferença entre incapacidade temporária e permanente na avaliação pericial, é CORRETO afirmar:',
   alts: [
-    { t: 'Depende da expectativa de recuperação, e a permanência não exige irreversibilidade absoluta.', ok: true,
+    { t: 'Depende da expectativa de recuperação, e a permanência não exige irreversibilidade absoluta', ok: true,
       why: 'Correta. Tempo de afastamento por si não converte temporária em permanente.' },
     { t: 'Depende do tempo decorrido, tornando-se a incapacidade permanente após certo período de afastamento.', ok: false,
       why: 'Errada. A conversão depende de avaliação clínica, não de prazo decorrido.' },
@@ -95,7 +95,7 @@ window.BANCO.push(
 { id: 'q-5.5-080', tema: '5.5', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a avaliação de capacidade em trabalhador com múltiplas comorbidades, é CORRETO afirmar:',
   alts: [
-    { t: 'O efeito conjunto pode superar a soma isolada, devendo descrever a limitação resultante.', ok: true,
+    { t: 'O efeito conjunto pode superar a soma isolada, devendo-se descrever a limitação resultante', ok: true,
       why: 'Correta. Comorbidades interagem, e o que importa é a limitação resultante, não a lista.' },
     { t: 'A avaliação deve considerar a condição de maior gravidade isolada, que determina a limitação predominante.', ok: false,
       why: 'Errada. O conjunto define a funcionalidade resultante.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-2.7-070', tema: '2.7', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a avaliação da exposição ocupacional ao calor conforme as normas de higiene ocupacional de referência técnica, é CORRETO afirmar:',
   alts: [
-    { t: 'Combina o índice de sobrecarga térmica com a taxa metabólica estimada da atividade executada.', ok: true,
+    { t: 'Combina o índice de sobrecarga térmica com a taxa metabólica estimada da atividade executada', ok: true,
       why: 'Correta. O metabolismo da tarefa é metade da conta e a parte mais mal estimada.' },
     { t: 'Considera as variáveis ambientais medidas no posto, que expressam integralmente a sobrecarga térmica.', ok: false,
       why: 'Errada. A taxa metabólica da atividade integra o procedimento.' },

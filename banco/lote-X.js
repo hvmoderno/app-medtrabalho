@@ -5,7 +5,7 @@ window.BANCO.push(
 { id: 'q-2.2-080', tema: '2.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a exposição ocupacional a vibração de corpo inteiro em operadores de máquinas móveis, é CORRETO afirmar:',
   alts: [
-    { t: 'Associa-se a lombalgia e depende do assento, da suspensão, do piso e da postura mantida.', ok: true,
+    { t: 'Associa-se a lombalgia e depende do assento, da suspensão, do piso e da postura mantida', ok: true,
       why: 'Correta. Assento, suspensão e piso são as variáveis que reduzem a dose, mais que o rodízio.' },
     { t: 'Associa-se a alterações osteomusculares, afetando principalmente as mãos e os punhos do operador.', ok: false,
       why: 'Errada. Esse é o perfil da vibração localizada de mãos e braços.' },
@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-2.6-080', tema: '2.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a relação entre limites de exposição e medidas de controle, é CORRETO afirmar:',
   alts: [
-    { t: 'O limite é referência de avaliação, não meta: cabe buscar a menor exposição exequível.', ok: true,
+    { t: 'O limite é referência de avaliação, e não meta: cabe buscar a menor exposição exequível', ok: true,
       why: 'Correta. Conformidade não é sinônimo de otimização.' },
     { t: 'O limite é referência, encerrando o valor abaixo dele a obrigação de adotar medidas adicionais.', ok: false,
       why: 'Errada. Havendo medida viável de redução, ela permanece exigível.' },
@@ -113,7 +113,7 @@ window.BANCO.push(
 { id: 'q-1.3-080', tema: '1.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre estudos de coorte em saúde do trabalhador, é CORRETO afirmar:',
   alts: [
-    { t: 'Estimam incidência e temporalidade, mas são vulneráveis à perda diferencial de seguimento.', ok: true,
+    { t: 'Estimam incidência e temporalidade, mas são vulneráveis à perda diferencial de seguimento', ok: true,
       why: 'Correta. Perda diferencial é a principal ameaça à validade em coortes ocupacionais longas.' },
     { t: 'Estimam a associação entre exposição e desfecho, sem permitir estimar incidência na população.', ok: false,
       why: 'Errada. É justamente o delineamento adequado para isso.' },
@@ -149,7 +149,7 @@ window.BANCO.push(
 { id: 'q-2.9-080', tema: '2.9', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o conceito de dose interna e sua relação com a exposição externa, é CORRETO afirmar:',
   alts: [
-    { t: 'A dose interna integra todas as vias e reflete esforço, ventilação e proteção efetiva.', ok: true,
+    { t: 'A dose interna integra todas as vias e reflete esforço, ventilação e proteção efetiva', ok: true,
       why: 'Correta. É por isso que dois trabalhadores no mesmo ambiente têm indicadores distintos.' },
     { t: 'A concentração ambiental medida determina de forma unívoca a dose interna do trabalhador exposto.', ok: false,
       why: 'Errada. Esforço, ventilação, via cutânea e proteção efetiva modificam a relação.' },

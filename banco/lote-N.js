@@ -41,7 +41,7 @@ window.BANCO.push(
 { id: 'q-1.3-062', tema: '1.3', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre sensibilidade e especificidade aplicadas a exames de vigilância ocupacional, é CORRETO afirmar:',
   alts: [
-    { t: 'Com baixa prevalência, mesmo exame específico gera muitos falso-positivos entre os positivos.', ok: true,
+    { t: 'Com baixa prevalência, mesmo um exame específico gera muitos falso-positivos entre os positivos', ok: true,
       why: 'Correta. Exige confirmação antes de qualquer conduta com repercussão sobre o emprego.' },
     { t: 'Com baixa prevalência, a sensibilidade e a especificidade do exame variam conforme a população.', ok: false,
       why: 'Errada. São propriedades do teste; o que varia com a prevalência é o valor preditivo.' },
@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-2.2-060', tema: '2.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a exposição ocupacional ao calor, é CORRETO afirmar:',
   alts: [
-    { t: 'Considera o calor ambiental com a carga metabólica da tarefa e a vestimenta utilizada.', ok: true,
+    { t: 'Considera o calor ambiental junto com a carga metabólica da tarefa e a vestimenta utilizada', ok: true,
       why: 'Correta. A mesma condição térmica produz sobrecarga distinta conforme esforço e roupa.' },
     { t: 'Considera a temperatura do ar medida no posto, parâmetro que expressa a condição térmica local.', ok: false,
       why: 'Errada. Carga metabólica, umidade, radiação e vestimenta também compõem.' },
@@ -149,7 +149,7 @@ window.BANCO.push(
 { id: 'q-2.6-063', tema: '2.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a aplicação de limites de exposição em jornadas diferentes de oito horas, é CORRETO afirmar:',
   alts: [
-    { t: 'Jornadas longas aumentam o tempo de absorção e reduzem o intervalo de recuperação.', ok: true,
+    { t: 'Jornadas longas aumentam o tempo de absorção e reduzem o intervalo de recuperação entre elas', ok: true,
       why: 'Correta. Justifica ajustar o limite para baixo em agentes cumulativos ou de eliminação lenta.' },
     { t: 'Os limites se aplicam sem qualquer ajuste às jornadas de doze horas praticadas em escala.', ok: false,
       why: 'Errada. Jornadas prolongadas alteram absorção e recuperação.' },

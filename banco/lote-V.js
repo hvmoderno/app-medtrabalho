@@ -23,7 +23,7 @@ window.BANCO.push(
 { id: 'q-7.5-041', tema: '7.5', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a responsabilidade do médico do trabalho nas informações de monitoramento da saúde enviadas pelo eSocial, é CORRETO afirmar:',
   alts: [
-    { t: 'Reproduz os dados do atestado, e o médico responde pela veracidade do que atesta.', ok: true,
+    { t: 'Reproduz os dados do atestado, e o médico responde pela veracidade daquilo que atesta', ok: true,
       why: 'Correta. Quem opera o envio não assume a responsabilidade pelo conteúdo do ato médico.' },
     { t: 'Reproduz os dados do atestado, sendo a responsabilidade pelo conteúdo do setor que realiza o envio.', ok: false,
       why: 'Errada. O conteúdo médico permanece sob responsabilidade de quem o atesta.' },
@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-7.3-070', tema: '7.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a atuação da vigilância sanitária em ambientes de trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'Alcança o ambiente de trabalho por ser ambiente de exposição, coexistindo com a do trabalho.', ok: true,
+    { t: 'Alcança o ambiente de trabalho por ser ambiente de exposição, coexistindo com a do trabalho', ok: true,
       why: 'Correta. Coexistência de competências, não sobreposição excludente.' },
     { t: 'Alcança estabelecimentos abertos ao público, não tendo competência sobre os ambientes de trabalho.', ok: false,
       why: 'Errada. A competência decorre da lei orgânica da saúde.' },
@@ -167,7 +167,7 @@ window.BANCO.push(
 { id: 'q-7.8-040', tema: '7.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre as bases legais para o tratamento de dados de saúde de trabalhadores, é CORRETO afirmar:',
   alts: [
-    { t: 'Apoiam-se em obrigação legal e tutela da saúde, sendo o consentimento base frágil no emprego.', ok: true,
+    { t: 'Apoiam-se em obrigação legal e na tutela da saúde, sendo o consentimento base frágil no emprego', ok: true,
       why: 'Correta. A assimetria da relação compromete a livre manifestação de vontade.' },
     { t: 'Apoiam-se preferencialmente no consentimento do empregado, colhido no momento da admissão ao emprego.', ok: false,
       why: 'Errada. A assimetria da relação torna o consentimento base frágil.' },
@@ -185,7 +185,7 @@ window.BANCO.push(
 { id: 'q-7.8-041', tema: '7.8', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o conteúdo do atestado de saúde ocupacional à luz da proteção de dados, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve conter riscos avaliados, exames realizados e conclusão de aptidão, sem diagnósticos.', ok: true,
+    { t: 'Deve conter riscos avaliados, exames realizados e conclusão de aptidão, sem diagnósticos', ok: true,
       why: 'Correta. Minimização: só o necessário à finalidade, que é a decisão sobre alocação.' },
     { t: 'Deve conter os riscos e trazer os resultados detalhados dos exames complementares realizados.', ok: false,
       why: 'Errada. Os resultados permanecem no prontuário sob guarda do médico.' },

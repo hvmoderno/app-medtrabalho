@@ -7,7 +7,7 @@ window.BANCO.push(
 { id: 'q-1.3-020', tema: '1.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Um estudo comparou trabalhadores de uma indústria com a população geral e encontrou menor mortalidade entre os trabalhadores. Sobre a interpretação, assinale a alternativa CORRETA:',
   alts: [
-    { t: 'Reflete o efeito do trabalhador sadio, viés pelo qual quem trabalha é mais saudável.', ok: true,
+    { t: 'Reflete o efeito do trabalhador sadio, viés pelo qual quem está empregado é mais saudável', ok: true,
       why: 'Correta. Pode mascarar efeitos nocivos reais da exposição estudada.' },
     { t: 'Demonstra que a exposição ocupacional daquela indústria tem efeito protetor sobre a mortalidade.', ok: false,
       why: 'Errada. O achado decorre do viés de seleção, não de proteção.' },
@@ -43,7 +43,7 @@ window.BANCO.push(
 { id: 'q-1.3-022', tema: '1.3', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Um estudo relata risco relativo de 1,8 com intervalo de confiança de 95% entre 0,9 e 3,4. Sobre a interpretação, assinale a alternativa CORRETA:',
   alts: [
-    { t: 'Não é significativo ao nível adotado, pois o intervalo inclui o valor um.', ok: true,
+    { t: 'Não é estatisticamente significativo ao nível adotado, pois o intervalo inclui o valor um', ok: true,
       why: 'Correta. Isso não equivale a demonstrar ausência de associação.' },
     { t: 'O resultado demonstra que não existe associação entre a exposição e o desfecho investigado.', ok: false,
       why: 'Errada. Ausência de significância não é evidência de ausência de efeito.' },
@@ -62,7 +62,7 @@ window.BANCO.push(
 { id: 'q-1.8-020', tema: '1.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Ao investigar um acidente de trabalho fatal em uma obra, a equipe de vigilância opta por analisar as decisões de planejamento, o cronograma e a pressão de prazo, além das condições do posto. Sobre essa abordagem, assinale a alternativa CORRETA:',
   alts: [
-    { t: 'Deve buscar causas técnicas, organizacionais e gerenciais, e não só o comportamento da vítima.', ok: true,
+    { t: 'Deve buscar causas técnicas, organizacionais e gerenciais, e não só o comportamento da vítima', ok: true,
       why: 'Correta. Limitar-se à vítima impede corrigir os determinantes do evento.' },
     { t: 'Deve concentrar-se em identificar o erro cometido pelo trabalhador acidentado durante a tarefa.', ok: false,
       why: 'Errada. É onde a investigação deve continuar, não parar.' },
@@ -80,7 +80,7 @@ window.BANCO.push(
 { id: 'q-1.8-021', tema: '1.8', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre os instrumentos da vigilância em saúde do trabalhador, assinale a alternativa CORRETA:',
   alts: [
-    { t: 'Combina análise de morbimortalidade com inspeção dos ambientes e processos de trabalho.', ok: true,
+    { t: 'Combina a análise de morbimortalidade com a inspeção dos ambientes e processos de trabalho', ok: true,
       why: 'Correta. Articula a informação epidemiológica à intervenção sobre a fonte.' },
     { t: 'Restringe-se à análise dos bancos de dados disponíveis, sem atuação em campo nos estabelecimentos.', ok: false,
       why: 'Errada. A inspeção dos ambientes é parte constitutiva da ação.' },
@@ -117,7 +117,7 @@ window.BANCO.push(
 { id: 'q-1.9-021', tema: '1.9', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre os sistemas de informação em saúde do trabalhador, assinale a alternativa CORRETA:',
   alts: [
-    { t: 'Cada sistema captura um recorte, e a leitura conjunta oferece panorama mais completo.', ok: true,
+    { t: 'Cada sistema captura um recorte, e a leitura conjunta oferece um panorama mais completo', ok: true,
       why: 'Correta. Notificação, benefícios, mortalidade e informações de SST se complementam.' },
     { t: 'Um único sistema de informação cobre integralmente os agravos relacionados ao trabalho no país.', ok: false,
       why: 'Errada. Cada base captura um recorte distinto da realidade.' },
@@ -173,7 +173,7 @@ window.BANCO.push(
 { id: 'q-6.3-020', tema: '6.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Trabalhador de 45 anos, operador de ponte rolante, relata episódio único de crise convulsiva tônico-clônica há dois meses, em investigação neurológica. Sobre a conduta do médico do trabalho, assinale a alternativa CORRETA:',
   alts: [
-    { t: 'Cabe restrição temporária às atividades de risco enquanto não há investigação e controle.', ok: true,
+    { t: 'Cabe restrição temporária às atividades de risco enquanto não há investigação e controle', ok: true,
       why: 'Correta. Com reavaliação e decisão individualizada junto ao neurologista.' },
     { t: 'O trabalhador deve ser declarado definitivamente inapto para qualquer atividade laboral exercida.', ok: false,
       why: 'Errada. A maioria das funções não apresenta risco incompatível.' },

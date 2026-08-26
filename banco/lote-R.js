@@ -23,7 +23,7 @@ window.BANCO.push(
 { id: 'q-6.1-061', tema: '6.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a conclusão de inaptidão em exame admissional, é CORRETO afirmar:',
   alts: [
-    { t: 'Só se justifica quando a condição é incompatível com as exigências daquela função ou expõe o candidato a risco aumentado naquele posto.', ok: true,
+    { t: 'Só se justifica quando a condição é incompatível com as exigências daquela função ou expõe o candidato a risco aumentado naquele posto de trabalho', ok: true,
       why: 'Correta. Avalia-se compatibilidade atual com a função, nunca probabilidade futura de adoecer.' },
     { t: 'Justifica-se quando a condição é incompatível com a função ou quando doença crônica, ainda que controlada, indique risco futuro de afastamento.', ok: false,
       why: 'Errada. Isso é discriminação: a avaliação é sobre a compatibilidade atual, não sobre custo futuro.' },
@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-2.2-070', tema: '2.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a exposição ocupacional a campos eletromagnéticos e radiações não ionizantes, é CORRETO afirmar:',
   alts: [
-    { t: 'Não ionizam moléculas, e o efeito depende da faixa: térmico na radiofrequência, ocular e cutâneo no ultravioleta.', ok: true,
+    { t: 'Não ionizam moléculas, e o efeito depende da faixa: térmico na radiofrequência, ocular e cutâneo no ultravioleta emitido', ok: true,
       why: 'Correta. Não existe um efeito único das não ionizantes; a faixa de frequência define o que acontece.' },
     { t: 'Não ionizam moléculas e, por não carregarem energia suficiente para romper ligações químicas, não produzem efeito biológico relevante.', ok: false,
       why: 'Errada. Há efeitos reconhecidos, variáveis conforme a faixa de frequência.' },
@@ -95,7 +95,7 @@ window.BANCO.push(
 { id: 'q-2.4-070', tema: '2.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a tuberculose como risco ocupacional em profissionais de saúde, é CORRETO afirmar:',
   alts: [
-    { t: 'O risco vem sobretudo do bacilífero não diagnosticado, e o controle começa pelas medidas administrativas de identificação precoce.', ok: true,
+    { t: 'O risco vem sobretudo do bacilífero ainda não diagnosticado, e o controle começa pelas medidas administrativas de identificação precoce', ok: true,
       why: 'Correta. Detecção precoce tem mais impacto que qualquer respirador; este vem por último.' },
     { t: 'O risco vem do contato com pacientes bacilíferos, e a proteção respiratória é a medida de maior impacto sobre a transmissão no serviço.', ok: false,
       why: 'Errada. Vem depois das medidas administrativas e de engenharia na hierarquia de controle.' },

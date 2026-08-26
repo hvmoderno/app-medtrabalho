@@ -5,7 +5,7 @@ window.BANCO.push(
 { id: 'q-4.4-060', tema: '4.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Cabeleireira apresenta eczema em mãos que melhora nas férias e recidiva no retorno. Sobre a investigação, é CORRETO afirmar:',
   alts: [
-    { t: 'É preciso distinguir a irritativa por trabalho úmido da alérgica por tinturas e alisantes.', ok: true,
+    { t: 'É preciso distinguir a irritativa por trabalho úmido da alérgica por tinturas e por alisantes', ok: true,
       why: 'Correta. As duas coexistem nessa ocupação, e o teste sozinho não define nexo.' },
     { t: 'É preciso distinguir as formas, embora a melhora nas férias afaste a origem ocupacional do quadro.', ok: false,
       why: 'Errada. É justamente o padrão que sugere origem ocupacional.' },
@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-7.4-060', tema: '7.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o direito de recusa do trabalhador diante de risco grave e iminente, é CORRETO afirmar:',
   alts: [
-    { t: 'Pode interromper as atividades comunicando ao superior, sendo vedada medida punitiva por isso.', ok: true,
+    { t: 'Pode interromper as atividades comunicando ao superior, sendo vedada qualquer medida punitiva', ok: true,
       why: 'Correta. A previsão do direito de recusa vem acompanhada da vedação a represália.' },
     { t: 'Pode comunicar o risco ao superior, mantendo a atividade até a chegada da fiscalização ao local.', ok: false,
       why: 'Errada. A interrupção é imediata; esperar a fiscalização anularia a proteção.' },
@@ -95,7 +95,7 @@ window.BANCO.push(
 { id: 'q-5.4-060', tema: '5.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a avaliação pericial de quadros com componente subjetivo predominante, como dor crônica e transtornos mentais, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve buscar coerência entre relato, exame, tratamento, adesão e funcionalidade observada.', ok: true,
+    { t: 'Deve buscar coerência entre relato, exame, tratamento, adesão e a funcionalidade observada', ok: true,
       why: 'Correta. A coerência do conjunto substitui o marcador objetivo que não existe.' },
     { t: 'Deve buscar achados objetivos, indicando simulação a ausência de exame complementar alterado.', ok: false,
       why: 'Errada. Dor crônica e transtornos mentais frequentemente não têm marcador.' },

@@ -5,7 +5,7 @@ window.BANCO.push(
 { id: 'q-6.1-070', tema: '6.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o exame periódico e sua periodicidade, é CORRETO afirmar:',
   alts: [
-    { t: 'A periodicidade decorre do risco, da idade e de condições que exijam acompanhamento mais próximo.', ok: true,
+    { t: 'A periodicidade decorre do risco, da idade e de condições que exijam acompanhamento mais próximo', ok: true,
       why: 'Correta. Periodicidade e conteúdo derivam do risco, não de uma rotina única para todos.' },
     { t: 'A periodicidade é anual para todos os trabalhadores, o que uniformiza o acompanhamento na empresa.', ok: false,
       why: 'Errada. Há situações com periodicidade menor, definidas pelo risco e pela idade.' },
@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-5.5-070', tema: '5.5', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a avaliação do dano corporal e a quantificação de sequelas, é CORRETO afirmar:',
   alts: [
-    { t: 'As tabelas padronizam o dano anatômico, mas não substituem a análise da repercussão na atividade.', ok: true,
+    { t: 'As tabelas padronizam o dano anatômico, mas não substituem a análise da repercussão na atividade', ok: true,
       why: 'Correta. A mesma sequela tem impacto laborativo muito distinto conforme a ocupação.' },
     { t: 'As tabelas padronizam a estimativa do dano e determinam diretamente o grau de incapacidade laborativa.', ok: false,
       why: 'Errada. Dano corporal e incapacidade para o trabalho são conceitos distintos.' },
@@ -95,7 +95,7 @@ window.BANCO.push(
 { id: 'q-7.7-033', tema: '7.7', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a emissão de atestados médicos por médico do trabalho e sua aceitação pela empresa, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve trazer identificação, data e tempo de afastamento, e o código diagnóstico só com autorização.', ok: true,
+    { t: 'Deve trazer identificação, data e tempo de afastamento, e o código diagnóstico só com autorização', ok: true,
       why: 'Correta. E a recusa sistemática de atestados de assistentes externos não se sustenta.' },
     { t: 'Deve trazer identificação e tempo de afastamento, constando o código diagnóstico obrigatoriamente em todos.', ok: false,
       why: 'Errada. Depende de autorização expressa do paciente.' },

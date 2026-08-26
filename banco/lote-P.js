@@ -5,7 +5,7 @@ window.BANCO.push(
 { id: 'q-4.3-060', tema: '4.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a pneumonite de hipersensibilidade de origem ocupacional, é CORRETO afirmar:',
   alts: [
-    { t: 'Resulta de resposta imunológica a antígeno inalado, e a forma aguda pode ser confundida com quadro infeccioso.', ok: true,
+    { t: 'Resulta de resposta imunológica a antígeno inalado, e a forma aguda pode ser confundida com quadro infeccioso febril', ok: true,
       why: 'Correta. O quadro agudo febril recorrente sugere infecção repetida se não se pergunta pelo ambiente.' },
     { t: 'Resulta da ação irritativa direta de poeiras orgânicas sobre o epitélio alveolar, sem participação de mecanismo imunológico.', ok: false,
       why: 'Errada. O mecanismo é imunológico, por hipersensibilidade ao antígeno inalado.' },
@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-4.6-060', tema: '4.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o assédio moral no trabalho e suas repercussões em saúde, é CORRETO afirmar:',
   alts: [
-    { t: 'Caracteriza-se por condutas abusivas repetidas e prolongadas, e sua abordagem exige intervenção organizacional.', ok: true,
+    { t: 'Caracteriza-se por condutas abusivas repetidas e prolongadas, e sua abordagem exige intervenção organizacional', ok: true,
       why: 'Correta. Repetição e prolongamento definem o fenômeno, e a resposta precisa alcançar a organização.' },
     { t: 'Caracteriza-se por conduta abusiva que degrada a dignidade, bastando um episódio isolado de conflito para configurá-lo.', ok: false,
       why: 'Errada. A repetição e o prolongamento no tempo são elementos característicos.' },
@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-5.5-060', tema: '5.5', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a emissão de restrições e recomendações no atestado de saúde ocupacional, é CORRETO afirmar:',
   alts: [
-    { t: 'A restrição deve ser funcional, específica e verificável, porque a genérica é inaplicável e vira exclusão.', ok: true,
+    { t: 'A restrição deve ser funcional, específica e verificável, porque a genérica é inaplicável e acaba virando exclusão', ok: true,
       why: 'Correta. Restrição vaga não orienta ninguém e vira motivo para não aproveitar o trabalhador.' },
     { t: 'A restrição deve ser específica e indicar o diagnóstico que a motivou, para justificar sua adoção perante a chefia.', ok: false,
       why: 'Errada. Diagnóstico permanece sob sigilo; comunica-se a limitação funcional.' },
@@ -95,7 +95,7 @@ window.BANCO.push(
 { id: 'q-5.2-060', tema: '5.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a classificação de Schilling aplicada às doenças relacionadas ao trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'Distingue o trabalho como causa necessária, contributiva ou agravante, e as três configuram relação com o trabalho.', ok: true,
+    { t: 'Distingue o trabalho como causa necessária, contributiva ou agravante, e as três configuram relação com o trabalho', ok: true,
       why: 'Correta. Varia o modo de participação, não a existência do vínculo.' },
     { t: 'Distingue três modos de participação, configurando doença relacionada ao trabalho apenas aquele em que ele é causa necessária.', ok: false,
       why: 'Errada. As três categorias configuram relação com o trabalho.' },

@@ -5,7 +5,7 @@ window.BANCO.push(
 { id: 'q-1.4-070', tema: '1.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a terceirização e a gestão de saúde e segurança nas empresas contratantes, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve estender as mesmas condições e o atendimento ambulatorial, consolidando os indicadores.', ok: true,
+    { t: 'Deve estender as mesmas condições e o atendimento ambulatorial, consolidando os indicadores', ok: true,
       why: 'Correta. Separar os indicadores faz o acidente de terceiro desaparecer da gestão.' },
     { t: 'Deve verificar os programas da prestadora, a quem cabe com exclusividade a segurança do terceirizado.', ok: false,
       why: 'Errada. As condições oferecidas nas dependências da contratante são de sua responsabilidade.' },
@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-1.8-070', tema: '1.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o conceito de vigilância dos ambientes e processos de trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'Dirige-se aos determinantes no processo produtivo, antecipando-se ao dano já instalado.', ok: true,
+    { t: 'Dirige-se aos determinantes no processo produtivo, antecipando-se ao dano já instalado', ok: true,
       why: 'Correta. Uma olha para a causa, a outra para o efeito; são complementares.' },
     { t: 'Dirige-se aos determinantes, sendo dispensável havendo bom programa de exames médicos periódicos.', ok: false,
       why: 'Errada. O exame detecta o efeito depois de instalado; não previne a exposição.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-2.5-070', tema: '2.5', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a verificação da eficácia das medidas de controle implantadas, é CORRETO afirmar:',
   alts: [
-    { t: 'Demonstra-se por medição após a implantação e por manutenção documentada ao longo do tempo.', ok: true,
+    { t: 'Demonstra-se por medição após a implantação e por manutenção documentada ao longo do tempo', ok: true,
       why: 'Correta. Controle instalado não é controle permanente.' },
     { t: 'Demonstra-se pela instalação da medida conforme o projeto aprovado e verificado no recebimento.', ok: false,
       why: 'Errada. É preciso medir o desempenho obtido na condição real de operação.' },
@@ -149,7 +149,7 @@ window.BANCO.push(
 { id: 'q-2.8-070', tema: '2.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o ensaio de vedação de respiradores, é CORRETO afirmar:',
   alts: [
-    { t: 'Verifica a adequação de modelo e tamanho à face e deve ser repetido após alterações faciais.', ok: true,
+    { t: 'Verifica a adequação de modelo e tamanho à face e deve ser repetido após alterações faciais', ok: true,
       why: 'Correta. É distinto da verificação que o próprio usuário faz a cada colocação.' },
     { t: 'Verifica a adequação do modelo à face, sendo o mesmo procedimento que o usuário faz na colocação.', ok: false,
       why: 'Errada. Um qualifica o modelo e o tamanho; o outro confere o posicionamento a cada uso.' },

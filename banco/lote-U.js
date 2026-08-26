@@ -5,7 +5,7 @@ window.BANCO.push(
 { id: 'q-4.3-070', tema: '4.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a asbestose e as demais alterações pleuropulmonares associadas ao asbesto, é CORRETO afirmar:',
   alts: [
-    { t: 'Placas indicam exposição pregressa e costumam não repercutir; asbestose é fibrose.', ok: true,
+    { t: 'As placas indicam exposição pregressa e costumam não repercutir; a asbestose é fibrose', ok: true,
       why: 'Correta. Placa pleural é marcador de exposição; asbestose é doença do parênquima.' },
     { t: 'Placas pleurais e asbestose são a mesma entidade observada em estágios evolutivos diferentes.', ok: false,
       why: 'Errada. São alterações distintas, com mecanismos e repercussões diferentes.' },
@@ -23,7 +23,7 @@ window.BANCO.push(
 { id: 'q-4.5-070', tema: '4.5', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a audiometria ocupacional e as condições de sua realização, é CORRETO afirmar:',
   alts: [
-    { t: 'Exige repouso auditivo prévio e cabina adequada, sobretudo na audiometria de referência.', ok: true,
+    { t: 'Exige repouso auditivo prévio e cabina adequada, sobretudo na audiometria de referência', ok: true,
       why: 'Correta. Referência mal obtida compromete toda a série de exames futura.' },
     { t: 'Exige cabina adequada, sendo o repouso auditivo dispensável quando a audiometria é de triagem.', ok: false,
       why: 'Errada. Sem repouso, mudança temporária de limiar simula perda permanente.' },
@@ -41,7 +41,7 @@ window.BANCO.push(
 { id: 'q-4.6-070', tema: '4.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre os modelos teóricos que explicam a relação entre organização do trabalho e adoecimento mental, é CORRETO afirmar:',
   alts: [
-    { t: 'Associam o adoecimento à alta exigência combinada a baixa autonomia ou baixo reconhecimento.', ok: true,
+    { t: 'Associam o adoecimento à alta exigência combinada a baixa autonomia ou baixo reconhecimento', ok: true,
       why: 'Correta. É a combinação que adoece, não a exigência em si.' },
     { t: 'Associam o adoecimento à carga de trabalho elevada, isoladamente o principal determinante do quadro.', ok: false,
       why: 'Errada. O que pesa é a combinação com baixa autonomia ou baixo reconhecimento.' },
@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-4.8-070', tema: '4.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre as leucemias relacionadas a exposições ocupacionais, é CORRETO afirmar:',
   alts: [
-    { t: 'A associação com o benzeno é estabelecida, e a exposição pode ter ocorrido anos antes.', ok: true,
+    { t: 'A associação com o benzeno é bem estabelecida, e a exposição pode ter ocorrido anos antes', ok: true,
       why: 'Correta. História ocupacional restrita ao emprego atual perde a exposição relevante.' },
     { t: 'A associação é estabelecida, manifestando-se a leucemia ocupacional durante o período de exposição.', ok: false,
       why: 'Errada. Pode surgir anos após o término da exposição.' },
@@ -95,7 +95,7 @@ window.BANCO.push(
 { id: 'q-2.9-070', tema: '2.9', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a intoxicação por monóxido de carbono em ambiente de trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'É gás inodoro com sintomas inespecíficos, e a oximetria convencional pode não detectá-lo.', ok: true,
+    { t: 'É gás inodoro com sintomas inespecíficos, e a oximetria comum pode não detectá-lo', ok: true,
       why: 'Correta. Ausência de alerta sensorial e oximetria enganosa são as duas armadilhas.' },
     { t: 'É gás cujo odor característico alerta os trabalhadores expostos antes do agravamento do quadro.', ok: false,
       why: 'Errada. É inodoro; não há qualquer aviso sensorial.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-4.4-080', tema: '4.4', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o afastamento e o retorno em dermatoses ocupacionais, é CORRETO afirmar:',
   alts: [
-    { t: 'O afastamento do contato é a medida principal, e o retorno exige o agente controlado.', ok: true,
+    { t: 'O afastamento do contato é a medida principal, e o retorno exige o agente efetivamente controlado', ok: true,
       why: 'Correta. Sem mudar a exposição, a dermatose volta assim que o tratamento cessa.' },
     { t: 'O tratamento tópico é a medida principal e permite manter o trabalhador na mesma exposição.', ok: false,
       why: 'Errada. Mantém o quadro em ciclo de melhora e recidiva sem resolução.' },

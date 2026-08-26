@@ -5,7 +5,7 @@ window.BANCO.push(
 { id: 'q-6.1-071', tema: '6.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o programa de controle médico de saúde ocupacional e sua articulação com o gerenciamento de riscos, é CORRETO afirmar:',
   alts: [
-    { t: 'Exames e periodicidade decorrem dos riscos do inventário, não de lista padronizada.', ok: true,
+    { t: 'Os exames e a periodicidade decorrem dos riscos do inventário, não de lista padronizada', ok: true,
       why: 'Correta. Exame sem relação com o risco consome recurso e não detecta o que importa.' },
     { t: 'A bateria de exames deve ser a mesma para todos os trabalhadores, garantindo tratamento uniforme.', ok: false,
       why: 'Errada. Os exames derivam do risco de cada função.' },
@@ -23,7 +23,7 @@ window.BANCO.push(
 { id: 'q-6.1-072', tema: '6.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o exame demissional, é CORRETO afirmar:',
   alts: [
-    { t: 'Documenta o estado de saúde ao fim do vínculo e é peça central em discussões de nexo.', ok: true,
+    { t: 'Documenta o estado de saúde ao término do vínculo e é peça central em discussões de nexo', ok: true,
       why: 'Correta. Sua omissão prejudica o trabalhador e deixa a empresa sem elemento de defesa.' },
     { t: 'Documenta o estado de saúde, sendo dispensável sempre que o trabalhador pede demissão.', ok: false,
       why: 'Errada. A dispensa segue critérios normativos, não a iniciativa do desligamento.' },
@@ -113,7 +113,7 @@ window.BANCO.push(
 { id: 'q-7.1-052', tema: '7.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a proteção da trabalhadora gestante e lactante no ambiente de trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'Afastar a exposição ao agente, com remuneração garantida e retorno à função assegurado.', ok: true,
+    { t: 'Afastar a exposição ao agente, com remuneração garantida e retorno à função assegurado depois', ok: true,
       why: 'Correta. O risco reprodutivo é motivo para controlar o ambiente, não para restringir o trabalho.' },
     { t: 'Afastar a trabalhadora da empresa, dado o risco que a exposição representa durante a gestação.', ok: false,
       why: 'Errada. Afasta-se da exposição, não do emprego.' },

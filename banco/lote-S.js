@@ -5,7 +5,7 @@ window.BANCO.push(
 { id: 'q-5.4-070', tema: '5.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre os quesitos formulados às partes em perícia judicial trabalhista, é CORRETO afirmar:',
   alts: [
-    { t: 'Responde ao que é técnico, podendo apontar quesito jurídico ou fora do objeto.', ok: true,
+    { t: 'Responde ao que é técnico, podendo apontar quesito jurídico ou fora do objeto da perícia', ok: true,
       why: 'Correta. Responder a questão de direito extrapola a função e enfraquece o laudo.' },
     { t: 'Responde a todos os quesitos formulados pelas partes, inclusive os de natureza jurídica.', ok: false,
       why: 'Errada. Questão de direito não é objeto da perícia médica.' },
@@ -41,7 +41,7 @@ window.BANCO.push(
 { id: 'q-2.9-060', tema: '2.9', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a intoxicação por organofosforados em trabalhadores rurais, é CORRETO afirmar:',
   alts: [
-    { t: 'Decorre da inibição de colinesterases, e a conduta na intoxicação aguda é clínica.', ok: true,
+    { t: 'Decorre da inibição de colinesterases, e a conduta na intoxicação aguda é sempre clínica', ok: true,
       why: 'Correta. A dosagem serve à vigilância, mas o tratamento não espera o laboratório.' },
     { t: 'Decorre da inibição de colinesterases, devendo o tratamento aguardar a confirmação laboratorial.', ok: false,
       why: 'Errada. A conduta é clínica e não pode esperar o resultado.' },
@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-4.7-070', tema: '4.7', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a avaliação psiquiátrica em contexto ocupacional, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve considerar o contexto de trabalho como determinante ou agravante possível do quadro.', ok: true,
+    { t: 'Deve considerar o contexto de trabalho como determinante ou agravante possível daquele quadro', ok: true,
       why: 'Correta. Sem atribuir tudo à personalidade nem tratar insatisfação como adoecimento.' },
     { t: 'Deve interpretar o sofrimento prioritariamente como característica de personalidade do trabalhador.', ok: false,
       why: 'Errada. O contexto de trabalho pode ser determinante ou agravante.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-7.1-054', tema: '7.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o trabalho de adolescentes e sua proteção, é CORRETO afirmar:',
   alts: [
-    { t: 'Há vedação de trabalho noturno, perigoso ou insalubre a menores de dezoito anos.', ok: true,
+    { t: 'Há vedação de trabalho noturno, perigoso ou insalubre aos menores de dezoito anos', ok: true,
       why: 'Correta. A lista de piores formas orienta a identificação das atividades proibidas.' },
     { t: 'Há vedações etárias, sendo o trabalho insalubre permitido aos dezesseis com pagamento de adicional.', ok: false,
       why: 'Errada. A vedação alcança todos os menores de dezoito anos.' },
@@ -149,7 +149,7 @@ window.BANCO.push(
 { id: 'q-7.8-033', tema: '7.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a proteção de dados de saúde de trabalhadores, é CORRETO afirmar:',
   alts: [
-    { t: 'São categoria sensível, com finalidade específica, minimização e controle de acesso.', ok: true,
+    { t: 'São categoria sensível, com finalidade específica, minimização e controle de acesso próprio', ok: true,
       why: 'Correta. Prontuários ocupacionais não podem ser acessados por setores administrativos.' },
     { t: 'São categoria sensível, podendo o prontuário ser mantido junto ao arquivo funcional do trabalhador.', ok: false,
       why: 'Errada. A guarda deve ser separada e sob responsabilidade médica.' },
