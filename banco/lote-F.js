@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-4.10-040', tema: '4.10', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a vacinação de trabalhadores em situação de surto ou de exposição a caso confirmado, é CORRETO afirmar:',
   alts: [
-    { t: 'A vacinação de bloqueio pode ser indicada em contatos, com prazos conforme o agente.', ok: true,
+    { t: 'A vacinação de bloqueio pode ser indicada em contatos, com prazos definidos conforme o agente', ok: true,
       why: 'Correta. É medida coletiva articulada com a vigilância, distinta da rotina por risco.' },
     { t: 'A vacinação tem indicação preventiva de rotina, e nunca em situação de exposição já ocorrida.', ok: false,
       why: 'Errada. A vacinação de bloqueio é medida prevista em surtos.' },

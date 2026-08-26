@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-7.4-110', tema: '7.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o trabalho em altura, é CORRETO afirmar:',
   alts: [
-    { t: 'Exige análise de risco, permissão, proteção contra quedas, capacitação e plano de resgate.', ok: true,
+    { t: 'Exige análise de risco, permissão, proteção contra quedas, capacitação e plano de resgate próprio', ok: true,
       why: 'Correta. Deter a queda é metade da solução; a outra é resgatar rápido.' },
     { t: 'Exige o uso de cinturão de segurança com talabarte adequado ao ponto de ancoragem disponível.', ok: false,
       why: 'Errada. Análise de risco, permissão, capacitação e plano de resgate também integram.' },
@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-7.5-080', tema: '7.5', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o monitoramento da saúde do trabalhador no eSocial e o sigilo das informações, é CORRETO afirmar:',
   alts: [
-    { t: 'Transmite a conclusão de aptidão e os exames realizados, sem diagnósticos nem resultados.', ok: true,
+    { t: 'Transmite a conclusão de aptidão e os exames realizados, sem diagnósticos nem seus resultados', ok: true,
       why: 'Correta. Reproduz no digital o limite que separa o atestado do prontuário médico.' },
     { t: 'Transmite os exames realizados e deve conter os resultados dos exames complementares obtidos.', ok: false,
       why: 'Errada. Informa-se a realização, não os resultados.' },

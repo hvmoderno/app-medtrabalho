@@ -95,7 +95,7 @@ window.BANCO.push(
 { id: 'q-4.9-080', tema: '4.9', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a hepatite B como risco ocupacional, é CORRETO afirmar:',
   alts: [
-    { t: 'Tem transmissibilidade percutânea muito superior à dos demais, e a vacina é a proteção mais eficaz.', ok: true,
+    { t: 'Tem transmissibilidade percutânea muito superior à dos demais vírus, e a vacina é a proteção mais eficaz', ok: true,
       why: 'Correta. É o vírus de maior risco por acidente percutâneo e o único desses com vacina eficaz.' },
     { t: 'Tem transmissibilidade percutânea semelhante à dos demais vírus de transmissão sanguínea conhecidos.', ok: false,
       why: 'Errada. A do vírus da hepatite B é substancialmente maior.' },

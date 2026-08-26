@@ -23,7 +23,7 @@ window.BANCO.push(
 { id: 'q-2.2-090', tema: '2.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a exposição ocupacional ao frio, é CORRETO afirmar:',
   alts: [
-    { t: 'O frio reduz destreza manual e sensibilidade tátil, e vento e umidade agravam a perda de calor.', ok: true,
+    { t: 'O frio reduz a destreza manual e a sensibilidade tátil, e vento e umidade agravam a perda de calor', ok: true,
       why: 'Correta. A perda de destreza produz o acidente antes de qualquer lesão pelo frio.' },
     { t: 'O frio traz risco de lesões locais e hipotermia, sendo a temperatura do ar isolada suficiente para caracterizar a exposição.', ok: false,
       why: 'Errada. Vento e umidade alteram substancialmente a perda de calor.' },
@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-2.6-090', tema: '2.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a comparação de resultados de avaliação de exposição com limites, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve considerar a distribuição dos resultados, e não apenas a média, pois as exposições são assimétricas', ok: true,
+    { t: 'Deve considerar a distribuição dos resultados, e não apenas a média, pois as exposições são assimétricas ali', ok: true,
       why: 'Correta. Média abaixo do limite convive com proporção relevante de jornadas acima dele.' },
     { t: 'Deve tomar a média dos resultados obtidos, medida que resume adequadamente a exposição para concluir sobre conformidade.', ok: false,
       why: 'Errada. Ignora a dispersão e a fração de jornadas acima do limite.' },

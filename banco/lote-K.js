@@ -41,7 +41,7 @@ window.BANCO.push(
 { id: 'q-4.6-052', tema: '4.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Uma equipe de atendimento a clientes apresenta, em seis meses, três afastamentos por transtorno de ansiedade e elevação de queixas de esgotamento. Sobre a abordagem do caso, é CORRETO afirmar:',
   alts: [
-    { t: 'O agrupamento na mesma equipe sinaliza fator organizacional e demanda avaliação coletiva.', ok: true,
+    { t: 'O agrupamento na mesma equipe sinaliza fator organizacional e demanda avaliação coletiva', ok: true,
       why: 'Correta. Vários casos no mesmo ponto apontam a causa comum: o desenho do trabalho.' },
     { t: 'O agrupamento na mesma equipe reflete predisposição individual coincidente entre esses trabalhadores.', ok: false,
       why: 'Errada. Concentração de casos é achado de causa comum, não coincidência.' },
@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-4.6-053', tema: '4.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a síndrome de burnout, é CORRETO afirmar:',
   alts: [
-    { t: 'É fenômeno ocupacional por estresse crônico não gerenciado, com exaustão e distanciamento.', ok: true,
+    { t: 'É fenômeno ocupacional por estresse crônico não gerenciado, com exaustão e distanciamento', ok: true,
       why: 'Correta. A própria definição vincula o quadro à organização do trabalho.' },
     { t: 'É um transtorno de personalidade de manifestação tardia, que se revela sob exigência profissional.', ok: false,
       why: 'Errada. Não é transtorno de personalidade nem característica do indivíduo.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-5.2-051', tema: '5.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a análise de nexo em doença de causa múltipla, como as musculoesqueléticas, é CORRETO afirmar:',
   alts: [
-    { t: 'A multicausalidade não impede: basta contribuição relevante da exposição ocupacional.', ok: true,
+    { t: 'A multicausalidade não impede o nexo: basta contribuição relevante da exposição ocupacional', ok: true,
       why: 'Correta. Exigir causa única eliminaria quase todas as doenças relacionadas ao trabalho.' },
     { t: 'A multicausalidade do quadro impede o reconhecimento do nexo ocupacional nessas doenças.', ok: false,
       why: 'Errada. A maioria das doenças relacionadas ao trabalho é multicausal.' },

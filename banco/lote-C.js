@@ -23,7 +23,7 @@ window.BANCO.push(
 { id: 'q-5.2-031', tema: '5.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Ao aplicar a classificação de Schilling a um caso de asma em trabalhador de padaria exposto a farinha, é CORRETO afirmar:',
   alts: [
-    { t: 'Sensibilização a agente exclusivo do trabalho torna o trabalho causa necessária.', ok: true,
+    { t: 'A sensibilização a agente exclusivo do trabalho torna o trabalho causa necessária da doença', ok: true,
       why: 'Correta. Sem a exposição a doença não existiria naquela forma.' },
     { t: 'Toda asma em trabalhador exposto se enquadra como doença comum agravada pelo trabalho exercido.', ok: false,
       why: 'Errada. Quando o agente é exclusivo do trabalho, ele é causa necessária.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-4.3-031', tema: '4.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a espirometria no acompanhamento de trabalhadores expostos a poeiras, é CORRETO afirmar:',
   alts: [
-    { t: 'Complementa a avaliação, mas pode estar normal em fases iniciais de pneumoconiose.', ok: true,
+    { t: 'Complementa a avaliação, mas pode estar normal nas fases iniciais de uma pneumoconiose', ok: true,
       why: 'Correta. O diagnóstico se apoia na história de exposição e na imagem.' },
     { t: 'Complementa a avaliação, excluindo a espirometria normal o diagnóstico de pneumoconiose.', ok: false,
       why: 'Errada. Pode estar normal em fases iniciais da doença.' },
@@ -149,7 +149,7 @@ window.BANCO.push(
 { id: 'q-3.2-040', tema: '3.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Uma empresa de logística implanta sistema de metas individuais medidas em tempo real, com ranking visível e alertas automáticos quando o trabalhador fica abaixo do ritmo esperado. Sobre a organização do trabalho descrita, é CORRETO afirmar:',
   alts: [
-    { t: 'O monitoramento contínuo com ritmo imposto reduz a autonomia e a regulação da atividade.', ok: true,
+    { t: 'O monitoramento contínuo com ritmo imposto reduz a autonomia e a regulação da própria atividade', ok: true,
       why: 'Correta. É fator de risco psicossocial e ergonômico que integra o inventário.' },
     { t: 'Os sistemas de medição em tempo real são neutros, pois apenas registram o desempenho realizado.', ok: false,
       why: 'Errada. O ritmo imposto e a exposição do desempenho têm efeito documentado.' },

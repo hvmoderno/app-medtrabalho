@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-2.4-040', tema: '2.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Trabalhador de frigorífico apresenta febre prolongada, sudorese noturna, artralgia e hepatoesplenomegalia, com história de manipulação de vísceras de bovinos. Sobre a hipótese, é CORRETO afirmar:',
   alts: [
-    { t: 'Considerar brucelose, zoonose de contato com tecidos e secreções de animais infectados', ok: true,
+    { t: 'Considerar brucelose, zoonose adquirida pelo contato com tecidos e secreções de animais infectados', ok: true,
       why: 'Correta. O quadro febril prolongado e inespecífico atrasa o diagnóstico.' },
     { t: 'Afastar zoonose ocupacional, por não haver relato de mordedura de animal no período de trabalho.', ok: false,
       why: 'Errada. O contato com tecidos e secreções é a via principal na brucelose.' },

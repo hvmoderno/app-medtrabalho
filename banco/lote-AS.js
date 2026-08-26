@@ -113,7 +113,7 @@ window.BANCO.push(
 { id: 'q-4.4-140', tema: '4.4', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o retorno ao trabalho de trabalhador com dermatose ocupacional em mãos, é CORRETO afirmar:',
   alts: [
-    { t: 'Depende de eliminar ou controlar o contato, podendo a luva ser insuficiente pela oclusão.', ok: true,
+    { t: 'Depende de eliminar ou de controlar o contato, podendo a luva ser insuficiente ou agravar pela oclusão', ok: true,
       why: 'Correta. A intervenção que resolve costuma estar no processo, não no equipamento.' },
     { t: 'Depende do controle do contato, resolvendo o uso de luva a maioria dos casos e permitindo retorno imediato.', ok: false,
       why: 'Errada. Pode ser insuficiente e, pela oclusão, agravar a dermatite irritativa.' },

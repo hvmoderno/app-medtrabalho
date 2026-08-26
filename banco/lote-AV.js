@@ -41,7 +41,7 @@ window.BANCO.push(
 { id: 'q-4.4-160', tema: '4.4', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o impacto das dermatoses ocupacionais sobre a vida do trabalhador, é CORRETO afirmar:',
   alts: [
-    { t: 'Quadros visíveis em mãos e face têm repercussão social e psicológica documentada sobre autoestima e relações.', ok: true,
+    { t: 'Quadros visíveis em mãos e face têm repercussão social e psicológica documentada sobre a autoestima e as relações do trabalhador', ok: true,
       why: 'Correta. É dimensão desconsiderada porque a doença raramente incapacita de forma evidente.' },
     { t: 'O impacto se restringe ao aspecto físico da lesão e ao desconforto que ela provoca durante a jornada de trabalho do acometido.', ok: false,
       why: 'Errada. Há repercussão social e psicológica documentada, sobretudo em lesões visíveis.' },
@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-4.5-150', tema: '4.5', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a reabilitação auditiva de trabalhadores com perda induzida por ruído, é CORRETO afirmar:',
   alts: [
-    { t: 'A indicação considera grau e repercussão funcional, a adaptação exige acompanhamento, e o benefício em ambiente ruidoso é limitado.', ok: true,
+    { t: 'A indicação considera o grau e a repercussão funcional, a adaptação exige acompanhamento, e o benefício em ambiente ruidoso é limitado', ok: true,
       why: 'Correta. Amplificar não devolve discriminação nem autoriza voltar à exposição que causou a perda.' },
     { t: 'A indicação considera grau e repercussão funcional, e o uso da prótese permite o retorno do trabalhador à exposição a ruído elevado.', ok: false,
       why: 'Errada. A prótese não protege da progressão e ainda amplifica o próprio ruído ambiente.' },
@@ -95,7 +95,7 @@ window.BANCO.push(
 { id: 'q-4.8-150', tema: '4.8', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o acompanhamento de ex-trabalhadores expostos a agentes cancerígenos, é CORRETO afirmar:',
   alts: [
-    { t: 'Ela depende de o trabalhador saber a que foi exposto, o que torna a entrega dessa informação no desligamento medida concreta.', ok: true,
+    { t: 'Ela depende de o trabalhador saber a que esteve exposto, o que torna a entrega dessa informação no desligamento medida concreta', ok: true,
       why: 'Correta. Quem não sabe a que se expôs não consegue informar isso ao médico daqui a vinte anos.' },
     { t: 'Ela depende da preservação dos registros e é atribuição exclusiva da empresa de origem, que detém a informação sobre as exposições.', ok: false,
       why: 'Errada. Envolve o sistema de saúde, e por isso a informação precisa acompanhar o trabalhador.' },
@@ -113,7 +113,7 @@ window.BANCO.push(
 { id: 'q-5.5-150', tema: '5.5', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a avaliação de capacidade laborativa em trabalhador próximo à idade de aposentadoria, é CORRETO afirmar:',
   alts: [
-    { t: 'Segue os mesmos critérios técnicos de qualquer trabalhador, podendo a idade pesar apenas na viabilidade da reabilitação.', ok: true,
+    { t: 'Segue os mesmos critérios técnicos aplicáveis a qualquer trabalhador, podendo a idade pesar apenas na viabilidade da reabilitação', ok: true,
       why: 'Correta. Idade entra na viabilidade da reabilitação, nunca na conclusão sobre a capacidade.' },
     { t: 'Segue critérios técnicos, e a proximidade da aposentadoria autoriza concluir por incapacidade permanente, dado o curto tempo restante.', ok: false,
       why: 'Errada. A conclusão decorre da avaliação funcional, não do tempo restante de contribuição.' },
@@ -149,7 +149,7 @@ window.BANCO.push(
 { id: 'q-7.4-150', tema: '7.4', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a documentação exigida pelas normas regulamentadoras e sua função, é CORRETO afirmar:',
   alts: [
-    { t: 'Existem para demonstrar o gerenciamento efetivo, e documentação completa com prática divergente não é cumprimento.', ok: true,
+    { t: 'Existem para demonstrar o gerenciamento efetivo, e documentação completa com prática divergente não caracteriza cumprimento', ok: true,
       why: 'Correta. O acidente grave costuma ocorrer em empresa com documentação impecável.' },
     { t: 'Existem para demonstrar o gerenciamento, e a apresentação do conjunto exigido caracteriza o cumprimento das obrigações da empresa.', ok: false,
       why: 'Errada. O cumprimento se demonstra na prática observada, não no arquivo apresentado.' },

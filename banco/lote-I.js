@@ -23,7 +23,7 @@ window.BANCO.push(
 { id: 'q-1.4-021', tema: '1.4', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o dimensionamento e a atuação do serviço especializado em segurança e medicina do trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'O dimensionamento segue o grau de risco e o número de trabalhadores, com atuação integrada.', ok: true,
+    { t: 'O dimensionamento segue o grau de risco e o número de trabalhadores, com atuação integrada', ok: true,
       why: 'Correta. A equipe é multiprofissional, não uma soma de atendimentos isolados.' },
     { t: 'O dimensionamento depende do número de trabalhadores do estabelecimento onde o serviço atua.', ok: false,
       why: 'Errada. O grau de risco da atividade também determina o dimensionamento.' },
@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-1.6-021', tema: '1.6', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre os Centros de Referência em Saúde do Trabalhador, é CORRETO afirmar:',
   alts: [
-    { t: 'São retaguarda técnica da rede, com apoio matricial, investigação, capacitação e vigilância.', ok: true,
+    { t: 'São retaguarda técnica da rede, com apoio matricial, investigação, capacitação e vigilância', ok: true,
       why: 'Correta. Não são porta de entrada substitutiva da atenção básica.' },
     { t: 'São unidades de referência cuja função principal é o atendimento clínico de todos os trabalhadores.', ok: false,
       why: 'Errada. São retaguarda técnica, não porta de entrada substitutiva.' },
@@ -95,7 +95,7 @@ window.BANCO.push(
 { id: 'q-1.7-021', tema: '1.7', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a atenção básica e a saúde do trabalhador, é CORRETO afirmar:',
   alts: [
-    { t: 'A ocupação deve integrar a anamnese na atenção básica, onde a maioria busca atendimento.', ok: true,
+    { t: 'A ocupação deve integrar a anamnese na atenção básica, onde a maioria busca atendimento', ok: true,
       why: 'Correta. Não perguntar é a principal causa de invisibilidade do nexo.' },
     { t: 'A ocupação importa, devendo os casos suspeitos ser encaminhados sem registro na unidade básica.', ok: false,
       why: 'Errada. O registro e a notificação começam onde o caso é identificado.' },
@@ -149,7 +149,7 @@ window.BANCO.push(
 { id: 'q-1.10-020', tema: '1.10', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Uma empresa lança programa de promoção da saúde com desafio de passos, palestra sobre alimentação e bonificação para quem reduzir o índice de massa corporal. Sobre esse desenho, é CORRETO afirmar:',
   alts: [
-    { t: 'Desloca a responsabilidade ao indivíduo sem tocar em jornada, ritmo, oferta e pausas.', ok: true,
+    { t: 'Desloca a responsabilidade ao indivíduo sem tocar em jornada, ritmo, oferta alimentar e pausas', ok: true,
       why: 'Correta. A bonificação por resultado corporal ainda introduz risco de discriminação.' },
     { t: 'O desenho é adequado, pois atua diretamente sobre fatores de risco individuais modificáveis.', ok: false,
       why: 'Errada. Ignora os determinantes organizacionais do problema.' },
@@ -167,7 +167,7 @@ window.BANCO.push(
 { id: 'q-1.10-021', tema: '1.10', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a confidencialidade em programas de promoção da saúde conduzidos no ambiente de trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'Dados individuais não vão ao empregador, que recebe apenas informação agregada do programa.', ok: true,
+    { t: 'Dados individuais não vão ao empregador, que recebe apenas informação agregada do programa', ok: true,
       why: 'Correta. A participação não pode condicionar desempenho, promoção ou permanência.' },
     { t: 'O empregador que custeia o programa tem direito de acesso aos resultados individuais dos aderentes.', ok: false,
       why: 'Errada. Custeio não confere acesso a dado de saúde individual.' },
@@ -239,7 +239,7 @@ window.BANCO.push(
 { id: 'q-5.3-042', tema: '5.3', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a distinção entre concausa preexistente, concomitante e superveniente, é CORRETO afirmar:',
   alts: [
-    { t: 'Refere-se a quando o fator concorrente atua: antes, junto ou depois do evento.', ok: true,
+    { t: 'Refere-se ao momento em que o fator concorrente atua: antes, junto ou depois do evento', ok: true,
       why: 'Correta. As três podem configurar relação com o trabalho, inclusive a superveniente.' },
     { t: 'Refere-se ao momento de atuação, sendo reconhecida apenas a concausa concomitante ao evento.', ok: false,
       why: 'Errada. As três modalidades são reconhecidas.' },

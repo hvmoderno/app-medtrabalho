@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-7.4-120', tema: '7.4', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre as condições sanitárias e de conforto nos locais de trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'Sanitários, vestiários, local de refeição e água potável têm repercussão direta em saúde.', ok: true,
+    { t: 'Sanitários, vestiários, local para refeição e água potável têm repercussão direta em saúde', ok: true,
       why: 'Correta. Banheiro distante e sujo faz o trabalhador beber menos água.' },
     { t: 'São exigências de conforto do ambiente laboral, sem repercussão clínica sobre os trabalhadores.', ok: false,
       why: 'Errada. Têm repercussão clínica documentada.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-7.8-090', tema: '7.8', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o encarregado de proteção de dados e a governança em serviços de saúde ocupacional, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve indicar canal com titulares, definir acesso e retenção e treinar quem manuseia dados.', ok: true,
+    { t: 'Deve indicar canal com os titulares, definir acesso e retenção e treinar quem manuseia dados', ok: true,
       why: 'Correta. A governança de dados não pode abrir o que o sigilo médico fecha.' },
     { t: 'Deve definir políticas de acesso amplo aos dados de saúde para viabilizar auditorias internas.', ok: false,
       why: 'Errada. O sigilo profissional restringe o acesso mesmo internamente.' },
@@ -149,7 +149,7 @@ window.BANCO.push(
 { id: 'q-7.1-110', tema: '7.1', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o afastamento por doença e a responsabilidade pelo pagamento nos primeiros dias, é CORRETO afirmar:',
   alts: [
-    { t: 'Os primeiros dias cabem ao empregador e o período seguinte à previdência.', ok: true,
+    { t: 'Os primeiros dias de afastamento cabem ao empregador e o período seguinte à previdência', ok: true,
       why: 'Correta. Daí vem boa parte da fricção em torno de atestados de poucos dias.' },
     { t: 'A previdência arca com o afastamento por incapacidade desde o primeiro dia, em qualquer hipótese.', ok: false,
       why: 'Errada. Há período inicial de responsabilidade do empregador.' },
@@ -167,7 +167,7 @@ window.BANCO.push(
 { id: 'q-1.3-130', tema: '1.3', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a leitura crítica de um estudo que sustenta associação entre exposição ocupacional e desfecho, é CORRETO afirmar:',
   alts: [
-    { t: 'Considera delineamento, aferição da exposição, confundimento, magnitude, precisão e coerência.', ok: true,
+    { t: 'Considera delineamento, aferição da exposição, confundimento, magnitude, precisão e coerência externa', ok: true,
       why: 'Correta. Corpo de evidência, não estudo único: nenhum estudo isolado encerra a questão.' },
     { t: 'Considera o delineamento e a magnitude, bastando um estudo bem conduzido para estabelecer causalidade.', ok: false,
       why: 'Errada. A causalidade se sustenta em conjunto de evidências.' },
@@ -293,7 +293,7 @@ window.BANCO.push(
 { id: 'q-1.5-110', tema: '1.5', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a gestão de mudanças em sistemas de segurança e saúde, é CORRETO afirmar:',
   alts: [
-    { t: 'Processo, equipamento, layout, pessoal e organização exigem análise de risco prévia.', ok: true,
+    { t: 'Processo, equipamento, layout, quadro de pessoal e organização exigem análise de risco prévia', ok: true,
       why: 'Correta. Mudança pequena sem análise é origem clássica de evento inesperado.' },
     { t: 'Apenas as mudanças de grande porte exigem análise prévia de risco antes de sua implementação.', ok: false,
       why: 'Errada. Mudanças pequenas frequentemente introduzem riscos não previstos.' },

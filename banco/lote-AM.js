@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-1.8-100', tema: '1.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a inspeção sanitária em ambiente de trabalho e a produção do relatório, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve descrever o observado, as fontes, as inadequações e as medidas exigidas com seus prazos', ok: true,
+    { t: 'Deve descrever o que foi observado, as fontes, as inadequações e as medidas exigidas com seus prazos', ok: true,
       why: 'Correta. O retorno para verificar cumprimento é o que converte inspeção em mudança.' },
     { t: 'Deve descrever o observado e as inadequações, encerrando-se a inspeção com a entrega do relatório.', ok: false,
       why: 'Errada. A verificação do cumprimento é etapa essencial.' },
@@ -95,7 +95,7 @@ window.BANCO.push(
 { id: 'q-1.9-100', tema: '1.9', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a investigação que se segue à notificação de um agravo relacionado ao trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'É o início do processo: cabe investigar a situação de trabalho e verificar outros expostos.', ok: true,
+    { t: 'É o início do processo: cabe investigar a situação de trabalho e verificar os demais expostos', ok: true,
       why: 'Correta. Um caso notificado sinaliza um grupo exposto à mesma condição.' },
     { t: 'É o registro do caso, encerrando a atuação do serviço de saúde sobre aquele agravo notificado.', ok: false,
       why: 'Errada. É o disparador da investigação, não o seu fim.' },
@@ -113,7 +113,7 @@ window.BANCO.push(
 { id: 'q-1.10-100', tema: '1.10', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre ações de promoção da saúde voltadas ao sono de trabalhadores, é CORRETO afirmar:',
   alts: [
-    { t: 'A higiene do sono tem eficácia limitada quando a escala de trabalho impede o descanso adequado', ok: true,
+    { t: 'A higiene do sono tem eficácia limitada quando a escala de trabalho impede o descanso adequado dele', ok: true,
       why: 'Correta. Não há higiene do sono que compense intervalo interjornada insuficiente.' },
     { t: 'As orientações de higiene do sono são suficientes, qualquer que seja a escala de trabalho praticada.', ok: false,
       why: 'Errada. Escala inadequada inviabiliza a aplicação das orientações.' },
@@ -221,7 +221,7 @@ window.BANCO.push(
 { id: 'q-5.2-090', tema: '5.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a análise de nexo em trabalhador com histórico de múltiplos vínculos e exposições em empresas distintas, é CORRETO afirmar:',
   alts: [
-    { t: 'A exposição relevante pode estar em vínculo anterior, exigindo reconstituir a história completa', ok: true,
+    { t: 'A exposição relevante pode estar em vínculo anterior, exigindo reconstituir a história ocupacional', ok: true,
       why: 'Correta. Dificuldade de atribuir a um empregador não é o mesmo que ausência de nexo.' },
     { t: 'A exposição pode estar em vínculo anterior, afastando a natureza ocupacional a impossibilidade de atribuí-la.', ok: false,
       why: 'Errada. São questões distintas: natureza ocupacional e responsabilidade individual.' },
@@ -257,7 +257,7 @@ window.BANCO.push(
 { id: 'q-5.6-100', tema: '5.6', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o retorno gradual ao trabalho como estratégia de reabilitação, é CORRETO afirmar:',
   alts: [
-    { t: 'Consiste em retomada progressiva de carga e de jornada, com acompanhamento e ajustes no processo', ok: true,
+    { t: 'Consiste em retomada progressiva de carga e de jornada, com acompanhamento e ajustes ao longo do processo', ok: true,
       why: 'Correta. Associa-se a melhores desfechos de permanência, sobretudo em osteomusculares e saúde mental.' },
     { t: 'Consiste em retomada progressiva, sem vantagem demonstrada sobre o retorno integral imediato à função.', ok: false,
       why: 'Errada. Há evidência de melhores desfechos de permanência com a retomada progressiva.' },

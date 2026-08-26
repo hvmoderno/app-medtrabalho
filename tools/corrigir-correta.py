@@ -46,13 +46,17 @@ def main():
         if len(novo) > max(erradas) + 16:
             avisos.append(f'{qid}: nova correta longa demais ({len(novo)} vs {max(erradas)})'); continue
 
+        pos = 1 + sum(1 for e in erradas if e > len(novo))
         novo_bloco = bloco[:m.start(1)] + novo + bloco[m.end(1):]
         txt = txt[:ini] + novo_bloco + txt[fim:]
-        feitos.append(qid)
+        feitos.append((qid, len(novo), pos))
 
     if feitos:
         caminho.write_text(txt, encoding='utf-8')
     print(f'corretas ajustadas: {len(feitos)}')
+    for qid, n, pos in feitos:
+        if pos == 5:
+            print(f'  AINDA 5a  {qid} ({n} car)')
     for a in avisos:
         print('  AVISO', a)
 

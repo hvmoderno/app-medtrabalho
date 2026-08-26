@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-2.9-101', tema: '2.9', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a exposição ocupacional a chumbo em atividades de reforma e demolição, é CORRETO afirmar:',
   alts: [
-    { t: 'Tintas antigas contêm chumbo, e lixamento, raspagem e aquecimento geram poeira e fumos absorvíveis.', ok: true,
+    { t: 'As tintas antigas contêm chumbo, e lixamento, raspagem e aquecimento geram poeira e fumos absorvíveis', ok: true,
       why: 'Correta. Ninguém espera exposição a chumbo em obra de reforma, e é onde ela ocorre.' },
     { t: 'A exposição a chumbo se restringe a indústrias de baterias e fundições, onde o metal é processado em massa.', ok: false,
       why: 'Errada. Reforma de estruturas antigas é fonte relevante e subestimada.' },

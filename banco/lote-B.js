@@ -113,7 +113,7 @@ window.BANCO.push(
 { id: 'q-4.8-050', tema: '4.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Trabalhador de indústria de borracha por 20 anos desenvolve carcinoma urotelial de bexiga. Sobre a investigação do nexo, é CORRETO afirmar:',
   alts: [
-    { t: 'Aminas aromáticas têm associação reconhecida, exigindo caracterizar os produtos usados no tempo.', ok: true,
+    { t: 'As aminas aromáticas têm associação reconhecida, exigindo caracterizar os produtos usados ao longo do tempo', ok: true,
       why: 'Correta. A latência é longa e o tabagismo entra como concausa, não como excludente.' },
     { t: 'O câncer de bexiga decorre de fatores individuais e do tabagismo, sem etiologia ocupacional reconhecida.', ok: false,
       why: 'Errada. É um dos cânceres com associação ocupacional mais bem estabelecida.' },
@@ -149,7 +149,7 @@ window.BANCO.push(
 { id: 'q-4.8-052', tema: '4.8', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a comunicação a trabalhadores expostos a agentes cancerígenos, é CORRETO afirmar:',
   alts: [
-    { t: 'Têm direito de saber os agentes, os efeitos potenciais e as medidas de controle adotadas.', ok: true,
+    { t: 'Têm direito de saber os agentes, os efeitos potenciais e as medidas de controle que foram adotadas', ok: true,
       why: 'Correta. Informar é condição para participar da prevenção e reconhecer o próprio histórico depois.' },
     { t: 'Têm direito à informação, que deve omitir a carcinogenicidade para não gerar ansiedade desnecessária.', ok: false,
       why: 'Errada. Omitir risco à própria saúde é insustentável e retira a chance de se proteger.' },

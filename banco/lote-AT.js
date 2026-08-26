@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-5.6-120', tema: '5.6', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a articulação entre reabilitação profissional e a empresa de origem, é CORRETO afirmar:',
   alts: [
-    { t: 'A permanência na origem tende a produzir melhores desfechos por preservar vínculo e conhecimento.', ok: true,
+    { t: 'A permanência na empresa de origem tende a produzir melhores desfechos por preservar vínculo e conhecimento', ok: true,
       why: 'Correta. A recusa da empresa em receber o reabilitado é barreira que precisa ser enfrentada.' },
     { t: 'A recolocação em nova empresa apresenta melhores resultados do que a permanência na empresa de origem.', ok: false,
       why: 'Errada. A permanência preserva vínculo e conhecimento do ambiente, favorecendo o desfecho.' },
@@ -113,7 +113,7 @@ window.BANCO.push(
 { id: 'q-6.2-130', tema: '6.2', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o exame admissional de candidato com deficiência encaminhado à vaga reservada, é CORRETO afirmar:',
   alts: [
-    { t: 'Verifica compatibilidade com adaptações razoáveis, e a inaptidão exige incompatibilidade insuperável.', ok: true,
+    { t: 'Verifica a compatibilidade com adaptações razoáveis, e a inaptidão exige incompatibilidade insuperável', ok: true,
       why: 'Correta. Sem essa exigência, o exame vira filtro que esvazia a reserva de vagas.' },
     { t: 'Verifica a compatibilidade com a função, bastando a constatação da deficiência para concluir pela inaptidão.', ok: false,
       why: 'Errada. É preciso demonstrar incompatibilidade insuperável por adaptação.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-6.3-130', tema: '6.3', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a avaliação cardiovascular em trabalhadores de funções de alta exigência física, é CORRETO afirmar:',
   alts: [
-    { t: 'Considera a estratificação individual e as exigências reais, incluindo esforço, calor e equipamentos.', ok: true,
+    { t: 'Considera a estratificação individual e as exigências reais, incluindo esforço, calor e equipamentos', ok: true,
       why: 'Correta. Roupa de proteção e calor somam carga cardiovascular relevante e mensurável.' },
     { t: 'Considera a estratificação de risco individual, independendo das exigências concretas da função exercida.', ok: false,
       why: 'Errada. É a exigência da função que define o que precisa ser avaliado.' },
@@ -185,7 +185,7 @@ window.BANCO.push(
 { id: 'q-7.4-130', tema: '7.4', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre os requisitos aplicáveis a caldeiras, vasos de pressão e tubulações, é CORRETO afirmar:',
   alts: [
-    { t: 'Exigem inspeção periódica por habilitado, histórico documentado e capacitação dos operadores.', ok: true,
+    { t: 'Exigem inspeção periódica por profissional habilitado, histórico documentado e capacitação dos operadores', ok: true,
       why: 'Correta. É risco de evento raro e de consequência devastadora, muito além do operador.' },
     { t: 'Exigem inspeção periódica, que pode ser realizada por qualquer profissional da equipe de manutenção.', ok: false,
       why: 'Errada. Exige-se profissional legalmente habilitado.' },

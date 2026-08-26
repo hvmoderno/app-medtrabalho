@@ -41,7 +41,7 @@ window.BANCO.push(
 { id: 'q-4.8-053', tema: '4.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a vigilância de trabalhadores expostos a agentes cancerígenos, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve continuar após o fim da exposição, porque a latência pode ultrapassar décadas.', ok: true,
+    { t: 'Deve continuar após o fim da exposição, porque a latência pode ultrapassar décadas', ok: true,
       why: 'Correta. O registro histórico é o que permite relacionar o câncer ao trabalho anterior.' },
     { t: 'Pode ser encerrado com o fim da exposição, quando cessa o acréscimo de dose ao trabalhador.', ok: false,
       why: 'Errada. A latência longa é a razão do acompanhamento posterior.' },
@@ -95,7 +95,7 @@ window.BANCO.push(
 { id: 'q-2.9-051', tema: '2.9', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o efeito da exposição simultânea a mais de um agente químico, é CORRETO afirmar:',
   alts: [
-    { t: 'Agentes com o mesmo alvo tendem a efeito aditivo, exigindo somar as frações de exposição.', ok: true,
+    { t: 'Agentes com o mesmo órgão-alvo tendem a efeito aditivo, exigindo somar as frações de exposição', ok: true,
       why: 'Correta. Comparar cada um isoladamente ao seu limite subestima a mistura.' },
     { t: 'Cada agente da mistura deve ser avaliado isoladamente contra seu próprio limite de exposição.', ok: false,
       why: 'Errada. Efeitos aditivos sobre o mesmo alvo exigem soma das frações.' },

@@ -23,7 +23,7 @@ window.BANCO.push(
 { id: 'q-7.4-041', tema: '7.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a caracterização de insalubridade por agente para o qual não há limite de tolerância fixado em norma, é CORRETO afirmar:',
   alts: [
-    { t: 'Há anexos de avaliação qualitativa, baseada em inspeção e na natureza da atividade.', ok: true,
+    { t: 'Há anexos de avaliação qualitativa, baseada na inspeção do local e na natureza da atividade', ok: true,
       why: 'Correta. Nem toda insalubridade se caracteriza por medição, como nos agentes biológicos.' },
     { t: 'Há limites de tolerância para os agentes listados, sem os quais é impossível caracterizar insalubridade.', ok: false,
       why: 'Errada. A avaliação qualitativa existe justamente para essas hipóteses.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-4.4-051', tema: '4.4', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o diagnóstico diferencial entre dermatose ocupacional e dermatose comum agravada pelo trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'A distinção muda o enquadramento do nexo, mas em ambos há relação com o trabalho.', ok: true,
+    { t: 'A distinção muda o enquadramento do nexo, mas em ambos os casos há relação com o trabalho', ok: true,
       why: 'Correta. O enquadramento muda; a necessidade de afastar o agente, não.' },
     { t: 'A distinção importa, pois dermatose preexistente agravada não guarda relação com o trabalho.', ok: false,
       why: 'Errada. É hipótese expressa de doença relacionada ao trabalho por agravamento.' },

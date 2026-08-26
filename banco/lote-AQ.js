@@ -23,7 +23,7 @@ window.BANCO.push(
 { id: 'q-4.5-120', tema: '4.5', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o uso de comunicação e a percepção de sinais sonoros em ambientes ruidosos, é CORRETO afirmar:',
   alts: [
-    { t: 'Perda auditiva e superproteção comprometem a percepção de alarmes, exigindo sinalização visual complementar.', ok: true,
+    { t: 'Perda auditiva e superproteção comprometem a percepção de alarmes, exigindo sinalização visual como complemento', ok: true,
       why: 'Correta. Superproteção transforma proteção auditiva em risco de acidente.' },
     { t: 'A percepção de alarmes melhora com a atenuação, sendo o protetor de maior atenuação preferível em qualquer situação.', ok: false,
       why: 'Errada. Atenuação excessiva prejudica comunicação e percepção de alertas.' },
@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-4.9-110', tema: '4.9', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre doenças infecciosas em trabalhadores que viajam a serviço, é CORRETO afirmar:',
   alts: [
-    { t: 'A orientação pré-viagem integra o cuidado ocupacional, e a doença adquirida a serviço pode ter nexo.', ok: true,
+    { t: 'A orientação pré-viagem integra o cuidado ocupacional, e a doença adquirida a serviço pode ter nexo com ele', ok: true,
       why: 'Correta. Deslocamento a serviço é exposição decorrente do trabalho.' },
     { t: 'A orientação pré-viagem integra o cuidado, mas doenças adquiridas em viagem não guardam relação com o trabalho.', ok: false,
       why: 'Errada. A exposição decorre do deslocamento determinado pelo trabalho.' },
@@ -113,7 +113,7 @@ window.BANCO.push(
 { id: 'q-4.7-120', tema: '4.7', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a atuação do serviço de saúde ocupacional após evento crítico que afeta uma equipe, é CORRETO afirmar:',
   alts: [
-    { t: 'Envolve acolhimento, identificação de maior risco, encaminhamento e seguimento por semanas.', ok: true,
+    { t: 'Envolve acolhimento, identificação de quem tem maior risco, encaminhamento e seguimento por semanas', ok: true,
       why: 'Correta. Sessão única obrigatória logo após o evento não é a intervenção recomendada.' },
     { t: 'Envolve sessão única obrigatória de relato detalhado do ocorrido, logo após o evento, com toda a equipe.', ok: false,
       why: 'Errada. Intervenção única e obrigatória com reexposição detalhada não é recomendada.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-5.2-100', tema: '5.2', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a atuação do médico assistente na caracterização de doença relacionada ao trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'Pode registrar a suspeita, emitir a comunicação de acidente quando cabível e notificar o agravo.', ok: true,
+    { t: 'Pode registrar a suspeita no prontuário, emitir a comunicação de acidente quando cabível e notificar o agravo', ok: true,
       why: 'Correta. O assistente é legitimado para a comunicação e obrigado à notificação.' },
     { t: 'Pode registrar a suspeita no prontuário, sendo a caracterização da relação com o trabalho do médico do trabalho.', ok: false,
       why: 'Errada. Qualquer médico pode e deve registrar a suspeita e notificar.' },
@@ -149,7 +149,7 @@ window.BANCO.push(
 { id: 'q-5.3-110', tema: '5.3', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a concausa e o agravamento de condição preexistente por acidente do trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'O acidente que agrava condição prévia configura relação com o trabalho quanto ao agravamento.', ok: true,
+    { t: 'O acidente que agrava condição prévia configura relação com o trabalho quanto a esse agravamento', ok: true,
       why: 'Correta. Reconhecido o agravamento, os efeitos são integrais, sem fracionamento.' },
     { t: 'O acidente pode agravar condição prévia, afastando a preexistência a relação com o evento ocorrido.', ok: false,
       why: 'Errada. O agravamento é hipótese expressa de concausa.' },

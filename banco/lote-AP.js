@@ -23,7 +23,7 @@ window.BANCO.push(
 { id: 'q-2.2-131', tema: '2.2', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o controle de ruído na fonte e na trajetória, é CORRETO afirmar:',
   alts: [
-    { t: 'Substituição, manutenção, amortecimento e enclausuramento atuam antes do trabalhador.', ok: true,
+    { t: 'Substituição, manutenção, amortecimento e enclausuramento atuam antes de o ruído chegar ao trabalhador', ok: true,
       why: 'Correta. Controle na fonte protege também quem não está usando protetor.' },
     { t: 'A proteção individual, quando fornecida a todos, protege o conjunto dos trabalhadores do setor.', ok: false,
       why: 'Errada. Protege apenas quem a usa corretamente.' },
@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-2.4-130', tema: '2.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o descarte e o manuseio de perfurocortantes em serviços de saúde, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve ser imediato, no ponto de uso, em recipiente rígido e bem posicionado.', ok: true,
+    { t: 'Deve ser imediato, no ponto de uso, em recipiente rígido e devidamente posicionado no local', ok: true,
       why: 'Correta. Recipiente longe do leito produz transporte de agulha, e é aí que o acidente ocorre.' },
     { t: 'Deve ser feito em recipiente rígido, ao término do conjunto de procedimentos realizados no leito.', ok: false,
       why: 'Errada. O acúmulo e o transporte do material aumentam o risco.' },
@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-2.6-130', tema: '2.6', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre os limites de exposição para agentes com efeito sensibilizante, é CORRETO afirmar:',
   alts: [
-    { t: 'Indica indução de resposta imunológica, e o limite não protege o já sensibilizado.', ok: true,
+    { t: 'Indica indução de resposta imunológica, e o limite não protege quem já se sensibilizou', ok: true,
       why: 'Correta. O sensibilizado pode reagir a concentrações muito abaixo do valor tabelado.' },
     { t: 'Indica risco de resposta imunológica, protegendo o limite igualmente sensibilizados e não sensibilizados.', ok: false,
       why: 'Errada. O sensibilizado pode reagir muito abaixo do limite.' },
@@ -113,7 +113,7 @@ window.BANCO.push(
 { id: 'q-2.9-130', tema: '2.9', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a exposição ocupacional a hidrocarbonetos aromáticos policíclicos, é CORRETO afirmar:',
   alts: [
-    { t: 'Estão em fumos de asfalto e fuligem, são cancerígenos e absorvidos também pela pele.', ok: true,
+    { t: 'Estão em fumos de asfalto e em fuligem, são cancerígenos e absorvidos também pela pele', ok: true,
       why: 'Correta. A via cutânea muda as medidas: higiene e troca de vestimenta entram no controle.' },
     { t: 'Estão em fumos de asfalto e fuligem, com exposição ocorrendo exclusivamente por via respiratória.', ok: false,
       why: 'Errada. A absorção cutânea é relevante e frequentemente subestimada.' },

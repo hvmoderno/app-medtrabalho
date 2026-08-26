@@ -113,7 +113,7 @@ window.BANCO.push(
 { id: 'q-3.1-039', tema: '3.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Ao avaliar uma atividade de levantamento manual de cargas, o ergonomista observa que a carga é levantada do chão, com torção de tronco e a 40 vezes por hora. Sobre a análise, é CORRETO afirmar:',
   alts: [
-    { t: 'O risco não é só o peso: altura, distância, torção, frequência, duração e pega o compõem.', ok: true,
+    { t: 'O risco não é só o peso: altura, distância, torção, frequência, duração e qualidade da pega o compõem', ok: true,
       why: 'Correta. A torção associada à alta frequência agrava substancialmente a carga.' },
     { t: 'O peso da carga define o risco, não havendo o que considerar quando está abaixo do recomendado.', ok: false,
       why: 'Errada. Altura, distância, torção e frequência compõem o risco mesmo com peso baixo.' },

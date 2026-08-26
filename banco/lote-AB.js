@@ -167,7 +167,7 @@ window.BANCO.push(
 { id: 'q-7.8-050', tema: '7.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre incidentes de segurança envolvendo dados de saúde de trabalhadores, é CORRETO afirmar:',
   alts: [
-    { t: 'Incidentes com risco relevante são comunicados à autoridade e aos afetados, e ter plano de resposta prévio reduz o dano e o tempo de reação.', ok: true,
+    { t: 'Incidentes com risco relevante são comunicados à autoridade e aos afetados, e ter um plano de resposta definido de antemão reduz o dano e o tempo de reação', ok: true,
       why: 'Correta. O critério é o risco relevante, e dado de saúde é sensível por definição.' },
     { t: 'Incidentes são comunicados à autoridade e aos afetados somente quando houver dano financeiro comprovado a algum dos titulares atingidos pelo vazamento.', ok: false,
       why: 'Errada. O critério é o risco relevante, e o dano típico aqui é discriminação e constrangimento.' },

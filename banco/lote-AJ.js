@@ -41,7 +41,7 @@ window.BANCO.push(
 { id: 'q-2.4-110', tema: '2.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a exposição a bioaerossóis em ambientes climatizados de trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'Sistemas mal mantidos disseminam fungos e bactérias, de rinite a pneumonite e legionelose.', ok: true,
+    { t: 'Sistemas mal mantidos disseminam fungos e bactérias, de irritação e rinite a pneumonite e legionelose', ok: true,
       why: 'Correta. O ar-condicionado vira fonte quando não recebe manutenção.' },
     { t: 'A climatização filtra o ar e elimina o risco biológico do ambiente interno onde é instalada.', ok: false,
       why: 'Errada. Sem manutenção, ela se torna fonte de disseminação.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-2.3-111', tema: '2.3', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a ficha de informações de segurança de produtos químicos, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve estar acessível no local de uso, em português, e orienta a seleção dos equipamentos', ok: true,
+    { t: 'Deve estar acessível no local de uso, redigida em português, e orienta a seleção dos equipamentos', ok: true,
       why: 'Correta. Ficha guardada em armário trancado não cumpre função alguma.' },
     { t: 'É documento de arquivo do setor de segurança, destinado a apresentação em caso de fiscalização.', ok: false,
       why: 'Errada. É documento de consulta pelos trabalhadores no local de uso.' },

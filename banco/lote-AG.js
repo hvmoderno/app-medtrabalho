@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-7.6-060', tema: '7.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a publicidade e a divulgação de informações pelo médico do trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'É vedada a divulgação que identifique trabalhadores, e o empregador não supre o consentimento.', ok: true,
+    { t: 'É vedada a divulgação que permita identificar trabalhadores, e o empregador não supre o consentimento', ok: true,
       why: 'Correta. Quem autoriza o uso da própria informação de saúde é o titular.' },
     { t: 'É vedada a divulgação identificável, salvo com autorização do empregador responsável pelo serviço médico.', ok: false,
       why: 'Errada. O empregador não é titular da informação de saúde do trabalhador.' },

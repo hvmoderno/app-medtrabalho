@@ -5,7 +5,7 @@ window.BANCO.push(
 { id: 'q-2.2-150', tema: '2.2', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a exposição a pressões anormais em trabalho subaquático, é CORRETO afirmar:',
   alts: [
-    { t: 'Exige avaliação específica, controle de tempo e profundidade e registro dos perfis de mergulho.', ok: true,
+    { t: 'Exige avaliação médica específica, controle de tempo e profundidade e registro dos perfis de mergulho', ok: true,
       why: 'Correta. Sem registro dos perfis, não há como avaliar a exposição acumulada.' },
     { t: 'Exige avaliação específica e tabelas de descompressão, sendo dispensável o registro individual dos perfis.', ok: false,
       why: 'Errada. É a base para avaliar exposição acumulada e investigar agravos tardios.' },
@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-2.6-150', tema: '2.6', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a comparação entre limites nacionais e referências técnicas internacionais, é CORRETO afirmar:',
   alts: [
-    { t: 'Divergências são frequentes, cabendo ao serviço adotar o critério mais protetor entre eles.', ok: true,
+    { t: 'As divergências são frequentes, cabendo ao serviço adotar o critério mais protetor entre os dois', ok: true,
       why: 'Correta. Nada impede adotar o critério mais protetor, e é o que a técnica recomenda.' },
     { t: 'Divergências são frequentes, sendo irregular a adoção de critério mais protetor que o normativo.', ok: false,
       why: 'Errada. É permitida e tecnicamente recomendável.' },
@@ -149,7 +149,7 @@ window.BANCO.push(
 { id: 'q-4.8-140', tema: '4.8', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a comunicação de risco a trabalhadores expostos a agentes cancerígenos, é CORRETO afirmar:',
   alts: [
-    { t: 'Devem ser informados da natureza cancerígena, das medidas e do acompanhamento posterior.', ok: true,
+    { t: 'Devem ser informados da natureza cancerígena do agente, das medidas e do acompanhamento posterior', ok: true,
       why: 'Correta. Informar mal produz negação ou fatalismo, e ambos afastam da prevenção.' },
     { t: 'Devem ser informados das medidas adotadas, omitida a natureza cancerígena para evitar ansiedade.', ok: false,
       why: 'Errada. A omissão retira do trabalhador a base para se proteger e buscar direitos.' },
@@ -167,7 +167,7 @@ window.BANCO.push(
 { id: 'q-4.10-130', tema: '4.10', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a cobertura vacinal em grupos de trabalhadores e sua avaliação, é CORRETO afirmar:',
   alts: [
-    { t: 'A cobertura deve ser avaliada por grupo de risco, e não apenas em números globais.', ok: true,
+    { t: 'A cobertura vacinal deve ser avaliada por grupo de risco, e não apenas em números globais da empresa', ok: true,
       why: 'Correta. A média esconde o setor descoberto, que costuma ser o de maior exposição.' },
     { t: 'A cobertura vacinal global da empresa é indicador suficiente para avaliar o programa implantado.', ok: false,
       why: 'Errada. Esconde diferenças entre grupos de risco.' },
@@ -257,7 +257,7 @@ window.BANCO.push(
 { id: 'q-7.2-140', tema: '7.2', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o requerimento administrativo e o acesso do trabalhador aos benefícios, é CORRETO afirmar:',
   alts: [
-    { t: 'Orientar sobre o direito, os documentos e os prazos integra o cuidado ao trabalhador.', ok: true,
+    { t: 'Orientar sobre a existência do direito, os documentos e os prazos integra o cuidado ao trabalhador', ok: true,
       why: 'Correta. Desconhecimento é barreira real, e orientar não é interferência indevida.' },
     { t: 'A orientação sobre direitos previdenciários está fora do escopo do cuidado médico prestado.', ok: false,
       why: 'Errada. Integra o cuidado, sobretudo em agravos relacionados ao trabalho.' },
@@ -437,7 +437,7 @@ window.BANCO.push(
 { id: 'q-1.10-120', tema: '1.10', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a articulação entre promoção da saúde e prevenção de riscos ocupacionais, é CORRETO afirmar:',
   alts: [
-    { t: 'São complementares e não substitutivas: a promoção não pode ocupar o espaço da prevenção.', ok: true,
+    { t: 'São complementares e não substitutivas: a promoção não pode ocupar o espaço da prevenção de riscos', ok: true,
       why: 'Correta. Promoção não compensa exposição não controlada.' },
     { t: 'São abordagens equivalentes, podendo os programas de promoção substituir o controle de exposições.', ok: false,
       why: 'Errada. São complementares, com objetos distintos.' },

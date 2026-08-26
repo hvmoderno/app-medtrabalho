@@ -95,7 +95,7 @@ window.BANCO.push(
 { id: 'q-5.5-100', tema: '5.5', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a avaliação de capacidade em trabalhadores com dor crônica musculoesquelética, é CORRETO afirmar:',
   alts: [
-    { t: 'O desempenho varia ao longo do dia, exigindo avaliar a sustentabilidade da atividade na jornada.', ok: true,
+    { t: 'O desempenho varia ao longo do dia, exigindo avaliar a sustentabilidade da atividade em toda a jornada', ok: true,
       why: 'Correta. Conseguir executar o gesto uma vez não é o mesmo que sustentar por oito horas.' },
     { t: 'O desempenho observado no exame demonstra aptidão para a jornada completa quando o movimento é executado.', ok: false,
       why: 'Errada. Repetição e sustentação ao longo do turno é o que determina a viabilidade.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-4.10-090', tema: '4.10', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a vacinação de trabalhadores expostos a risco de exposição a agentes de zoonoses, é CORRETO afirmar:',
   alts: [
-    { t: 'É indicada aos grupos com exposição continuada a animais, sem dispensar a conduta pós-exposição', ok: true,
+    { t: 'É indicada aos grupos com exposição continuada a animais, sem dispensar a conduta pós-exposição devida', ok: true,
       why: 'Correta. A pré-exposição simplifica a conduta posterior, mas não a elimina.' },
     { t: 'É indicada a grupos com exposição continuada a animais e elimina a necessidade de conduta após acidente.', ok: false,
       why: 'Errada. A conduta pós-exposição permanece, ainda que simplificada.' },

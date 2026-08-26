@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-1.7-090', tema: '1.7', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a regionalização e a hierarquização aplicadas às ações de saúde do trabalhador, é CORRETO afirmar:',
   alts: [
-    { t: 'A rede regionalizada oferta ações de maior complexidade em base regional, apoiando as locais.', ok: true,
+    { t: 'A rede regionalizada oferta as ações de maior complexidade em base regional, apoiando as unidades locais', ok: true,
       why: 'Correta. Município pequeno não sustenta estrutura própria; a base regional resolve.' },
     { t: 'Cada município deve dispor de estrutura completa e autônoma de vigilância em saúde do trabalhador.', ok: false,
       why: 'Errada. A regionalização existe para viabilizar o que o município isolado não sustenta.' },
@@ -149,7 +149,7 @@ window.BANCO.push(
 { id: 'q-2.8-080', tema: '2.8', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a higienização, a guarda e a manutenção de respiradores, é CORRETO afirmar:',
   alts: [
-    { t: 'Exigem higienização e inspeção periódicas e guarda protegida de contaminação e de deformação', ok: true,
+    { t: 'Exigem higienização e inspeção periódicas e guarda protegida de contaminação, umidade e deformação', ok: true,
       why: 'Correta. Respirador guardado dobrado dentro do armário perde vedação.' },
     { t: 'Exigem higienização e inspeção periódicas, sem que a forma de guarda influencie seu desempenho.', ok: false,
       why: 'Errada. Deformação e contaminação comprometem vedação e proteção.' },

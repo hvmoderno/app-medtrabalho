@@ -5,7 +5,7 @@ window.BANCO.push(
 { id: 'q-4.4-120', tema: '4.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o teste de contato aplicado à investigação de dermatoses ocupacionais, é CORRETO afirmar:',
   alts: [
-    { t: 'Identifica sensibilização, mas a bateria padrão pode não conter o agente do trabalho, que exige preparo adequado.', ok: true,
+    { t: 'Identifica sensibilização, mas a bateria padrão pode não conter o agente do trabalho, que exige preparo adequado antes', ok: true,
       why: 'Correta. Testar material bruto do trabalho sem diluição pode causar sensibilização ativa.' },
     { t: 'Identifica sensibilização por meio de bateria padrão que cobre os principais agentes ocupacionais de qualquer atividade.', ok: false,
       why: 'Errada. Muitos agentes ocupacionais específicos não constam da bateria padrão.' },

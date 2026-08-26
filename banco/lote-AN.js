@@ -41,7 +41,7 @@ window.BANCO.push(
 { id: 'q-2.4-120', tema: '2.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a exposição a agentes biológicos em atividades de campo e trabalho rural, é CORRETO afirmar:',
   alts: [
-    { t: 'Além das zoonoses há acidentes com animais peçonhentos, o que exige fluxo definido e articulação prévia com a rede que dispõe de soro.', ok: true,
+    { t: 'Além das zoonoses há acidentes com animais peçonhentos, o que exige fluxo definido e articulação prévia com a rede que dispõe do soro', ok: true,
       why: 'Correta. Saber de antemão onde há soro é o que economiza tempo no acidente, sobretudo em frente distante.' },
     { t: 'Há exposição a zoonoses por contato com tecidos e secreções, ficando os acidentes com animais peçonhentos fora do escopo da saúde ocupacional rural.', ok: false,
       why: 'Errada. São agravos ocupacionais frequentes nessas atividades e entram no planejamento.' },
@@ -149,7 +149,7 @@ window.BANCO.push(
 { id: 'q-2.8-100', tema: '2.8', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o fator de proteção atribuído aos respiradores e sua aplicação prática, é CORRETO afirmar:',
   alts: [
-    { t: 'Expressa a redução de concentração esperada de um tipo de respirador sob programa adequado, e não dispensa os controles na fonte.', ok: true,
+    { t: 'Expressa a redução de concentração esperada de um determinado tipo de respirador sob programa adequado, e não dispensa os controles na fonte', ok: true,
       why: 'Correta. O fator pressupõe o programa funcionando; sem ele é número de catálogo, não proteção.' },
     { t: 'Expressa a redução de concentração que cada usuário obtém individualmente, sendo garantida pelo certificado de aprovação do equipamento.', ok: false,
       why: 'Errada. É valor esperado em condições adequadas, com variação individual significativa.' },
