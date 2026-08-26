@@ -5,7 +5,7 @@ window.BANCO.push(
 { id: 'q-5.4-052', tema: '5.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Em perícia judicial, o assistente técnico de uma das partes apresenta parecer divergente do laudo pericial. Sobre a conduta do perito, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve responder tecnicamente aos pontos divergentes, mantendo ou revendo conforme o mérito.', ok: true,
+    { t: 'Deve responder tecnicamente aos pontos divergentes, mantendo ou revendo a conclusão conforme o mérito', ok: true,
       why: 'Correta. A revisão fundamentada não desabona o laudo; recusar-se a enfrentar, sim.' },
     { t: 'Deve ignorar o parecer apresentado, por ser peça produzida por parte interessada no resultado.', ok: false,
       why: 'Errada. É elemento legítimo que precisa ser enfrentado tecnicamente.' },
@@ -41,7 +41,7 @@ window.BANCO.push(
 { id: 'q-4.8-053', tema: '4.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a vigilância de trabalhadores expostos a agentes cancerígenos, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve continuar após o fim da exposição, porque a latência pode ultrapassar décadas', ok: true,
+    { t: 'Deve continuar após o fim da exposição, porque a latência desses agravos pode ultrapassar décadas', ok: true,
       why: 'Correta. O registro histórico é o que permite relacionar o câncer ao trabalho anterior.' },
     { t: 'Pode ser encerrado com o fim da exposição, quando cessa o acréscimo de dose ao trabalhador.', ok: false,
       why: 'Errada. A latência longa é a razão do acompanhamento posterior.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-4.3-050', tema: '4.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a asma relacionada ao trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'Abrange a asma com sensibilização a agente do trabalho e a preexistente agravada por ele.', ok: true,
+    { t: 'Abrange a asma com sensibilização a agente do trabalho e também a preexistente agravada por ele', ok: true,
       why: 'Correta. Melhora no afastamento com piora no retorno é achado de alto valor.' },
     { t: 'Abrange apenas a asma com sensibilização comprovada a agente específico do ambiente de trabalho.', ok: false,
       why: 'Errada. A asma agravada pelo trabalho também é relacionada a ele.' },
@@ -149,7 +149,7 @@ window.BANCO.push(
 { id: 'q-4.3-051', tema: '4.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a doença pulmonar obstrutiva crônica de origem ocupacional, é CORRETO afirmar:',
   alts: [
-    { t: 'Parcela relevante tem contribuição ocupacional por poeiras, gases, fumos e vapores.', ok: true,
+    { t: 'Parcela relevante dos casos tem contribuição ocupacional por poeiras, gases, fumos e vapores', ok: true,
       why: 'Correta. O tabagismo é fator concorrente, e não excludente.' },
     { t: 'A doença decorre do tabagismo, que afasta a contribuição ocupacional para o quadro obstrutivo.', ok: false,
       why: 'Errada. É fator concorrente e não exclui a contribuição do trabalho.' },

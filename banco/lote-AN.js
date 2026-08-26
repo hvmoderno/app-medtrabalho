@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-2.7-100', tema: '2.7', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a estratégia de amostragem definida em procedimentos técnicos padronizados de higiene ocupacional, é CORRETO afirmar:',
   alts: [
-    { t: 'Define quantas amostras, em quem e em que condições coletar, para representar a exposição do grupo com um nível de confiança conhecido', ok: true,
+    { t: 'Define quantas amostras, em quem e em que condições coletar, de modo a representar a exposição do grupo com um nível de confiança conhecido', ok: true,
       why: 'Correta. É a estratégia que transforma medições isoladas em caracterização do grupo.' },
     { t: 'Define as condições da coleta, sendo uma amostra por grupo homogêneo suficiente para caracterizar a exposição de todos os seus integrantes.', ok: false,
       why: 'Errada. Uma amostra não permite avaliar a variabilidade nem sustentar conclusão sobre o grupo.' },

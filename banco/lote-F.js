@@ -5,7 +5,7 @@ window.BANCO.push(
 { id: 'q-4.1-039', tema: '4.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Ao avaliar se determinada doença pode ser reconhecida como relacionada ao trabalho, o médico consulta as listas do anexo do regulamento previdenciário. Sobre essas listas, é CORRETO afirmar:',
   alts: [
-    { t: 'Uma lista vai do agente à doença e outra da doença ao agente, apoiando o raciocínio de nexo.', ok: true,
+    { t: 'Uma lista vai do agente à doença e outra da doença ao agente, apoiando o raciocínio de nexo causal', ok: true,
       why: 'Correta. São instrumentos de apoio, que não esgotam as possibilidades de reconhecimento.' },
     { t: 'São listas taxativas, de modo que doença não listada não pode ser reconhecida como ocupacional.', ok: false,
       why: 'Errada. O reconhecimento no caso concreto é possível fora delas.' },
@@ -113,7 +113,7 @@ window.BANCO.push(
 { id: 'q-5.6-040', tema: '5.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o papel da empresa no processo de reabilitação profissional conduzido pela Previdência, é CORRETO afirmar:',
   alts: [
-    { t: 'Participa informando as funções e suas exigências, viabilizando treinamento e reintegrando.', ok: true,
+    { t: 'Participa informando as funções e suas exigências, viabilizando o treinamento e reintegrando depois', ok: true,
       why: 'Correta. Sua omissão compromete o programa e tem repercussões próprias.' },
     { t: 'Não participa do processo, conduzido integralmente pela previdência com seus próprios recursos.', ok: false,
       why: 'Errada. A informação sobre as funções disponíveis é elemento central.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-5.6-041', tema: '5.6', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o retorno ao trabalho de trabalhador que permaneceu afastado por período muito prolongado, é CORRETO afirmar:',
   alts: [
-    { t: 'Exigem atenção à reaclimatação, à readaptação ao ritmo e à reinserção social na equipe.', ok: true,
+    { t: 'Exigem atenção à reaclimatação física, à readaptação ao ritmo e à reinserção social na equipe', ok: true,
       why: 'Correta. A retomada abrupta da carga plena é fator de risco para nova falha.' },
     { t: 'Exigem retorno com carga plena desde o primeiro dia, para não gerar tratamento diferenciado.', ok: false,
       why: 'Errada. A retomada progressiva melhora os desfechos de permanência.' },

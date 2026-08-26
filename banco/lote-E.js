@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-3.1-040', tema: '3.1', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o mobiliário do posto de trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'A regulagem deve cobrir a variabilidade antropométrica, e fornecer o mobiliário não basta.', ok: true,
+    { t: 'A regulagem deve cobrir a variabilidade antropométrica, e fornecer o mobiliário regulável não basta', ok: true,
       why: 'Correta. É preciso orientar sobre o ajuste e verificar se ele é usado.' },
     { t: 'A regulagem cobre a variabilidade, dispensando o mobiliário regulável orientação ao trabalhador.', ok: false,
       why: 'Errada. Sem orientação, o ajuste não é feito e o recurso se perde.' },

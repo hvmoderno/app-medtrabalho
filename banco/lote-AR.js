@@ -149,7 +149,7 @@ window.BANCO.push(
 { id: 'q-7.1-110', tema: '7.1', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o afastamento por doença e a responsabilidade pelo pagamento nos primeiros dias, é CORRETO afirmar:',
   alts: [
-    { t: 'Os primeiros dias de afastamento cabem ao empregador e o período seguinte cabe à previdência', ok: true,
+    { t: 'Os primeiros quinze dias de afastamento cabem ao empregador e o período seguinte cabe à previdência', ok: true,
       why: 'Correta. Daí vem boa parte da fricção em torno de atestados de poucos dias.' },
     { t: 'A previdência arca com o afastamento por incapacidade desde o primeiro dia, em qualquer hipótese.', ok: false,
       why: 'Errada. Há período inicial de responsabilidade do empregador.' },
@@ -275,7 +275,7 @@ window.BANCO.push(
 { id: 'q-1.10-110', tema: '1.10', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre programas de alimentação do trabalhador e sua relação com a saúde, é CORRETO afirmar:',
   alts: [
-    { t: 'Oferta alimentar, tempo real de refeição e condições do local influenciam o padrão alimentar', ok: true,
+    { t: 'A oferta alimentar, o tempo real de refeição e as condições do local influenciam o padrão alimentar', ok: true,
       why: 'Correta. Não há escolha alimentar quando o intervalo real é de quinze minutos.' },
     { t: 'O padrão alimentar do trabalhador depende das escolhas individuais que ele faz durante a jornada.', ok: false,
       why: 'Errada. Oferta, tempo e local condicionam fortemente a escolha.' },

@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-1.2-031', tema: '1.2', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a determinação social do processo saúde-doença aplicada ao trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'Sustenta que o adoecimento se explica por determinantes sociais e pela organização do trabalho', ok: true,
+    { t: 'Sustenta que o adoecimento se explica pelos determinantes sociais e pela organização do trabalho', ok: true,
       why: 'Correta. Não apenas por agentes isolados ou características individuais.' },
     { t: 'Sustenta os determinantes sociais, conceito incompatível com a análise de agentes de risco específicos.', ok: false,
       why: 'Errada. As duas abordagens se complementam.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-1.7-040', tema: '1.7', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a participação social no sistema público de saúde aplicada à saúde do trabalhador, é CORRETO afirmar:',
   alts: [
-    { t: 'Conselhos e conferências de saúde são instâncias de controle social que alcançam o trabalhador', ok: true,
+    { t: 'Conselhos e conferências de saúde são instâncias de controle social que alcançam também o trabalhador', ok: true,
       why: 'Correta. A participação de trabalhadores e representações é diretriz do sistema.' },
     { t: 'O controle social não alcança a saúde do trabalhador, por envolver relações privadas de trabalho.', ok: false,
       why: 'Errada. É campo do sistema de saúde e sujeito ao controle social.' },
@@ -149,7 +149,7 @@ window.BANCO.push(
 { id: 'q-1.9-040', tema: '1.9', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a notificação de acidente de trabalho grave, é CORRETO afirmar:',
   alts: [
-    { t: 'Acidentes graves e fatais têm prazo diferenciado, pela necessidade de investigação oportuna', ok: true,
+    { t: 'Acidentes graves e fatais têm prazo diferenciado, pela necessidade de investigação mais oportuna', ok: true,
       why: 'Correta. A cena e as condições se alteram rapidamente após o evento.' },
     { t: 'Todos os agravos têm o mesmo prazo de notificação, independentemente da gravidade apresentada.', ok: false,
       why: 'Errada. Graves e fatais têm notificação imediata.' },

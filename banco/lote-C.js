@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-4.3-031', tema: '4.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a espirometria no acompanhamento de trabalhadores expostos a poeiras, é CORRETO afirmar:',
   alts: [
-    { t: 'Complementa a avaliação, mas pode estar normal nas fases iniciais de uma pneumoconiose', ok: true,
+    { t: 'Complementa a avaliação clínica, mas pode estar normal nas fases iniciais de uma pneumoconiose', ok: true,
       why: 'Correta. O diagnóstico se apoia na história de exposição e na imagem.' },
     { t: 'Complementa a avaliação, excluindo a espirometria normal o diagnóstico de pneumoconiose.', ok: false,
       why: 'Errada. Pode estar normal em fases iniciais da doença.' },

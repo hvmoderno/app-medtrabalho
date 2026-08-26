@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-1.7-100', tema: '1.7', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o acesso do trabalhador aos serviços do sistema público durante o horário de trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'A dificuldade de conciliar o horário de atendimento com a jornada é barreira concreta de acesso', ok: true,
+    { t: 'A dificuldade de conciliar o horário de atendimento com a jornada é barreira concreta de acesso ao cuidado', ok: true,
       why: 'Correta. Serviço que só funciona no horário comercial exclui quem trabalha nesse horário.' },
     { t: 'A conciliação entre jornada e horário de atendimento não constitui barreira relevante de acesso.', ok: false,
       why: 'Errada. É uma das barreiras mais concretas para trabalhadores.' },
@@ -293,7 +293,7 @@ window.BANCO.push(
 { id: 'q-6.4-110', tema: '6.4', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a intoxicação aguda por exposição maciça a gases em ambiente de trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'Gases pouco hidrossolúveis irritam pouco de início e causam lesão pulmonar de instalação tardia', ok: true,
+    { t: 'Gases pouco hidrossolúveis irritam pouco de início e causam lesão pulmonar de instalação bastante tardia', ok: true,
       why: 'Correta. É o padrão que faz um trabalhador aparentemente bem piorar horas depois.' },
     { t: 'A ausência de sintomas respiratórios logo após a exposição permite a liberação imediata do trabalhador.', ok: false,
       why: 'Errada. Alguns gases produzem edema pulmonar de instalação tardia.' },

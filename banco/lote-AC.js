@@ -23,7 +23,7 @@ window.BANCO.push(
 { id: 'q-2.2-090', tema: '2.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a exposição ocupacional ao frio, é CORRETO afirmar:',
   alts: [
-    { t: 'O frio reduz a destreza manual e a sensibilidade tátil, e o vento e a umidade agravam a perda de calor', ok: true,
+    { t: 'O frio reduz a destreza manual e a sensibilidade tátil, e o vento e a umidade agravam ainda mais a perda de calor', ok: true,
       why: 'Correta. A perda de destreza produz o acidente antes de qualquer lesão pelo frio.' },
     { t: 'O frio traz risco de lesões locais e hipotermia, sendo a temperatura do ar isolada suficiente para caracterizar a exposição.', ok: false,
       why: 'Errada. Vento e umidade alteram substancialmente a perda de calor.' },

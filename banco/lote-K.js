@@ -41,7 +41,7 @@ window.BANCO.push(
 { id: 'q-4.6-052', tema: '4.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Uma equipe de atendimento a clientes apresenta, em seis meses, três afastamentos por transtorno de ansiedade e elevação de queixas de esgotamento. Sobre a abordagem do caso, é CORRETO afirmar:',
   alts: [
-    { t: 'O agrupamento na mesma equipe sinaliza fator organizacional e demanda avaliação coletiva', ok: true,
+    { t: 'O agrupamento de casos na mesma equipe sinaliza fator organizacional e demanda avaliação coletiva', ok: true,
       why: 'Correta. Vários casos no mesmo ponto apontam a causa comum: o desenho do trabalho.' },
     { t: 'O agrupamento na mesma equipe reflete predisposição individual coincidente entre esses trabalhadores.', ok: false,
       why: 'Errada. Concentração de casos é achado de causa comum, não coincidência.' },
@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-4.6-053', tema: '4.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a síndrome de burnout, é CORRETO afirmar:',
   alts: [
-    { t: 'É fenômeno ocupacional por estresse crônico não gerenciado, com exaustão e distanciamento', ok: true,
+    { t: 'É fenômeno ocupacional por estresse crônico não gerenciado, com exaustão e com distanciamento', ok: true,
       why: 'Correta. A própria definição vincula o quadro à organização do trabalho.' },
     { t: 'É um transtorno de personalidade de manifestação tardia, que se revela sob exigência profissional.', ok: false,
       why: 'Errada. Não é transtorno de personalidade nem característica do indivíduo.' },
@@ -113,7 +113,7 @@ window.BANCO.push(
 { id: 'q-5.2-050', tema: '5.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o nexo técnico epidemiológico previdenciário, é CORRETO afirmar:',
   alts: [
-    { t: 'Decorre do cruzamento entre atividade econômica e entidade mórbida, gerando presunção relativa.', ok: true,
+    { t: 'Decorre do cruzamento entre a atividade econômica e a entidade mórbida, gerando presunção relativa', ok: true,
       why: 'Correta. É presunção baseada em associação estatística, afastável por demonstração técnica.' },
     { t: 'Decorre do cruzamento entre atividade e agravo, estabelecendo presunção absoluta e incontestável.', ok: false,
       why: 'Errada. Há via própria para o empregador demonstrar a inexistência de nexo.' },

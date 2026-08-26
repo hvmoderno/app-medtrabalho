@@ -5,7 +5,7 @@ window.BANCO.push(
 { id: 'q-2.2-050', tema: '2.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Operador de britadeira portátil e motorista de caminhão fora de estrada trabalham na mesma pedreira. Sobre a exposição a vibração, é CORRETO afirmar:',
   alts: [
-    { t: 'O primeiro se expõe a vibração de mãos e braços; o segundo, a corpo inteiro, associada a alterações lombares', ok: true,
+    { t: 'O primeiro se expõe a vibração de mãos e braços; o segundo, a de corpo inteiro, associada a alterações lombares', ok: true,
       why: 'Correta. A via de entrada define o órgão-alvo, o método de avaliação e o desfecho esperado.' },
     { t: 'Ambos se expõem ao mesmo tipo de vibração, variando apenas a intensidade transmitida pela ferramenta ou pelo assento.', ok: false,
       why: 'Errada. Ferramenta manual e assento transmitem vibração por vias e a segmentos distintos.' },
@@ -23,7 +23,7 @@ window.BANCO.push(
 { id: 'q-2.2-051', tema: '2.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Trabalhadores de uma caldeiraria relatam que, ao fim do turno, os sons parecem abafados, com recuperação durante a noite. Sobre o fenômeno, é CORRETO afirmar:',
   alts: [
-    { t: 'É mudança temporária de limiar, reversível com repouso, cuja repetição antecede a perda permanente', ok: true,
+    { t: 'É mudança temporária de limiar, reversível com repouso, cuja repetição antecede a perda permanente da audição', ok: true,
       why: 'Correta. O deslocamento temporário repetido sinaliza que o controle da exposição falhou.' },
     { t: 'É mudança temporária de limiar, esperada ao fim do turno e sem indicar necessidade de revisão do controle.', ok: false,
       why: 'Errada. Sua ocorrência sistemática é indicador de exposição excessiva.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-2.6-061', tema: '2.6', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a aplicação de valores-limite a agentes com notação de risco reprodutivo ou de efeito sobre o desenvolvimento, é CORRETO afirmar:',
   alts: [
-    { t: 'Sinaliza risco reprodutivo e exige afastar exposições incompatíveis, sem excluir mulheres da função.', ok: true,
+    { t: 'Sinaliza risco reprodutivo específico e exige afastar exposições incompatíveis, sem excluir mulheres da função', ok: true,
       why: 'Correta. A proteção é da exposição, não das pessoas, e o risco também alcança homens.' },
     { t: 'Sinaliza risco reprodutivo específico, o que justifica não contratar mulheres em idade fértil para a função.', ok: false,
       why: 'Errada e discriminatória. A solução é controlar a exposição, não selecionar por sexo.' },

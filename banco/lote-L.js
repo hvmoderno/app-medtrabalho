@@ -5,7 +5,7 @@ window.BANCO.push(
 { id: 'q-2.5-041', tema: '2.5', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a formação de grupos homogêneos de exposição em higiene ocupacional, é CORRETO afirmar:',
   alts: [
-    { t: 'Reúne exposições semelhantes, e a homogeneidade precisa ser verificada nos resultados.', ok: true,
+    { t: 'Reúne exposições semelhantes, e a homogeneidade presumida precisa ser verificada nos resultados', ok: true,
       why: 'Correta. Variabilidade excessiva indica grupo mal formado, que deve ser dividido.' },
     { t: 'Reúne trabalhadores segundo o cargo formal que ocupam na estrutura organizacional da empresa.', ok: false,
       why: 'Errada. O critério é a semelhança de exposição, não a denominação do cargo.' },
@@ -23,7 +23,7 @@ window.BANCO.push(
 { id: 'q-2.5-042', tema: '2.5', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a diferença entre avaliação de exposição por amostragem pessoal e por amostragem de área, é CORRETO afirmar:',
   alts: [
-    { t: 'A pessoal estima a exposição individual; a de área caracteriza o ambiente.', ok: true,
+    { t: 'A amostragem pessoal estima a exposição individual; a de área caracteriza o ambiente do setor', ok: true,
       why: 'Correta. A pessoal é a referência para comparar com limites; a de área identifica fontes.' },
     { t: 'A pessoal e a de área são intercambiáveis para fins de comparação com os limites de exposição.', ok: false,
       why: 'Errada. A referência para comparação com limites é a amostragem pessoal.' },

@@ -23,7 +23,7 @@ window.BANCO.push(
 { id: 'q-7.4-041', tema: '7.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a caracterização de insalubridade por agente para o qual não há limite de tolerância fixado em norma, é CORRETO afirmar:',
   alts: [
-    { t: 'Há anexos de avaliação qualitativa, baseada na inspeção do local e na natureza da atividade', ok: true,
+    { t: 'Há anexos de avaliação qualitativa, baseada na inspeção do local e na natureza da atividade exercida', ok: true,
       why: 'Correta. Nem toda insalubridade se caracteriza por medição, como nos agentes biológicos.' },
     { t: 'Há limites de tolerância para os agentes listados, sem os quais é impossível caracterizar insalubridade.', ok: false,
       why: 'Errada. A avaliação qualitativa existe justamente para essas hipóteses.' },
@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-7.2-040', tema: '7.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Trabalhador teve benefício por incapacidade concedido como previdenciário, mas entende que se trata de doença ocupacional. Sobre as consequências da natureza do benefício, é CORRETO afirmar:',
   alts: [
-    { t: 'A natureza acidentária dispensa carência, mantém o fundo de garantia e gera estabilidade.', ok: true,
+    { t: 'A natureza acidentária dispensa a carência, mantém o fundo de garantia e gera estabilidade depois', ok: true,
       why: 'Correta. As diferenças são concretas e patrimoniais, e por isso a espécie importa.' },
     { t: 'A natureza do benefício concedido é irrelevante ao segurado, pois o valor mensal é o mesmo.', ok: false,
       why: 'Errada. Carência, fundo de garantia e estabilidade diferem substancialmente.' },
@@ -113,7 +113,7 @@ window.BANCO.push(
 { id: 'q-4.4-050', tema: '4.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Pedreiro apresenta lesões eczematosas em mãos e antebraços, com fissuras e áreas de ulceração, após anos de contato com cimento úmido. Sobre o quadro, é CORRETO afirmar:',
   alts: [
-    { t: 'O cimento atua por dois mecanismos: irritação pelo pH alcalino e sensibilização ao cromo.', ok: true,
+    { t: 'O cimento atua por dois mecanismos distintos: irritação pelo pH alcalino e sensibilização ao cromo', ok: true,
       why: 'Correta. Alcalinidade e cromo hexavalente juntos tornam a dermatose do cimento rebelde.' },
     { t: 'O cimento atua pela alcalinidade, causando irritação e queimadura, sem potencial sensibilizante.', ok: false,
       why: 'Errada. O cromo hexavalente presente como contaminante é sensibilizante reconhecido.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-4.4-051', tema: '4.4', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o diagnóstico diferencial entre dermatose ocupacional e dermatose comum agravada pelo trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'A distinção muda o enquadramento do nexo, mas em ambos os casos há relação com o trabalho', ok: true,
+    { t: 'A distinção muda o enquadramento do nexo, mas em ambos os casos há relação com o trabalho exercido', ok: true,
       why: 'Correta. O enquadramento muda; a necessidade de afastar o agente, não.' },
     { t: 'A distinção importa, pois dermatose preexistente agravada não guarda relação com o trabalho.', ok: false,
       why: 'Errada. É hipótese expressa de doença relacionada ao trabalho por agravamento.' },
@@ -167,7 +167,7 @@ window.BANCO.push(
 { id: 'q-2.3-051', tema: '2.3', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o rótulo e a sinalização de produtos químicos no ambiente de trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve trazer produto, perigos, precauções e socorros, inclusive nos recipientes fracionados.', ok: true,
+    { t: 'Deve trazer produto, perigos, precauções e primeiros socorros, inclusive nos recipientes fracionados', ok: true,
       why: 'Correta. Recipiente sem identificação é risco por si, e o fracionamento é onde isso falha.' },
     { t: 'Deve identificar produto e perigos, bastando a rotulagem dos recipientes originais do fabricante.', ok: false,
       why: 'Errada. Recipientes de fracionamento também devem ser identificados.' },

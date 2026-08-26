@@ -23,7 +23,7 @@ window.BANCO.push(
 { id: 'q-2.3-150', tema: '2.3', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a exposição ocupacional a gases anestésicos residuais em centros cirúrgicos, é CORRETO afirmar:',
   alts: [
-    { t: 'Decorre de escape de circuitos e de ventilação inadequada, sendo a exaustão a medida central', ok: true,
+    { t: 'Decorre de escape de circuitos e de ventilação inadequada, sendo a exaustão de gases a medida central', ok: true,
       why: 'Correta. Controle é exaustão de gases residuais e manutenção, não proteção individual.' },
     { t: 'Não há exposição ocupacional relevante a gases anestésicos em centros cirúrgicos modernos e ventilados.', ok: false,
       why: 'Errada. Escapes e ventilação inadequada mantêm a exposição relevante.' },
@@ -95,7 +95,7 @@ window.BANCO.push(
 { id: 'q-4.4-150', tema: '4.4', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a vigilância de dermatoses em grupos de trabalhadores expostos, é CORRETO afirmar:',
   alts: [
-    { t: 'O exame de pele dirigido detecta quadros iniciais antes da cronificação naqueles setores', ok: true,
+    { t: 'O exame de pele dirigido detecta os quadros iniciais antes da cronificação naqueles setores', ok: true,
       why: 'Correta. O trabalhador só procura quando a mão já não trabalha.' },
     { t: 'A queixa espontânea do trabalhador é indicador suficiente para orientar a vigilância dermatológica.', ok: false,
       why: 'Errada. A procura espontânea ocorre tardiamente, com lesão já instalada.' },

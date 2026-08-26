@@ -95,7 +95,7 @@ window.BANCO.push(
 { id: 'q-6.2-080', tema: '6.2', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a definição legal de deficiência auditiva para fins de enquadramento, é CORRETO afirmar:',
   alts: [
-    { t: 'Segue critério normativo de grau e de bilateralidade e não se confunde com a perda auditiva induzida por ruído', ok: true,
+    { t: 'Segue critério normativo de grau e de bilateralidade e não se confunde com a perda auditiva induzida por ruído ocupacional', ok: true,
       why: 'Correta. São enquadramentos com finalidades diferentes e não se equivalem.' },
     { t: 'Segue critério audiológico amplo, de modo que qualquer perda auditiva documentada caracteriza deficiência para fins de cota.', ok: false,
       why: 'Errada. Há critério normativo específico de grau e de bilateralidade.' },

@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-4.5-130', tema: '4.5', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a caracterização da perda auditiva induzida por ruído para fins de reconhecimento, é CORRETO afirmar:',
   alts: [
-    { t: 'Considera o padrão audiométrico, a exposição documentada e a exclusão razoável de outras causas', ok: true,
+    { t: 'Considera o padrão audiométrico, a exposição documentada e a exclusão razoável de outras causas possíveis', ok: true,
       why: 'Correta. A estabilização após cessada a exposição é característica que a distingue.' },
     { t: 'Considera o padrão audiométrico e a exposição, progredindo a perda mesmo após o afastamento do ruído.', ok: false,
       why: 'Errada. Tende a estabilizar após cessada a exposição.' },
@@ -167,7 +167,7 @@ window.BANCO.push(
 { id: 'q-4.8-130', tema: '4.8', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a substituição de agentes cancerígenos em processos produtivos, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve ser precedida de avaliação do agente substituto, para não trocar por outro pior ou desconhecido', ok: true,
+    { t: 'Deve ser precedida da avaliação do agente substituto, para não trocar por outro de perfil pior ou desconhecido', ok: true,
       why: 'Correta. Trocar sem avaliar já produziu substituições piores que o original.' },
     { t: 'Deve ser buscada sempre que possível, representando qualquer substituição de cancerígeno ganho automático.', ok: false,
       why: 'Errada. O substituto pode ter perfil toxicológico pior ou desconhecido.' },
