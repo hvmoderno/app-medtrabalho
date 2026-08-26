@@ -23,16 +23,16 @@ window.BANCO.push(
 { id: 'q-2.3-100', tema: '2.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o manuseio de medicamentos antineoplásicos por trabalhadores de saúde, é CORRETO afirmar:',
   alts: [
-    { t: 'Há exposição ocupacional a agentes com potencial carcinogênico e de toxicidade reprodutiva, exigindo preparo em cabine de segurança adequada, sistema fechado, capacitação e procedimentos definidos para derramamento e para o manejo de excretas dos pacientes tratados.', ok: true,
+    { t: 'Há exposição a agentes carcinogênicos e reprotóxicos, exigindo cabine adequada e sistema fechado.', ok: true,
       why: 'Correta. A exposição não termina no preparo: alcança administração, limpeza e excretas.' },
-    { t: 'A exposição se limita ao momento do preparo do medicamento.', ok: false,
+    { t: 'Há exposição a agentes carcinogênicos, limitada ao momento do preparo do medicamento na farmácia hospitalar.', ok: false,
       why: 'Errada. Administração, limpeza, transporte e manejo de excretas também expõem.' },
-    { t: 'A cabine de exaustão química convencional é adequada para o preparo.', ok: false,
+    { t: 'Há exposição a agentes carcinogênicos, sendo a cabine de exaustão química convencional adequada ao preparo.', ok: false,
       why: 'Errada. É necessária cabine de segurança apropriada ao risco desses fármacos.' },
-    { t: 'Trabalhadores da limpeza não integram os grupos expostos.', ok: false,
+    { t: 'Há exposição a agentes carcinogênicos, não integrando os trabalhadores da limpeza os grupos expostos.', ok: false,
       why: 'Errada. Manuseiam resíduos e excretas e estão entre os expostos.' },
-    { t: 'A luva de procedimento comum é suficiente para o manuseio desses agentes.', ok: false,
-      why: 'Errada. Exige-se luva com especificação própria e prática de dupla luva em determinadas etapas.' }
+    { t: 'Há exposição a agentes carcinogênicos, sendo a luva de procedimento comum suficiente para o manuseio.', ok: false,
+      why: 'Errada. Exige-se luva com especificação própria e dupla luva em determinadas etapas.' }
   ],
   comentario: 'Antineoplásicos expõem toda a cadeia — preparo, administração, limpeza, excretas — a agentes carcinogênicos e de toxicidade reprodutiva. Cabine específica, sistema fechado, luva especificada e protocolo de derramamento.',
   pegadinha: 'Restringir a exposição à farmácia deixa desprotegidos a enfermagem e o pessoal da limpeza.',
