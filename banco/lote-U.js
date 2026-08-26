@@ -5,16 +5,16 @@ window.BANCO.push(
 { id: 'q-4.3-070', tema: '4.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a asbestose e as demais alterações pleuropulmonares associadas ao asbesto, é CORRETO afirmar:',
   alts: [
-    { t: 'Placas pleurais indicam exposição pregressa e frequentemente cursam sem repercussão funcional significativa, enquanto a asbestose é doença intersticial fibrosante com repercussão funcional — de modo que a presença de placas não equivale ao diagnóstico de asbestose.', ok: true,
+    { t: 'Placas indicam exposição pregressa e costumam não repercutir; asbestose é fibrose.', ok: true,
       why: 'Correta. Placa pleural é marcador de exposição; asbestose é doença do parênquima.' },
-    { t: 'Placas pleurais e asbestose são a mesma entidade em estágios diferentes.', ok: false,
+    { t: 'Placas pleurais e asbestose são a mesma entidade observada em estágios evolutivos diferentes.', ok: false,
       why: 'Errada. São alterações distintas, com mecanismos e repercussões diferentes.' },
-    { t: 'A ausência de placas pleurais afasta exposição significativa ao asbesto.', ok: false,
-      why: 'Errada. Nem todo exposto desenvolve placas.' },
-    { t: 'A asbestose regride com o afastamento da exposição.', ok: false,
+    { t: 'Placas indicam exposição pregressa, afastando sua ausência exposição significativa ao asbesto.', ok: false,
+      why: 'Errada. Nem todo exposto desenvolve placas pleurais.' },
+    { t: 'Placas indicam exposição, e a asbestose regride com o afastamento definitivo da exposição.', ok: false,
       why: 'Errada. A fibrose instalada não regride; o afastamento evita a progressão adicional.' },
-    { t: 'Trabalhadores com placas pleurais dispensam acompanhamento posterior.', ok: false,
-      why: 'Errada. São expostos comprovados e permanecem sob risco de outros desfechos, incluindo neoplasias.' }
+    { t: 'Placas indicam exposição pregressa, dispensando esses trabalhadores acompanhamento posterior.', ok: false,
+      why: 'Errada. São expostos comprovados e seguem sob risco de outros desfechos, inclusive neoplasias.' }
   ],
   comentario: 'Placa pleural marca exposição, não doença parenquimatosa. Asbestose é fibrose e não regride. E quem tem placa é exposto comprovado — segue em vigilância pelo risco de mesotelioma e câncer de pulmão.',
   pegadinha: 'Ler placa pleural como asbestose leve confunde marcador de exposição com doença fibrosante.',
