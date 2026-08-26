@@ -185,16 +185,16 @@ window.BANCO.push(
 { id: 'q-5.4-150', tema: '5.4', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a atuação do perito diante de periciando em situação de vulnerabilidade, é CORRETO afirmar:',
   alts: [
-    { t: 'Baixa escolaridade, dificuldade de compreensão e limitações de comunicação exigem adaptação da entrevista e verificação do entendimento — pois relato empobrecido por barreira de comunicação pode ser lido, equivocadamente, como ausência de sintomas.', ok: true,
+    { t: 'Baixa escolaridade e limitações de comunicação exigem adaptar a entrevista e checar o entendimento.', ok: true,
       why: 'Correta. Quem não consegue descrever pode parecer não ter o que descrever.' },
-    { t: 'A entrevista pericial deve ser padronizada, sem adaptação ao periciando.', ok: false,
+    { t: 'A entrevista pericial deve ser padronizada e igual para todos, sem adaptação ao periciando avaliado.', ok: false,
       why: 'Errada. A adaptação é o que permite obter informação de qualidade.' },
-    { t: 'Relato pobre em detalhes indica ausência de sintomas relevantes.', ok: false,
+    { t: 'A entrevista deve ser adaptada, indicando o relato pobre em detalhes ausência de sintomas relevantes.', ok: false,
       why: 'Errada. Pode refletir barreira de comunicação ou escolaridade.' },
-    { t: 'A presença de acompanhante deve ser sempre recusada na perícia.', ok: false,
+    { t: 'A entrevista deve ser adaptada, devendo a presença de acompanhante ser sempre recusada na perícia.', ok: false,
       why: 'Errada. Em situações específicas, o acompanhante viabiliza a comunicação.' },
-    { t: 'A verificação do entendimento das orientações não integra o ato pericial.', ok: false,
-      why: 'Errada. Assegurar que o periciando compreendeu o que foi informado é parte do ato.' }
+    { t: 'A entrevista deve ser adaptada, não integrando o ato pericial a verificação do entendimento.', ok: false,
+      why: 'Errada. Assegurar que o periciando compreendeu é parte do ato.' }
   ],
   comentario: 'Barreira de comunicação empobrece o relato e pode ser lida como ausência de sintoma. Adaptar a entrevista, verificar o entendimento e, quando necessário, admitir acompanhante é o que produz informação confiável.',
   pegadinha: 'Interpretar relato pobre como quadro leve penaliza quem tem menos recursos para descrever o próprio sofrimento.',
