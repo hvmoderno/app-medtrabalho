@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-7.2-081', tema: '7.2', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a carência para benefícios por incapacidade, é CORRETO afirmar:',
   alts: [
-    { t: 'A regra geral exige contribuições mínimas, mas há dispensa em acidente de qualquer natureza e nas doenças de lista própria.', ok: true,
+    { t: 'A regra geral exige um mínimo de contribuições, mas há dispensa de carência no acidente de qualquer natureza e nas doenças que constam de lista própria', ok: true,
       why: 'Correta. É a natureza do evento que decide: acidente de qualquer natureza e as doenças listadas dispensam a carência.' },
     { t: 'A regra geral exige contribuições mínimas para todo benefício por incapacidade, sem hipótese de dispensa, ainda que o afastamento decorra de acidente.', ok: false,
       why: 'Errada. Há dispensas expressas — acidente de qualquer natureza e doenças de lista própria.' },

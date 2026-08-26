@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-4.8-100', tema: '4.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a exposição ocupacional à radiação solar e o risco de câncer de pele, é CORRETO afirmar:',
   alts: [
-    { t: 'A radiação solar é cancerígena reconhecida, e quem trabalha a céu aberto acumula dose muito maior.', ok: true,
+    { t: 'A radiação solar é cancerígena reconhecida, e quem trabalha a céu aberto acumula dose muito maior que a população', ok: true,
       why: 'Correta. Sol é agente ocupacional, com hierarquia de controle aplicável como a qualquer outro.' },
     { t: 'A exposição solar ocupacional é condição ambiental inevitável, não considerada exposição a agente cancerígeno.', ok: false,
       why: 'Errada. A radiação solar tem classificação de cancerígeno para humanos.' },
@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-5.4-110', tema: '5.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a perícia em pedido de auxílio-acidente por sequela auditiva, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve verificar consolidação, grau e redução da capacidade, pois as agudas comprometem a comunicação.', ok: true,
+    { t: 'Deve verificar a consolidação, o grau e a redução da capacidade, pois as agudas comprometem a comunicação', ok: true,
       why: 'Correta. A média tonal esconde o prejuízo de discriminação nas frequências agudas.' },
     { t: 'Deve verificar a consolidação e o grau, descrevendo a média tonal isolada a repercussão funcional da perda.', ok: false,
       why: 'Errada. Pode estar pouco alterada com prejuízo relevante de discriminação.' },
@@ -113,7 +113,7 @@ window.BANCO.push(
 { id: 'q-1.3-100', tema: '1.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a interpretação de estudos que não encontram associação entre exposição ocupacional e desfecho, é CORRETO afirmar:',
   alts: [
-    { t: 'É preciso avaliar poder, qualidade da exposição medida e seguimento frente à latência esperada.', ok: true,
+    { t: 'É preciso avaliar o poder, a qualidade da exposição medida e o seguimento frente à latência esperada', ok: true,
       why: 'Correta. Não achar não é o mesmo que não existir.' },
     { t: 'O resultado negativo obtido em estudo bem conduzido demonstra a ausência de risco associado ao agente.', ok: false,
       why: 'Errada. Pode refletir limitações do próprio estudo.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-4.10-090', tema: '4.10', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a vacinação de trabalhadores expostos a risco de exposição a agentes de zoonoses, é CORRETO afirmar:',
   alts: [
-    { t: 'É indicada a grupos com exposição continuada a animais, sem dispensar a conduta pós-exposição.', ok: true,
+    { t: 'É indicada aos grupos com exposição continuada a animais, sem dispensar a conduta pós-exposição', ok: true,
       why: 'Correta. A pré-exposição simplifica a conduta posterior, mas não a elimina.' },
     { t: 'É indicada a grupos com exposição continuada a animais e elimina a necessidade de conduta após acidente.', ok: false,
       why: 'Errada. A conduta pós-exposição permanece, ainda que simplificada.' },
@@ -167,7 +167,7 @@ window.BANCO.push(
 { id: 'q-6.3-100', tema: '6.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre os distúrbios do sono e a sonolência ocupacional, é CORRETO afirmar:',
   alts: [
-    { t: 'A apneia não tratada eleva o risco de acidentes, sendo o tratamento efetivo a resposta adequada.', ok: true,
+    { t: 'A apneia não tratada eleva o risco de acidentes, sendo o tratamento efetivo, e não o afastamento, a resposta', ok: true,
       why: 'Correta. Tratada e com adesão demonstrada, a condição deixa de ser impedimento.' },
     { t: 'A apneia eleva o risco de acidentes, implicando seu diagnóstico inaptidão definitiva para condução profissional.', ok: false,
       why: 'Errada. Tratamento eficaz com adesão comprovada permite o exercício da função.' },

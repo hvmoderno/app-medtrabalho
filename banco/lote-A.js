@@ -5,7 +5,7 @@ window.BANCO.push(
 { id: 'q-2.3-040', tema: '2.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Trabalhador de posto de combustíveis, 15 anos na função de frentista, apresenta hemograma com leucopenia e plaquetopenia leves, persistentes em dois exames. Sobre a conduta, é CORRETO afirmar:',
   alts: [
-    { t: 'Investigar o benzeno da gasolina, afastar da exposição e repetir o hemograma em série.', ok: true,
+    { t: 'Investigar o benzeno presente na gasolina, afastar o trabalhador da exposição e repetir o hemograma em série', ok: true,
       why: 'Correta. Citopenia em exposto ao benzeno é achado sentinela.' },
     { t: 'Repetir o hemograma em seis meses, pois alterações leves em duas amostras não exigem investigação.', ok: false,
       why: 'Errada. Em exposto ao benzeno, é achado sentinela que exige ação.' },
@@ -41,7 +41,7 @@ window.BANCO.push(
 { id: 'q-2.3-042', tema: '2.3', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre as vias de absorção dos agentes químicos no ambiente de trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'A respiratória predomina, mas a cutânea pode ser principal em agentes com notação de pele.', ok: true,
+    { t: 'A via respiratória predomina, mas a cutânea pode ser a principal em agentes com notação de pele', ok: true,
       why: 'Correta. A digestiva ganha relevância com higiene inadequada no setor produtivo.' },
     { t: 'A via respiratória é a única relevante na exposição ocupacional a agentes químicos industriais.', ok: false,
       why: 'Errada. Cutânea e digestiva também contribuem, conforme o agente.' },
@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-2.4-040', tema: '2.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Trabalhador de frigorífico apresenta febre prolongada, sudorese noturna, artralgia e hepatoesplenomegalia, com história de manipulação de vísceras de bovinos. Sobre a hipótese, é CORRETO afirmar:',
   alts: [
-    { t: 'Considerar brucelose, zoonose por contato com tecidos e secreções de animais infectados.', ok: true,
+    { t: 'Considerar brucelose, zoonose de contato com tecidos e secreções de animais infectados', ok: true,
       why: 'Correta. O quadro febril prolongado e inespecífico atrasa o diagnóstico.' },
     { t: 'Afastar zoonose ocupacional, por não haver relato de mordedura de animal no período de trabalho.', ok: false,
       why: 'Errada. O contato com tecidos e secreções é a via principal na brucelose.' },
@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-2.4-041', tema: '2.4', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o descarte de resíduos de serviços de saúde e o risco ocupacional associado, é CORRETO afirmar:',
   alts: [
-    { t: 'A segregação na origem é o que mais reduz o risco de quem manuseia nas etapas seguintes.', ok: true,
+    { t: 'A segregação correta na origem é o que mais reduz o risco de quem manuseia nas etapas seguintes', ok: true,
       why: 'Correta. Erros na origem se propagam por toda a cadeia até a destinação.' },
     { t: 'O risco se restringe aos profissionais assistenciais que geram o resíduo no ponto de atendimento.', ok: false,
       why: 'Errada. Coleta, transporte e destinação expõem outros trabalhadores.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-2.9-040', tema: '2.9', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Trabalhador de mineração apresenta quadro neuropsiquiátrico com alterações de comportamento, seguido de sinais extrapiramidais com rigidez e alteração da marcha. Sobre a hipótese, é CORRETO afirmar:',
   alts: [
-    { t: 'Considerar manganismo, com fase neuropsiquiátrica seguida de quadro extrapiramidal.', ok: true,
+    { t: 'Considerar manganismo, com fase inicial neuropsiquiátrica seguida de quadro extrapiramidal', ok: true,
       why: 'Correta. Pode persistir após o afastamento, o que torna o reconhecimento precoce decisivo.' },
     { t: 'Considerar intoxicação por chumbo, cuja manifestação típica é o quadro extrapiramidal descrito.', ok: false,
       why: 'Errada. O quadro extrapiramidal caracteriza o manganismo.' },

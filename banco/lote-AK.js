@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-7.5-070', tema: '7.5', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a articulação entre os eventos do eSocial e os documentos exigidos pelas normas regulamentadoras, é CORRETO afirmar:',
   alts: [
-    { t: 'Transmitem informações derivadas dos programas, sendo verificável a consistência entre eles.', ok: true,
+    { t: 'Transmitem informações derivadas dos programas, sendo verificável a consistência entre uns e outros', ok: true,
       why: 'Correta. O sistema permite cruzar o transmitido com o documentado, e a divergência é indício.' },
     { t: 'Transmitem informações de saúde e segurança, substituindo a elaboração dos programas exigidos por norma.', ok: false,
       why: 'Errada. Os programas continuam exigidos; o eSocial transmite informações deles derivadas.' },

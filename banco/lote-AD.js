@@ -5,7 +5,7 @@ window.BANCO.push(
 { id: 'q-4.6-090', tema: '4.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o teletrabalho e seus efeitos sobre a saúde mental, é CORRETO afirmar:',
   alts: [
-    { t: 'Pode aumentar autonomia, mas também dissolver fronteiras e enfraquecer o suporte entre colegas.', ok: true,
+    { t: 'Pode aumentar a autonomia, mas também dissolver fronteiras e enfraquecer o suporte social entre colegas', ok: true,
       why: 'Correta. A modalidade não determina o efeito; a organização do trabalho determina.' },
     { t: 'Ele reduz de forma uniforme os riscos psicossociais, por afastar o trabalhador do ambiente presencial.', ok: false,
       why: 'Errada. Introduz riscos próprios, como conexão prolongada e isolamento.' },
@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-5.5-090', tema: '5.5', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o uso da Classificação Internacional de Funcionalidade na avaliação de trabalhadores, é CORRETO afirmar:',
   alts: [
-    { t: 'Padroniza a descrição de funcionalidade e contexto, complementando a classificação diagnóstica.', ok: true,
+    { t: 'Padroniza a descrição da funcionalidade e do contexto, complementando a classificação diagnóstica', ok: true,
       why: 'Correta. Descreve por que dois trabalhadores com o mesmo diagnóstico têm capacidades distintas.' },
     { t: 'Padroniza a descrição de funcionalidade e substitui a classificação diagnóstica de doenças nesse uso.', ok: false,
       why: 'Errada. São classificações complementares, com objetos distintos.' },
@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-4.7-090', tema: '4.7', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a prescrição e o uso de psicofármacos em trabalhadores de funções críticas, é CORRETO afirmar:',
   alts: [
-    { t: 'Considera o efeito sobre atenção e sonolência, a fase do tratamento e a resposta individual.', ok: true,
+    { t: 'Considera o efeito sobre atenção e sonolência, a fase do tratamento e a resposta de cada indivíduo', ok: true,
       why: 'Correta. O que restringe é o efeito funcional, e ele muda ao longo do tratamento.' },
     { t: 'Considera o efeito da medicação, implicando o uso de qualquer psicofármaco inaptidão para funções críticas.', ok: false,
       why: 'Errada. O efeito varia por fármaco, dose, fase do tratamento e resposta individual.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-5.3-080', tema: '5.3', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a suscetibilidade individual e sua relação com a concausalidade, é CORRETO afirmar:',
   alts: [
-    { t: 'A maior suscetibilidade não afasta o nexo e pode caracterizar concausa preexistente.', ok: true,
+    { t: 'A maior suscetibilidade individual não afasta o nexo e pode caracterizar concausa preexistente', ok: true,
       why: 'Correta. A lógica preventiva é adequar o ambiente à variabilidade das pessoas.' },
     { t: 'A maior suscetibilidade individual afasta o nexo com o trabalho, por deslocar a causa para o indivíduo.', ok: false,
       why: 'Errada. Caracteriza, quando muito, concausa preexistente.' },

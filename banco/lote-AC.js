@@ -41,7 +41,7 @@ window.BANCO.push(
 { id: 'q-2.3-090', tema: '2.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a exposição ocupacional a agrotóxicos na agricultura familiar e no trabalho informal, é CORRETO afirmar:',
   alts: [
-    { t: 'A ausência de vínculo formal não reduz a exposição e agrava a proteção, estendendo-a aos familiares.', ok: true,
+    { t: 'A ausência de vínculo formal não reduz a exposição e costuma agravar a proteção, estendendo o risco aos familiares', ok: true,
       why: 'Correta. Armazenamento no domicílio e reutilização de embalagens alcançam quem nem trabalha na lavoura.' },
     { t: 'A exposição nesse contexto é menor por envolver volumes reduzidos de produto em cada aplicação realizada.', ok: false,
       why: 'Errada. A proteção costuma ser mais precária, o que compensa ou supera o menor volume.' },
@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-2.4-090', tema: '2.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a exposição a agentes biológicos em laboratórios de análises clínicas, é CORRETO afirmar:',
   alts: [
-    { t: 'A maioria dos acidentes envolve amostras e perfurocortantes, e o risco existe mesmo com agente desconhecido.', ok: true,
+    { t: 'A maioria dos acidentes envolve manipulação de amostras e perfurocortantes, e o risco existe mesmo com agente desconhecido', ok: true,
       why: 'Correta. Amostra sem diagnóstico é amostra potencialmente infectante.' },
     { t: 'A maioria dos acidentes envolve perfurocortantes, dispensando precauções as amostras sem diagnóstico infeccioso.', ok: false,
       why: 'Errada. Toda amostra biológica é tratada como potencialmente infectante.' },
@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-2.6-090', tema: '2.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a comparação de resultados de avaliação de exposição com limites, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve considerar a distribuição dos resultados e não só a média, pois as exposições são assimétricas.', ok: true,
+    { t: 'Deve considerar a distribuição dos resultados, e não apenas a média, pois as exposições são assimétricas', ok: true,
       why: 'Correta. Média abaixo do limite convive com proporção relevante de jornadas acima dele.' },
     { t: 'Deve tomar a média dos resultados obtidos, medida que resume adequadamente a exposição para concluir sobre conformidade.', ok: false,
       why: 'Errada. Ignora a dispersão e a fração de jornadas acima do limite.' },
@@ -113,7 +113,7 @@ window.BANCO.push(
 { id: 'q-4.4-100', tema: '4.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre alterações ungueais e periungueais de origem ocupacional, é CORRETO afirmar:',
   alts: [
-    { t: 'Trabalho úmido favorece paroníquia e onicomicose, e agentes químicos produzem onicólise e discromia.', ok: true,
+    { t: 'Trabalho úmido favorece paroníquia e onicomicose, e agentes químicos produzem onicólise e alteração de cor', ok: true,
       why: 'Correta. São sinais úteis, desde que não substituam o diferencial com causas não ocupacionais.' },
     { t: 'Alterações ungueais decorrem de fatores individuais e infecciosos, sem relação com exposições ocupacionais.', ok: false,
       why: 'Errada. Trabalho úmido e agentes químicos produzem alterações características.' },

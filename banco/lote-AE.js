@@ -185,7 +185,7 @@ window.BANCO.push(
 { id: 'q-1.10-080', tema: '1.10', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre programas de apoio ao trabalhador para cessação do tabagismo, é CORRETO afirmar:',
   alts: [
-    { t: 'O ambiente é favorável e deve combinar apoio terapêutico com ambiente livre de fumo.', ok: true,
+    { t: 'O ambiente de trabalho é favorável e deve combinar apoio terapêutico com ambiente livre de fumo', ok: true,
       why: 'Correta. Abordagem punitiva afasta justamente quem mais precisa de apoio.' },
     { t: 'O ambiente é favorável, bastando a proibição de fumar nas dependências como programa de cessação.', ok: false,
       why: 'Errada. Ambiente livre de fumo é complementar, não substitui o apoio terapêutico.' },

@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-1.7-100', tema: '1.7', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o acesso do trabalhador aos serviços do sistema público durante o horário de trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'A dificuldade de conciliar horário de atendimento e jornada é barreira concreta de acesso.', ok: true,
+    { t: 'A dificuldade de conciliar o horário de atendimento e a jornada é barreira concreta de acesso', ok: true,
       why: 'Correta. Serviço que só funciona no horário comercial exclui quem trabalha nesse horário.' },
     { t: 'A conciliação entre jornada e horário de atendimento não constitui barreira relevante de acesso.', ok: false,
       why: 'Errada. É uma das barreiras mais concretas para trabalhadores.' },
@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-1.8-100', tema: '1.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a inspeção sanitária em ambiente de trabalho e a produção do relatório, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve descrever o observado, as fontes, as inadequações e as medidas exigidas com prazos.', ok: true,
+    { t: 'Deve descrever o observado, as fontes, as inadequações e as medidas exigidas com seus prazos', ok: true,
       why: 'Correta. O retorno para verificar cumprimento é o que converte inspeção em mudança.' },
     { t: 'Deve descrever o observado e as inadequações, encerrando-se a inspeção com a entrega do relatório.', ok: false,
       why: 'Errada. A verificação do cumprimento é etapa essencial.' },
@@ -113,7 +113,7 @@ window.BANCO.push(
 { id: 'q-1.10-100', tema: '1.10', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre ações de promoção da saúde voltadas ao sono de trabalhadores, é CORRETO afirmar:',
   alts: [
-    { t: 'A higiene do sono tem eficácia limitada quando a escala impede o descanso adequado.', ok: true,
+    { t: 'A higiene do sono tem eficácia limitada quando a escala de trabalho impede o descanso adequado', ok: true,
       why: 'Correta. Não há higiene do sono que compense intervalo interjornada insuficiente.' },
     { t: 'As orientações de higiene do sono são suficientes, qualquer que seja a escala de trabalho praticada.', ok: false,
       why: 'Errada. Escala inadequada inviabiliza a aplicação das orientações.' },
@@ -149,7 +149,7 @@ window.BANCO.push(
 { id: 'q-2.8-090', tema: '2.8', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a avaliação da aptidão do trabalhador para o uso de respirador, é CORRETO afirmar:',
   alts: [
-    { t: 'O uso impõe carga respiratória e cardiovascular e pode gerar desconforto e claustrofobia.', ok: true,
+    { t: 'O uso impõe carga respiratória e cardiovascular e pode gerar desconforto e quadro de claustrofobia', ok: true,
       why: 'Correta. A inaptidão para um tipo de respirador não implica inaptidão para a função.' },
     { t: 'O uso de respirador é passivo e não impõe carga fisiológica adicional relevante ao trabalhador.', ok: false,
       why: 'Errada. Impõe carga respiratória e cardiovascular, especialmente em esforço.' },
@@ -167,7 +167,7 @@ window.BANCO.push(
 { id: 'q-4.3-080', tema: '4.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a bissinose e outras doenças respiratórias por poeiras orgânicas, é CORRETO afirmar:',
   alts: [
-    { t: 'A bissinose, por poeiras de algodão, piora classicamente no primeiro dia após a folga.', ok: true,
+    { t: 'A bissinose, por poeiras de algodão, piora classicamente no primeiro dia de trabalho após a folga', ok: true,
       why: 'Correta. A piora na segunda-feira é a marca clínica clássica dessa doença.' },
     { t: 'Poeiras orgânicas produzem incômodo respiratório sem causar doença ocupacional relevante nos expostos.', ok: false,
       why: 'Errada. Causam bissinose, pneumonite de hipersensibilidade e síndrome tóxica.' },
@@ -185,7 +185,7 @@ window.BANCO.push(
 { id: 'q-4.7-110', tema: '4.7', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o encaminhamento de trabalhador a serviço de saúde mental pela medicina do trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve incluir as condições de trabalho relevantes, com autorização do próprio trabalhador.', ok: true,
+    { t: 'Deve incluir as condições de trabalho relevantes, com autorização expressa do próprio trabalhador', ok: true,
       why: 'Correta. O assistente não conhece o posto; quem conhece é quem encaminha.' },
     { t: 'Deve conter a queixa relatada pelo trabalhador, elemento que orienta a avaliação do serviço assistencial.', ok: false,
       why: 'Errada. As condições de trabalho são informação essencial que só o serviço ocupacional tem.' },
@@ -221,7 +221,7 @@ window.BANCO.push(
 { id: 'q-5.2-090', tema: '5.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a análise de nexo em trabalhador com histórico de múltiplos vínculos e exposições em empresas distintas, é CORRETO afirmar:',
   alts: [
-    { t: 'A exposição relevante pode estar em vínculo anterior, exigindo reconstituir a história completa.', ok: true,
+    { t: 'A exposição relevante pode estar em vínculo anterior, exigindo reconstituir a história completa', ok: true,
       why: 'Correta. Dificuldade de atribuir a um empregador não é o mesmo que ausência de nexo.' },
     { t: 'A exposição pode estar em vínculo anterior, afastando a natureza ocupacional a impossibilidade de atribuí-la.', ok: false,
       why: 'Errada. São questões distintas: natureza ocupacional e responsabilidade individual.' },
@@ -257,7 +257,7 @@ window.BANCO.push(
 { id: 'q-5.6-100', tema: '5.6', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o retorno gradual ao trabalho como estratégia de reabilitação, é CORRETO afirmar:',
   alts: [
-    { t: 'Consiste em retomada progressiva de carga e jornada, com acompanhamento e ajustes no processo.', ok: true,
+    { t: 'Consiste em retomada progressiva de carga e de jornada, com acompanhamento e ajustes no processo', ok: true,
       why: 'Correta. Associa-se a melhores desfechos de permanência, sobretudo em osteomusculares e saúde mental.' },
     { t: 'Consiste em retomada progressiva, sem vantagem demonstrada sobre o retorno integral imediato à função.', ok: false,
       why: 'Errada. Há evidência de melhores desfechos de permanência com a retomada progressiva.' },
@@ -275,7 +275,7 @@ window.BANCO.push(
 { id: 'q-6.1-110', tema: '6.1', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a conclusão de aptidão com restrição, é CORRETO afirmar:',
   alts: [
-    { t: 'Reconhece que ele pode exercer a função com limitações, exigindo que a empresa as implemente.', ok: true,
+    { t: 'Reconhece que ele pode exercer a função com limitações, exigindo que a empresa as implemente de fato', ok: true,
       why: 'Correta. Restrição não implementada é papel; o trabalhador segue na mesma condição.' },
     { t: 'Reconhece limitações específicas, transferindo ao trabalhador a responsabilidade de evitar o restrito.', ok: false,
       why: 'Errada. Cabe à empresa organizar o trabalho de modo a respeitar a restrição.' },

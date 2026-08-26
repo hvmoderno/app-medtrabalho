@@ -23,7 +23,7 @@ window.BANCO.push(
 { id: 'q-7.3-090', tema: '7.3', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a notificação compulsória à luz da legislação sanitária, é CORRETO afirmar:',
   alts: [
-    { t: 'É obrigação legal de serviços públicos e privados, e a omissão pode gerar responsabilização.', ok: true,
+    { t: 'É obrigação legal de profissionais e serviços, públicos e privados, e a omissão gera responsabilização', ok: true,
       why: 'Correta. É dever legal, e não faculdade sujeita a juízo de conveniência.' },
     { t: 'É obrigação legal dos serviços públicos de saúde, aos quais compete alimentar o sistema de vigilância.', ok: false,
       why: 'Errada. Alcança também os serviços privados.' },

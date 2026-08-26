@@ -5,7 +5,7 @@ window.BANCO.push(
 { id: 'q-2.2-110', tema: '2.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a atenuação obtida na prática por protetores auditivos, é CORRETO afirmar:',
   alts: [
-    { t: 'Depende do ajuste, do uso contínuo e da compatibilidade com outros equipamentos da cabeça.', ok: true,
+    { t: 'Depende do ajuste, do uso contínuo e da compatibilidade com os demais equipamentos da cabeça', ok: true,
       why: 'Correta. Poucos minutos sem o protetor derrubam a proteção média da jornada.' },
     { t: 'Depende do modelo escolhido, correspondendo a atenuação declarada no certificado à obtida em campo.', ok: false,
       why: 'Errada. A atenuação de campo é sistematicamente menor que a declarada.' },
@@ -113,7 +113,7 @@ window.BANCO.push(
 { id: 'q-1.3-110', tema: '1.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a matriz de exposição ocupacional como instrumento em estudos epidemiológicos, é CORRETO afirmar:',
   alts: [
-    { t: 'Atribui exposições prováveis pela ocupação e período, ao custo de classificação errônea.', ok: true,
+    { t: 'Atribui exposições prováveis pela ocupação e pelo período, ao custo de classificação errônea', ok: true,
       why: 'Correta. Viabiliza o estudo e dilui a associação em direção ao valor nulo.' },
     { t: 'Atribui exposições pela ocupação e pelo período, eliminando a classificação errônea da exposição.', ok: false,
       why: 'Errada. Ela a reduz em relação ao autorrelato, mas não a elimina.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-2.3-111', tema: '2.3', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a ficha de informações de segurança de produtos químicos, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve estar acessível no local de uso, em português, e orienta a seleção de equipamentos.', ok: true,
+    { t: 'Deve estar acessível no local de uso, em português, e orienta a seleção dos equipamentos', ok: true,
       why: 'Correta. Ficha guardada em armário trancado não cumpre função alguma.' },
     { t: 'É documento de arquivo do setor de segurança, destinado a apresentação em caso de fiscalização.', ok: false,
       why: 'Errada. É documento de consulta pelos trabalhadores no local de uso.' },

@@ -23,7 +23,7 @@ window.BANCO.push(
 { id: 'q-4.5-110', tema: '4.5', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o trauma acústico agudo, é CORRETO afirmar:',
   alts: [
-    { t: 'Decorre de exposição única de altíssima intensidade, com instalação imediata e possível perda permanente.', ok: true,
+    { t: 'Decorre de exposição única de altíssima intensidade, com instalação imediata e possibilidade de perda permanente', ok: true,
       why: 'Correta. Evento único e dano imediato o distinguem da perda induzida por ruído, lenta e progressiva.' },
     { t: 'Decorre de exposição sonora intensa e tem a mesma evolução lenta e cumulativa da perda induzida por ruído.', ok: false,
       why: 'Errada. Um é evento único e imediato; o outro é lento e cumulativo.' },
@@ -41,7 +41,7 @@ window.BANCO.push(
 { id: 'q-4.6-110', tema: '4.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a violência no trabalho como fator de risco ocupacional, é CORRETO afirmar:',
   alts: [
-    { t: 'Abrange agressões físicas, verbais e ameaças, inclusive de terceiros, risco a inventariar e a controlar.', ok: true,
+    { t: 'Abrange agressões físicas, verbais e ameaças, inclusive de terceiros, risco a inventariar e a controlar no setor', ok: true,
       why: 'Correta. Violência de terceiros é risco ocupacional, não fatalidade do atendimento ao público.' },
     { t: 'Abrange agressões e ameaças entre trabalhadores, não constituindo risco ocupacional a violência de clientes e usuários.', ok: false,
       why: 'Errada. É risco reconhecido e gerenciável, típico de atendimento ao público e saúde.' },
@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-4.8-110', tema: '4.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o registro de trabalhadores expostos a agentes cancerígenos, é CORRETO afirmar:',
   alts: [
-    { t: 'O registro nominal com período, agente e intensidade é o que viabiliza o reconhecimento futuro do agravo.', ok: true,
+    { t: 'O registro nominal com período, agente e intensidade estimada é o que viabiliza o reconhecimento futuro do agravo', ok: true,
       why: 'Correta. Sem registro, a exposição de trinta anos atrás vira palavra do trabalhador contra a empresa.' },
     { t: 'O registro nominal é dispensável quando existe avaliação ambiental documentada do setor em que se deu a exposição.', ok: false,
       why: 'Errada. A avaliação descreve o ambiente; o registro vincula o trabalhador ao período de exposição.' },
@@ -95,7 +95,7 @@ window.BANCO.push(
 { id: 'q-5.5-110', tema: '5.5', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a avaliação de capacidade laborativa e a possibilidade de reabilitação, é CORRETO afirmar:',
   alts: [
-    { t: 'Concluir por incapacidade permanente para todo trabalho pressupõe reabilitação considerada e afastada.', ok: true,
+    { t: 'Concluir por incapacidade permanente para todo e qualquer trabalho pressupõe reabilitação considerada e afastada', ok: true,
       why: 'Correta. É a conclusão de maior consequência e a que mais exige fundamentação.' },
     { t: 'Concluir por incapacidade para a função habitual equivale a concluir por incapacidade para todo e qualquer trabalho.', ok: false,
       why: 'Errada. São graus distintos, e a capacidade residual costuma permitir outras atividades.' },

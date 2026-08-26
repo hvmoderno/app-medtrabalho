@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-2.6-101', tema: '2.6', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a atualização periódica das listas de limites de exposição, é CORRETO afirmar:',
   alts: [
-    { t: 'As revisões podem introduzir agentes, alterar valores e acrescentar notações conforme a evidência.', ok: true,
+    { t: 'As revisões podem introduzir novos agentes, alterar valores e acrescentar notações conforme a evidência', ok: true,
       why: 'Correta. A edição usada precisa ser declarada e mantida atualizada, sob pena de critério superado.' },
     { t: 'As listas são estáveis ao longo do tempo, não sendo necessário declarar nos laudos a edição utilizada.', ok: false,
       why: 'Errada. A edição deve constar, pois valores mudam entre versões.' },
@@ -113,7 +113,7 @@ window.BANCO.push(
 { id: 'q-2.9-100', tema: '2.9', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a toxicocinética aplicada à interpretação de exposições ocupacionais, é CORRETO afirmar:',
   alts: [
-    { t: 'A meia-vida define se o agente se acumula entre jornadas, o que altera o momento adequado da coleta.', ok: true,
+    { t: 'A meia-vida define se o agente se acumula entre as jornadas, o que altera o momento adequado da coleta', ok: true,
       why: 'Correta. O acúmulo semanal é invisível se a coleta ignora a cinética do agente.' },
     { t: 'A meia-vida descreve a eliminação do agente, sem influenciar a estratégia de monitoramento biológico adotada.', ok: false,
       why: 'Errada. Determina o momento de coleta e a possibilidade de acúmulo.' },

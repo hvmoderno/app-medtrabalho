@@ -23,7 +23,7 @@ window.BANCO.push(
 { id: 'q-1.5-090', tema: '1.5', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a política de segurança e saúde de uma organização, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve declarar compromissos verificáveis e ser coerente com as decisões concretas de produção.', ok: true,
+    { t: 'Deve declarar compromissos verificáveis e ser coerente com as decisões concretas de produção da empresa', ok: true,
       why: 'Correta. Uma decisão de produção contra a política ensina mais que qualquer cartaz.' },
     { t: 'Tem valor simbólico de orientação geral e não precisa declarar compromissos verificáveis e auditáveis.', ok: false,
       why: 'Errada. Compromissos verificáveis são o que permite cobrar e auditar.' },
@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-1.8-090', tema: '1.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o uso de indicadores para priorizar ações de vigilância em saúde do trabalhador em um território, é CORRETO afirmar:',
   alts: [
-    { t: 'Combina magnitude, gravidade, número de expostos e viabilidade da intervenção proposta.', ok: true,
+    { t: 'Combina magnitude, gravidade, número de expostos e viabilidade técnica da intervenção proposta', ok: true,
       why: 'Correta. Setor com poucos registros pode significar ausência de vigilância, não de risco.' },
     { t: 'Combina magnitude e gravidade, podendo desconsiderar os setores sem registros de agravos notificados.', ok: false,
       why: 'Errada. A ausência de registro pode indicar ausência de vigilância anterior.' },
@@ -149,7 +149,7 @@ window.BANCO.push(
 { id: 'q-2.8-080', tema: '2.8', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a higienização, a guarda e a manutenção de respiradores, é CORRETO afirmar:',
   alts: [
-    { t: 'Exigem higienização e inspeção periódicas e guarda protegida de contaminação e deformação.', ok: true,
+    { t: 'Exigem higienização e inspeção periódicas e guarda protegida de contaminação e de deformação', ok: true,
       why: 'Correta. Respirador guardado dobrado dentro do armário perde vedação.' },
     { t: 'Exigem higienização e inspeção periódicas, sem que a forma de guarda influencie seu desempenho.', ok: false,
       why: 'Errada. Deformação e contaminação comprometem vedação e proteção.' },
@@ -221,7 +221,7 @@ window.BANCO.push(
 { id: 'q-5.6-090', tema: '5.6', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a estabilidade do trabalhador reabilitado e a reserva de vagas, é CORRETO afirmar:',
   alts: [
-    { t: 'A dispensa em contrato indeterminado exige contratar substituto em condição semelhante.', ok: true,
+    { t: 'A dispensa em contrato por prazo indeterminado exige contratar substituto em condição semelhante', ok: true,
       why: 'Correta. A proteção é do preenchimento da reserva, mantendo o número de vagas.' },
     { t: 'A dispensa é condicionada, protegendo a regra apenas o trabalhador individualmente considerado.', ok: false,
       why: 'Errada. Protege a manutenção do percentual de vagas reservadas.' },
@@ -239,7 +239,7 @@ window.BANCO.push(
 { id: 'q-6.1-100', tema: '6.1', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a guarda e a validade do atestado de saúde ocupacional, é CORRETO afirmar:',
   alts: [
-    { t: 'Uma via vai ao trabalhador, e o documento registra riscos avaliados, exames e conclusão.', ok: true,
+    { t: 'Uma via vai ao trabalhador, e o documento registra os riscos avaliados, os exames e a conclusão', ok: true,
       why: 'Correta. É documento de memória da exposição, não apenas de liberação para o trabalho.' },
     { t: 'Uma via fica arquivada na empresa, sendo facultativa a entrega de via ao próprio trabalhador.', ok: false,
       why: 'Errada. É exigência normativa.' },
