@@ -80,9 +80,8 @@ def main():
     if feitos:
         caminho.write_text(txt, encoding='utf-8')
     print(f'questões reescritas: {len(feitos)}')
-    pos_alta = [k for k, p in feitos if p == 1]
-    if pos_alta:
-        print('  correta é a mais longa em:', ', '.join(pos_alta))
+    for k, p in feitos:
+        print(f'  {k}  posição {p}ª')
     for a in avisos:
         print('  AVISO', a)
 
