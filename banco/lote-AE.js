@@ -149,16 +149,16 @@ window.BANCO.push(
 { id: 'q-1.8-080', tema: '1.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a investigação de óbito relacionado ao trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'A investigação envolve notificação, análise das circunstâncias e do processo de trabalho, e articulação entre saúde, trabalho e ministério público — e o preenchimento adequado da declaração de óbito, informando a relação com o trabalho, é elemento que sustenta toda a cadeia seguinte.', ok: true,
-      why: 'Correta. Declaração mal preenchida apaga o caso de todas as bases.' },
-    { t: 'A declaração de óbito não comporta informação sobre relação com o trabalho.', ok: false,
+    { t: 'Envolve notificação, análise do processo e articulação entre saúde, trabalho e ministério.', ok: true,
+      why: 'Correta. Declaração de óbito mal preenchida apaga o caso de todas as bases.' },
+    { t: 'Envolve notificação e análise, não comportando a declaração de óbito informação sobre o trabalho.', ok: false,
       why: 'Errada. Há campo específico para essa informação.' },
-    { t: 'A investigação é atribuição exclusiva da fiscalização do trabalho.', ok: false,
+    { t: 'Envolve análise das circunstâncias, sendo atribuição exclusiva da fiscalização do trabalho.', ok: false,
       why: 'Errada. Envolve articulação entre setores, com competências próprias de cada um.' },
-    { t: 'Óbitos por doença ocupacional não são objeto de investigação, apenas os por acidente.', ok: false,
+    { t: 'Envolve notificação e análise, restrita aos óbitos por acidente, e não por doença ocupacional.', ok: false,
       why: 'Errada. Ambos são objeto de vigilância.' },
-    { t: 'A investigação deve se concentrar na conduta do trabalhador falecido.', ok: false,
-      why: 'Errada. O objeto é o processo de trabalho e as falhas de barreira que permitiram o evento.' }
+    { t: 'Envolve notificação e análise, concentrada na conduta do trabalhador falecido no evento.', ok: false,
+      why: 'Errada. O objeto é o processo de trabalho e as falhas de barreira.' }
   ],
   comentario: 'Óbito relacionado ao trabalho: notificação, análise do processo de trabalho e articulação intersetorial — com a declaração de óbito informando a relação com o trabalho, sem a qual o caso desaparece das estatísticas.',
   pegadinha: 'Investigar a conduta do falecido em vez do processo de trabalho encerra a apuração onde ela deveria começar.',
