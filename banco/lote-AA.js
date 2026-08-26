@@ -41,7 +41,7 @@ window.BANCO.push(
 { id: 'q-5.3-070', tema: '5.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a distinção entre concausa e causa exclusiva não ocupacional, é CORRETO afirmar:',
   alts: [
-    { t: 'A concausa exige contribuição efetiva da exposição para o resultado; coincidência temporal com o trabalho não basta.', ok: true,
+    { t: 'A concausa exige contribuição efetiva da exposição para o resultado; a coincidência temporal com o trabalho não basta', ok: true,
       why: 'Correta. Concausa exige contribuição demonstrável, não apenas simultaneidade.' },
     { t: 'A concausa se caracteriza pela ocorrência da doença durante o vínculo, período em que o trabalhador esteve sob exposição.', ok: false,
       why: 'Errada. É preciso demonstrar contribuição efetiva da exposição para o resultado.' },
@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-5.6-070', tema: '5.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre os fatores que influenciam o retorno ao trabalho após afastamento prolongado, é CORRETO afirmar:',
   alts: [
-    { t: 'Fatores não clínicos pesam tanto quanto o quadro, e o afastamento prolongado por si reduz a chance de retorno.', ok: true,
+    { t: 'Fatores não clínicos pesam tanto quanto o quadro clínico, e o afastamento prolongado por si reduz a chance de retorno', ok: true,
       why: 'Correta. É o achado mais consistente da literatura sobre retorno ao trabalho.' },
     { t: 'O desfecho é determinado principalmente pela gravidade clínica, que define a extensão da limitação funcional residual.', ok: false,
       why: 'Errada. Fatores organizacionais e psicossociais pesam de forma comparável ao quadro clínico.' },
@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-6.1-080', tema: '6.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o exame de mudança de riscos ocupacionais, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve ser realizado antes da mudança efetiva, servindo de linha de base para o acompanhamento no novo risco.', ok: true,
+    { t: 'Deve ser realizado antes da mudança efetiva de função, servindo de linha de base para o acompanhamento no novo risco', ok: true,
       why: 'Correta. Feito depois, perde a função de linha de base.' },
     { t: 'Pode ser realizado nos primeiros meses após a mudança, sem prejuízo, já que a exposição ainda é recente nesse período.', ok: false,
       why: 'Errada. A realização prévia é justamente o que estabelece a linha de base do novo risco.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-6.4-080', tema: '6.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o atendimento inicial a trabalhador com exposição maciça a agente químico, é CORRETO afirmar:',
   alts: [
-    { t: 'A descontaminação precede o atendimento definitivo e protege a equipe, e a ficha de segurança orienta a conduta.', ok: true,
+    { t: 'A descontaminação precede o atendimento definitivo e protege também a equipe, e a ficha de segurança orienta a conduta', ok: true,
       why: 'Correta. Descontaminar cedo protege a vítima e evita contaminação secundária da equipe.' },
     { t: 'O atendimento clínico definitivo precede a descontaminação, por ser a estabilização a prioridade em exposição maciça.', ok: false,
       why: 'Errada. A descontaminação inicial é prioritária e reduz a dose absorvida.' },

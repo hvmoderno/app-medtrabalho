@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-1.8-090', tema: '1.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o uso de indicadores para priorizar ações de vigilância em saúde do trabalhador em um território, é CORRETO afirmar:',
   alts: [
-    { t: 'Combina magnitude, gravidade, número de expostos e viabilidade técnica da intervenção proposta', ok: true,
+    { t: 'Combina magnitude, gravidade, número de expostos e a viabilidade técnica da intervenção proposta', ok: true,
       why: 'Correta. Setor com poucos registros pode significar ausência de vigilância, não de risco.' },
     { t: 'Combina magnitude e gravidade, podendo desconsiderar os setores sem registros de agravos notificados.', ok: false,
       why: 'Errada. A ausência de registro pode indicar ausência de vigilância anterior.' },
@@ -113,7 +113,7 @@ window.BANCO.push(
 { id: 'q-1.10-090', tema: '1.10', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a promoção da atividade física no ambiente de trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'Podem trazer benefícios, mas não substituem a correção de fatores ergonômicos e organizacionais.', ok: true,
+    { t: 'Podem trazer benefícios reais, mas não substituem a correção dos fatores ergonômicos e organizacionais', ok: true,
       why: 'Correta. Pausa para ginástica sem reduzir o ritmo transfere ao trabalhador a compensação.' },
     { t: 'Podem trazer benefícios, substituindo a ginástica laboral as adequações ergonômicas do posto de trabalho.', ok: false,
       why: 'Errada. São medidas de naturezas distintas e não substitutivas.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-2.5-080', tema: '2.5', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a antecipação de riscos em projetos de novas instalações e processos, é CORRETO afirmar:',
   alts: [
-    { t: 'Intervir no projeto é a oportunidade de maior eficácia e menor custo, eliminando o perigo antes.', ok: true,
+    { t: 'Intervir na fase de projeto é a oportunidade de maior eficácia e menor custo, eliminando o perigo antes', ok: true,
       why: 'Correta. O que se resolve no desenho não precisa ser gerenciado depois.' },
     { t: 'A avaliação de riscos deve começar após o início da operação, quando as condições reais se revelam.', ok: false,
       why: 'Errada. A antecipação na fase de projeto é a etapa mais eficaz.' },
@@ -257,7 +257,7 @@ window.BANCO.push(
 { id: 'q-6.4-100', tema: '6.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a queimadura elétrica no trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'A lesão externa subestima o dano profundo, com necrose muscular, rabdomiólise e risco renal.', ok: true,
+    { t: 'A lesão externa subestima o dano profundo, com necrose muscular, rabdomiólise e risco de lesão renal', ok: true,
       why: 'Correta. A corrente lesa o trajeto interno; a pele mostra só entrada e saída.' },
     { t: 'A extensão da lesão cutânea visível estima adequadamente a gravidade do caso a ser atendido.', ok: false,
       why: 'Errada. O dano profundo ao longo do trajeto costuma ser muito maior.' },

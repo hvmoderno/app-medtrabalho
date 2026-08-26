@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-2.6-090', tema: '2.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a comparação de resultados de avaliação de exposição com limites, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve considerar a distribuição dos resultados, e não apenas a média, pois as exposições são assimétricas ali', ok: true,
+    { t: 'Deve considerar a distribuição dos resultados, e não apenas a média, pois as exposições ocupacionais são assimétricas', ok: true,
       why: 'Correta. Média abaixo do limite convive com proporção relevante de jornadas acima dele.' },
     { t: 'Deve tomar a média dos resultados obtidos, medida que resume adequadamente a exposição para concluir sobre conformidade.', ok: false,
       why: 'Errada. Ignora a dispersão e a fração de jornadas acima do limite.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-4.5-090', tema: '4.5', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre as rinopatias e as alterações de vias aéreas superiores relacionadas ao trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'Poeiras e sensibilizantes produzem rinite ocupacional que frequentemente precede a asma pelo mesmo agente.', ok: true,
+    { t: 'Poeiras e sensibilizantes produzem rinite ocupacional que frequentemente precede a asma causada pelo mesmo agente', ok: true,
       why: 'Correta. A queixa nasal é a oportunidade de intervir antes do comprometimento brônquico.' },
     { t: 'Poeiras e gases irritantes produzem rinite ocupacional, quadro sem relação com o desenvolvimento posterior de asma.', ok: false,
       why: 'Errada. A associação temporal entre rinite e asma ocupacional é bem documentada.' },

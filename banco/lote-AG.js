@@ -95,7 +95,7 @@ window.BANCO.push(
 { id: 'q-7.7-060', tema: '7.7', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a atuação do médico como assistente técnico em processo judicial, é CORRETO afirmar:',
   alts: [
-    { t: 'Atua a serviço da parte, com liberdade técnica, sem se desobrigar da veracidade e da fundamentação.', ok: true,
+    { t: 'Atua a serviço da parte, com liberdade técnica, sem se desobrigar da veracidade e da fundamentação devida', ok: true,
       why: 'Correta. Defender uma posição não autoriza afirmar o que não se sustenta tecnicamente.' },
     { t: 'Atua a serviço da parte que o indicou, vinculação que autoriza sustentar tese ainda que sem lastro técnico.', ok: false,
       why: 'Errada. A veracidade e a fundamentação continuam exigíveis.' },

@@ -41,7 +41,7 @@ window.BANCO.push(
 { id: 'q-5.4-100', tema: '5.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a fundamentação do laudo pericial, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve explicitar metodologia, elementos e raciocínio, permitindo a terceiros reconstituir o percurso.', ok: true,
+    { t: 'Deve explicitar a metodologia, os elementos e o raciocínio, permitindo a terceiros reconstituir o percurso seguido', ok: true,
       why: 'Correta. Reprodutibilidade do raciocínio é o que distingue laudo de opinião.' },
     { t: 'Deve explicitar os elementos considerados, dispensando a conclusão bem fundamentada a descrição da metodologia.', ok: false,
       why: 'Errada. A metodologia é parte da fundamentação.' },
@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-5.5-090', tema: '5.5', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o uso da Classificação Internacional de Funcionalidade na avaliação de trabalhadores, é CORRETO afirmar:',
   alts: [
-    { t: 'Padroniza a descrição da funcionalidade e do contexto, complementando a classificação diagnóstica', ok: true,
+    { t: 'Padroniza a descrição da funcionalidade e do contexto, complementando, sem substituir, a classificação diagnóstica', ok: true,
       why: 'Correta. Descreve por que dois trabalhadores com o mesmo diagnóstico têm capacidades distintas.' },
     { t: 'Padroniza a descrição de funcionalidade e substitui a classificação diagnóstica de doenças nesse uso.', ok: false,
       why: 'Errada. São classificações complementares, com objetos distintos.' },
@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-4.7-090', tema: '4.7', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a prescrição e o uso de psicofármacos em trabalhadores de funções críticas, é CORRETO afirmar:',
   alts: [
-    { t: 'Considera o efeito sobre atenção e sonolência, a fase do tratamento e a resposta de cada indivíduo', ok: true,
+    { t: 'Considera o efeito sobre a atenção e a sonolência, a fase do tratamento e a resposta de cada indivíduo', ok: true,
       why: 'Correta. O que restringe é o efeito funcional, e ele muda ao longo do tratamento.' },
     { t: 'Considera o efeito da medicação, implicando o uso de qualquer psicofármaco inaptidão para funções críticas.', ok: false,
       why: 'Errada. O efeito varia por fármaco, dose, fase do tratamento e resposta individual.' },
@@ -113,7 +113,7 @@ window.BANCO.push(
 { id: 'q-4.10-080', tema: '4.10', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a vacinação contra influenza em ambientes de trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'Reduz transmissão e absenteísmo, e a prioridade em saúde se justifica pela proteção dos pacientes.', ok: true,
+    { t: 'Reduz a transmissão e o absenteísmo, e a prioridade em saúde se justifica pela proteção dos pacientes', ok: true,
       why: 'Correta. A proteção de terceiros é o argumento central em trabalhadores de saúde.' },
     { t: 'Reduz a transmissão em ambientes de convívio, dispensando o afastamento de trabalhadores sintomáticos.', ok: false,
       why: 'Errada. A proteção não é absoluta e o sintomático transmite.' },
@@ -149,7 +149,7 @@ window.BANCO.push(
 { id: 'q-5.6-080', tema: '5.6', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o papel do médico do trabalho no processo de reabilitação profissional conduzido pela previdência, é CORRETO afirmar:',
   alts: [
-    { t: 'Contribui descrevendo as exigências reais das funções disponíveis e avaliando a compatibilidade.', ok: true,
+    { t: 'Contribui descrevendo as exigências reais das funções disponíveis e avaliando a compatibilidade com elas', ok: true,
       why: 'Correta. Quem conhece as funções reais da empresa é o serviço médico dela.' },
     { t: 'Não tem papel no processo, que é conduzido pela previdência com seus próprios profissionais e critérios.', ok: false,
       why: 'Errada. Sua informação sobre as funções disponíveis é elemento central.' },

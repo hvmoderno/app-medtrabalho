@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-2.4-041', tema: '2.4', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o descarte de resíduos de serviços de saúde e o risco ocupacional associado, é CORRETO afirmar:',
   alts: [
-    { t: 'A segregação correta na origem é o que mais reduz o risco de quem manuseia nas etapas seguintes', ok: true,
+    { t: 'A segregação correta na origem é o que mais reduz o risco de quem manuseia o resíduo adiante', ok: true,
       why: 'Correta. Erros na origem se propagam por toda a cadeia até a destinação.' },
     { t: 'O risco se restringe aos profissionais assistenciais que geram o resíduo no ponto de atendimento.', ok: false,
       why: 'Errada. Coleta, transporte e destinação expõem outros trabalhadores.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-2.9-040', tema: '2.9', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Trabalhador de mineração apresenta quadro neuropsiquiátrico com alterações de comportamento, seguido de sinais extrapiramidais com rigidez e alteração da marcha. Sobre a hipótese, é CORRETO afirmar:',
   alts: [
-    { t: 'Considerar manganismo, com fase inicial neuropsiquiátrica seguida de quadro extrapiramidal', ok: true,
+    { t: 'Considerar manganismo, com fase inicial neuropsiquiátrica seguida de quadro extrapiramidal claro', ok: true,
       why: 'Correta. Pode persistir após o afastamento, o que torna o reconhecimento precoce decisivo.' },
     { t: 'Considerar intoxicação por chumbo, cuja manifestação típica é o quadro extrapiramidal descrito.', ok: false,
       why: 'Errada. O quadro extrapiramidal caracteriza o manganismo.' },
@@ -149,7 +149,7 @@ window.BANCO.push(
 { id: 'q-2.9-041', tema: '2.9', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Trabalhador de garimpo apresenta tremor de extremidades, irritabilidade, alterações de memória e gengivite com sialorreia. Sobre a hipótese, é CORRETO afirmar:',
   alts: [
-    { t: 'Considerar mercúrio metálico: tremor, alterações neuropsiquiátricas e gengivoestomatite.', ok: true,
+    { t: 'Considerar mercúrio metálico: tremor de intenção, alterações neuropsiquiátricas e gengivoestomatite', ok: true,
       why: 'Correta. O monitoramento biológico se faz preferencialmente por dosagem urinária.' },
     { t: 'Considerar intoxicação por manganês, cuja marca clínica é a gengivoestomatite descrita no caso.', ok: false,
       why: 'Errada. A gengivoestomatite compõe o quadro do mercúrio.' },
@@ -185,7 +185,7 @@ window.BANCO.push(
 { id: 'q-2.9-043', tema: '2.9', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a exposição combinada a solventes e o consumo de bebida alcoólica pelo trabalhador, é CORRETO afirmar:',
   alts: [
-    { t: 'O álcool compete pelas vias de biotransformação e interfere no monitoramento biológico.', ok: true,
+    { t: 'O álcool compete pelas mesmas vias de biotransformação e interfere no monitoramento biológico', ok: true,
       why: 'Correta. Deve ser considerado sem virar juízo moral ou motivo de discriminação.' },
     { t: 'O consumo de álcool não interfere na toxicidade nem no monitoramento biológico de solventes.', ok: false,
       why: 'Errada. Compete pelas mesmas vias metabólicas.' },

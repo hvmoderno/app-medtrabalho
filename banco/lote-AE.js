@@ -41,7 +41,7 @@ window.BANCO.push(
 { id: 'q-6.3-090', tema: '6.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a epilepsia e a avaliação de aptidão para atividades de risco, é CORRETO afirmar:',
   alts: [
-    { t: 'Considera tipo de crise, tempo sem crises, adesão e fatores desencadeantes da atividade.', ok: true,
+    { t: 'Considera o tipo de crise, o tempo sem crises, a adesão e os fatores desencadeantes da atividade', ok: true,
       why: 'Correta. O diagnóstico isolado é insuficiente para concluir por inaptidão.' },
     { t: 'Considera o diagnóstico de epilepsia, que implica inaptidão para qualquer atividade laboral.', ok: false,
       why: 'Errada. A maioria das funções não apresenta risco incompatível.' },
@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-6.4-090', tema: '6.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o plano de resposta a emergências em empresas com riscos de processo, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve prever cenários, recursos, comunicação e articulação externa, com simulados periódicos.', ok: true,
+    { t: 'Deve prever cenários, recursos, comunicação e articulação externa, com simulados feitos periodicamente', ok: true,
       why: 'Correta. Plano nunca testado falha no primeiro uso real.' },
     { t: 'Deve ser genérico o bastante para cobrir qualquer situação de emergência que venha a ocorrer.', ok: false,
       why: 'Errada. Cenários específicos permitem preparo concreto de recursos e fluxos.' },
@@ -95,7 +95,7 @@ window.BANCO.push(
 { id: 'q-1.5-080', tema: '1.5', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre auditorias de sistemas de gestão de segurança e saúde, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve verificar a implementação efetiva, com observação do trabalho e entrevista com quem executa.', ok: true,
+    { t: 'Deve verificar a implementação efetiva, com observação do trabalho e entrevista com quem de fato executa', ok: true,
       why: 'Correta. Auditoria restrita a documentos certifica o sistema descrito, não o praticado.' },
     { t: 'Deve verificar a conformidade documental, evidência suficiente da implementação do sistema auditado.', ok: false,
       why: 'Errada. Documento conforme convive com prática divergente.' },
@@ -149,7 +149,7 @@ window.BANCO.push(
 { id: 'q-1.8-080', tema: '1.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a investigação de óbito relacionado ao trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'Envolve notificação, análise do processo e articulação entre saúde, trabalho e ministério.', ok: true,
+    { t: 'Envolve notificação, análise do processo de trabalho e articulação entre saúde, trabalho e ministério', ok: true,
       why: 'Correta. Declaração de óbito mal preenchida apaga o caso de todas as bases.' },
     { t: 'Envolve notificação e análise, não comportando a declaração de óbito informação sobre o trabalho.', ok: false,
       why: 'Errada. Há campo específico para essa informação.' },

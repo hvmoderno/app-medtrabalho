@@ -41,7 +41,7 @@ window.BANCO.push(
 { id: 'q-2.4-100', tema: '2.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o risco biológico em atividades de abate e processamento de carnes, é CORRETO afirmar:',
   alts: [
-    { t: 'Há exposição a zoonoses por tecidos e aerossóis, agravada por ferimentos com facas e umidade constante.', ok: true,
+    { t: 'Há exposição a zoonoses por tecidos e aerossóis, agravada pelos ferimentos com facas e pela umidade constante', ok: true,
       why: 'Correta. É o corte na mão que transforma a exposição em infecção.' },
     { t: 'Há exposição a zoonoses nesse setor, risco desprezível quando comparado ao risco ergonômico predominante.', ok: false,
       why: 'Errada. Ambos são relevantes e coexistem nessas atividades.' },
@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-2.6-100', tema: '2.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a diferença entre limites de exposição e valores de referência para indicadores biológicos, é CORRETO afirmar:',
   alts: [
-    { t: 'Um mede o ar e o outro o organismo, de modo que resultados discordantes são possíveis e informativos.', ok: true,
+    { t: 'Um mede o ar e o outro mede o organismo, de modo que resultados discordantes são possíveis e informativos', ok: true,
       why: 'Correta. A discordância aponta absorção cutânea ou falha na proteção respiratória.' },
     { t: 'Um mede o ar e o outro o organismo, indicando resultados discordantes erro de medição em uma das avaliações.', ok: false,
       why: 'Errada. Frequentemente indicam via de absorção não considerada ou falha de proteção.' },
@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-2.6-101', tema: '2.6', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a atualização periódica das listas de limites de exposição, é CORRETO afirmar:',
   alts: [
-    { t: 'As revisões podem introduzir novos agentes, alterar valores e acrescentar notações conforme a evidência', ok: true,
+    { t: 'As revisões podem introduzir novos agentes, alterar valores e acrescentar notações conforme a evidência disponível', ok: true,
       why: 'Correta. A edição usada precisa ser declarada e mantida atualizada, sob pena de critério superado.' },
     { t: 'As listas são estáveis ao longo do tempo, não sendo necessário declarar nos laudos a edição utilizada.', ok: false,
       why: 'Errada. A edição deve constar, pois valores mudam entre versões.' },
@@ -113,7 +113,7 @@ window.BANCO.push(
 { id: 'q-2.9-100', tema: '2.9', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a toxicocinética aplicada à interpretação de exposições ocupacionais, é CORRETO afirmar:',
   alts: [
-    { t: 'A meia-vida define se o agente se acumula entre as jornadas, o que altera o momento adequado da coleta', ok: true,
+    { t: 'A meia-vida define se o agente se acumula entre as jornadas, o que altera o momento adequado de fazer a coleta', ok: true,
       why: 'Correta. O acúmulo semanal é invisível se a coleta ignora a cinética do agente.' },
     { t: 'A meia-vida descreve a eliminação do agente, sem influenciar a estratégia de monitoramento biológico adotada.', ok: false,
       why: 'Errada. Determina o momento de coleta e a possibilidade de acúmulo.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-2.9-101', tema: '2.9', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a exposição ocupacional a chumbo em atividades de reforma e demolição, é CORRETO afirmar:',
   alts: [
-    { t: 'As tintas antigas contêm chumbo, e lixamento, raspagem e aquecimento geram poeira e fumos absorvíveis', ok: true,
+    { t: 'As tintas antigas contêm chumbo, e o lixamento, a raspagem e o aquecimento geram poeira e fumos absorvíveis', ok: true,
       why: 'Correta. Ninguém espera exposição a chumbo em obra de reforma, e é onde ela ocorre.' },
     { t: 'A exposição a chumbo se restringe a indústrias de baterias e fundições, onde o metal é processado em massa.', ok: false,
       why: 'Errada. Reforma de estruturas antigas é fonte relevante e subestimada.' },

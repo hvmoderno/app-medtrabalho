@@ -5,7 +5,7 @@ window.BANCO.push(
 { id: 'q-2.2-110', tema: '2.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a atenuação obtida na prática por protetores auditivos, é CORRETO afirmar:',
   alts: [
-    { t: 'Depende do ajuste, do uso contínuo e da compatibilidade com os demais equipamentos da cabeça', ok: true,
+    { t: 'Depende do ajuste, do uso contínuo e da compatibilidade com os demais equipamentos usados na cabeça', ok: true,
       why: 'Correta. Poucos minutos sem o protetor derrubam a proteção média da jornada.' },
     { t: 'Depende do modelo escolhido, correspondendo a atenuação declarada no certificado à obtida em campo.', ok: false,
       why: 'Errada. A atenuação de campo é sistematicamente menor que a declarada.' },
@@ -23,7 +23,7 @@ window.BANCO.push(
 { id: 'q-2.3-110', tema: '2.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a exposição ocupacional a formaldeído, é CORRETO afirmar:',
   alts: [
-    { t: 'É irritante, sensibilizante cutâneo e cancerígeno, com exposição em setores bem distintos.', ok: true,
+    { t: 'É irritante, sensibilizante cutâneo e cancerígeno, com exposição em setores bastante distintos entre si', ok: true,
       why: 'Correta. Anatomia patológica, necrotérios, resinas e alisamento capilar expõem a ele.' },
     { t: 'É irritante de vias aéreas e olhos e sensibilizante cutâneo, sem potencial carcinogênico reconhecido.', ok: false,
       why: 'Errada. É classificado como cancerígeno para humanos.' },
@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-2.7-090', tema: '2.7', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o relatório de avaliação de exposição ocupacional elaborado segundo procedimento técnico padronizado, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve descrever grupo, estratégia, equipamentos, calibração, tarefas e critério de comparação.', ok: true,
+    { t: 'Deve descrever o grupo, a estratégia, os equipamentos, a calibração, as tarefas e o critério adotado', ok: true,
       why: 'Correta. Reprodutibilidade é o que distingue laudo técnico de número solto.' },
     { t: 'Deve apresentar os resultados numéricos obtidos, suficientes para compor o relatório da avaliação.', ok: false,
       why: 'Errada. Sem método e condições, o número não se interpreta.' },

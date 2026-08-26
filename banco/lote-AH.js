@@ -23,7 +23,7 @@ window.BANCO.push(
 { id: 'q-4.5-100', tema: '4.5', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a interpretação de audiometrias sequenciais em programa de conservação auditiva, é CORRETO afirmar:',
   alts: [
-    { t: 'A piora frente à referência exige confirmação com repouso, avaliação otorrino e revisão da proteção.', ok: true,
+    { t: 'A piora frente à referência exige confirmação com repouso, avaliação otorrinolaringológica e revisão da proteção', ok: true,
       why: 'Correta. O desencadeamento identificado deve gerar ação, não apenas anotação.' },
     { t: 'A piora frente à referência deve ser registrada e reavaliada apenas no próximo exame periódico anual.', ok: false,
       why: 'Errada. Exige confirmação e ação imediata sobre exposição e proteção.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-4.10-090', tema: '4.10', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a vacinação de trabalhadores expostos a risco de exposição a agentes de zoonoses, é CORRETO afirmar:',
   alts: [
-    { t: 'É indicada aos grupos com exposição continuada a animais, sem dispensar a conduta pós-exposição devida', ok: true,
+    { t: 'É indicada aos grupos com exposição ocupacional continuada a animais, sem dispensar a conduta pós-exposição', ok: true,
       why: 'Correta. A pré-exposição simplifica a conduta posterior, mas não a elimina.' },
     { t: 'É indicada a grupos com exposição continuada a animais e elimina a necessidade de conduta após acidente.', ok: false,
       why: 'Errada. A conduta pós-exposição permanece, ainda que simplificada.' },
