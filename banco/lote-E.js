@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-2.7-040', tema: '2.7', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Um perito compara dois laudos de ruído da mesma empresa, com resultados divergentes, feitos por profissionais distintos. Sobre as possíveis causas, é CORRETO afirmar:',
   alts: [
-    { t: 'Podem decorrer de critério, posicionamento, duração, tarefas incluídas e calibração.', ok: true,
+    { t: 'Podem decorrer do critério, do posicionamento, da duração, das tarefas incluídas e da calibração', ok: true,
       why: 'Correta. Por isso a descrição da metodologia é elemento essencial de qualquer laudo.' },
     { t: 'Podem decorrer de vários fatores, indicando a divergência entre laudos fraude em um deles.', ok: false,
       why: 'Errada. Diferenças metodológicas explicam a maior parte das divergências.' },
@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-2.8-040', tema: '2.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Uma empresa fornece respiradores purificadores de ar em setor onde há também deficiência intermitente de oxigênio por uso de gás inerte em processo de purga. Sobre a adequação, é CORRETO afirmar:',
   alts: [
-    { t: 'A possibilidade de deficiência de oxigênio exige adução de ar e monitoramento contínuo.', ok: true,
+    { t: 'A possibilidade de deficiência de oxigênio exige adução de ar e monitoramento contínuo da atmosfera', ok: true,
       why: 'Correta. Purificador de ar não gera oxigênio e é inadequado nessa condição.' },
     { t: 'O purificador de ar é adequado quando a deficiência de oxigênio é intermitente e de curta duração.', ok: false,
       why: 'Errada. O purificador não supre oxigênio em nenhuma circunstância.' },

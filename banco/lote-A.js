@@ -167,7 +167,7 @@ window.BANCO.push(
 { id: 'q-2.9-042', tema: '2.9', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a interpretação de resultados de monitoramento biológico em grupo de trabalhadores, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve considerar a distribuição no grupo, e não apenas os casos isolados encontrados.', ok: true,
+    { t: 'Deve considerar a distribuição dos resultados no grupo, e não apenas os casos isolados encontrados', ok: true,
       why: 'Correta. Vários elevados apontam falha coletiva; um discrepante sugere fator individual.' },
     { t: 'Deve analisar cada resultado isoladamente, sem comparação com os demais resultados do grupo.', ok: false,
       why: 'Errada. A distribuição no grupo é o que revela falha de controle.' },

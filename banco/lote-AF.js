@@ -23,7 +23,7 @@ window.BANCO.push(
 { id: 'q-2.3-100', tema: '2.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o manuseio de medicamentos antineoplásicos por trabalhadores de saúde, é CORRETO afirmar:',
   alts: [
-    { t: 'Há exposição a agentes carcinogênicos e reprotóxicos, exigindo cabine adequada e sistema fechado.', ok: true,
+    { t: 'Há exposição a agentes carcinogênicos e reprotóxicos, exigindo cabine adequada, sistema fechado e capacitação', ok: true,
       why: 'Correta. A exposição não termina no preparo: alcança administração, limpeza e excretas.' },
     { t: 'Há exposição a agentes carcinogênicos, limitada ao momento do preparo do medicamento na farmácia hospitalar.', ok: false,
       why: 'Errada. Administração, limpeza, transporte e manejo de excretas também expõem.' },

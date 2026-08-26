@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-2.4-130', tema: '2.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o descarte e o manuseio de perfurocortantes em serviços de saúde, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve ser imediato, no ponto de uso, em recipiente rígido e devidamente posicionado no local', ok: true,
+    { t: 'Deve ser imediato, no ponto de uso, em recipiente rígido e devidamente posicionado junto ao leito', ok: true,
       why: 'Correta. Recipiente longe do leito produz transporte de agulha, e é aí que o acidente ocorre.' },
     { t: 'Deve ser feito em recipiente rígido, ao término do conjunto de procedimentos realizados no leito.', ok: false,
       why: 'Errada. O acúmulo e o transporte do material aumentam o risco.' },
@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-2.6-130', tema: '2.6', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre os limites de exposição para agentes com efeito sensibilizante, é CORRETO afirmar:',
   alts: [
-    { t: 'Indica indução de resposta imunológica, e o limite não protege quem já se sensibilizou', ok: true,
+    { t: 'Indica indução de resposta imunológica específica, e o limite não protege quem já se sensibilizou', ok: true,
       why: 'Correta. O sensibilizado pode reagir a concentrações muito abaixo do valor tabelado.' },
     { t: 'Indica risco de resposta imunológica, protegendo o limite igualmente sensibilizados e não sensibilizados.', ok: false,
       why: 'Errada. O sensibilizado pode reagir muito abaixo do limite.' },
@@ -95,7 +95,7 @@ window.BANCO.push(
 { id: 'q-2.7-110', tema: '2.7', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a aplicação dos procedimentos técnicos padronizados na avaliação de exposição a poeiras, é CORRETO afirmar:',
   alts: [
-    { t: 'Usa seletor de fração, e a gravimetria exige controle de umidade e amostras de branco.', ok: true,
+    { t: 'Usa seletor de fração, e a análise gravimétrica exige controle de umidade e amostras de branco', ok: true,
       why: 'Correta. Em massa pequena, umidade e contaminação do filtro dominam o resultado.' },
     { t: 'Usa filtro apropriado, dispensando a amostragem de poeira dispositivo seletor de fração.', ok: false,
       why: 'Errada. A fração de interesse define o efeito e exige seletor apropriado.' },
@@ -113,7 +113,7 @@ window.BANCO.push(
 { id: 'q-2.9-130', tema: '2.9', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a exposição ocupacional a hidrocarbonetos aromáticos policíclicos, é CORRETO afirmar:',
   alts: [
-    { t: 'Estão em fumos de asfalto e em fuligem, são cancerígenos e absorvidos também pela pele', ok: true,
+    { t: 'Estão em fumos de asfalto e em fuligem, são cancerígenos e absorvidos também pela via cutânea', ok: true,
       why: 'Correta. A via cutânea muda as medidas: higiene e troca de vestimenta entram no controle.' },
     { t: 'Estão em fumos de asfalto e fuligem, com exposição ocorrendo exclusivamente por via respiratória.', ok: false,
       why: 'Errada. A absorção cutânea é relevante e frequentemente subestimada.' },

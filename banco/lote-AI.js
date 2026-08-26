@@ -5,7 +5,7 @@ window.BANCO.push(
 { id: 'q-1.4-090', tema: '1.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a gestão do absenteísmo por doença e o chamado presenteísmo, é CORRETO afirmar:',
   alts: [
-    { t: 'O presenteísmo pode superar o absenteísmo e é favorecido por políticas punitivas de faltas.', ok: true,
+    { t: 'O presenteísmo pode superar o absenteísmo em impacto e é favorecido por políticas punitivas de faltas', ok: true,
       why: 'Correta. Reduzir o absenteísmo por pressão desloca o problema em vez de resolvê-lo.' },
     { t: 'O presenteísmo é conceito descritivo do trabalho com desempenho reduzido, sem repercussão mensurável.', ok: false,
       why: 'Errada. Há instrumentos de mensuração e impacto documentado.' },
@@ -185,7 +185,7 @@ window.BANCO.push(
 { id: 'q-4.9-090', tema: '4.9', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a tuberculose em trabalhadores fora da área da saúde, é CORRETO afirmar:',
   alts: [
-    { t: 'Ambientes fechados e com aglomeração favorecem a transmissão em qualquer setor de atividade.', ok: true,
+    { t: 'Ambientes fechados e com aglomeração favorecem a transmissão em qualquer setor de atividade econômica', ok: true,
       why: 'Correta. A investigação de contato costuma parar na família e ignorar o turno inteiro.' },
     { t: 'A transmissão ocupacional de tuberculose se restringe aos serviços de saúde e laboratórios clínicos.', ok: false,
       why: 'Errada. Qualquer ambiente fechado com aglomeração favorece a transmissão.' },
@@ -203,7 +203,7 @@ window.BANCO.push(
 { id: 'q-5.3-090', tema: '5.3', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a concausa e a quantificação da contribuição do trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'A lei não fixa percentuais, sendo a análise qualitativa quanto à existência da contribuição.', ok: true,
+    { t: 'A lei não fixa percentuais de contribuição, sendo a análise qualitativa quanto à existência dela', ok: true,
       why: 'Correta. O reconhecimento é binário; proporcionalidade é discussão da esfera civil.' },
     { t: 'A legislação previdenciária estabelece percentuais mínimos de contribuição do trabalho para o nexo.', ok: false,
       why: 'Errada. Não há previsão de percentuais para o reconhecimento.' },

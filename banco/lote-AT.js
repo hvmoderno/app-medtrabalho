@@ -113,7 +113,7 @@ window.BANCO.push(
 { id: 'q-6.2-130', tema: '6.2', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o exame admissional de candidato com deficiência encaminhado à vaga reservada, é CORRETO afirmar:',
   alts: [
-    { t: 'Verifica a compatibilidade com adaptações razoáveis, e a inaptidão exige incompatibilidade insuperável', ok: true,
+    { t: 'Verifica a compatibilidade com as adaptações razoáveis, e a inaptidão exige incompatibilidade insuperável', ok: true,
       why: 'Correta. Sem essa exigência, o exame vira filtro que esvazia a reserva de vagas.' },
     { t: 'Verifica a compatibilidade com a função, bastando a constatação da deficiência para concluir pela inaptidão.', ok: false,
       why: 'Errada. É preciso demonstrar incompatibilidade insuperável por adaptação.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-6.3-130', tema: '6.3', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a avaliação cardiovascular em trabalhadores de funções de alta exigência física, é CORRETO afirmar:',
   alts: [
-    { t: 'Considera a estratificação individual e as exigências reais, incluindo esforço, calor e equipamentos', ok: true,
+    { t: 'Considera a estratificação de risco individual e as exigências reais, incluindo esforço, calor e equipamentos', ok: true,
       why: 'Correta. Roupa de proteção e calor somam carga cardiovascular relevante e mensurável.' },
     { t: 'Considera a estratificação de risco individual, independendo das exigências concretas da função exercida.', ok: false,
       why: 'Errada. É a exigência da função que define o que precisa ser avaliado.' },

@@ -41,7 +41,7 @@ window.BANCO.push(
 { id: 'q-2.4-120', tema: '2.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a exposição a agentes biológicos em atividades de campo e trabalho rural, é CORRETO afirmar:',
   alts: [
-    { t: 'Além das zoonoses há acidentes com animais peçonhentos, o que exige fluxo definido e articulação prévia com a rede que dispõe do soro', ok: true,
+    { t: 'Além das zoonoses há acidentes com animais peçonhentos, o que exige fluxo definido e articulação prévia com a rede que dispõe do soro específico', ok: true,
       why: 'Correta. Saber de antemão onde há soro é o que economiza tempo no acidente, sobretudo em frente distante.' },
     { t: 'Há exposição a zoonoses por contato com tecidos e secreções, ficando os acidentes com animais peçonhentos fora do escopo da saúde ocupacional rural.', ok: false,
       why: 'Errada. São agravos ocupacionais frequentes nessas atividades e entram no planejamento.' },
@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-2.7-100', tema: '2.7', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a estratégia de amostragem definida em procedimentos técnicos padronizados de higiene ocupacional, é CORRETO afirmar:',
   alts: [
-    { t: 'Define quantas amostras, em quem e em que condições coletar, para representar a exposição do grupo com nível de confiança conhecido.', ok: true,
+    { t: 'Define quantas amostras, em quem e em que condições coletar, para representar a exposição do grupo com um nível de confiança conhecido', ok: true,
       why: 'Correta. É a estratégia que transforma medições isoladas em caracterização do grupo.' },
     { t: 'Define as condições da coleta, sendo uma amostra por grupo homogêneo suficiente para caracterizar a exposição de todos os seus integrantes.', ok: false,
       why: 'Errada. Uma amostra não permite avaliar a variabilidade nem sustentar conclusão sobre o grupo.' },

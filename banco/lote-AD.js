@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-5.3-080', tema: '5.3', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a suscetibilidade individual e sua relação com a concausalidade, é CORRETO afirmar:',
   alts: [
-    { t: 'A maior suscetibilidade individual não afasta o nexo e pode caracterizar concausa preexistente', ok: true,
+    { t: 'A maior suscetibilidade individual não afasta o nexo com o trabalho e pode caracterizar concausa preexistente', ok: true,
       why: 'Correta. A lógica preventiva é adequar o ambiente à variabilidade das pessoas.' },
     { t: 'A maior suscetibilidade individual afasta o nexo com o trabalho, por deslocar a causa para o indivíduo.', ok: false,
       why: 'Errada. Caracteriza, quando muito, concausa preexistente.' },

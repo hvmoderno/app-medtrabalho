@@ -5,7 +5,7 @@ window.BANCO.push(
 { id: 'q-7.2-090', tema: '7.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a cessação de benefício por incapacidade e o retorno ao trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'A alta conclui sobre a capacidade, mas a empresa deve avaliar a compatibilidade com a função.', ok: true,
+    { t: 'A alta conclui sobre a capacidade, mas a empresa mantém o dever de avaliar a compatibilidade com a função', ok: true,
       why: 'Correta. Os dois exames avaliam coisas distintas e podem divergir legitimamente.' },
     { t: 'A alta previdenciária conclui sobre a capacidade e vincula a conclusão do exame de retorno ao trabalho.', ok: false,
       why: 'Errada. A avaliação de compatibilidade com a função é autônoma.' },
@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-7.6-060', tema: '7.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a publicidade e a divulgação de informações pelo médico do trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'É vedada a divulgação que permita identificar trabalhadores, e o empregador não supre o consentimento', ok: true,
+    { t: 'É vedada a divulgação que permita identificar os trabalhadores atendidos, e o empregador não supre o consentimento', ok: true,
       why: 'Correta. Quem autoriza o uso da própria informação de saúde é o titular.' },
     { t: 'É vedada a divulgação identificável, salvo com autorização do empregador responsável pelo serviço médico.', ok: false,
       why: 'Errada. O empregador não é titular da informação de saúde do trabalhador.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-7.1-080', tema: '7.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a fiscalização do trabalho e a atuação do médico do trabalho da empresa durante uma inspeção, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve prestar as informações de sua competência e os documentos exigíveis, preservado o sigilo clínico.', ok: true,
+    { t: 'Deve prestar as informações técnicas de sua competência e os documentos exigíveis, preservado o sigilo clínico', ok: true,
       why: 'Correta. Colaborar com a fiscalização não implica entregar dado clínico individual.' },
     { t: 'Deve colaborar com a fiscalização, entregando os prontuários individuais ao auditor fiscal do trabalho.', ok: false,
       why: 'Errada. O sigilo clínico permanece; apresentam-se os documentos do programa.' },

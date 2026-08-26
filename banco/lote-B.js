@@ -5,7 +5,7 @@ window.BANCO.push(
 { id: 'q-4.4-040', tema: '4.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Cabeleireira de 31 anos apresenta eczema em polpas digitais e dorso das mãos, com piora após início do uso de produtos para alisamento. Sobre a investigação, é CORRETO afirmar:',
   alts: [
-    { t: 'É preciso levantar a composição dos produtos e testar bateria com os alérgenos da atividade.', ok: true,
+    { t: 'É preciso levantar a composição dos produtos usados e testar bateria com os alérgenos da atividade', ok: true,
       why: 'Correta. Cabeleireiros somam sensibilizantes potentes e trabalho úmido, produzindo quadros mistos.' },
     { t: 'É preciso testar os alérgenos da profissão, embora o trabalho úmido não contribua para dermatose nesse grupo.', ok: false,
       why: 'Errada. Lavagem frequente e oclusão por luvas rompem a barreira e favorecem irritação.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-4.8-051', tema: '4.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Uma empresa questiona a necessidade de manter registro de exposição a cancerígenos de trabalhadores já desligados. Sobre a obrigação, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve ser mantido por prazo prolongado porque a latência desses cânceres é de décadas.', ok: true,
+    { t: 'Deve ser mantido por prazo prolongado porque a latência desses cânceres costuma ser de décadas', ok: true,
       why: 'Correta. Sem ele, o trabalhador não consegue demonstrar a exposição quando a doença aparecer.' },
     { t: 'Deve ser mantido durante o vínculo, podendo o registro ser descartado quando o contrato se encerra.', ok: false,
       why: 'Errada. É precisamente após o vínculo que o registro se torna essencial.' },

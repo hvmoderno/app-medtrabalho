@@ -23,7 +23,7 @@ window.BANCO.push(
 { id: 'q-2.3-150', tema: '2.3', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a exposição ocupacional a gases anestésicos residuais em centros cirúrgicos, é CORRETO afirmar:',
   alts: [
-    { t: 'Decorre de escape de circuitos e ventilação inadequada, sendo a exaustão a medida central.', ok: true,
+    { t: 'Decorre de escape de circuitos e de ventilação inadequada, sendo a exaustão a medida central', ok: true,
       why: 'Correta. Controle é exaustão de gases residuais e manutenção, não proteção individual.' },
     { t: 'Não há exposição ocupacional relevante a gases anestésicos em centros cirúrgicos modernos e ventilados.', ok: false,
       why: 'Errada. Escapes e ventilação inadequada mantêm a exposição relevante.' },
@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-2.7-130', tema: '2.7', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a integração entre os resultados de avaliação de higiene ocupacional e o programa de controle médico, é CORRETO afirmar:',
   alts: [
-    { t: 'Os resultados devem orientar exames, periodicidades e grupos a monitorar no programa médico.', ok: true,
+    { t: 'Os resultados devem orientar exames, periodicidades e grupos a monitorar no programa médico da empresa', ok: true,
       why: 'Correta. Sem isso ficam dois programas paralelos: um mede o ambiente, outro examina pessoas.' },
     { t: 'Os dois programas devem operar de forma independente, cada um com sua metodologia e seu cronograma.', ok: false,
       why: 'Errada. O programa médico deve derivar dos riscos avaliados.' },
@@ -95,7 +95,7 @@ window.BANCO.push(
 { id: 'q-4.4-150', tema: '4.4', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a vigilância de dermatoses em grupos de trabalhadores expostos, é CORRETO afirmar:',
   alts: [
-    { t: 'O exame de pele dirigido detecta quadros iniciais antes da cronificação nesses setores.', ok: true,
+    { t: 'O exame de pele dirigido detecta quadros iniciais antes da cronificação naqueles setores', ok: true,
       why: 'Correta. O trabalhador só procura quando a mão já não trabalha.' },
     { t: 'A queixa espontânea do trabalhador é indicador suficiente para orientar a vigilância dermatológica.', ok: false,
       why: 'Errada. A procura espontânea ocorre tardiamente, com lesão já instalada.' },
@@ -203,7 +203,7 @@ window.BANCO.push(
 { id: 'q-5.5-140', tema: '5.5', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a reavaliação periódica de restrições funcionais, é CORRETO afirmar:',
   alts: [
-    { t: 'Devem ser reavaliadas em intervalos definidos, pois as condições evoluem nos dois sentidos.', ok: true,
+    { t: 'Devem ser reavaliadas em intervalos definidos, pois as condições evoluem nos dois sentidos possíveis', ok: true,
       why: 'Correta. Restrição desatualizada erra tanto por limitar quanto por deixar de proteger.' },
     { t: 'Devem ser mantidas conforme emitidas até que o próprio trabalhador as questione formalmente.', ok: false,
       why: 'Errada. A reavaliação periódica é responsabilidade do serviço médico.' },
@@ -365,7 +365,7 @@ window.BANCO.push(
 { id: 'q-1.6-120', tema: '1.6', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a participação de trabalhadores e suas entidades na formulação de políticas de saúde do trabalhador, é CORRETO afirmar:',
   alts: [
-    { t: 'É princípio estruturante do campo e traz o conhecimento sobre o trabalho real à formulação.', ok: true,
+    { t: 'É princípio estruturante do campo e traz o conhecimento sobre o trabalho real à formulação técnica', ok: true,
       why: 'Correta. É o traço histórico que distingue a saúde do trabalhador da medicina do trabalho.' },
     { t: 'É etapa consultiva prevista nos processos, sem efeito sobre a formulação técnica das políticas.', ok: false,
       why: 'Errada. É princípio estruturante do campo.' },

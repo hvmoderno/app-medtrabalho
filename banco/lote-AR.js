@@ -41,7 +41,7 @@ window.BANCO.push(
 { id: 'q-7.3-120', tema: '7.3', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a atuação sanitária em situações de contaminação que atingem trabalhadores e comunidade, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve mapear fonte, vias e populações atingidas, com comunicação de risco aos envolvidos.', ok: true,
+    { t: 'Deve mapear a fonte, as vias e as populações atingidas, com comunicação de risco aos envolvidos', ok: true,
       why: 'Correta. Quem trabalha na fonte recebe a maior dose e é prioritário na avaliação.' },
     { t: 'Deve mapear a fonte e restringir-se à população residente do entorno afetado pela contaminação.', ok: false,
       why: 'Errada. Os trabalhadores da fonte são o grupo de maior exposição.' },
@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-7.4-120', tema: '7.4', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre as condições sanitárias e de conforto nos locais de trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'Sanitários, vestiários, local para refeição e água potável têm repercussão direta em saúde', ok: true,
+    { t: 'Sanitários, vestiários, local para refeição e água potável têm repercussão direta sobre a saúde', ok: true,
       why: 'Correta. Banheiro distante e sujo faz o trabalhador beber menos água.' },
     { t: 'São exigências de conforto do ambiente laboral, sem repercussão clínica sobre os trabalhadores.', ok: false,
       why: 'Errada. Têm repercussão clínica documentada.' },
@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-7.5-090', tema: '7.5', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a implantação dos eventos de saúde e segurança no eSocial nas empresas, é CORRETO afirmar:',
   alts: [
-    { t: 'Exige integração entre pessoal, segurança e medicina, com definição de responsáveis e fluxos.', ok: true,
+    { t: 'Exige integração entre pessoal, segurança e medicina, com definição de responsáveis e de fluxos', ok: true,
       why: 'Correta. Quem opera o sistema não é quem detém a informação técnica.' },
     { t: 'Exige coordenação da área de tecnologia da informação, responsável exclusiva pela implantação.', ok: false,
       why: 'Errada. Exige participação das áreas que produzem a informação.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-7.8-090', tema: '7.8', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o encarregado de proteção de dados e a governança em serviços de saúde ocupacional, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve indicar canal com os titulares, definir acesso e retenção e treinar quem manuseia dados', ok: true,
+    { t: 'Deve indicar canal com os titulares, definir acesso e retenção e treinar quem manuseia os dados', ok: true,
       why: 'Correta. A governança de dados não pode abrir o que o sigilo médico fecha.' },
     { t: 'Deve definir políticas de acesso amplo aos dados de saúde para viabilizar auditorias internas.', ok: false,
       why: 'Errada. O sigilo profissional restringe o acesso mesmo internamente.' },
@@ -149,7 +149,7 @@ window.BANCO.push(
 { id: 'q-7.1-110', tema: '7.1', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o afastamento por doença e a responsabilidade pelo pagamento nos primeiros dias, é CORRETO afirmar:',
   alts: [
-    { t: 'Os primeiros dias de afastamento cabem ao empregador e o período seguinte à previdência', ok: true,
+    { t: 'Os primeiros dias de afastamento cabem ao empregador e o período seguinte cabe à previdência', ok: true,
       why: 'Correta. Daí vem boa parte da fricção em torno de atestados de poucos dias.' },
     { t: 'A previdência arca com o afastamento por incapacidade desde o primeiro dia, em qualquer hipótese.', ok: false,
       why: 'Errada. Há período inicial de responsabilidade do empregador.' },
@@ -203,7 +203,7 @@ window.BANCO.push(
 { id: 'q-1.6-110', tema: '1.6', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a saúde do trabalhador de plataformas digitais e do trabalho por aplicativo, é CORRETO afirmar:',
   alts: [
-    { t: 'Acumulam risco de trânsito, jornadas longas, pressão algorítmica e ausência de cobertura.', ok: true,
+    { t: 'Acumulam risco de trânsito, jornadas longas, pressão algorítmica e ausência total de cobertura', ok: true,
       why: 'Correta. Alta exposição somada a ausência total de estrutura de proteção.' },
     { t: 'Acumulam riscos, embora a ausência de vínculo formal reduza a exposição a riscos ocupacionais.', ok: false,
       why: 'Errada. Reduz a proteção, não a exposição.' },
@@ -221,7 +221,7 @@ window.BANCO.push(
 { id: 'q-1.7-110', tema: '1.7', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a integração entre serviços de saúde ocupacional das empresas e a rede pública, é CORRETO afirmar:',
   alts: [
-    { t: 'Melhora a continuidade do cuidado e a informação nos dois lados, que a têm pela metade.', ok: true,
+    { t: 'Melhora a continuidade do cuidado e a qualidade da informação nos dois lados, que a têm pela metade', ok: true,
       why: 'Correta. O serviço da empresa conhece a exposição; a rede pública conduz o tratamento.' },
     { t: 'Os dois sistemas devem operar de forma independente entre si para preservar o sigilo do trabalhador.', ok: false,
       why: 'Errada. A articulação é possível com autorização do trabalhador e preserva o sigilo.' },
@@ -275,7 +275,7 @@ window.BANCO.push(
 { id: 'q-1.10-110', tema: '1.10', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre programas de alimentação do trabalhador e sua relação com a saúde, é CORRETO afirmar:',
   alts: [
-    { t: 'Oferta, tempo real de refeição e condições do local influenciam o padrão alimentar.', ok: true,
+    { t: 'Oferta alimentar, tempo real de refeição e condições do local influenciam o padrão alimentar', ok: true,
       why: 'Correta. Não há escolha alimentar quando o intervalo real é de quinze minutos.' },
     { t: 'O padrão alimentar do trabalhador depende das escolhas individuais que ele faz durante a jornada.', ok: false,
       why: 'Errada. Oferta, tempo e local condicionam fortemente a escolha.' },

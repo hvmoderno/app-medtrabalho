@@ -5,7 +5,7 @@ window.BANCO.push(
 { id: 'q-1.3-090', tema: '1.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre estudos de caso-controle aninhados em coortes ocupacionais, é CORRETO afirmar:',
   alts: [
-    { t: 'Aprofundam a exposição num subconjunto a menor custo, mantendo o registro dela anterior ao desfecho.', ok: true,
+    { t: 'Aprofundam a exposição num subconjunto a menor custo, mantendo o registro dela anterior ao desfecho observado', ok: true,
       why: 'Correta. Combina economia com a proteção temporal da coorte de origem, reduzindo viés de memória.' },
     { t: 'Aprofundam a caracterização da exposição a menor custo, perdendo a vantagem temporal da coorte de origem.', ok: false,
       why: 'Errada. A exposição segue registrada antes do desfecho.' },
@@ -23,7 +23,7 @@ window.BANCO.push(
 { id: 'q-2.2-090', tema: '2.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a exposição ocupacional ao frio, é CORRETO afirmar:',
   alts: [
-    { t: 'O frio reduz a destreza manual e a sensibilidade tátil, e vento e umidade agravam a perda de calor', ok: true,
+    { t: 'O frio reduz a destreza manual e a sensibilidade tátil, e o vento e a umidade agravam a perda de calor', ok: true,
       why: 'Correta. A perda de destreza produz o acidente antes de qualquer lesão pelo frio.' },
     { t: 'O frio traz risco de lesões locais e hipotermia, sendo a temperatura do ar isolada suficiente para caracterizar a exposição.', ok: false,
       why: 'Errada. Vento e umidade alteram substancialmente a perda de calor.' },

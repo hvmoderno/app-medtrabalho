@@ -149,7 +149,7 @@ window.BANCO.push(
 { id: 'q-6.1-120', tema: '6.1', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a responsabilidade pela elaboração e coordenação do programa de controle médico, é CORRETO afirmar:',
   alts: [
-    { t: 'A coordenação cabe a médico do trabalho, e o programa decorre dos riscos do inventário.', ok: true,
+    { t: 'A coordenação cabe a médico do trabalho, e o programa decorre dos riscos levantados no inventário', ok: true,
       why: 'Correta. É documento vivo, revisto quando muda o risco, não peça anual repetida.' },
     { t: 'A coordenação pode ser atribuída a qualquer profissional de saúde com formação compatível.', ok: false,
       why: 'Errada. A coordenação é atribuição de médico do trabalho.' },

@@ -167,7 +167,7 @@ window.BANCO.push(
 { id: 'q-1.9-080', tema: '1.9', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a qualidade e a completitude dos dados em sistemas de informação de agravos, é CORRETO afirmar:',
   alts: [
-    { t: 'Duplicidade, campos em branco e inconsistência comprometem a análise e exigem depuração.', ok: true,
+    { t: 'Duplicidade, campos em branco e inconsistência comprometem a análise e exigem depuração contínua', ok: true,
       why: 'Correta. Base não depurada descreve o erro de registro, não o fenômeno.' },
     { t: 'O volume de notificações recebidas é o principal indicador da qualidade do sistema de informação.', ok: false,
       why: 'Errada. Volume sem completitude e sem consistência não sustenta análise.' },

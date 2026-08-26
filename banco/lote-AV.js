@@ -113,7 +113,7 @@ window.BANCO.push(
 { id: 'q-5.5-150', tema: '5.5', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a avaliação de capacidade laborativa em trabalhador próximo à idade de aposentadoria, é CORRETO afirmar:',
   alts: [
-    { t: 'Segue os mesmos critérios técnicos aplicáveis a qualquer trabalhador, podendo a idade pesar apenas na viabilidade da reabilitação', ok: true,
+    { t: 'Segue os mesmos critérios técnicos aplicáveis a qualquer trabalhador, podendo a idade pesar apenas na viabilidade da reabilitação profissional', ok: true,
       why: 'Correta. Idade entra na viabilidade da reabilitação, nunca na conclusão sobre a capacidade.' },
     { t: 'Segue critérios técnicos, e a proximidade da aposentadoria autoriza concluir por incapacidade permanente, dado o curto tempo restante.', ok: false,
       why: 'Errada. A conclusão decorre da avaliação funcional, não do tempo restante de contribuição.' },
@@ -149,7 +149,7 @@ window.BANCO.push(
 { id: 'q-7.4-150', tema: '7.4', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a documentação exigida pelas normas regulamentadoras e sua função, é CORRETO afirmar:',
   alts: [
-    { t: 'Existem para demonstrar o gerenciamento efetivo, e documentação completa com prática divergente não caracteriza cumprimento', ok: true,
+    { t: 'Existem para organizar e demonstrar o gerenciamento efetivo, e documentação completa com prática divergente não caracteriza cumprimento', ok: true,
       why: 'Correta. O acidente grave costuma ocorrer em empresa com documentação impecável.' },
     { t: 'Existem para demonstrar o gerenciamento, e a apresentação do conjunto exigido caracteriza o cumprimento das obrigações da empresa.', ok: false,
       why: 'Errada. O cumprimento se demonstra na prática observada, não no arquivo apresentado.' },

@@ -95,7 +95,7 @@ window.BANCO.push(
 { id: 'q-5.5-100', tema: '5.5', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a avaliação de capacidade em trabalhadores com dor crônica musculoesquelética, é CORRETO afirmar:',
   alts: [
-    { t: 'O desempenho varia ao longo do dia, exigindo avaliar a sustentabilidade da atividade em toda a jornada', ok: true,
+    { t: 'O desempenho varia ao longo do dia e entre dias, exigindo avaliar a sustentabilidade da atividade na jornada', ok: true,
       why: 'Correta. Conseguir executar o gesto uma vez não é o mesmo que sustentar por oito horas.' },
     { t: 'O desempenho observado no exame demonstra aptidão para a jornada completa quando o movimento é executado.', ok: false,
       why: 'Errada. Repetição e sustentação ao longo do turno é o que determina a viabilidade.' },
@@ -113,7 +113,7 @@ window.BANCO.push(
 { id: 'q-1.3-100', tema: '1.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a interpretação de estudos que não encontram associação entre exposição ocupacional e desfecho, é CORRETO afirmar:',
   alts: [
-    { t: 'É preciso avaliar o poder, a qualidade da exposição medida e o seguimento frente à latência esperada', ok: true,
+    { t: 'É preciso avaliar o poder do estudo, a qualidade da exposição medida e o seguimento frente à latência esperada', ok: true,
       why: 'Correta. Não achar não é o mesmo que não existir.' },
     { t: 'O resultado negativo obtido em estudo bem conduzido demonstra a ausência de risco associado ao agente.', ok: false,
       why: 'Errada. Pode refletir limitações do próprio estudo.' },

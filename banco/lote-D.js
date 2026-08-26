@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-1.7-040', tema: '1.7', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a participação social no sistema público de saúde aplicada à saúde do trabalhador, é CORRETO afirmar:',
   alts: [
-    { t: 'Conselhos e conferências são instâncias de controle social que alcançam a saúde do trabalhador', ok: true,
+    { t: 'Conselhos e conferências de saúde são instâncias de controle social que alcançam o trabalhador', ok: true,
       why: 'Correta. A participação de trabalhadores e representações é diretriz do sistema.' },
     { t: 'O controle social não alcança a saúde do trabalhador, por envolver relações privadas de trabalho.', ok: false,
       why: 'Errada. É campo do sistema de saúde e sujeito ao controle social.' },

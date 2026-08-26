@@ -149,7 +149,7 @@ window.BANCO.push(
 { id: 'q-5.3-110', tema: '5.3', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a concausa e o agravamento de condição preexistente por acidente do trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'O acidente que agrava condição prévia configura relação com o trabalho quanto a esse agravamento', ok: true,
+    { t: 'O acidente que agrava condição prévia configura relação com o trabalho quanto a esse agravamento sofrido', ok: true,
       why: 'Correta. Reconhecido o agravamento, os efeitos são integrais, sem fracionamento.' },
     { t: 'O acidente pode agravar condição prévia, afastando a preexistência a relação com o evento ocorrido.', ok: false,
       why: 'Errada. O agravamento é hipótese expressa de concausa.' },
@@ -185,7 +185,7 @@ window.BANCO.push(
 { id: 'q-5.5-120', tema: '5.5', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a documentação da avaliação funcional em prontuário e relatórios, é CORRETO afirmar:',
   alts: [
-    { t: 'Devem ser específicas e verificáveis: o que executa, por quanto tempo e com que limitação.', ok: true,
+    { t: 'Devem ser específicas e verificáveis: o que a pessoa executa, por quanto tempo e com que limitação', ok: true,
       why: 'Correta. Descrição genérica não orienta alocação, não sustenta perícia e não mostra evolução.' },
     { t: 'Devem indicar a limitação em termos gerais, formulação suficiente para orientar a alocação do trabalhador.', ok: false,
       why: 'Errada. Não indica o que pode ou não ser feito na prática.' },

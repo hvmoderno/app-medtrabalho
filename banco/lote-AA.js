@@ -23,7 +23,7 @@ window.BANCO.push(
 { id: 'q-4.9-070', tema: '4.9', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre doenças transmissíveis em ambientes de trabalho com aglomeração, é CORRETO afirmar:',
   alts: [
-    { t: 'Alojamentos, transporte coletivo e refeitórios são pontos críticos, e a intervenção precisa alcançar toda a jornada.', ok: true,
+    { t: 'Alojamentos, transporte coletivo e refeitórios são pontos críticos, e a intervenção precisa alcançar toda a jornada do trabalhador', ok: true,
       why: 'Correta. O ônibus e o alojamento costumam transmitir mais que a própria linha de produção.' },
     { t: 'O risco se concentra no posto de trabalho, onde a permanência é maior e o contato entre trabalhadores é mais prolongado.', ok: false,
       why: 'Errada. Alojamento, transporte e refeitório são pontos críticos frequentemente esquecidos.' },
@@ -95,7 +95,7 @@ window.BANCO.push(
 { id: 'q-6.2-080', tema: '6.2', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a definição legal de deficiência auditiva para fins de enquadramento, é CORRETO afirmar:',
   alts: [
-    { t: 'Segue critério normativo de grau e bilateralidade e não se confunde com a perda induzida por ruído.', ok: true,
+    { t: 'Segue critério normativo de grau e de bilateralidade e não se confunde com a perda auditiva induzida por ruído', ok: true,
       why: 'Correta. São enquadramentos com finalidades diferentes e não se equivalem.' },
     { t: 'Segue critério audiológico amplo, de modo que qualquer perda auditiva documentada caracteriza deficiência para fins de cota.', ok: false,
       why: 'Errada. Há critério normativo específico de grau e de bilateralidade.' },

@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-1.7-100', tema: '1.7', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o acesso do trabalhador aos serviços do sistema público durante o horário de trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'A dificuldade de conciliar o horário de atendimento e a jornada é barreira concreta de acesso', ok: true,
+    { t: 'A dificuldade de conciliar o horário de atendimento com a jornada é barreira concreta de acesso', ok: true,
       why: 'Correta. Serviço que só funciona no horário comercial exclui quem trabalha nesse horário.' },
     { t: 'A conciliação entre jornada e horário de atendimento não constitui barreira relevante de acesso.', ok: false,
       why: 'Errada. É uma das barreiras mais concretas para trabalhadores.' },
@@ -221,7 +221,7 @@ window.BANCO.push(
 { id: 'q-5.2-090', tema: '5.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a análise de nexo em trabalhador com histórico de múltiplos vínculos e exposições em empresas distintas, é CORRETO afirmar:',
   alts: [
-    { t: 'A exposição relevante pode estar em vínculo anterior, exigindo reconstituir a história ocupacional', ok: true,
+    { t: 'A exposição relevante pode estar em vínculo anterior, exigindo reconstituir a história ocupacional completa', ok: true,
       why: 'Correta. Dificuldade de atribuir a um empregador não é o mesmo que ausência de nexo.' },
     { t: 'A exposição pode estar em vínculo anterior, afastando a natureza ocupacional a impossibilidade de atribuí-la.', ok: false,
       why: 'Errada. São questões distintas: natureza ocupacional e responsabilidade individual.' },
@@ -293,7 +293,7 @@ window.BANCO.push(
 { id: 'q-6.4-110', tema: '6.4', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a intoxicação aguda por exposição maciça a gases em ambiente de trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'Gases pouco hidrossolúveis irritam pouco de início e causam lesão pulmonar tardia.', ok: true,
+    { t: 'Gases pouco hidrossolúveis irritam pouco de início e causam lesão pulmonar de instalação tardia', ok: true,
       why: 'Correta. É o padrão que faz um trabalhador aparentemente bem piorar horas depois.' },
     { t: 'A ausência de sintomas respiratórios logo após a exposição permite a liberação imediata do trabalhador.', ok: false,
       why: 'Errada. Alguns gases produzem edema pulmonar de instalação tardia.' },

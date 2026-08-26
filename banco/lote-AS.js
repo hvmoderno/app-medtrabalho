@@ -5,7 +5,7 @@ window.BANCO.push(
 { id: 'q-2.2-140', tema: '2.2', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a exposição ocupacional a radiação ultravioleta artificial, é CORRETO afirmar:',
   alts: [
-    { t: 'Soldagem, esterilização e cura de resinas expõem, e o alcance atinge trabalhadores próximos.', ok: true,
+    { t: 'Soldagem, esterilização e cura de resinas expõem, e o alcance atinge também trabalhadores próximos', ok: true,
       why: 'Correta. O terceiro que passa perto é atingido sem estar protegido; daí as barreiras.' },
     { t: 'Soldagem e esterilização geram exposição, limitada ao operador direto do processo que a produz.', ok: false,
       why: 'Errada. Trabalhadores próximos são atingidos, o que exige barreiras e delimitação.' },
@@ -41,7 +41,7 @@ window.BANCO.push(
 { id: 'q-2.4-140', tema: '2.4', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a exposição a agentes biológicos em atividades de limpeza urbana e coleta de resíduos, é CORRETO afirmar:',
   alts: [
-    { t: 'Há exposição a perfurocortantes descartados por terceiros, a zoonoses e a resíduos de saúde.', ok: true,
+    { t: 'Há exposição a perfurocortantes descartados por terceiros, a zoonoses e a resíduos de serviços de saúde', ok: true,
       why: 'Correta. Quem se fere é o coletor, e a causa está no descarte de outra pessoa.' },
     { t: 'O risco desses trabalhadores decorre de agentes químicos presentes nos resíduos que eles manuseiam.', ok: false,
       why: 'Errada. O risco biológico é central nessas atividades.' },
@@ -95,7 +95,7 @@ window.BANCO.push(
 { id: 'q-2.9-140', tema: '2.9', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a comunicação de resultados de monitoramento biológico ao trabalhador, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve ser comunicado e explicado, e o alterado exige revisão coletiva da exposição do grupo.', ok: true,
+    { t: 'Deve ser comunicado e explicado, e o resultado alterado exige revisão coletiva da exposição do grupo', ok: true,
       why: 'Correta. Um resultado alterado é sinal sobre o grupo, não apenas sobre a pessoa.' },
     { t: 'Deve ser arquivado no prontuário e comunicado apenas quando houver necessidade de afastamento.', ok: false,
       why: 'Errada. O trabalhador tem direito de conhecer e compreender o resultado.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-4.5-130', tema: '4.5', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a caracterização da perda auditiva induzida por ruído para fins de reconhecimento, é CORRETO afirmar:',
   alts: [
-    { t: 'Considera padrão audiométrico, exposição documentada e exclusão razoável de outras causas.', ok: true,
+    { t: 'Considera o padrão audiométrico, a exposição documentada e a exclusão razoável de outras causas', ok: true,
       why: 'Correta. A estabilização após cessada a exposição é característica que a distingue.' },
     { t: 'Considera o padrão audiométrico e a exposição, progredindo a perda mesmo após o afastamento do ruído.', ok: false,
       why: 'Errada. Tende a estabilizar após cessada a exposição.' },
@@ -167,7 +167,7 @@ window.BANCO.push(
 { id: 'q-4.8-130', tema: '4.8', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a substituição de agentes cancerígenos em processos produtivos, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve ser precedida de avaliação do substituto, para não trocar por agente pior ou desconhecido.', ok: true,
+    { t: 'Deve ser precedida de avaliação do agente substituto, para não trocar por outro pior ou desconhecido', ok: true,
       why: 'Correta. Trocar sem avaliar já produziu substituições piores que o original.' },
     { t: 'Deve ser buscada sempre que possível, representando qualquer substituição de cancerígeno ganho automático.', ok: false,
       why: 'Errada. O substituto pode ter perfil toxicológico pior ou desconhecido.' },
@@ -203,7 +203,7 @@ window.BANCO.push(
 { id: 'q-4.10-120', tema: '4.10', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a indicação de imunização em trabalhadores de laboratório, é CORRETO afirmar:',
   alts: [
-    { t: 'Decorre dos agentes manipulados e do nível de contenção, podendo ir além do calendário geral.', ok: true,
+    { t: 'Decorre dos agentes manipulados e do nível de contenção, podendo ir além do calendário vacinal geral', ok: true,
       why: 'Correta. Mudança de agente manipulado é gatilho de reavaliação vacinal.' },
     { t: 'Decorre do calendário vacinal do adulto, aplicável a esses trabalhadores como a qualquer outro grupo.', ok: false,
       why: 'Errada. Pode incluir imunizações específicas conforme os agentes manipulados.' },
