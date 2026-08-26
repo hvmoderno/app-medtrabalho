@@ -7,7 +7,7 @@ window.BANCO.push(
 { id: 'q-2.2-020', tema: '2.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Operador de martelete pneumático, 44 anos, há doze anos na função, relata episódios de palidez súbita das pontas dos dedos das duas mãos desencadeados pelo frio, seguidos de cianose e depois rubor com formigamento, além de redução da sensibilidade tátil fina. Sobre o quadro, assinale a alternativa CORRETA:',
   alts: [
-    { t: 'Sugere síndrome de vibração mão-braço, com Raynaud ocupacional no componente vascular.', ok: true,
+    { t: 'Sugere síndrome de vibração mão-braço, com Raynaud ocupacional no seu componente vascular', ok: true,
       why: 'Correta. O nexo se estabelece pela exposição a vibração localizada.' },
     { t: 'Sugere fenômeno de Raynaud primário, sem relação com o trabalho, por acometer as duas mãos.', ok: false,
       why: 'Errada. A forma ocupacional também é bilateral, conforme a ferramenta usada.' },
@@ -25,7 +25,7 @@ window.BANCO.push(
 { id: 'q-2.2-021', tema: '2.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Em uma marcenaria, o setor de lixamento apresenta ruído contínuo e o setor de prensagem apresenta impactos repetidos. O higienista precisa definir a estratégia de avaliação. Sobre ruído ocupacional, assinale a alternativa CORRETA:',
   alts: [
-    { t: 'Ruído contínuo e de impacto têm critérios distintos: identificar o tipo precede a medição.', ok: true,
+    { t: 'Ruído contínuo e de impacto têm critérios distintos: identificar o tipo precede a medição', ok: true,
       why: 'Correta. O parâmetro e o instrumento dependem do tipo de ruído.' },
     { t: 'Todo ruído se avalia pelo nível de pressão sonora instantâneo no momento de maior intensidade.', ok: false,
       why: 'Errada. O contínuo se avalia pelo nível equivalente da jornada.' },
@@ -43,7 +43,7 @@ window.BANCO.push(
 { id: 'q-2.2-022', tema: '2.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Soldador relata episódios recorrentes de dor ocular intensa, sensação de areia nos olhos, lacrimejamento e fotofobia, iniciados algumas horas após a jornada e com resolução em um a dois dias. Sobre o quadro, assinale a alternativa CORRETA:',
   alts: [
-    { t: 'É ceratoconjuntivite por radiação ultravioleta, de início tardio em relação à exposição.', ok: true,
+    { t: 'É ceratoconjuntivite por radiação ultravioleta, de início tardio em relação à exposição sofrida', ok: true,
       why: 'Correta. Exige filtro adequado e barreiras que protejam também quem passa perto.' },
     { t: 'É quadro por radiação ionizante emitida pelo arco elétrico durante o processo de soldagem.', ok: false,
       why: 'Errada. O arco emite radiação não ionizante, sobretudo ultravioleta.' },
@@ -79,7 +79,7 @@ window.BANCO.push(
 { id: 'q-2.2-024', tema: '2.2', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre exposição ocupacional ao frio, assinale a alternativa INCORRETA:',
   alts: [
-    { t: 'A ingestão de bebida alcoólica é útil no frio, por promover sensação de aquecimento.', ok: true,
+    { t: 'A ingestão de bebida alcoólica é útil ao trabalhador no frio, por promover sensação de aquecimento', ok: true,
       why: 'É a INCORRETA. O álcool causa vasodilatação periférica e acelera a perda de calor.' },
     { t: 'A velocidade do ar aumenta a perda de calor e deve ser considerada na avaliação da exposição.', ok: false,
       why: 'Correta, portanto não é a resposta. O vento agrava a perda além do que a temperatura indica.' },
@@ -98,7 +98,7 @@ window.BANCO.push(
 { id: 'q-2.3-020', tema: '2.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Ao descrever os aerodispersoides presentes em uma indústria, o higienista precisa classificá-los corretamente. A associação CORRETA entre o material particulado e seu processo de geração é:',
   alts: [
-    { t: 'Fumo metálico: partícula sólida da condensação de vapores metálicos, como na soldagem.', ok: true,
+    { t: 'Fumo metálico: partícula sólida da condensação de vapores de metal, como ocorre na soldagem', ok: true,
       why: 'Correta. É a definição do aerodispersoide gerado por condensação de vapor de metal.' },
     { t: 'Poeira: partícula sólida formada pela condensação de vapores em processos de aquecimento intenso.', ok: false,
       why: 'Errada. Poeira se forma por ruptura mecânica de sólidos.' },
@@ -116,7 +116,7 @@ window.BANCO.push(
 { id: 'q-2.3-021', tema: '2.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Uma empresa que utiliza benzeno como matéria-prima pergunta ao médico do trabalho qual limite de exposição adotar como meta de controle. A orientação CORRETA é:',
   alts: [
-    { t: 'Para o benzeno não se admite nível seguro: o valor de referência tem caráter tecnológico.', ok: true,
+    { t: 'Para o benzeno não se admite nível seguro: o valor de referência tem apenas caráter tecnológico', ok: true,
       why: 'Correta. A meta é a busca permanente da menor exposição possível.' },
     { t: 'Basta manter a concentração logo abaixo do valor de referência, que é o nível seguro para a vida laboral.', ok: false,
       why: 'Errada. Não se assume nível seguro para o benzeno.' },
@@ -152,7 +152,7 @@ window.BANCO.push(
 { id: 'q-2.3-023', tema: '2.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Uma marmoraria processa rochas ornamentais com corte a seco. Sobre a exposição à sílica cristalina, assinale a alternativa CORRETA:',
   alts: [
-    { t: 'A sílica é cancerígena e o corte a seco eleva muito a geração de poeira respirável.', ok: true,
+    { t: 'A sílica é cancerígena e o corte a seco eleva muito a geração de poeira respirável no ambiente', ok: true,
       why: 'Correta. Supressão com água ou exaustão localizada são medidas prioritárias.' },
     { t: 'O risco existe para a fração inalável total, sem relevância específica da fração respirável.', ok: false,
       why: 'Errada. É a fração respirável que atinge os alvéolos.' },
@@ -189,7 +189,7 @@ window.BANCO.push(
 { id: 'q-2.6-021', tema: '2.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Uma refinaria adota jornadas de doze horas em regime de turnos. O higienista alerta que os valores-limite precisam ser ajustados. A justificativa CORRETA é:',
   alts: [
-    { t: 'Os limites pressupõem jornada habitual, e a prolongada exige fator de redução.', ok: true,
+    { t: 'Os limites pressupõem a jornada habitual, e a jornada prolongada exige fator de redução', ok: true,
       why: 'Correta. Aumenta o tempo de absorção e reduz o de eliminação entre jornadas.' },
     { t: 'O ajuste é desnecessário, pois o limite já contempla qualquer jornada praticada pela empresa.', ok: false,
       why: 'Errada. Os valores pressupõem regime de jornada e recuperação específicos.' },
@@ -244,7 +244,7 @@ window.BANCO.push(
 { id: 'q-2.9-021', tema: '2.9', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Trabalhador de indústria de acumuladores apresenta indicador biológico de exposição elevado, sem sintomas. O gestor pergunta se ele deve ser afastado. A conduta CORRETA é:',
   alts: [
-    { t: 'Investigar exposição e controles, reavaliar e considerar afastamento conforme o protocolo.', ok: true,
+    { t: 'Investigar a exposição e os controles, reavaliar e considerar o afastamento conforme o protocolo', ok: true,
       why: 'Correta. O indicador alterado sinaliza absorção excessiva e exige ação, sem sintoma.' },
     { t: 'Nenhuma medida é necessária além de repetir o exame no próximo periódico, por não haver sintomas.', ok: false,
       why: 'Errada. O indicador existe para agir antes do sintoma aparecer.' },

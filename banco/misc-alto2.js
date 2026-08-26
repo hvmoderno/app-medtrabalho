@@ -228,7 +228,7 @@ window.BANCO.push(
 { id: 'q-7.8-031', tema: '7.8', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre os direitos do trabalhador como titular de dados no contexto ocupacional, é CORRETO afirmar:',
   alts: [
-    { t: 'Tem direito de acessar os seus dados, saber com quem foram compartilhados e pedir correção', ok: true,
+    { t: 'Tem direito de acessar os seus próprios dados, saber com quem foram compartilhados e pedir correção', ok: true,
       why: 'Correta. Convivem com o direito de acesso ao próprio prontuário.' },
     { t: 'Tem direitos limitados, não podendo acessar os próprios dados de saúde no serviço ocupacional.', ok: false,
       why: 'Errada. O acesso do titular é direito reconhecido.' },

@@ -41,7 +41,7 @@ window.BANCO.push(
 { id: 'q-1.7-060', tema: '1.7', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre os princípios do Sistema Único de Saúde aplicados à saúde do trabalhador, é CORRETO afirmar:',
   alts: [
-    { t: 'A integralidade implica articular assistência, vigilância e promoção em torno de um mesmo sujeito', ok: true,
+    { t: 'A integralidade implica articular assistência, vigilância e promoção em torno de um mesmo sujeito atendido', ok: true,
       why: 'Correta. Atender o adoecido sem intervir no ambiente é cumprimento parcial do princípio.' },
     { t: 'A integralidade se refere à oferta de todos os níveis de complexidade assistencial ao trabalhador.', ok: false,
       why: 'Errada. Abrange também a articulação entre assistência, prevenção e vigilância.' },

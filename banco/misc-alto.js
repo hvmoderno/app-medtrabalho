@@ -173,7 +173,7 @@ window.BANCO.push(
 { id: 'q-6.3-020', tema: '6.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Trabalhador de 45 anos, operador de ponte rolante, relata episódio único de crise convulsiva tônico-clônica há dois meses, em investigação neurológica. Sobre a conduta do médico do trabalho, assinale a alternativa CORRETA:',
   alts: [
-    { t: 'Cabe restrição temporária às atividades de risco enquanto não houver investigação e controle', ok: true,
+    { t: 'Cabe restrição temporária às atividades de risco enquanto não houver investigação e controle demonstrado', ok: true,
       why: 'Correta. Com reavaliação e decisão individualizada junto ao neurologista.' },
     { t: 'O trabalhador deve ser declarado definitivamente inapto para qualquer atividade laboral exercida.', ok: false,
       why: 'Errada. A maioria das funções não apresenta risco incompatível.' },
@@ -228,7 +228,7 @@ window.BANCO.push(
 { id: 'q-7.8-021', tema: '7.8', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o tratamento de dados de saúde no atestado de saúde ocupacional à luz da proteção de dados, assinale a alternativa CORRETA:',
   alts: [
-    { t: 'Deve conter apenas o necessário à finalidade: a conclusão de aptidão e os riscos avaliados', ok: true,
+    { t: 'Deve conter apenas o necessário à sua finalidade: a conclusão de aptidão e os riscos avaliados', ok: true,
       why: 'Correta. É a aplicação do princípio da necessidade, sem incluir diagnóstico.' },
     { t: 'Deve conter o histórico clínico completo do trabalhador, para maior transparência do documento.', ok: false,
       why: 'Errada. Viola a minimização e o sigilo do dado clínico.' },

@@ -5,7 +5,7 @@ window.BANCO.push(
 { id: 'q-1.4-070', tema: '1.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a terceirização e a gestão de saúde e segurança nas empresas contratantes, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve estender as mesmas condições e o atendimento ambulatorial, consolidando também os indicadores', ok: true,
+    { t: 'Deve estender as mesmas condições de segurança e o atendimento ambulatorial, consolidando os indicadores', ok: true,
       why: 'Correta. Separar os indicadores faz o acidente de terceiro desaparecer da gestão.' },
     { t: 'Deve verificar os programas da prestadora, a quem cabe com exclusividade a segurança do terceirizado.', ok: false,
       why: 'Errada. As condições oferecidas nas dependências da contratante são de sua responsabilidade.' },
@@ -95,7 +95,7 @@ window.BANCO.push(
 { id: 'q-1.9-070', tema: '1.9', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o uso dos dados de notificação para orientar ações de vigilância, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve identificar a concentração por atividade, ocupação e território para direcionar as inspeções', ok: true,
+    { t: 'Deve identificar a concentração de agravos por atividade, ocupação e território para direcionar inspeções', ok: true,
       why: 'Correta. Notificar sem consequência prática é o que faz o profissional deixar de notificar.' },
     { t: 'Deve alimentar a produção de estatísticas anuais, consolidadas para acompanhamento da série histórica.', ok: false,
       why: 'Errada. Sua finalidade primária é orientar ação de vigilância.' },

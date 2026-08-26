@@ -7,7 +7,7 @@ window.BANCO.push(
 { id: 'q-5.3-030', tema: '5.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Trabalhador com diabetes mellitus de longa data sofre ferimento em pé durante a jornada, evoluindo com infecção grave e amputação transtibial — desfecho improvável em pessoa sem a doença de base. Sobre a caracterização, é CORRETO afirmar:',
   alts: [
-    { t: 'A doença de base é concausa preexistente que agrava o resultado, sem romper o nexo.', ok: true,
+    { t: 'A doença de base é concausa preexistente que agrava o resultado do acidente, sem romper o nexo', ok: true,
       why: 'Correta. O evento ocorreu em razão do trabalho e o desfecho permanece a ele vinculado.' },
     { t: 'A doença prévia que explica a gravidade do desfecho afasta a natureza acidentária do caso.', ok: false,
       why: 'Errada. Concausa preexistente não rompe o nexo.' },
@@ -25,7 +25,7 @@ window.BANCO.push(
 { id: 'q-5.3-031', tema: '5.3', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a classificação temporal das concausas, é CORRETO afirmar:',
   alts: [
-    { t: 'Preexistente é anterior; concomitante atua junto; superveniente surge depois e se soma.', ok: true,
+    { t: 'Preexistente é anterior ao evento; concomitante atua junto; superveniente surge depois e se soma', ok: true,
       why: 'Correta. Todas mantêm o nexo, bastando que o trabalho tenha contribuído.' },
     { t: 'Concausa superveniente é a que existia antes do evento e predispôs o trabalhador ao agravo.', ok: false,
       why: 'Errada. Essa é a preexistente; a superveniente surge depois.' },
@@ -44,7 +44,7 @@ window.BANCO.push(
 { id: 'q-6.4-030', tema: '6.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Trabalhador sofre queimadura elétrica por contato com condutor energizado em rede de média tensão, apresentando pequenas lesões de entrada na mão e de saída no pé, consciente e hemodinamicamente estável. Sobre a conduta, é CORRETO afirmar:',
   alts: [
-    { t: 'A lesão cutânea não reflete o dano interno: há risco de rabdomiólise e de arritmias.', ok: true,
+    { t: 'A lesão cutânea não reflete o dano interno: há risco de rabdomiólise e de arritmias tardias', ok: true,
       why: 'Correta. Exige monitorização, avaliação laboratorial e hidratação, mesmo se parecer estável.' },
     { t: 'As lesões cutâneas pequenas indicam queimadura leve, permitindo alta após o curativo local.', ok: false,
       why: 'Errada. O dano profundo ao longo do trajeto da corrente costuma ser maior.' },
@@ -62,7 +62,7 @@ window.BANCO.push(
 { id: 'q-6.4-031', tema: '6.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Durante o expediente, trabalhador de 54 anos apresenta colapso súbito, sem resposta e sem respiração normal. Sobre a resposta da empresa, é CORRETO afirmar:',
   alts: [
-    { t: 'Depende de reconhecimento imediato, acionamento, compressão precoce e desfibrilação rápida.', ok: true,
+    { t: 'Depende do reconhecimento imediato, do acionamento, da compressão precoce e da desfibrilação', ok: true,
       why: 'Correta. Desfibrilador e pessoal treinado são componentes concretos do plano de emergência.' },
     { t: 'Depende do atendimento especializado, cabendo aguardar o serviço externo antes de qualquer manobra.', ok: false,
       why: 'Errada. Cada minuto sem compressão reduz substancialmente a sobrevida.' },
@@ -81,7 +81,7 @@ window.BANCO.push(
 { id: 'q-7.1-030', tema: '7.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Uma empresa pretende contratar aprendizes de 16 anos para o setor de produção, que possui exposição a ruído acima do nível de ação e operação de máquinas. Sobre a situação, é CORRETO afirmar:',
   alts: [
-    { t: 'É vedado ao menor de dezoito anos o trabalho insalubre, perigoso e noturno.', ok: true,
+    { t: 'É vedado ao menor de dezoito anos o trabalho insalubre, perigoso e o trabalho noturno', ok: true,
       why: 'Correta. A condição de aprendiz não afasta as vedações protetivas.' },
     { t: 'É vedado em regra, mas a condição de aprendiz permite a alocação sob supervisão permanente.', ok: false,
       why: 'Errada. A vedação não se afasta pela condição de aprendiz.' },
@@ -118,7 +118,7 @@ window.BANCO.push(
 { id: 'q-7.3-030', tema: '7.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Uma indústria de alimentos é autuada pela vigilância sanitária por condições que afetam simultaneamente a segurança do produto e a saúde dos trabalhadores. Sobre a situação, é CORRETO afirmar:',
   alts: [
-    { t: 'A mesma condição gera atuação sanitária sobre o produto e sobre a saúde dos expostos.', ok: true,
+    { t: 'A mesma condição gera atuação sanitária sobre o produto e sobre a saúde dos trabalhadores expostos', ok: true,
       why: 'Correta. As competências se somam e podem ser exercidas por órgãos articulados.' },
     { t: 'A autuação sobre o produto exclui a possibilidade de atuação quanto à saúde dos trabalhadores.', ok: false,
       why: 'Errada. As competências se somam.' },
@@ -136,7 +136,7 @@ window.BANCO.push(
 { id: 'q-7.3-031', tema: '7.3', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a ficha com informações de segurança de produtos químicos no contexto sanitário e ocupacional, é CORRETO afirmar:',
   alts: [
-    { t: 'É documento obrigatório com perigos e condutas, acessível a trabalhadores e ao médico.', ok: true,
+    { t: 'É documento obrigatório com perigos e condutas, acessível aos trabalhadores e ao serviço médico', ok: true,
       why: 'Correta. Não é peça restrita ao setor de compras.' },
     { t: 'É documento comercial, de interesse exclusivo do fornecedor e do comprador do produto químico.', ok: false,
       why: 'Errada. É documento técnico obrigatório de consulta operacional.' },
@@ -173,7 +173,7 @@ window.BANCO.push(
 { id: 'q-7.5-031', tema: '7.5', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre prazos e retificações nos eventos de saúde e segurança do sistema de escrituração digital, é CORRETO afirmar:',
   alts: [
-    { t: 'Há prazos para cada evento e mecanismos de retificação, e o descumprimento gera penalidades.', ok: true,
+    { t: 'Há prazos definidos para cada evento e mecanismos de retificação, e o descumprimento gera penalidades', ok: true,
       why: 'Correta. O controle de prazos é rotina do serviço de saúde ocupacional, não só do administrativo.' },
     { t: 'Não há prazos definidos, bastando transmitir o conjunto dos eventos ao final de cada exercício.', ok: false,
       why: 'Errada. Há prazos próprios para cada tipo de evento.' },
@@ -210,7 +210,7 @@ window.BANCO.push(
 { id: 'q-7.7-031', tema: '7.7', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Um médico do trabalho identifica que o serviço contratado pela empresa vem emitindo atestados de saúde ocupacional em série, sem exame clínico efetivo, assinados por colega. Sobre a conduta, é CORRETO afirmar:',
   alts: [
-    { t: 'É falta ética grave: cabe recusar-se a participar e comunicar ao conselho profissional.', ok: true,
+    { t: 'É falta ética grave: cabe recusar-se a participar e ainda comunicar ao conselho profissional', ok: true,
       why: 'Correta. Comunicar infração ética não se confunde com deslealdade entre colegas.' },
     { t: 'É conduta do colega que não diz respeito a quem a identificou, cabendo apenas afastar-se dela.', ok: false,
       why: 'Errada. Há dever de comunicar a infração ao conselho.' },

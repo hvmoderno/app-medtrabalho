@@ -6,7 +6,7 @@ window.BANCO.push(
 { id: 'q-1.1-001', tema: '1.1', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Um médico recém-contratado como coordenador do serviço de saúde ocupacional de uma metalúrgica é questionado pelo diretor de RH sobre "por que precisamos de um médico se já temos técnicos de segurança". Ao explicar a evolução histórica do campo, o médico cita Bernardino Ramazzini. A contribuição central atribuída a Ramazzini para a prática atual é:',
   alts: [
-    { t: 'Introduzir na anamnese a pergunta sobre a ocupação, ligando o adoecimento ao trabalho.', ok: true,
+    { t: 'Introduzir na anamnese a pergunta sobre a ocupação, ligando o adoecimento ao trabalho exercido', ok: true,
       why: 'Correta. É a contribuição fundadora da medicina do trabalho como campo.' },
     { t: 'Criar os primeiros limites de tolerância quantitativos para agentes químicos no ambiente fabril.', ok: false,
       why: 'Errada. Os limites quantitativos são muito posteriores.' },
@@ -24,7 +24,7 @@ window.BANCO.push(
 { id: 'q-1.2-001', tema: '1.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Em uma reunião de um CEREST, discute-se o adoecimento de trabalhadores terceirizados de uma transportadora. Um participante afirma que a abordagem deve ser "de Saúde do Trabalhador, e não de Medicina do Trabalho clássica". Assinale a alternativa que descreve CORRETAMENTE o que diferencia o campo da Saúde do Trabalhador do modelo da Medicina do Trabalho clássica:',
   alts: [
-    { t: 'A primeira toma o processo de trabalho como objeto, com participação dos trabalhadores.', ok: true,
+    { t: 'A primeira toma o processo de trabalho como objeto, com participação dos próprios trabalhadores', ok: true,
       why: 'Correta. O modelo clássico centra-se no indivíduo doente e na adaptação ao trabalho.' },
     { t: 'A primeira se restringe aos com vínculo formal, e a clássica alcança informais e autônomos.', ok: false,
       why: 'Errada, é o inverso: a saúde do trabalhador é que alcança todos.' },
@@ -42,7 +42,7 @@ window.BANCO.push(
 { id: 'q-1.3-001', tema: '1.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Um estudo de coorte acompanhou 800 trabalhadores expostos a um solvente e 800 não expostos durante 10 anos. Ocorreram 48 casos de neuropatia periférica entre os expostos e 12 entre os não expostos. Considerando os dados, o risco relativo e a interpretação corretos são:',
   alts: [
-    { t: 'Risco relativo de quatro: a incidência nos expostos foi quatro vezes a dos não expostos.', ok: true,
+    { t: 'Risco relativo de quatro: a incidência entre os expostos foi quatro vezes a dos não expostos', ok: true,
       why: 'Correta. É a razão entre as incidências dos dois grupos.' },
     { t: 'Risco relativo de quatro, indicando que quatro por cento dos casos são atribuíveis ao solvente.', ok: false,
       why: 'Errada. Confunde risco relativo com fração atribuível.' },
@@ -60,7 +60,7 @@ window.BANCO.push(
 { id: 'q-1.3-002', tema: '1.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Um programa de saúde ocupacional pretende adotar um teste de triagem para uma doença de baixa prevalência na população de trabalhadores examinados. O teste tem sensibilidade de 95% e especificidade de 90%. Sobre o desempenho esperado, é CORRETO afirmar:',
   alts: [
-    { t: 'O valor preditivo positivo será baixo: em baixa prevalência predominam os falsos-positivos.', ok: true,
+    { t: 'O valor preditivo positivo será baixo: em baixa prevalência predominam os resultados falso-positivos', ok: true,
       why: 'Correta. Por isso a triagem exige exame confirmatório.' },
     { t: 'O valor preditivo positivo será alto, pois a sensibilidade elevada garante positivos verdadeiros.', ok: false,
       why: 'Errada. Sensibilidade alta não garante valor preditivo positivo alto.' },
@@ -78,7 +78,7 @@ window.BANCO.push(
 { id: 'q-1.8-001', tema: '1.8', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Após um acidente com amputação de dedos em uma prensa, a equipe de vigilância em saúde do trabalhador do município comparece à empresa. Sobre a atuação da VISAT nesse caso, assinale a alternativa INCORRETA:',
   alts: [
-    { t: 'A atuação depende de autorização prévia do empregador para ingressar e acessar documentos.', ok: true,
+    { t: 'A atuação depende de autorização prévia do empregador para ingressar e para acessar documentos', ok: true,
       why: 'É a INCORRETA. A vigilância tem competência própria de acesso e inspeção.' },
     { t: 'Pode analisar o processo de trabalho e o posto envolvido, e não apenas o trabalhador acidentado.', ok: false,
       why: 'Correta, portanto não é a resposta. O objeto é o processo de trabalho.' },
@@ -96,7 +96,7 @@ window.BANCO.push(
 { id: 'q-1.9-001', tema: '1.9', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Um trabalhador de frigorífico recebe diagnóstico de tendinopatia de ombro com nexo ocupacional estabelecido pelo médico assistente. O médico do trabalho da empresa é consultado sobre as providências de registro. A conduta CORRETA é:',
   alts: [
-    { t: 'Notificar o agravo no sistema de agravos e assegurar a comunicação de acidente do trabalho.', ok: true,
+    { t: 'Notificar o agravo no sistema de agravos e assegurar a comunicação de acidente do trabalho devida', ok: true,
       why: 'Correta. Os dois registros têm finalidades diferentes e ambos são devidos.' },
     { t: 'Emitir apenas a comunicação de acidente, pois a notificação cabe exclusivamente à rede pública.', ok: false,
       why: 'Errada. A notificação alcança serviços públicos e privados.' },

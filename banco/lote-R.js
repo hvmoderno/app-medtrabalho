@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-2.2-070', tema: '2.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a exposição ocupacional a campos eletromagnéticos e radiações não ionizantes, é CORRETO afirmar:',
   alts: [
-    { t: 'Não ionizam moléculas, e o efeito depende da faixa de frequência: térmico na radiofrequência, ocular e cutâneo no ultravioleta', ok: true,
+    { t: 'Não ionizam moléculas, e o efeito depende da faixa de frequência: térmico na radiofrequência, ocular e cutâneo no caso do ultravioleta', ok: true,
       why: 'Correta. Não existe um efeito único das não ionizantes; a faixa de frequência define o que acontece.' },
     { t: 'Não ionizam moléculas e, por não carregarem energia suficiente para romper ligações químicas, não produzem efeito biológico relevante.', ok: false,
       why: 'Errada. Há efeitos reconhecidos, variáveis conforme a faixa de frequência.' },

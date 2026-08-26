@@ -4,7 +4,7 @@ window.BANCO.push(
 { id: 'q-1.1-025', tema: '1.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Um hospital de médio porte discute quem deve chefiar o serviço especializado em segurança e medicina do trabalho. O diretor sugere um engenheiro de produção sem formação em segurança, por ser "o mais organizado". A objeção técnica correta é:',
   alts: [
-    { t: 'Os integrantes devem ter formação e qualificação específicas para as funções previstas.', ok: true,
+    { t: 'Os integrantes devem ter formação e qualificação específicas para as funções que estão previstas', ok: true,
       why: 'Correta. Competência gerencial genérica não supre a exigência técnica.' },
     { t: 'Qualquer profissional de nível superior pode chefiar, desde que haja médico e técnico na equipe.', ok: false,
       why: 'Errada. Cada função exige formação e qualificação próprias.' },
@@ -22,7 +22,7 @@ window.BANCO.push(
 { id: 'q-1.1-026', tema: '1.1', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Ao apresentar o relatório anual de saúde ocupacional à diretoria de uma indústria têxtil, o médico do trabalho é criticado por "trazer só números de doença e nenhum indicador de negócio". A resposta que melhor integra as duas linguagens sem descaracterizar a prática médica é:',
   alts: [
-    { t: 'Articular os achados de saúde a absenteísmo, rotatividade e custo, em nível agregado.', ok: true,
+    { t: 'Articular os achados de saúde a absenteísmo, rotatividade e custo, sempre em nível agregado', ok: true,
       why: 'Correta. Os dados clínicos permanecem sem identificação individual.' },
     { t: 'Fornecer a lista nominal de afastados por diagnóstico para a diretoria calcular seu próprio indicador.', ok: false,
       why: 'Errada. Viola o sigilo dos dados clínicos individuais.' },
@@ -58,7 +58,7 @@ window.BANCO.push(
 { id: 'q-1.1-028', tema: '1.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Uma transportadora quer implantar um programa de exames em motoristas com base em recomendação de um fornecedor de laboratório, que sugere painel amplo de exames laboratoriais anuais para todos. O médico do trabalho avalia a proposta. A análise tecnicamente correta é:',
   alts: [
-    { t: 'Devem ser selecionados pelos riscos e pelas exigências da função, não por pacote comercial.', ok: true,
+    { t: 'Devem ser selecionados pelos riscos e pelas exigências da função, e não por pacote comercial', ok: true,
       why: 'Correta. O painel padronizado gera achados irrelevantes e sobrediagnóstico.' },
     { t: 'Quanto mais exames, melhor a proteção do trabalhador e maior a segurança jurídica da empresa.', ok: false,
       why: 'Errada. Exame sem indicação produz dano por excesso de intervenção.' },
@@ -76,7 +76,7 @@ window.BANCO.push(
 { id: 'q-1.1-029', tema: '1.1', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Um médico do trabalho é convidado a integrar o quadro de uma empresa de consultoria que atende múltiplas indústrias químicas. Sobre o exercício da autonomia técnica nesse arranjo, é CORRETO afirmar:',
   alts: [
-    { t: 'A autonomia técnica deve ser assegurada qualquer que seja o vínculo contratual do médico.', ok: true,
+    { t: 'A autonomia técnica deve ser assegurada qualquer que seja o vínculo contratual daquele médico', ok: true,
       why: 'Correta. A relação comercial não pode condicionar conclusões médicas.' },
     { t: 'Em contrato de consultoria, as conclusões médicas devem ser previamente validadas pelo cliente.', ok: false,
       why: 'Errada. A conclusão técnica não se subordina ao contratante.' },
@@ -112,7 +112,7 @@ window.BANCO.push(
 { id: 'q-1.1-031', tema: '1.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Um frigorífico registra aumento expressivo de queixas osteomusculares. A direção pede ao médico do trabalho que "avalie melhor os candidatos na admissão para não contratar quem já tem problema de coluna". A resposta tecnicamente e eticamente correta é:',
   alts: [
-    { t: 'A seleção admissional não controla adoecimento coletivo: cabe intervir na organização.', ok: true,
+    { t: 'A seleção admissional não controla o adoecimento coletivo: cabe intervir na organização', ok: true,
       why: 'Correta. O aumento das queixas aponta o processo de trabalho, não os candidatos.' },
     { t: 'A triagem admissional rigorosa é a medida de maior custo-efetividade para reduzir essas queixas.', ok: false,
       why: 'Errada. Seleciona pessoas sem alterar a exposição que adoece.' },
@@ -220,7 +220,7 @@ window.BANCO.push(
 { id: 'q-1.1-037', tema: '1.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Um serviço de medicina do trabalho terceirizado atende 200 empresas e emite documentos de aptidão em larga escala, com consultas de poucos minutos. Sobre a qualidade dessa prática, a crítica tecnicamente mais precisa é:',
   alts: [
-    { t: 'O exame só cumpre sua função se reconhece a exposição e liga os achados ao risco da função.', ok: true,
+    { t: 'O exame só cumpre sua função se reconhece a exposição e liga os achados ao risco daquela função', ok: true,
       why: 'Correta. Volume alto com tempo insuficiente transforma o exame em ato cartorial.' },
     { t: 'O problema é exclusivamente jurídico, pois a norma estabelece tempo mínimo de consulta ocupacional.', ok: false,
       why: 'Errada. O problema é técnico: o juízo exigido não cabe naquele tempo.' },
@@ -255,7 +255,7 @@ window.BANCO.push(
 { id: 'q-1.2-010', tema: '1.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Um serviço de referência analisa por que trabalhadores de uma mesma empresa, com o mesmo posto, adoecem de forma diferente conforme sejam efetivos ou terceirizados. Um técnico propõe explicar o achado pela determinação social do processo saúde-doença. Essa perspectiva sustenta que:',
   alts: [
-    { t: 'Vínculo, renda e poder de negociação atuam como determinantes, além da exposição no posto.', ok: true,
+    { t: 'Vínculo, renda e poder de negociação atuam como determinantes, além da exposição física no posto', ok: true,
       why: 'Correta. A inserção no trabalho explica diferenças com exposição física idêntica.' },
     { t: 'A diferença observada é explicada pela suscetibilidade genética individual de cada trabalhador.', ok: false,
       why: 'Errada. Os determinantes sociais explicam boa parte do gradiente.' },
@@ -273,7 +273,7 @@ window.BANCO.push(
 { id: 'q-1.2-011', tema: '1.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Um sindicato de químicos organiza grupos de trabalhadores para mapear coletivamente as exposições em uma fábrica, produzindo um "mapa de risco" construído pelos próprios operários. Essa prática se inspira diretamente:',
   alts: [
-    { t: 'No modelo operário italiano, que valoriza o saber do trabalhador sobre seu processo.', ok: true,
+    { t: 'No modelo operário italiano, que valoriza o saber do trabalhador sobre o próprio processo', ok: true,
       why: 'Correta. Inclui a validação consensual do conhecimento pelo grupo homogêneo.' },
     { t: 'No modelo taylorista, que padroniza tarefas a partir da observação sistemática dos operários.', ok: false,
       why: 'Errada. O taylorismo expropria o saber do trabalhador.' },
@@ -309,7 +309,7 @@ window.BANCO.push(
 { id: 'q-1.2-013', tema: '1.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Uma pesquisadora afirma que "o trabalho é categoria analítica central para compreender o adoecimento contemporâneo". Um colega discorda, dizendo que o desemprego e o trabalho por aplicativo tornaram a categoria obsoleta. A análise CORRETA é:',
   alts: [
-    { t: 'As novas formas ampliam a relevância do trabalho, criando exposições com padrões próprios.', ok: true,
+    { t: 'As novas formas ampliam a relevância do trabalho, criando exposições com padrões bastante próprios', ok: true,
       why: 'Correta. Jornadas, vínculos e pressão algorítmica produzem adoecimento específico.' },
     { t: 'A categoria trabalho perde sentido sem vínculo formal, restando a análise do comportamento individual.', ok: false,
       why: 'Errada. O objeto é o processo de trabalho, com ou sem vínculo.' },
@@ -345,7 +345,7 @@ window.BANCO.push(
 { id: 'q-1.2-015', tema: '1.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Um trabalhador de aplicativo de entregas sofre acidente de trânsito durante uma corrida e procura a unidade básica de saúde. O médico se pergunta se o caso pertence ao campo da saúde do trabalhador. A abordagem correta é:',
   alts: [
-    { t: 'Sim: o campo alcança todo trabalhador, e o caso deve ser registrado como agravo do trabalho.', ok: true,
+    { t: 'Sim: o campo alcança todo trabalhador, e o caso deve ser registrado como agravo do trabalho', ok: true,
       why: 'Correta. Cabe investigar as condições em que a atividade é executada.' },
     { t: 'Não: sem vínculo empregatício não há acidente nem agravo relacionado ao trabalho para nenhum fim.', ok: false,
       why: 'Errada. A notificação e o campo independem do vínculo.' },
@@ -363,7 +363,7 @@ window.BANCO.push(
 { id: 'q-1.2-016', tema: '1.2', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Uma equipe de saúde da família identifica que muitos moradores adoecem por exposição a solventes em oficinas de fundo de quintal do bairro. Ao propor a intervenção, a equipe deve considerar que:',
   alts: [
-    { t: 'O trabalho informal e domiciliar integra o campo, e a via territorial alcança essas exposições.', ok: true,
+    { t: 'O trabalho informal e domiciliar integra o campo, e a via territorial alcança essas exposições', ok: true,
       why: 'Correta. Escapam da lógica de vigilância centrada na empresa formal.' },
     { t: 'A atuação é inviável, pois sem empregador identificado não há a quem dirigir as ações de vigilância.', ok: false,
       why: 'Errada. A vigilância atua sobre o processo de trabalho e o território.' },
@@ -399,7 +399,7 @@ window.BANCO.push(
 { id: 'q-1.2-018', tema: '1.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Uma empresa apresenta campanha interna afirmando que "a maioria dos acidentes decorre de ato inseguro do trabalhador" e propõe premiação por comportamento seguro. Um médico do trabalho formado no campo da saúde do trabalhador critica a proposta porque:',
   alts: [
-    { t: 'Atribuir ao ato inseguro individualiza a culpa e desloca a análise das condições de trabalho.', ok: true,
+    { t: 'Atribuir o acidente ao ato inseguro individualiza a culpa e desloca a análise das condições', ok: true,
       why: 'Correta. A premiação ainda induz subnotificação por medo de perdê-la.' },
     { t: 'A premiação por ausência de acidentes é vedada por norma, o que torna a campanha simplesmente ilegal.', ok: false,
       why: 'Errada. O problema é técnico e cultural, não de vedação normativa.' },
@@ -417,7 +417,7 @@ window.BANCO.push(
 { id: 'q-1.2-019', tema: '1.2', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Ao caracterizar o campo da Saúde do Trabalhador no Brasil, é CORRETO afirmar que sua inserção institucional principal ocorre:',
   alts: [
-    { t: 'No sistema público de saúde, com competência constitucional e legal atribuída ao setor.', ok: true,
+    { t: 'No sistema público de saúde, com competência constitucional e legal atribuída ao setor saúde', ok: true,
       why: 'Correta. A execução das ações de saúde do trabalhador é do sistema de saúde.' },
     { t: 'Exclusivamente nos serviços internos das empresas, por meio dos programas obrigatórios previstos.', ok: false,
       why: 'Errada. A competência pública é constitucional e legal.' },
@@ -435,7 +435,7 @@ window.BANCO.push(
 { id: 'q-1.2-020', tema: '1.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Uma trabalhadora de teleatendimento relata que a pressão por metas e a vigilância eletrônica constante geram sofrimento. O supervisor argumenta que "não há risco físico, portanto não há risco ocupacional". A análise correta é:',
   alts: [
-    { t: 'A organização do trabalho é fonte de risco: ritmo, metas e falta de autonomia adoecem.', ok: true,
+    { t: 'A organização do trabalho é fonte de risco: ritmo, metas e falta de autonomia fazem adoecer', ok: true,
       why: 'Correta. São determinantes reconhecidos de adoecimento ocupacional.' },
     { t: 'Somente agentes físicos, químicos e biológicos configuram risco, conforme a classificação clássica.', ok: false,
       why: 'Errada. Fatores ergonômicos e psicossociais integram o inventário.' },
@@ -453,7 +453,7 @@ window.BANCO.push(
 { id: 'q-1.2-021', tema: '1.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Um gestor de saúde afirma que a diferença entre "saúde ocupacional" e "saúde do trabalhador" é irrelevante na prática cotidiana. Um técnico responde que a diferença tem consequências operacionais concretas. Assinale a consequência prática que melhor sustenta essa resposta:',
   alts: [
-    { t: 'O agravo não se encerra no atendido: dispara vigilância, busca de casos e intervenção.', ok: true,
+    { t: 'O agravo não se encerra no trabalhador atendido: dispara vigilância, busca de casos e intervenção', ok: true,
       why: 'Correta. É o que distingue a perspectiva da saúde do trabalhador.' },
     { t: 'Sob a perspectiva da saúde do trabalhador, o atendimento clínico individual torna-se dispensável.', ok: false,
       why: 'Errada. O cuidado individual permanece e se soma à ação coletiva.' },
@@ -471,7 +471,7 @@ window.BANCO.push(
 { id: 'q-1.2-022', tema: '1.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a relação entre trabalho, desigualdade social e saúde, assinale a afirmativa INCORRETA:',
   alts: [
-    { t: 'A elevação da renda média elimina os gradientes de adoecimento por posição ocupacional.', ok: true,
+    { t: 'A elevação da renda média de um país elimina os gradientes por posição ocupacional', ok: true,
       why: 'É a INCORRETA. O gradiente persiste mesmo em países de renda alta.' },
     { t: 'Trabalhadores com menor controle sobre o próprio trabalho têm pior perfil de saúde, mesmo com renda igual.', ok: false,
       why: 'Correta, portanto não é a resposta. É achado clássico da literatura.' },
@@ -489,7 +489,7 @@ window.BANCO.push(
 { id: 'q-1.2-023', tema: '1.2', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Uma equipe realiza roda de conversa com costureiras de uma oficina para entender por que as pausas prescritas não são cumpridas. Elas relatam que o pagamento por peça inviabiliza parar. Essa constatação ilustra:',
   alts: [
-    { t: 'A distância entre trabalho prescrito e real, mediada pela forma de remuneração adotada.', ok: true,
+    { t: 'A distância entre o trabalho prescrito e o real, mediada pela forma de remuneração adotada', ok: true,
       why: 'Correta. A remuneração por produção funciona como determinante da exposição.' },
     { t: 'Falta de conscientização das trabalhadoras sobre a importância das pausas para a recuperação.', ok: false,
       why: 'Errada. Elas conhecem a pausa; a remuneração é que a inviabiliza.' },
@@ -507,7 +507,7 @@ window.BANCO.push(
 { id: 'q-1.2-024', tema: '1.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Um município investiga adoecimento entre trabalhadores de uma cadeia produtiva com forte presença de trabalho terceirizado e subcontratado. Sobre a chamada "invisibilidade" desses trabalhadores nos sistemas de informação, é CORRETO afirmar:',
   alts: [
-    { t: 'A fragmentação dilui o registro entre empregadores e oculta o processo produtivo real.', ok: true,
+    { t: 'A fragmentação dilui o registro entre os empregadores e oculta o processo produtivo real', ok: true,
       why: 'Correta. Subestima a carga de doença atribuível àquela cadeia.' },
     { t: 'A terceirização melhora a qualidade do registro, pois cada prestadora mantém seu próprio sistema.', ok: false,
       why: 'Errada. A fragmentação dispersa e dilui a informação.' },

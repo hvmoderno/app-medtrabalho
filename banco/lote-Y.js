@@ -41,7 +41,7 @@ window.BANCO.push(
 { id: 'q-4.6-080', tema: '4.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o suicídio e a tentativa de suicídio relacionados ao trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'Há situações em que os fatores ocupacionais são determinantes, e a investigação precisa alcançá-los', ok: true,
+    { t: 'Há situações em que os fatores ocupacionais são determinantes, e a investigação precisa alcançar o trabalho', ok: true,
       why: 'Correta. Investigar só a história pessoal reproduz a omissão que permitiu o desfecho.' },
     { t: 'O suicídio é evento de determinação exclusivamente individual, ligado à história pessoal de cada um.', ok: false,
       why: 'Errada. Fatores ocupacionais podem ser determinantes ou contribuintes relevantes.' },

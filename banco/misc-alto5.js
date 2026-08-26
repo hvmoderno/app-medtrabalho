@@ -7,7 +7,7 @@ window.BANCO.push(
 { id: 'q-2.5-030', tema: '2.5', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Ao caracterizar a exposição de um grupo de soldadores, o higienista dispõe de poucos recursos para amostragem e precisa priorizar. Sobre a estratégia, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve considerar toxicidade, magnitude estimada e número de expostos, começando pelo maior risco.', ok: true,
+    { t: 'Deve considerar a toxicidade, a magnitude estimada e o número de expostos, começando pelo maior risco', ok: true,
       why: 'Correta. Priorizar sem caracterização básica é sortear; com ela, a decisão é defensável.' },
     { t: 'Deve amostrar uniformemente todos os grupos, distribuindo os recursos de forma igualitária entre eles.', ok: false,
       why: 'Errada. Ignora diferenças de risco e desperdiça recursos em exposições irrelevantes.' },
@@ -62,7 +62,7 @@ window.BANCO.push(
 { id: 'q-2.8-031', tema: '2.8', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o ensaio de vedação em programa de proteção respiratória, é CORRETO afirmar:',
   alts: [
-    { t: 'Verifica a adequação de um modelo e tamanho a um rosto, e deve ser repetido periodicamente.', ok: true,
+    { t: 'Verifica a adequação de um modelo e tamanho a um rosto, e deve ser repetido periodicamente depois', ok: true,
       why: 'Correta. Não se confunde com a checagem rápida que o usuário faz a cada colocação.' },
     { t: 'Verifica a adequação do modelo ao rosto e, realizado na admissão, não precisa mais ser repetido.', ok: false,
       why: 'Errada. Mudanças de peso, cirurgias e alterações faciais exigem novo ensaio.' },
@@ -192,7 +192,7 @@ window.BANCO.push(
 { id: 'q-1.8-040', tema: '1.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Durante inspeção, a equipe de vigilância identifica risco grave e iminente em uma prensa sem proteção. A empresa alega que a paralisação do equipamento inviabiliza a produção e propõe corrigir em trinta dias. Sobre a conduta, é CORRETO afirmar:',
   alts: [
-    { t: 'Cabe interdição imediata do equipamento, com levantamento condicionado à correção do risco.', ok: true,
+    { t: 'Cabe a interdição imediata do equipamento, com o levantamento condicionado à correção do risco', ok: true,
       why: 'Correta. Risco grave e iminente é o que afasta a concessão de prazo para adequação.' },
     { t: 'Cabe conceder prazo para adequação, solução sempre preferível à interdição por preservar empregos.', ok: false,
       why: 'Errada. Manter trabalhadores expostos durante o prazo é inaceitável.' },
@@ -210,7 +210,7 @@ window.BANCO.push(
 { id: 'q-1.8-041', tema: '1.8', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a participação dos trabalhadores nas ações de vigilância em saúde do trabalhador, é CORRETO afirmar:',
   alts: [
-    { t: 'É estruturante, pois são eles que conhecem o trabalho real que não aparece nos documentos.', ok: true,
+    { t: 'É estruturante, pois são eles que conhecem o trabalho real, aquele que não aparece nos documentos', ok: true,
       why: 'Correta. E sem proteção contra retaliação esse conhecimento não emerge.' },
     { t: 'É prevista, mas a participação dos trabalhadores compromete a objetividade técnica da inspeção.', ok: false,
       why: 'Errada. Ela acrescenta informação sobre a atividade real, que a documentação não descreve.' },

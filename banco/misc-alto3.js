@@ -210,7 +210,7 @@ window.BANCO.push(
 { id: 'q-5.6-031', tema: '5.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Ao estruturar um programa interno de retorno ao trabalho, o médico do trabalho define os elementos essenciais. Sobre esse programa, é CORRETO afirmar:',
   alts: [
-    { t: 'Prevê contato no afastamento, avaliação prévia, restrições com prazo e acompanhamento.', ok: true,
+    { t: 'Prevê contato durante o afastamento, avaliação prévia, restrições com prazo e acompanhamento', ok: true,
       why: 'Correta. E intervenção no posto quando o determinante estiver nele.' },
     { t: 'Prevê avaliação prévia, devendo o contato durante o afastamento ser evitado para não configurar assédio.', ok: false,
       why: 'Errada. O contato cuidadoso mantém o vínculo e melhora o desfecho.' },

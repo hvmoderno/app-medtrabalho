@@ -7,7 +7,7 @@ window.BANCO.push(
 { id: 'q-1.4-010', tema: '1.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'A diretoria de uma indústria cobra do serviço médico a redução do absenteísmo, que subiu no último ano. O médico coordenador é convidado a apresentar um plano. A abordagem tecnicamente CORRETA é:',
   alts: [
-    { t: 'Analisar o absenteísmo por causa, setor e duração antes de propor qualquer medida.', ok: true,
+    { t: 'Analisar o absenteísmo por causa, por setor e por duração antes de propor qualquer medida', ok: true,
       why: 'Correta. Adoecimento ocupacional, doença comum e desmotivação exigem intervenções distintas.' },
     { t: 'Endurecer a aceitação de atestados, exigindo perícia interna para qualquer afastamento solicitado.', ok: false,
       why: 'Errada. Aumenta o presenteísmo sem resolver a causa dos afastamentos.' },
@@ -43,7 +43,7 @@ window.BANCO.push(
 { id: 'q-1.4-012', tema: '1.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Uma microempresa de dez empregados, de grau de risco baixo, questiona o médico do trabalho sobre suas obrigações de gestão em saúde ocupacional. A orientação CORRETA é:',
   alts: [
-    { t: 'Há tratamento diferenciado por porte e grau de risco, mas não dispensa das obrigações.', ok: true,
+    { t: 'Há tratamento diferenciado por porte e por grau de risco, mas não dispensa das obrigações', ok: true,
       why: 'Correta. Identificar riscos e acompanhar a saúde dos expostos permanece devido.' },
     { t: 'As microempresas estão integralmente dispensadas de programa médico e de gerenciamento de riscos.', ok: false,
       why: 'Errada. Há simplificação, não dispensa integral.' },
@@ -61,7 +61,7 @@ window.BANCO.push(
 { id: 'q-1.4-013', tema: '1.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Ao apresentar o relatório anual do programa de controle médico, o coordenador é questionado sobre o valor gerencial do documento. Sobre esse relatório, assinale a alternativa CORRETA:',
   alts: [
-    { t: 'Deve analisar os agravos e a evolução dos indicadores, apontando mudanças no controle.', ok: true,
+    { t: 'Deve analisar os agravos e a evolução dos indicadores, apontando mudanças nas medidas de controle', ok: true,
       why: 'Correta. É instrumento de gestão que realimenta o gerenciamento de riscos.' },
     { t: 'Serve para comprovar à fiscalização que os exames previstos foram realizados no período avaliado.', ok: false,
       why: 'Errada. É documento de análise, não de prestação de contas.' },
@@ -98,7 +98,7 @@ window.BANCO.push(
 { id: 'q-1.5-010', tema: '1.5', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Uma empresa implanta um sistema de gestão de segurança e saúde no trabalho. Sobre a estrutura desses sistemas, assinale a alternativa CORRETA:',
   alts: [
-    { t: 'Organizam-se em ciclo de planejar, executar, verificar e agir, com política e avaliação.', ok: true,
+    { t: 'Organizam-se em ciclo de planejar, executar, verificar e agir, com política, avaliação e melhoria', ok: true,
       why: 'Correta. Dependem do comprometimento da direção e da participação dos trabalhadores.' },
     { t: 'São conjuntos de procedimentos documentados, medindo-se a eficácia pelo volume de registros gerados.', ok: false,
       why: 'Errada. A eficácia se mede pelo desempenho, não pelo volume documental.' },
@@ -134,7 +134,7 @@ window.BANCO.push(
 { id: 'q-1.5-012', tema: '1.5', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre cultura de segurança nas organizações, assinale a alternativa INCORRETA:',
   alts: [
-    { t: 'Uma cultura madura se reconhece pelo baixo número de relatos de quase-acidentes.', ok: true,
+    { t: 'Uma cultura de segurança madura se reconhece pelo baixo número de relatos de quase-acidentes', ok: true,
       why: 'É a INCORRETA. Cultura madura aumenta os relatos, porque eles não geram punição.' },
     { t: 'A confiança de que o relato não gerará punição é condição para que a informação flua na empresa.', ok: false,
       why: 'Correta, portanto não é a resposta. Punição seca o fluxo de informação.' },
@@ -153,7 +153,7 @@ window.BANCO.push(
 { id: 'q-1.6-010', tema: '1.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Um município estrutura sua atenção à saúde dos trabalhadores. Sobre a Política Nacional de Saúde do Trabalhador e da Trabalhadora, assinale a alternativa CORRETA:',
   alts: [
-    { t: 'Alcança todos os trabalhadores, urbanos e rurais, com ou sem vínculo formal.', ok: true,
+    { t: 'Alcança todos os trabalhadores, urbanos e rurais, com ou sem qualquer vínculo formal', ok: true,
       why: 'Correta. Tem a vigilância em saúde e a atenção integral como eixos.' },
     { t: 'Aplica-se aos trabalhadores com vínculo formal, cobertos pelo seguro de acidentes do trabalho.', ok: false,
       why: 'Errada. O princípio é a universalidade, independentemente do vínculo.' },
@@ -171,7 +171,7 @@ window.BANCO.push(
 { id: 'q-1.6-011', tema: '1.6', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a Rede Nacional de Atenção Integral à Saúde do Trabalhador e os centros de referência em saúde do trabalhador, assinale a alternativa CORRETA:',
   alts: [
-    { t: 'Têm papel de suporte técnico, matriciamento e apoio à vigilância, sem substituir a rede.', ok: true,
+    { t: 'Têm papel de suporte técnico, matriciamento e apoio à vigilância, sem substituir a rede assistencial', ok: true,
       why: 'Correta. Não são porta de entrada substitutiva da atenção ao trabalhador.' },
     { t: 'São unidades de pronto atendimento exclusivas para os trabalhadores vítimas de acidente do trabalho.', ok: false,
       why: 'Errada. Não são unidades de urgência.' },
@@ -189,7 +189,7 @@ window.BANCO.push(
 { id: 'q-1.6-012', tema: '1.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Um caso de intoxicação por agrotóxico em trabalhador rural informal chega a uma unidade básica de saúde. Sobre a atuação das políticas públicas nesse caso, assinale a alternativa CORRETA:',
   alts: [
-    { t: 'O caso deve ser notificado, e identificar a relação com o trabalho independe do vínculo.', ok: true,
+    { t: 'O caso deve ser notificado, e identificar a relação com o trabalho independe do vínculo formal', ok: true,
       why: 'Correta. É obrigação do serviço de saúde, com ou sem cobertura previdenciária.' },
     { t: 'Por ser trabalhador informal, o caso não integra o escopo da saúde do trabalhador no sistema.', ok: false,
       why: 'Errada. O campo alcança todas as formas de inserção no trabalho.' },
@@ -226,7 +226,7 @@ window.BANCO.push(
 { id: 'q-1.7-011', tema: '1.7', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre os princípios do sistema público de saúde aplicados à saúde do trabalhador, assinale a alternativa CORRETA:',
   alts: [
-    { t: 'A equidade orienta alocar mais recursos a grupos mais expostos e vulneráveis.', ok: true,
+    { t: 'A equidade orienta alocar mais recursos aos grupos mais expostos e mais vulneráveis', ok: true,
       why: 'Correta. Justifica priorizar categorias com maior carga de risco ocupacional.' },
     { t: 'A universalidade significa que os contribuintes da previdência têm direito à atenção à saúde.', ok: false,
       why: 'Errada. O direito é de todos, independentemente de contribuição.' },
@@ -244,7 +244,7 @@ window.BANCO.push(
 { id: 'q-1.7-012', tema: '1.7', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Uma equipe de saúde da família atende repetidos casos de dorsalgia em moradores que trabalham em uma mesma cerâmica do território. Sobre o papel da atenção primária, assinale a alternativa CORRETA:',
   alts: [
-    { t: 'A repetição de casos com a mesma inserção ocupacional deve disparar suspeita e vigilância.', ok: true,
+    { t: 'A repetição de casos com a mesma inserção ocupacional deve disparar a suspeita e a vigilância', ok: true,
       why: 'Correta. Além do cuidado individual, o caso vira ação coletiva.' },
     { t: 'A atenção primária deve tratar os sintomas, deixando a discussão de nexo à perícia previdenciária.', ok: false,
       why: 'Errada. Suspeitar e notificar é atribuição de qualquer serviço de saúde.' },
@@ -263,7 +263,7 @@ window.BANCO.push(
 { id: 'q-1.10-010', tema: '1.10', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Uma empresa lança um programa de qualidade de vida com aulas de ginástica laboral, palestras sobre alimentação e desafio de passos, mantendo inalterados o ritmo de produção e as metas. O médico do trabalho é consultado. A avaliação CORRETA é:',
   alts: [
-    { t: 'A promoção tem valor, mas não substitui a intervenção sobre os determinantes do adoecimento.', ok: true,
+    { t: 'A promoção tem valor, mas não substitui a intervenção sobre os determinantes do adoecimento no trabalho', ok: true,
       why: 'Correta. Mantidos ritmo e metas, transfere-se ao trabalhador a responsabilidade.' },
     { t: 'O programa é suficiente, pois atua sobre os principais fatores de risco, que são comportamentais.', ok: false,
       why: 'Errada. Ritmo, metas e organização do trabalho pesam mais.' },
@@ -281,7 +281,7 @@ window.BANCO.push(
 { id: 'q-1.10-011', tema: '1.10', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Uma empresa propõe incluir na bateria periódica um painel amplo de exames laboratoriais e de imagem "para detectar tudo precocemente" em todos os trabalhadores. Sobre os níveis de prevenção, assinale a alternativa CORRETA:',
   alts: [
-    { t: 'Desconsidera a prevenção quaternária, que é evitar o dano do excesso de intervenção.', ok: true,
+    { t: 'Desconsidera a prevenção quaternária, que é evitar o dano causado pelo excesso de intervenção', ok: true,
       why: 'Correta. Exames sem indicação geram achados incidentais e investigações desnecessárias.' },
     { t: 'Trata-se de prevenção primária, pois a ampliação da bateria evita o aparecimento das doenças.', ok: false,
       why: 'Errada. Exame detecta; não evita o aparecimento.' },
@@ -299,7 +299,7 @@ window.BANCO.push(
 { id: 'q-1.10-012', tema: '1.10', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre programas de prevenção do uso de álcool e outras drogas no ambiente de trabalho, assinale a alternativa CORRETA:',
   alts: [
-    { t: 'Devem ter caráter educativo e de cuidado, com sigilo e encaminhamento ao tratamento.', ok: true,
+    { t: 'Devem ter caráter educativo e de cuidado, com sigilo e com encaminhamento ao tratamento', ok: true,
       why: 'Correta. Abordagem punitiva afasta o trabalhador da ajuda de que precisa.' },
     { t: 'Devem basear-se em testagem toxicológica generalizada e sem indicação de todos os empregados.', ok: false,
       why: 'Errada. Exige finalidade legítima ligada à segurança da atividade.' },

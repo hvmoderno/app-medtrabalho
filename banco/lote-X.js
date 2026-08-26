@@ -95,7 +95,7 @@ window.BANCO.push(
 { id: 'q-2.3-080', tema: '2.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a exposição ocupacional a poeiras minerais e sua avaliação, é CORRETO afirmar:',
   alts: [
-    { t: 'A fração relevante é a respirável, o que exige amostragem seletiva pelo tamanho da partícula', ok: true,
+    { t: 'A fração relevante é a respirável, o que exige amostragem seletiva pelo tamanho da partícula inalada', ok: true,
       why: 'Correta. O que se vê é a fração grossa; o que adoece é a que não se vê.' },
     { t: 'A quantidade de poeira visível suspensa no ar indica adequadamente o risco respiratório presente.', ok: false,
       why: 'Errada. A fração respirável não é visível a olho nu.' },
@@ -113,7 +113,7 @@ window.BANCO.push(
 { id: 'q-1.3-080', tema: '1.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre estudos de coorte em saúde do trabalhador, é CORRETO afirmar:',
   alts: [
-    { t: 'Estimam incidência e temporalidade, mas são vulneráveis à perda diferencial de seguimento', ok: true,
+    { t: 'Estimam a incidência e a temporalidade, mas são vulneráveis à perda diferencial de seguimento', ok: true,
       why: 'Correta. Perda diferencial é a principal ameaça à validade em coortes ocupacionais longas.' },
     { t: 'Estimam a associação entre exposição e desfecho, sem permitir estimar incidência na população.', ok: false,
       why: 'Errada. É justamente o delineamento adequado para isso.' },
