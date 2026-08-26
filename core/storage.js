@@ -614,6 +614,46 @@
     }
   }
 
+  /* Aplica um snapshot ao estado local. Usada pela importação de arquivo e
+   * pela sincronização — as duas precisam da MESMA regra de mesclagem, e
+   * duplicá-la seria a forma mais fácil de elas divergirem com o tempo. */
+  function aplicarSnapshot(snap, modo) {
+    modo = modo === 'substituir' ? 'substituir' : 'mesclar';
+
+    // Antes de tocar em qualquer coisa, guarda o estado atual: se a mesclagem
+    // estiver errada, o usuário ainda tem para onde voltar.
+    try { gravarBackupRotativo(); } catch (e) {
+      avisar('erro', 'Não consegui guardar um backup antes de aplicar os dados.', String(e));
+    }
+
+    var restaurados = [];
+    try {
+      MODULOS.forEach(function (m) {
+        var env = snap.dados[m];
+        if (!env || typeof env !== 'object' || !('d' in env)) return;
+        var nv;
+        if (modo === 'substituir') {
+          nv = env;
+        } else {
+          var atual = mem[m] && mem[m].d ? JSON.parse(JSON.stringify(mem[m].d)) : {};
+          nv = { _v: env._v || '1', _t: String(Date.now()),
+                 d: mesclarModulo(m, atual, env.d) };
+        }
+        mem[m] = nv;
+        lsGravar(m, nv);
+        idbPut('kv', { k: m, env: nv });
+        if (!vazio(nv)) restaurados.push(m);
+      });
+    } catch (e) {
+      avisar('erro', 'Falha ao aplicar os dados. Nada foi perdido: ' +
+        'seu estado anterior está nos backups automáticos.', String(e));
+      throw e;
+    }
+
+    gravarBackupRotativo();
+    return restaurados;
+  }
+
   /* modo: 'mesclar' (padrão) ou 'substituir'. */
   function importarArquivo(file, modo) {
     modo = modo === 'substituir' ? 'substituir' : 'mesclar';
@@ -628,37 +668,12 @@
           return reject(new Error('Este arquivo não é um backup deste aplicativo.'));
         }
 
-        // Antes de tocar em qualquer coisa, guarda o estado atual: se a
-        // mesclagem estiver errada, o usuário ainda tem para onde voltar.
-        try { gravarBackupRotativo(); } catch (e) {
-          avisar('erro', 'Não consegui guardar um backup antes de importar.', String(e));
-        }
-
-        var restaurados = [];
+        var restaurados;
         try {
-          MODULOS.forEach(function (m) {
-            var env = snap.dados[m];
-            if (!env || typeof env !== 'object' || !('d' in env)) return;
-            var novo;
-            if (modo === 'substituir') {
-              novo = env;
-            } else {
-              var atual = mem[m] && mem[m].d ? JSON.parse(JSON.stringify(mem[m].d)) : {};
-              novo = { _v: env._v || '1', _t: String(Date.now()),
-                       d: mesclarModulo(m, atual, env.d) };
-            }
-            mem[m] = novo;
-            lsGravar(m, novo);
-            idbPut('kv', { k: m, env: novo });
-            if (!vazio(novo)) restaurados.push(m);
-          });
+          restaurados = aplicarSnapshot(snap, modo);
         } catch (e) {
-          avisar('erro', 'Falha ao importar o backup. Nada foi perdido: ' +
-            'seu estado anterior está nos backups automáticos.', String(e));
           return reject(e);
         }
-
-        gravarBackupRotativo();
         avisar('info',
           (modo === 'mesclar' ? 'Backup mesclado com o que já havia aqui: '
                               : 'Backup restaurado por substituição: ') +
@@ -693,6 +708,10 @@
     flush: flush,
     exportarArquivo: exportarArquivo,
     importarArquivo: importarArquivo,
+    // Usados pela sincronização (core/sync.js), para ela reaproveitar o mesmo
+    // formato de snapshot e a mesma regra de mesclagem da importação.
+    montarSnapshot: montarSnapshot,
+    aplicarSnapshot: aplicarSnapshot,
     listarBackups: function () {
       return idbGetAll('backups').then(function (t) {
         t.sort(function (a, b) { return a.id < b.id ? 1 : -1; });

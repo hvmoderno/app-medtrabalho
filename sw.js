@@ -10,7 +10,7 @@
    abre offline, mas pega a versão nova assim que houver rede.
    ========================================================================== */
 
-const VERSAO = 'v102';
+const VERSAO = 'v103';
 const CACHE = 'medtrabalho-' + VERSAO;
 
 const ARQUIVOS = [
@@ -160,6 +160,7 @@ const ARQUIVOS = [
   './core/edital.js',
   './core/gabarito.js',
   './core/storage.js',
+  './core/sync.js',
   './core/xlsx.js',
   './cronograma/cronograma.js',
   './cronograma/index.html',

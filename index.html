@@ -110,6 +110,34 @@
       <button id="btImportar">Restaurar de arquivo</button>
       <input type="file" id="arqBackup" accept="application/json,.json" hidden>
     </div>
+    <h3 style="margin-top:16px">Sincronizar entre aparelhos</h3>
+    <p class="pequeno fraco" style="margin:0 0 8px">
+      Mantém tablet, notebook e celular com o mesmo progresso, usando um arquivo
+      privado na sua conta do GitHub. Sincroniza sozinho ao abrir e ao sair.
+      Nada é enviado sem o token, e ele fica só neste aparelho.
+    </p>
+    <div id="syncDesligado">
+      <p class="pequeno fraco" style="margin:0 0 6px">
+        Crie um token em <b>github.com/settings/tokens</b> &rarr; "Generate new token
+        (classic)" &rarr; marque <b>somente</b> a caixa <b>gist</b>. Cole abaixo.
+      </p>
+      <div class="linha">
+        <input type="password" id="syncToken" placeholder="cole o token aqui"
+               autocomplete="off" style="flex:1;min-width:180px">
+        <button class="primario" id="btSyncLigar">Ligar</button>
+      </div>
+    </div>
+    <div id="syncLigado" hidden>
+      <div class="placar" style="margin-bottom:8px">
+        <span>conta: <b id="syncUsuario">—</b></span>
+        <span>última sincronização: <b id="syncQuando">nunca</b></span>
+      </div>
+      <div class="linha">
+        <button class="primario" id="btSyncAgora">Sincronizar agora</button>
+        <button id="btSyncDesligar">Desligar</button>
+      </div>
+    </div>
+
     <h3 style="margin-top:16px">Backups automáticos internos</h3>
     <p class="pequeno fraco" style="margin-bottom:6px">Cópias datadas guardadas dentro do
       navegador (últimas 12). Servem se algo se perder sem o site ser limpo.</p>
@@ -123,6 +151,7 @@
 
 <script src="core/edital.js"></script>
 <script src="core/storage.js"></script>
+<script src="core/sync.js"></script>
 <script>
 (function () {
   'use strict';
@@ -489,6 +518,7 @@
   /* -------------------------------------------------------------- backup -- */
   var dlg = document.getElementById('dlgBackup');
   document.getElementById('btBackup').onclick = function () {
+    pintarSync();
     var st = Store.status();
     var ub = st.ultimoBackupArquivo;
     document.getElementById('infoBackup').innerHTML = ub
@@ -557,6 +587,67 @@
     ev.target.value = '';
   };
 
+  /* ------------------------------------------------------- sincronização ---
+   * Dispara ao abrir e ao sair. Silenciosa no automático: quem está estudando
+   * não precisa de faixa verde a cada troca de aparelho — só de aviso quando
+   * algo falha, e disso o próprio SYNC cuida.
+   */
+  function pintarSync() {
+    var e = SYNC.estado();
+    document.getElementById('syncDesligado').hidden = e.configurado;
+    document.getElementById('syncLigado').hidden = !e.configurado;
+    if (e.configurado) {
+      var c = {};
+      try { c = JSON.parse(localStorage.getItem('mtb:sync') || '{}'); } catch (x) { c = {}; }
+      document.getElementById('syncUsuario').textContent = c.usuario || '—';
+      document.getElementById('syncQuando').textContent = e.ultimo
+        ? new Date(e.ultimo).toLocaleString('pt-BR')
+        : 'nunca';
+    }
+  }
+
+  document.getElementById('btSyncLigar').onclick = function () {
+    var campo = document.getElementById('syncToken');
+    var bt = this;
+    bt.disabled = true;
+    SYNC.configurar(campo.value).then(function (login) {
+      campo.value = '';
+      MTB_AVISO({ nivel: 'info', texto: 'Sincronização ligada na conta ' + login + '.' });
+      pintarSync();
+      return SYNC.sincronizar(false);
+    }).then(pintarSync).catch(function (err) {
+      MTB_AVISO({ nivel: 'erro', texto: 'Não consegui ligar a sincronização.', detalhe: err.message });
+    }).then(function () { bt.disabled = false; });
+  };
+
+  document.getElementById('btSyncAgora').onclick = function () {
+    var bt = this; bt.disabled = true;
+    SYNC.sincronizar(false).then(function () {
+      pintarSync();
+      // Os iframes leem do storage na carga; recarrega para refletir o que veio.
+      setTimeout(function () { location.reload(); }, 800);
+    }).then(function () { bt.disabled = false; });
+  };
+
+  document.getElementById('btSyncDesligar').onclick = function () {
+    if (!confirm('Desligar a sincronização deste aparelho?\n\n' +
+                 'O arquivo no GitHub continua lá, e os dados locais não são apagados.')) return;
+    SYNC.desligar();
+    pintarSync();
+  };
+
+  // Ao sair: envia o que mudou. keepalive para a requisição sobreviver ao fechamento.
+  ['pagehide', 'freeze'].forEach(function (ev) {
+    window.addEventListener(ev, function () {
+      if (SYNC.configurado()) { SYNC.sincronizar(true); }
+    });
+  });
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'hidden' && SYNC.configurado()) {
+      SYNC.sincronizar(true);
+    }
+  });
+
   /* ------------------------------------------------------------ instalação ---
    * O Chrome só oferece a instalação por um menu que muita gente não encontra.
    * Guardando o evento, o botão "Instalar" aparece no próprio app e abre o
@@ -624,6 +715,12 @@
   Store.onAviso(window.MTB_AVISO);
   Store.init().then(function () {
     atualizarContagem();
+    // Puxa o que os outros aparelhos fizeram. Silencioso: só fala se falhar.
+    if (SYNC.configurado()) {
+      SYNC.sincronizar(true).then(function (r) {
+        if (r && r.feito) { atualizarContagem(); }
+      });
+    }
     var meta = Store.get('meta') || {};
     // Na primeira abertura cai no cronograma: a pergunta de quem senta para
     // estudar é "o que faço hoje?", e é ele quem responde. Depois disso o app

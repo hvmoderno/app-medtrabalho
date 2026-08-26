@@ -138,3 +138,26 @@ valor; linhas do log de erros são unidas por identificador.
 Antes de qualquer importação o app guarda um backup automático do estado
 atual — se a importação sair errada, dá para voltar por
 **Backup > Backups automáticos internos**.
+
+## Sincronizar os três aparelhos
+
+Em **Backup > Sincronizar entre aparelhos**. Usa um arquivo privado (gist) na
+sua conta do GitHub como ponto comum. Sincroniza sozinho ao abrir e ao sair.
+
+Para ligar, em cada aparelho:
+
+1. Crie um token em github.com/settings/tokens > "Generate new token (classic)"
+2. Marque **somente** a caixa `gist`. Nada além dela.
+3. Cole no campo e toque em Ligar.
+
+O mesmo token serve nos três aparelhos. Na primeira sincronização o arquivo é
+criado; nas seguintes ele é atualizado.
+
+O que vem da nuvem é **mesclado**, nunca substitui: usar dois aparelhos no
+mesmo dia soma o progresso. Antes de aplicar qualquer coisa vinda da rede o app
+grava um backup automático interno.
+
+O token fica só no aparelho onde foi colado e **não entra no backup .json** —
+se entrasse, mandar o arquivo para alguém entregaria a credencial junto.
+
+Sem internet o app funciona igual; sincroniza quando a conexão voltar.
