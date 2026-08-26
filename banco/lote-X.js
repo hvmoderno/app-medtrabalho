@@ -95,7 +95,7 @@ window.BANCO.push(
 { id: 'q-2.3-080', tema: '2.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a exposição ocupacional a poeiras minerais e sua avaliação, é CORRETO afirmar:',
   alts: [
-    { t: 'A fração relevante é a respirável, o que exige amostragem seletiva por tamanho de partícula', ok: true,
+    { t: 'A fração relevante é a respirável, o que exige amostragem seletiva pelo tamanho da partícula', ok: true,
       why: 'Correta. O que se vê é a fração grossa; o que adoece é a que não se vê.' },
     { t: 'A quantidade de poeira visível suspensa no ar indica adequadamente o risco respiratório presente.', ok: false,
       why: 'Errada. A fração respirável não é visível a olho nu.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-1.3-081', tema: '1.3', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o conceito de confundimento em estudos de saúde do trabalhador, é CORRETO afirmar:',
   alts: [
-    { t: 'O confundidor se associa à exposição e ao desfecho sem ser etapa do mecanismo causal', ok: true,
+    { t: 'O confundidor se associa à exposição e ao desfecho sem ser etapa intermediária do mecanismo', ok: true,
       why: 'Correta. Ajustar por mediador remove parte do próprio efeito que se quer estimar.' },
     { t: 'Toda variável associada ao desfecho deve ser incluída como ajuste no modelo estatístico usado.', ok: false,
       why: 'Errada. Incluir mediadores ou colisores introduz viés em vez de removê-lo.' },

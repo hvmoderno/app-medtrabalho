@@ -41,7 +41,7 @@ window.BANCO.push(
 { id: 'q-4.6-070', tema: '4.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre os modelos teóricos que explicam a relação entre organização do trabalho e adoecimento mental, é CORRETO afirmar:',
   alts: [
-    { t: 'Associam o adoecimento à alta exigência combinada a baixa autonomia ou a baixo reconhecimento', ok: true,
+    { t: 'Associam o adoecimento à alta exigência combinada a baixa autonomia ou a baixo reconhecimento no trabalho', ok: true,
       why: 'Correta. É a combinação que adoece, não a exigência em si.' },
     { t: 'Associam o adoecimento à carga de trabalho elevada, isoladamente o principal determinante do quadro.', ok: false,
       why: 'Errada. O que pesa é a combinação com baixa autonomia ou baixo reconhecimento.' },
@@ -95,7 +95,7 @@ window.BANCO.push(
 { id: 'q-2.9-070', tema: '2.9', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a intoxicação por monóxido de carbono em ambiente de trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'É gás inodoro com sintomas inespecíficos, e a oximetria convencional pode não detectá-lo', ok: true,
+    { t: 'É gás inodoro e incolor com sintomas inespecíficos, e a oximetria convencional pode não detectá-lo', ok: true,
       why: 'Correta. Ausência de alerta sensorial e oximetria enganosa são as duas armadilhas.' },
     { t: 'É gás cujo odor característico alerta os trabalhadores expostos antes do agravamento do quadro.', ok: false,
       why: 'Errada. É inodoro; não há qualquer aviso sensorial.' },

@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-4.6-060', tema: '4.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o assédio moral no trabalho e suas repercussões em saúde, é CORRETO afirmar:',
   alts: [
-    { t: 'Caracteriza-se por condutas abusivas repetidas e prolongadas, e sua abordagem exige intervenção na organização', ok: true,
+    { t: 'Caracteriza-se por condutas abusivas repetidas e prolongadas, e sua abordagem exige intervenção sobre a organização', ok: true,
       why: 'Correta. Repetição e prolongamento definem o fenômeno, e a resposta precisa alcançar a organização.' },
     { t: 'Caracteriza-se por conduta abusiva que degrada a dignidade, bastando um episódio isolado de conflito para configurá-lo.', ok: false,
       why: 'Errada. A repetição e o prolongamento no tempo são elementos característicos.' },
@@ -95,7 +95,7 @@ window.BANCO.push(
 { id: 'q-5.2-060', tema: '5.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a classificação de Schilling aplicada às doenças relacionadas ao trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'Distingue o trabalho como causa necessária, contributiva ou agravante, e as três configuram relação com o trabalho', ok: true,
+    { t: 'Distingue o trabalho como causa necessária, contributiva ou agravante, e as três configuram relação com o trabalho exercido', ok: true,
       why: 'Correta. Varia o modo de participação, não a existência do vínculo.' },
     { t: 'Distingue três modos de participação, configurando doença relacionada ao trabalho apenas aquele em que ele é causa necessária.', ok: false,
       why: 'Errada. As três categorias configuram relação com o trabalho.' },

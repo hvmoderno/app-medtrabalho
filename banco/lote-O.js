@@ -41,7 +41,7 @@ window.BANCO.push(
 { id: 'q-2.3-061', tema: '2.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o benzeno no ambiente ocupacional, é CORRETO afirmar:',
   alts: [
-    { t: 'É cancerígeno reconhecido, com toxicidade hematológica, adotada a busca do menor nível exequível', ok: true,
+    { t: 'É cancerígeno reconhecido, com toxicidade hematológica, adotada a busca permanente do menor nível exequível', ok: true,
       why: 'Correta. Para o benzeno não se assume nível seguro de exposição.' },
     { t: 'É cancerígeno reconhecido, havendo nível de exposição ao benzeno tido como seguro para o trabalhador.', ok: false,
       why: 'Errada. A abordagem parte da inexistência de nível seguro presumido.' },

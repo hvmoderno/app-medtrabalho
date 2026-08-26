@@ -41,7 +41,7 @@ window.BANCO.push(
 { id: 'q-7.1-053', tema: '7.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o poder diretivo do empregador e os limites impostos pela proteção à saúde e à intimidade do trabalhador, é CORRETO afirmar:',
   alts: [
-    { t: 'O poder diretivo não alcança exames nem informações sem relação com o risco daquela função', ok: true,
+    { t: 'O poder diretivo não alcança exames nem informações que não tenham relação com o risco da função', ok: true,
       why: 'Correta. Teste de gravidez, sorologia sem indicação e dado genético são discriminação.' },
     { t: 'O poder diretivo permite exigir qualquer exame que o empregador julgue relevante à contratação.', ok: false,
       why: 'Errada. Só se exige o que tem relação com o risco da função.' },

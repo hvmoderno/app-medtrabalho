@@ -7,7 +7,7 @@ window.BANCO.push(
 { id: 'q-1.5-030', tema: '1.5', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Uma empresa contrata terceirizadas para manutenção industrial e sofre acidente grave com trabalhador terceirizado. A direção alega que a responsabilidade pela segurança era exclusivamente da contratada. Sobre a gestão de contratadas, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve integrá-los ao seu gerenciamento, informando riscos, harmonizando e verificando em campo', ok: true,
+    { t: 'Deve integrá-los ao seu gerenciamento de riscos, informando riscos, harmonizando e verificando em campo', ok: true,
       why: 'Correta. Terceirizar a execução não terceiriza a responsabilidade pelo ambiente que controla.' },
     { t: 'Deve exigir documentos, cabendo à contratada, com exclusividade, a segurança do trabalhador terceirizado.', ok: false,
       why: 'Errada. As condições do ambiente que a contratante controla são responsabilidade dela.' },
@@ -62,7 +62,7 @@ window.BANCO.push(
 { id: 'q-1.8-030', tema: '1.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'A vigilância de um município identifica, pelo cruzamento de bases, concentração de afastamentos por transtornos mentais em trabalhadores de um mesmo ramo de atividade. Sobre a conduta, é CORRETO afirmar:',
   alts: [
-    { t: 'O achado justifica investigação de campo no ramo, com análise da organização do trabalho', ok: true,
+    { t: 'O achado justifica investigação de campo nos estabelecimentos do ramo, com análise da organização', ok: true,
       why: 'Correta. É uso adequado da vigilância epidemiológica como disparador de ação.' },
     { t: 'Os dados de afastamento descrevem a demanda previdenciária e não orientam ações de vigilância.', ok: false,
       why: 'Errada. São fonte reconhecida para direcionar a vigilância.' },
@@ -80,7 +80,7 @@ window.BANCO.push(
 { id: 'q-1.8-031', tema: '1.8', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a interface entre vigilância em saúde do trabalhador e vigilância ambiental, é CORRETO afirmar:',
   alts: [
-    { t: 'Um mesmo processo pode atingir trabalhadores e o entorno, o que justifica atuação articulada', ok: true,
+    { t: 'Um mesmo processo pode atingir trabalhadores e o entorno, o que justifica uma atuação articulada', ok: true,
       why: 'Correta. A exposição da comunidade costuma revelar a magnitude da exposição interna.' },
     { t: 'São fenômenos independentes, sem interface entre os riscos ocupacionais e os riscos ambientais.', ok: false,
       why: 'Errada. Compartilham frequentemente a mesma fonte.' },
@@ -154,7 +154,7 @@ window.BANCO.push(
 { id: 'q-6.2-031', tema: '6.2', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Um trabalhador com deficiência intelectual leve é admitido para função operacional. O gestor solicita ao médico do trabalho orientação sobre acompanhamento. A conduta CORRETA é:',
   alts: [
-    { t: 'Avaliar exigências e competências, definir apoios e acompanhar a eficácia das adaptações', ok: true,
+    { t: 'Avaliar exigências e competências, definir os apoios necessários e acompanhar a eficácia deles', ok: true,
       why: 'Correta. São condições de trabalho, não concessão.' },
     { t: 'Recomendar que o trabalhador seja mantido nas tarefas mais simples, sem possibilidade de progressão.', ok: false,
       why: 'Errada. Congela a carreira e contraria a finalidade inclusiva.' },
@@ -173,7 +173,7 @@ window.BANCO.push(
 { id: 'q-6.3-030', tema: '6.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Trabalhador de 50 anos, operador de caldeira, apresenta no exame periódico pressão arterial elevada em duas aferições, assintomático, sem diagnóstico prévio. Sobre a conduta, é CORRETO afirmar:',
   alts: [
-    { t: 'Confirmar o diagnóstico, orientar, encaminhar e avaliar a repercussão sobre a segurança', ok: true,
+    { t: 'Confirmar o diagnóstico, orientar, encaminhar e avaliar a repercussão sobre a segurança da função', ok: true,
       why: 'Correta. A hipertensão, por si, não gera inaptidão nessa atividade.' },
     { t: 'A hipertensão arterial contraindica de forma absoluta as atividades de operação de equipamentos.', ok: false,
       why: 'Errada. Controlada, a maioria dos hipertensos exerce essas funções.' },
@@ -228,7 +228,7 @@ window.BANCO.push(
 { id: 'q-7.8-031', tema: '7.8', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre os direitos do trabalhador como titular de dados no contexto ocupacional, é CORRETO afirmar:',
   alts: [
-    { t: 'Tem direito de acessar seus dados, saber com quem foram compartilhados e pedir correção', ok: true,
+    { t: 'Tem direito de acessar os seus dados, saber com quem foram compartilhados e pedir correção', ok: true,
       why: 'Correta. Convivem com o direito de acesso ao próprio prontuário.' },
     { t: 'Tem direitos limitados, não podendo acessar os próprios dados de saúde no serviço ocupacional.', ok: false,
       why: 'Errada. O acesso do titular é direito reconhecido.' },

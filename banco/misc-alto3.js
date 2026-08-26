@@ -99,7 +99,7 @@ window.BANCO.push(
 { id: 'q-1.10-031', tema: '1.10', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a prevenção primária no ambiente de trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'Atua antes da doença e inclui controlar a exposição e imunizar os expostos.', ok: true,
+    { t: 'Atua antes do aparecimento da doença e inclui controlar a exposição e imunizar os expostos', ok: true,
       why: 'Correta. Na medicina do trabalho depende mais do ambiente que do indivíduo.' },
     { t: 'Corresponde ao rastreamento precoce de doenças em trabalhadores assintomáticos expostos ao agente.', ok: false,
       why: 'Errada. Rastreamento é prevenção secundária.' },
@@ -118,7 +118,7 @@ window.BANCO.push(
 { id: 'q-2.7-030', tema: '2.7', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Um perito precisa avaliar a exposição de motorista de trator agrícola a vibração. Sobre a avaliação segundo os procedimentos técnicos de higiene ocupacional, é CORRETO afirmar:',
   alts: [
-    { t: 'É vibração de corpo inteiro, medida na interface entre o assento e o trabalhador.', ok: true,
+    { t: 'É vibração de corpo inteiro, medida na interface entre o assento e o próprio trabalhador', ok: true,
       why: 'Correta. Considera jornada e eixos, e difere da avaliação de mãos e braços.' },
     { t: 'É vibração transmitida pelo veículo, medida na empunhadura do volante, ponto de contato principal.', ok: false,
       why: 'Errada. Para corpo inteiro, mede-se na interface do assento.' },
@@ -136,7 +136,7 @@ window.BANCO.push(
 { id: 'q-2.7-031', tema: '2.7', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a amostragem de aerodispersoides conforme os procedimentos técnicos de higiene ocupacional, é CORRETO afirmar:',
   alts: [
-    { t: 'A fração a amostrar depende do sítio de deposição em que o agente exerce seu efeito.', ok: true,
+    { t: 'A fração a amostrar depende do sítio de deposição em que aquele agente exerce o seu efeito', ok: true,
       why: 'Correta. Amostrar a fração errada produz resultado que não representa o risco.' },
     { t: 'Qualquer fração amostrada representa a exposição, bastando corrigir o cálculo ao final da análise.', ok: false,
       why: 'Errada. Cada fração deposita-se em sítio distinto da via aérea.' },

@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-2.6-062', tema: '2.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre os limites de exposição de curta duração e os valores-teto, é CORRETO afirmar:',
   alts: [
-    { t: 'Existem porque alguns agentes têm efeito agudo que depende do pico de concentração atingido', ok: true,
+    { t: 'Existem porque alguns agentes têm efeito agudo que depende do pico de concentração alcançado ali', ok: true,
       why: 'Correta. Média dentro do limite pode ocultar picos lesivos, e o teto nunca se ultrapassa.' },
     { t: 'Existem como referência, sendo a média ponderada suficiente para caracterizar a exposição segura.', ok: false,
       why: 'Errada. A média pode ocultar picos capazes de causar dano agudo.' },

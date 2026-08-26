@@ -149,7 +149,7 @@ window.BANCO.push(
 { id: 'q-7.8-033', tema: '7.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a proteção de dados de saúde de trabalhadores, é CORRETO afirmar:',
   alts: [
-    { t: 'São categoria sensível, com finalidade específica, minimização e controle de acesso próprio', ok: true,
+    { t: 'São categoria sensível, com exigência de finalidade específica, minimização e controle de acesso', ok: true,
       why: 'Correta. Prontuários ocupacionais não podem ser acessados por setores administrativos.' },
     { t: 'São categoria sensível, podendo o prontuário ser mantido junto ao arquivo funcional do trabalhador.', ok: false,
       why: 'Errada. A guarda deve ser separada e sob responsabilidade médica.' },

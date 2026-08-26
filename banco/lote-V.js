@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-7.3-070', tema: '7.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a atuação da vigilância sanitária em ambientes de trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'Alcança o ambiente de trabalho por ser ambiente de exposição, coexistindo com a do trabalho', ok: true,
+    { t: 'Alcança o ambiente de trabalho por ser também ambiente de exposição, coexistindo com a do trabalho', ok: true,
       why: 'Correta. Coexistência de competências, não sobreposição excludente.' },
     { t: 'Alcança estabelecimentos abertos ao público, não tendo competência sobre os ambientes de trabalho.', ok: false,
       why: 'Errada. A competência decorre da lei orgânica da saúde.' },
@@ -167,7 +167,7 @@ window.BANCO.push(
 { id: 'q-7.8-040', tema: '7.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre as bases legais para o tratamento de dados de saúde de trabalhadores, é CORRETO afirmar:',
   alts: [
-    { t: 'Apoiam-se na obrigação legal e na tutela da saúde, sendo o consentimento base frágil no emprego', ok: true,
+    { t: 'Apoiam-se na obrigação legal e na tutela da saúde, sendo o consentimento base frágil na relação de emprego', ok: true,
       why: 'Correta. A assimetria da relação compromete a livre manifestação de vontade.' },
     { t: 'Apoiam-se preferencialmente no consentimento do empregado, colhido no momento da admissão ao emprego.', ok: false,
       why: 'Errada. A assimetria da relação torna o consentimento base frágil.' },
