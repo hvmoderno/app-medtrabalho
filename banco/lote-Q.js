@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-1.10-060', tema: '1.10', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a promoção da saúde em ambientes de trabalho segundo o modelo proposto pela Organização Mundial da Saúde, é CORRETO afirmar:',
   alts: [
-    { t: 'Abrange ambiente físico, ambiente psicossocial, recursos pessoais e participação na comunidade', ok: true,
+    { t: 'Abrange ambiente físico, ambiente psicossocial, recursos pessoais e a participação na comunidade', ok: true,
       why: 'Correta. São quatro avenidas de ação, não apenas mudança de hábito individual.' },
     { t: 'Concentra-se nos hábitos individuais de saúde, atuando sobre alimentação, atividade física e tabagismo.', ok: false,
       why: 'Errada. Ambiente físico e psicossocial são dois de seus quatro planos.' },
@@ -95,7 +95,7 @@ window.BANCO.push(
 { id: 'q-2.7-060', tema: '2.7', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a avaliação da exposição ocupacional ao ruído conforme as normas de higiene ocupacional de referência técnica, é CORRETO afirmar:',
   alts: [
-    { t: 'Considera o nível equivalente na jornada, e o ruído de impacto segue procedimento próprio.', ok: true,
+    { t: 'Considera o nível equivalente ao longo da jornada, e o ruído de impacto segue procedimento próprio', ok: true,
       why: 'Correta. O incremento de duplicação de dose difere entre referências e altera o resultado.' },
     { t: 'Considera o nível equivalente da jornada, seguindo ruído contínuo e de impacto o mesmo procedimento.', ok: false,
       why: 'Errada. O ruído de impacto tem procedimento e critérios próprios.' },

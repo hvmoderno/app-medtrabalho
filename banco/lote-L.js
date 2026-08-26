@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-1.5-041', tema: '1.5', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a investigação de incidentes e acidentes dentro de um sistema de gestão de segurança e saúde, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve buscar causas organizacionais e falhas de barreira, e não atribuir culpa individual.', ok: true,
+    { t: 'Deve buscar as causas organizacionais e as falhas de barreira, e não atribuir culpa individual', ok: true,
       why: 'Correta. A cultura punitiva reduz o relato e cega o sistema para os eventos precursores.' },
     { t: 'Deve identificar o responsável individual pelo evento, principal resultado esperado da investigação.', ok: false,
       why: 'Errada. O objeto são as causas organizacionais e as falhas de barreira.' },
@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-1.5-042', tema: '1.5', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a participação dos trabalhadores em sistemas de gestão de segurança e saúde, é CORRETO afirmar:',
   alts: [
-    { t: 'É requisito estruturante: consulta nos perigos, nos controles e na investigação.', ok: true,
+    { t: 'É requisito estruturante: consulta na identificação de perigos, nos controles e na investigação', ok: true,
       why: 'Correta. Exige remover barreiras como represália e custo para o trabalhador.' },
     { t: 'É requisito atendido pela existência formal de uma comissão interna de prevenção na empresa.', ok: false,
       why: 'Errada. A participação abrange consulta efetiva nas várias etapas.' },
@@ -113,7 +113,7 @@ window.BANCO.push(
 { id: 'q-4.7-041', tema: '4.7', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o retorno ao trabalho após afastamento por transtorno mental relacionado ao trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve ser planejado com avaliação do posto e das relações, com ajustes e retorno gradual.', ok: true,
+    { t: 'Deve ser planejado com avaliação do posto e das relações, com ajustes de carga e retorno gradual', ok: true,
       why: 'Correta. Voltar ao mesmo contexto inalterado é o principal preditor de recidiva.' },
     { t: 'Deve ocorrer diretamente à função anterior, sem ajustes, para não estigmatizar o trabalhador.', ok: false,
       why: 'Errada. Retornar ao contexto inalterado é o principal preditor de novo afastamento.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-4.9-041', tema: '4.9', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Técnico de laboratório sofre acidente com material biológico por perfuração com agulha de paciente com sorologia desconhecida. Sobre a conduta imediata, é CORRETO afirmar:',
   alts: [
-    { t: 'Lavar com água e sabão, notificar e avaliar rapidamente a indicação de profilaxia.', ok: true,
+    { t: 'Lavar com água e sabão, notificar e avaliar com rapidez a indicação de profilaxia pós-exposição', ok: true,
       why: 'Correta. A eficácia depende do início precoce; espremer ou usar cáustico é indevido.' },
     { t: 'Espremer o local para eliminar o sangue contaminado, lavar com água e sabão e notificar o caso.', ok: false,
       why: 'Errada. Espremer aumenta o trauma local e não reduz o risco.' },
@@ -149,7 +149,7 @@ window.BANCO.push(
 { id: 'q-5.6-042', tema: '5.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a reabilitação profissional, é CORRETO afirmar:',
   alts: [
-    { t: 'Visa ao reingresso por readaptação ou requalificação e independe de carência.', ok: true,
+    { t: 'Visa ao reingresso no mercado por readaptação ou requalificação e independe de carência prévia', ok: true,
       why: 'Correta. Pode alcançar também segurados sem direito a benefício por incapacidade.' },
     { t: 'Visa ao reingresso no mercado e exige carência mínima de contribuições do segurado atendido.', ok: false,
       why: 'Errada. Independe de carência.' },

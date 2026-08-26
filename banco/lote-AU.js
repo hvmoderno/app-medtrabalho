@@ -95,7 +95,7 @@ window.BANCO.push(
 { id: 'q-4.4-150', tema: '4.4', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a vigilância de dermatoses em grupos de trabalhadores expostos, é CORRETO afirmar:',
   alts: [
-    { t: 'O exame de pele dirigido detecta os quadros iniciais antes da cronificação naqueles setores', ok: true,
+    { t: 'O exame de pele dirigido detecta os quadros iniciais antes da cronificação nesses setores expostos', ok: true,
       why: 'Correta. O trabalhador só procura quando a mão já não trabalha.' },
     { t: 'A queixa espontânea do trabalhador é indicador suficiente para orientar a vigilância dermatológica.', ok: false,
       why: 'Errada. A procura espontânea ocorre tardiamente, com lesão já instalada.' },

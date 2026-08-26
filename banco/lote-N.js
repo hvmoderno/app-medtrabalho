@@ -23,7 +23,7 @@ window.BANCO.push(
 { id: 'q-1.3-061', tema: '1.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a interpretação do intervalo de confiança de uma medida de associação, é CORRETO afirmar:',
   alts: [
-    { t: 'Sua amplitude expressa a precisão: intervalo muito amplo indica estudo pouco informativo.', ok: true,
+    { t: 'Sua amplitude expressa a precisão: um intervalo muito amplo indica estudo pouco informativo', ok: true,
       why: 'Correta. É diferente de intervalo estreito em torno do nulo, que sugere ausência de efeito.' },
     { t: 'Sua amplitude expressa a precisão, significando o intervalo que inclui o nulo ausência de efeito.', ok: false,
       why: 'Errada. Pode indicar apenas imprecisão, quando o intervalo é amplo.' },
@@ -113,7 +113,7 @@ window.BANCO.push(
 { id: 'q-2.4-061', tema: '2.4', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre o risco biológico em atividades de coleta e tratamento de resíduos e esgoto, é CORRETO afirmar:',
   alts: [
-    { t: 'Há exposição a leptospirose, tétano, hepatite A e parasitoses, com múltiplas vias.', ok: true,
+    { t: 'Há exposição a leptospirose, tétano, hepatite A e parasitoses, com múltiplas vias de entrada', ok: true,
       why: 'Correta. Exige vacinação, higienização, vestimenta e cuidado com lesões cutâneas.' },
     { t: 'Há risco químico predominante, sendo o risco biológico desprezível nessas atividades de saneamento.', ok: false,
       why: 'Errada. O risco biológico é central nessas atividades.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-2.6-062', tema: '2.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre os limites de exposição de curta duração e os valores-teto, é CORRETO afirmar:',
   alts: [
-    { t: 'Existem porque alguns agentes têm efeito agudo dependente de pico de concentração.', ok: true,
+    { t: 'Existem porque alguns agentes têm efeito agudo que depende do pico de concentração atingido', ok: true,
       why: 'Correta. Média dentro do limite pode ocultar picos lesivos, e o teto nunca se ultrapassa.' },
     { t: 'Existem como referência, sendo a média ponderada suficiente para caracterizar a exposição segura.', ok: false,
       why: 'Errada. A média pode ocultar picos capazes de causar dano agudo.' },

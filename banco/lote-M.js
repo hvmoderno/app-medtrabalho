@@ -5,7 +5,7 @@ window.BANCO.push(
 { id: 'q-6.1-071', tema: '6.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o programa de controle médico de saúde ocupacional e sua articulação com o gerenciamento de riscos, é CORRETO afirmar:',
   alts: [
-    { t: 'Os exames e a periodicidade decorrem dos riscos do inventário, não de lista padronizada', ok: true,
+    { t: 'Os exames e a sua periodicidade decorrem dos riscos do inventário, e não de lista padronizada', ok: true,
       why: 'Correta. Exame sem relação com o risco consome recurso e não detecta o que importa.' },
     { t: 'A bateria de exames deve ser a mesma para todos os trabalhadores, garantindo tratamento uniforme.', ok: false,
       why: 'Errada. Os exames derivam do risco de cada função.' },
@@ -41,7 +41,7 @@ window.BANCO.push(
 { id: 'q-7.1-053', tema: '7.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o poder diretivo do empregador e os limites impostos pela proteção à saúde e à intimidade do trabalhador, é CORRETO afirmar:',
   alts: [
-    { t: 'O poder diretivo não alcança exames ou informações sem relação com o risco da função.', ok: true,
+    { t: 'O poder diretivo não alcança exames nem informações sem relação com o risco daquela função', ok: true,
       why: 'Correta. Teste de gravidez, sorologia sem indicação e dado genético são discriminação.' },
     { t: 'O poder diretivo permite exigir qualquer exame que o empregador julgue relevante à contratação.', ok: false,
       why: 'Errada. Só se exige o que tem relação com o risco da função.' },

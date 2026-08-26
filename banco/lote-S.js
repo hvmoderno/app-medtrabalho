@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-7.1-054', tema: '7.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o trabalho de adolescentes e sua proteção, é CORRETO afirmar:',
   alts: [
-    { t: 'Há vedação de trabalho noturno, perigoso ou insalubre aos menores de dezoito anos', ok: true,
+    { t: 'Há vedação de trabalho noturno, perigoso ou insalubre aos menores de dezoito anos de idade', ok: true,
       why: 'Correta. A lista de piores formas orienta a identificação das atividades proibidas.' },
     { t: 'Há vedações etárias, sendo o trabalho insalubre permitido aos dezesseis com pagamento de adicional.', ok: false,
       why: 'Errada. A vedação alcança todos os menores de dezoito anos.' },

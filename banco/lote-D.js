@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-1.2-031', tema: '1.2', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a determinação social do processo saúde-doença aplicada ao trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'Sustenta que o adoecimento se explica pelos determinantes sociais e pela organização do trabalho', ok: true,
+    { t: 'Sustenta que o adoecimento se explica pelos determinantes sociais e pela organização do trabalho real', ok: true,
       why: 'Correta. Não apenas por agentes isolados ou características individuais.' },
     { t: 'Sustenta os determinantes sociais, conceito incompatível com a análise de agentes de risco específicos.', ok: false,
       why: 'Errada. As duas abordagens se complementam.' },

@@ -5,7 +5,7 @@ window.BANCO.push(
 { id: 'q-4.4-060', tema: '4.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Cabeleireira apresenta eczema em mãos que melhora nas férias e recidiva no retorno. Sobre a investigação, é CORRETO afirmar:',
   alts: [
-    { t: 'É preciso distinguir a irritativa por trabalho úmido da alérgica por tinturas e por alisantes', ok: true,
+    { t: 'É preciso distinguir a irritativa por trabalho úmido da alérgica por tinturas e por alisantes capilares', ok: true,
       why: 'Correta. As duas coexistem nessa ocupação, e o teste sozinho não define nexo.' },
     { t: 'É preciso distinguir as formas, embora a melhora nas férias afaste a origem ocupacional do quadro.', ok: false,
       why: 'Errada. É justamente o padrão que sugere origem ocupacional.' },
@@ -41,7 +41,7 @@ window.BANCO.push(
 { id: 'q-2.3-061', tema: '2.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o benzeno no ambiente ocupacional, é CORRETO afirmar:',
   alts: [
-    { t: 'É cancerígeno reconhecido, com toxicidade hematológica, adotada a busca do menor nível exequível.', ok: true,
+    { t: 'É cancerígeno reconhecido, com toxicidade hematológica, adotada a busca do menor nível exequível', ok: true,
       why: 'Correta. Para o benzeno não se assume nível seguro de exposição.' },
     { t: 'É cancerígeno reconhecido, havendo nível de exposição ao benzeno tido como seguro para o trabalhador.', ok: false,
       why: 'Errada. A abordagem parte da inexistência de nível seguro presumido.' },
@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-7.4-060', tema: '7.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o direito de recusa do trabalhador diante de risco grave e iminente, é CORRETO afirmar:',
   alts: [
-    { t: 'Pode interromper as atividades comunicando ao superior, sendo vedada qualquer medida punitiva', ok: true,
+    { t: 'Pode interromper as atividades comunicando ao superior hierárquico, sendo vedada medida punitiva', ok: true,
       why: 'Correta. A previsão do direito de recusa vem acompanhada da vedação a represália.' },
     { t: 'Pode comunicar o risco ao superior, mantendo a atividade até a chegada da fiscalização ao local.', ok: false,
       why: 'Errada. A interrupção é imediata; esperar a fiscalização anularia a proteção.' },
@@ -95,7 +95,7 @@ window.BANCO.push(
 { id: 'q-5.4-060', tema: '5.4', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a avaliação pericial de quadros com componente subjetivo predominante, como dor crônica e transtornos mentais, é CORRETO afirmar:',
   alts: [
-    { t: 'Deve buscar coerência entre relato, exame, tratamento, adesão e a funcionalidade observada', ok: true,
+    { t: 'Deve buscar coerência entre relato, exame, tratamento, adesão e a funcionalidade observada nele', ok: true,
       why: 'Correta. A coerência do conjunto substitui o marcador objetivo que não existe.' },
     { t: 'Deve buscar achados objetivos, indicando simulação a ausência de exame complementar alterado.', ok: false,
       why: 'Errada. Dor crônica e transtornos mentais frequentemente não têm marcador.' },
@@ -131,7 +131,7 @@ window.BANCO.push(
 { id: 'q-4.8-061', tema: '4.8', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a exposição ocupacional à sílica e o risco de câncer, é CORRETO afirmar:',
   alts: [
-    { t: 'É cancerígena para humanos além de causar silicose, e associa-se também à tuberculose.', ok: true,
+    { t: 'É cancerígena para humanos além de causar silicose, e associa-se também ao risco de tuberculose', ok: true,
       why: 'Correta. Silicose, câncer e tuberculose compõem o quadro completo do risco da sílica.' },
     { t: 'Causa doença pulmonar fibrosante nos expostos, sem potencial cancerígeno reconhecido para humanos.', ok: false,
       why: 'Errada. É classificada como cancerígena para humanos.' },

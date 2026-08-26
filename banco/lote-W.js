@@ -41,7 +41,7 @@ window.BANCO.push(
 { id: 'q-6.3-070', tema: '6.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Motorista profissional com diabetes em uso de insulina apresenta bom controle e nenhum episódio de hipoglicemia grave. Sobre a conduta, é CORRETO afirmar:',
   alts: [
-    { t: 'Considera o controle, o histórico de hipoglicemias, a percepção dos sintomas e a adesão', ok: true,
+    { t: 'Considera o controle atual, o histórico de hipoglicemias, a percepção dos sintomas e a adesão', ok: true,
       why: 'Correta. O que decide é o risco de hipoglicemia incapacitante, não a via de tratamento.' },
     { t: 'Considera o tratamento adotado, implicando o uso de insulina inaptidão para condução profissional.', ok: false,
       why: 'Errada. A avaliação é individualizada e considera o controle e o histórico.' },

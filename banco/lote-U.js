@@ -5,7 +5,7 @@ window.BANCO.push(
 { id: 'q-4.3-070', tema: '4.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a asbestose e as demais alterações pleuropulmonares associadas ao asbesto, é CORRETO afirmar:',
   alts: [
-    { t: 'As placas indicam exposição pregressa e costumam não repercutir; a asbestose é fibrose', ok: true,
+    { t: 'As placas indicam exposição pregressa e costumam não repercutir; a asbestose é fibrose difusa', ok: true,
       why: 'Correta. Placa pleural é marcador de exposição; asbestose é doença do parênquima.' },
     { t: 'Placas pleurais e asbestose são a mesma entidade observada em estágios evolutivos diferentes.', ok: false,
       why: 'Errada. São alterações distintas, com mecanismos e repercussões diferentes.' },
@@ -23,7 +23,7 @@ window.BANCO.push(
 { id: 'q-4.5-070', tema: '4.5', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a audiometria ocupacional e as condições de sua realização, é CORRETO afirmar:',
   alts: [
-    { t: 'Exige repouso auditivo prévio e cabina adequada, sobretudo na audiometria de referência', ok: true,
+    { t: 'Exige repouso auditivo prévio e cabina adequada, sobretudo na audiometria tomada de referência', ok: true,
       why: 'Correta. Referência mal obtida compromete toda a série de exames futura.' },
     { t: 'Exige cabina adequada, sendo o repouso auditivo dispensável quando a audiometria é de triagem.', ok: false,
       why: 'Errada. Sem repouso, mudança temporária de limiar simula perda permanente.' },
@@ -41,7 +41,7 @@ window.BANCO.push(
 { id: 'q-4.6-070', tema: '4.6', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre os modelos teóricos que explicam a relação entre organização do trabalho e adoecimento mental, é CORRETO afirmar:',
   alts: [
-    { t: 'Associam o adoecimento à alta exigência combinada a baixa autonomia ou baixo reconhecimento', ok: true,
+    { t: 'Associam o adoecimento à alta exigência combinada a baixa autonomia ou a baixo reconhecimento', ok: true,
       why: 'Correta. É a combinação que adoece, não a exigência em si.' },
     { t: 'Associam o adoecimento à carga de trabalho elevada, isoladamente o principal determinante do quadro.', ok: false,
       why: 'Errada. O que pesa é a combinação com baixa autonomia ou baixo reconhecimento.' },
@@ -59,7 +59,7 @@ window.BANCO.push(
 { id: 'q-4.8-070', tema: '4.8', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre as leucemias relacionadas a exposições ocupacionais, é CORRETO afirmar:',
   alts: [
-    { t: 'A associação com o benzeno é bem estabelecida, e a exposição pode ter ocorrido anos antes', ok: true,
+    { t: 'A associação com o benzeno é bem estabelecida, e a exposição pode ter ocorrido muitos anos antes', ok: true,
       why: 'Correta. História ocupacional restrita ao emprego atual perde a exposição relevante.' },
     { t: 'A associação é estabelecida, manifestando-se a leucemia ocupacional durante o período de exposição.', ok: false,
       why: 'Errada. Pode surgir anos após o término da exposição.' },
@@ -77,7 +77,7 @@ window.BANCO.push(
 { id: 'q-2.3-070', tema: '2.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a exposição ocupacional a mercúrio, é CORRETO afirmar:',
   alts: [
-    { t: 'A forma química e a via determinam o quadro, e há exposição além do garimpo.', ok: true,
+    { t: 'A forma química e a via de entrada determinam o quadro, e há exposição bem além do garimpo', ok: true,
       why: 'Correta. O vapor metálico tem tropismo pelo sistema nervoso; odontologia e lâmpadas também expõem.' },
     { t: 'Todas as formas de mercúrio produzem o mesmo quadro clínico, variando apenas a intensidade dele.', ok: false,
       why: 'Errada. Metálico, inorgânico e orgânico têm perfis toxicológicos distintos.' },
@@ -95,7 +95,7 @@ window.BANCO.push(
 { id: 'q-2.9-070', tema: '2.9', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre a intoxicação por monóxido de carbono em ambiente de trabalho, é CORRETO afirmar:',
   alts: [
-    { t: 'É gás inodoro com sintomas inespecíficos, e a oximetria comum pode não detectá-lo', ok: true,
+    { t: 'É gás inodoro com sintomas inespecíficos, e a oximetria convencional pode não detectá-lo', ok: true,
       why: 'Correta. Ausência de alerta sensorial e oximetria enganosa são as duas armadilhas.' },
     { t: 'É gás cujo odor característico alerta os trabalhadores expostos antes do agravamento do quadro.', ok: false,
       why: 'Errada. É inodoro; não há qualquer aviso sensorial.' },

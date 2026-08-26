@@ -95,7 +95,7 @@ window.BANCO.push(
 { id: 'q-1.7-021', tema: '1.7', tipo: 'autoral', fonte: null, nivel: 'intermediario',
   enunciado: 'Sobre a atenção básica e a saúde do trabalhador, é CORRETO afirmar:',
   alts: [
-    { t: 'A ocupação deve integrar a anamnese na atenção básica, que é onde a maioria busca atendimento', ok: true,
+    { t: 'A ocupação deve integrar a anamnese na atenção básica, que é onde a maior parte busca atendimento', ok: true,
       why: 'Correta. Não perguntar é a principal causa de invisibilidade do nexo.' },
     { t: 'A ocupação importa, devendo os casos suspeitos ser encaminhados sem registro na unidade básica.', ok: false,
       why: 'Errada. O registro e a notificação começam onde o caso é identificado.' },
@@ -221,7 +221,7 @@ window.BANCO.push(
 { id: 'q-5.3-041', tema: '5.3', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Trabalhador com hérnia discal degenerativa prévia desenvolve quadro incapacitante após dois anos em função com levantamento repetitivo de cargas. Sobre a análise do caso, é CORRETO afirmar:',
   alts: [
-    { t: 'A preexistência não afasta o nexo: tendo o trabalho contribuído, configura-se a concausa', ok: true,
+    { t: 'A preexistência não afasta o nexo: tendo o trabalho contribuído, configura-se a concausa reconhecida', ok: true,
       why: 'Correta. As consequências são as mesmas do nexo por causa única.' },
     { t: 'A preexistência da degeneração discal documentada afasta qualquer nexo com a atividade exercida.', ok: false,
       why: 'Errada. O agravamento é hipótese expressa de concausa.' },

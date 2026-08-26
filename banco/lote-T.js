@@ -5,7 +5,7 @@ window.BANCO.push(
 { id: 'q-6.1-070', tema: '6.1', tipo: 'autoral', fonte: null, nivel: 'dificil',
   enunciado: 'Sobre o exame periódico e sua periodicidade, é CORRETO afirmar:',
   alts: [
-    { t: 'A periodicidade decorre do risco, da idade e de condições que exijam acompanhamento mais próximo', ok: true,
+    { t: 'A periodicidade decorre do risco, da idade e da existência de condições que exijam acompanhamento', ok: true,
       why: 'Correta. Periodicidade e conteúdo derivam do risco, não de uma rotina única para todos.' },
     { t: 'A periodicidade é anual para todos os trabalhadores, o que uniformiza o acompanhamento na empresa.', ok: false,
       why: 'Errada. Há situações com periodicidade menor, definidas pelo risco e pela idade.' },
