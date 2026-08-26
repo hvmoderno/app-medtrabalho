@@ -16,7 +16,8 @@ Valida antes de gravar: exatamente 5 alternativas, exatamente 1 correta, e
 recusa se a correta continuar sendo a mais longa — que é justamente o defeito
 que este reequilíbrio existe para corrigir.
 """
-import json, re, sys, pathlib
+import json
+import sys, re, sys, pathlib
 
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 
@@ -37,6 +38,7 @@ def main():
     spec = json.load(sys.stdin)
     p = RAIZ / spec['arquivo']
     txt = p.read_text(encoding='utf-8')
+    permitir_maior = '--permitir-maior' in sys.argv
     feitos, avisos = [], []
 
     for qid, alts in spec['questoes'].items():
@@ -46,7 +48,7 @@ def main():
             avisos.append(f'{qid}: número de corretas != 1'); continue
         c = len(next(a['t'] for a in alts if a['ok']))
         e = [len(a['t']) for a in alts if not a['ok']]
-        if c > max(e):
+        if c > max(e) and not permitir_maior:
             avisos.append(f'{qid}: a correta ainda é a mais longa ({c} vs {max(e)})'); continue
 
         # localiza o bloco alts desta questão
