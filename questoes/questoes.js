@@ -212,6 +212,7 @@
       return;
     }
     if (estado.idx >= estado.lista.length) { estado.idx = 0; }
+    estado.marcada = null;
     desenharQuestao(estado.lista[estado.idx]);
   }
 
@@ -275,6 +276,7 @@
 
       b.onclick = function () {
         if (b.disabled) return;
+        estado.marcada = a;
         registrar(q, a.ok, a);
         revelar(ul, alts, q);
       };
@@ -435,6 +437,81 @@
     var p = prog();
     p.ultimo = { tema: estado.tema, modo: estado.modo, idx: estado.idx };
     salvar(p);
+  }
+
+
+  /* ------------------------------------------------------- tenho uma dúvida --
+   * A dúvida sobre uma questão quase nunca é "explique o tema": é "por que a
+   * minha alternativa está errada" ou "não concordo com esse comentário". Por
+   * isso o anexo leva o enunciado, TODAS as alternativas, a que foi marcada, a
+   * correta e o comentário do app — sem isso a resposta vira aula genérica.
+   */
+  var caixaDuvida = document.getElementById('caixaDuvida');
+  var txtDuvida = document.getElementById('txtDuvida');
+  var statusDuvida = document.getElementById('statusDuvida');
+
+  function avisoDuvida(msg, erro) {
+    statusDuvida.textContent = msg;
+    statusDuvida.style.color = erro ? 'var(--erro)' : 'var(--ok)';
+    clearTimeout(statusDuvida._t);
+    statusDuvida._t = setTimeout(function () { statusDuvida.textContent = ''; }, 6000);
+  }
+
+  function contextoDaQuestao() {
+    var q = estado.lista[estado.idx];
+    if (!q) return ['(nenhuma questão aberta)'];
+    var tema = EDITAL.tema(q.tema);
+    var ctx = ['Tema do edital: ' + (q.tema || '?') + ' — ' + (tema ? tema.nome : ''),
+               'Origem: questão ' + (q.tipo === 'real' ? 'de prova anterior' : 'autoral') +
+               ' do meu app de estudo.'];
+
+    if (!document.getElementById('chkAnexarQuestao').checked) return ctx;
+
+    var partes = [q.enunciado, ''];
+    // A MESMA função que desenha a questão, para as letras citadas baterem
+    // com as que ele viu na tela. GABARITO.ordenar é determinístico.
+    var alts = ordenar(q);
+    alts.forEach(function (a, i) {
+      partes.push('ABCDE'[i] + ') ' + a.t);
+    });
+    ctx = ctx.concat(Duvida.bloco('Questão:', partes.join('\n')));
+
+    var correta = alts.filter(function (a) { return a.ok; })[0];
+    var iCorreta = alts.indexOf(correta);
+    if (estado.marcada) {
+      var iMarcada = alts.indexOf(estado.marcada);
+      ctx.push('', 'Eu marquei: ' + (iMarcada >= 0 ? 'ABCDE'[iMarcada] + ') ' : '') +
+        Duvida.encurtar(estado.marcada.t, 160));
+    }
+    if (correta) {
+      ctx.push('Gabarito: ' + (iCorreta >= 0 ? 'ABCDE'[iCorreta] + ') ' : '') +
+        Duvida.encurtar(correta.t, 160));
+    }
+    if (q.comentario) {
+      ctx = ctx.concat(Duvida.bloco('Comentário do meu app (pode ser com ele que eu discordo):',
+        q.comentario));
+    }
+    return ctx;
+  }
+
+  var btDuvida = document.getElementById('btDuvida');
+  if (btDuvida) {
+    btDuvida.onclick = function () {
+      caixaDuvida.classList.toggle('oculto');
+      if (!caixaDuvida.classList.contains('oculto')) { txtDuvida.focus(); }
+    };
+    document.getElementById('btFecharDuvida').onclick = function () {
+      caixaDuvida.classList.add('oculto');
+    };
+    document.getElementById('btCopiarDuvida').onclick = function () {
+      if (!(txtDuvida.value || '').trim()) {
+        avisoDuvida('Escreva a dúvida primeiro.', true);
+        txtDuvida.focus();
+        return;
+      }
+      Duvida.copiar(Duvida.montar(contextoDaQuestao(), txtDuvida.value),
+        txtDuvida, avisoDuvida);
+    };
   }
 
   var chkAuto = document.getElementById('chkAutoLog');

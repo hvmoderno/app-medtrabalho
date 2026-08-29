@@ -6,6 +6,12 @@
 <title>Questões</title>
 <link rel="stylesheet" href="../assets/app.css">
 <style>
+  .caixaDuvida { margin: 10px 0 0; }
+  .caixaDuvida textarea { width: 100%; resize: vertical; margin-top: 4px;
+    font: inherit; padding: 8px 10px; border-radius: 8px;
+    border: 1px solid var(--borda); background: var(--fundo); color: var(--texto); }
+  .caixaDuvida textarea:focus { outline: 2px solid var(--acento); outline-offset: -2px; }
+
   body { padding-bottom: 40px; }
 
   .filtros { position: sticky; top: 0; z-index: 5; background: var(--bg); padding-top: 4px; }
@@ -108,6 +114,30 @@
           <input type="checkbox" id="chkAutoLog" checked>
           Registrar no log de erros toda questão que eu errar
         </label>
+        <button id="btDuvida" class="pequeno"
+          title="Montar uma pergunta com o contexto desta questão">Tenho uma dúvida</button>
+      </div>
+
+      <!-- A dúvida sobre uma questão precisa de mais coisa que a dúvida sobre um
+           guia: o enunciado, as alternativas, o que foi marcado e o comentário
+           do app — porque muitas vezes a dúvida é justamente com o comentário. -->
+      <div class="cartao caixaDuvida oculto" id="caixaDuvida">
+        <label class="pequeno fraco" for="txtDuvida">Qual é a sua dúvida sobre esta questão?</label>
+        <textarea id="txtDuvida" rows="3"
+          placeholder="ex.: por que a letra que eu marquei está errada?"></textarea>
+        <label class="pequeno fraco" style="display:flex;align-items:center;gap:6px;margin:8px 0 0;cursor:pointer">
+          <input type="checkbox" id="chkAnexarQuestao" checked>
+          Anexar a questão, o que eu marquei e o comentário
+        </label>
+        <div class="linha" style="margin-top:10px">
+          <button class="primario" id="btCopiarDuvida">Copiar pergunta</button>
+          <button id="btFecharDuvida">Cancelar</button>
+          <span class="pequeno fraco" id="statusDuvida" style="flex:1"></span>
+        </div>
+        <p class="pequeno fraco" style="margin:8px 0 0">
+          Cole no app do Claude. Nada sai daqui sozinho — o botão só põe o texto
+          na área de transferência.
+        </p>
       </div>
       <div class="placar" id="placar"></div>
     </details>
@@ -127,6 +157,7 @@
 <script src="../core/storage.js"></script>
 <script src="../core/desempenho.js"></script>
 <script src="../core/log-erros.js"></script>
+<script src="../core/duvida.js"></script>
 <script src="questoes.js"></script>
 </body>
 </html>
