@@ -558,6 +558,38 @@
     return Math.abs(b || 0) > Math.abs(a || 0) ? b : a;
   }
 
+  /* A data de início decide o desenho inteiro do cronograma: quantas semanas,
+   * quais blocos caem em que dia. A regra antiga — "fica com a que já existe" —
+   * nunca reconciliava divergência, e quem abre o cronograma sem data carimba
+   * HOJE. Dois aparelhos abertos em dias diferentes viravam dois planos
+   * diferentes, para sempre, e a data parecia mudar sozinha conforme o
+   * aparelho.
+   *
+   * Agora vence a decisão mais FORTE, não a mais antiga:
+   *   2 — escolhida à mão em "Refazer o plano"
+   *   1 — carimbada automaticamente na primeira abertura
+   *   0 — herdada de antes desta regra existir
+   * Empatando a força, vence a mais recente. Assim os aparelhos convergem.
+   */
+  function forcaInicio(c) {
+    if (!c || !c.inicio) return -1;
+    if (c.inicioAuto === false) return 2;
+    return c.inicioEm ? 1 : 0;
+  }
+
+  function reconciliarInicio(meu, dele) {
+    var fMeu = forcaInicio(meu), fDele = forcaInicio(dele);
+    if (fDele < 0) return meu;
+    var trocar = fDele > fMeu ||
+      (fDele === fMeu && (dele.inicioEm || 0) > (meu.inicioEm || 0));
+    if (trocar) {
+      meu.inicio = dele.inicio;
+      meu.inicioEm = dele.inicioEm || 0;
+      meu.inicioAuto = dele.inicioAuto !== false;
+    }
+    return meu;
+  }
+
   function unirMapa(destino, origem, resolver) {
     destino = destino || {}; origem = origem || {};
     Object.keys(origem).forEach(function (k) {
@@ -602,8 +634,7 @@
         // Vence a marcação mais recente: marcar E desmarcar viajam entre
         // aparelhos. Antes, desmarcar aqui voltava marcado do outro lado.
         meu.feitos = unirMapa(meu.feitos, dele.feitos, marcaMaisRecente);
-        if (!meu.inicio) meu.inicio = dele.inicio;
-        return meu;
+        return reconciliarInicio(meu, dele);
 
       case 'materiais':
         meu.lidos = unirMapa(meu.lidos, dele.lidos, marcaMaisRecente);

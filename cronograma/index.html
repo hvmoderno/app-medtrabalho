@@ -117,7 +117,11 @@
   function construir() {
     var c = dados();
     if (!c.inicio) {
+      // Carimbo automático: vale menos que uma escolha à mão, para que a data
+      // de um aparelho aberto por acaso não sobreponha a que você definiu.
       c.inicio = hojeISO;
+      c.inicioEm = Date.now();
+      c.inicioAuto = true;
       Store.set('cronograma', c);
     }
     plano = PLANO.gerar(c.inicio);
@@ -284,7 +288,14 @@
   document.getElementById('btRefazer').onclick = function () {
     if (!confirm('Refazer o plano começando hoje?\n\nOs blocos já marcados como cumpridos ' +
         'são preservados pelas datas que continuarem existindo.')) return;
-    Store.patch('cronograma', function (c) { c = c || {}; c.inicio = hojeISO; return c; });
+    Store.patch('cronograma', function (c) {
+      c = c || {};
+      // Escolha explícita: é ela que manda em todos os aparelhos.
+      c.inicio = hojeISO;
+      c.inicioEm = Date.now();
+      c.inicioAuto = false;
+      return c;
+    });
     construir();
   };
 
