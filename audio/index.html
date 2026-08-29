@@ -143,7 +143,7 @@
 
     AUDIO_FAIXAS.forEach(function (f, i) {
       totalSeg += f.seg || 0;
-      if (a.ouvidas[f.tema]) ouvidas++;
+      if (a.ouvidas[f.tema] > 0) ouvidas++;
       var temCopia = baixadas[f.arq.split('/').pop()];
       if (temCopia) nBaixadas++;
 
@@ -163,7 +163,7 @@
         bx.title = 'Disponível sem internet';
         dir.appendChild(bx);
       }
-      if (a.ouvidas[f.tema]) {
+      if (a.ouvidas[f.tema] > 0) {
         var ok = document.createElement('span');
         ok.className = 'ouvido'; ok.textContent = 'ouvida';
         dir.appendChild(ok);
@@ -270,7 +270,9 @@
     if (idxAtual < 0) return;
     var a = prog();
     var t = AUDIO_FAIXAS[idxAtual].tema;
-    if (a.ouvidas[t]) delete a.ouvidas[t]; else a.ouvidas[t] = Date.now();
+    // Negativo = desmarcada nesta hora, para a marcação viajar entre
+    // aparelhos em vez de voltar do vizinho na sincronização seguinte.
+    a.ouvidas[t] = (a.ouvidas[t] > 0) ? -Date.now() : Date.now();
     Store.set('audio', a); montar();
   };
 

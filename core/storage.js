@@ -637,6 +637,23 @@
         };
         return meu;
 
+      case 'audio':
+        // Sem regra própria, este módulo caía no `default`, que é RASO: como a
+        // chave 'posicao' já existia dos dois lados, o mapa inteiro de um
+        // aparelho vencia e apagava as marcas do outro. Um aparelho com uma
+        // faixa começada zerava sete faixas em andamento do outro.
+        meu.ouvidas = unirMapa(meu.ouvidas, dele.ouvidas, marcaMaisRecente);
+        // Posição de escuta: vale a mais adiantada. Retomar um pouco antes é
+        // um contratempo; retomar do zero uma faixa quase inteira, não.
+        meu.posicao = unirMapa(meu.posicao, dele.posicao, function (a, b) {
+          return Math.max(a || 0, b || 0);
+        });
+        // Velocidade é preferência DE APARELHO, não progresso: 1,5× no celular
+        // e 1× no notebook é uma escolha legítima. Só herda quando este
+        // aparelho ainda não tem nenhuma — nunca sobrescreve a que já existe.
+        if (!meu.velocidade) meu.velocidade = dele.velocidade;
+        return meu;
+
       case 'planilha':
         // 'em' é o carimbo da última edição da linha, gravado a cada alteração.
         // Sem ele a comparação era entre dois indefinidos e a edição mais nova
