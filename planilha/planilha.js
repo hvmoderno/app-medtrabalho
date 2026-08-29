@@ -27,6 +27,12 @@
   }
   function salvar(p) { Store.set('planilha', p); }
 
+  /* Linhas que o usuário enxerga: as lápides de remoção continuam no array
+   * para viajar até os outros aparelhos, mas nunca aparecem nem contam. */
+  function vivas(p) {
+    return (p || dados()).linhas.filter(function (l) { return !l.removido; });
+  }
+
   function hojeISO() {
     var d = new Date();
     return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') +
@@ -38,7 +44,7 @@
     p.linhas.push({
       id: 'l' + Date.now() + Math.random().toString(36).slice(2, 6),
       data: hojeISO(), tema: '', fonte: 'Questões do app', descricao: '',
-      motivo: '', revisei: 'Não', dataRevisao: ''
+      motivo: '', revisei: 'Não', dataRevisao: '', em: Date.now()
     });
     salvar(p);
     render();
@@ -52,6 +58,8 @@
     var l = p.linhas.filter(function (x) { return x.id === id; })[0];
     if (!l) return;
     l[campo] = valor;
+    l.em = Date.now();
+    if (campo === 'motivo') { delete l.auto; }
     if (campo === 'revisei') {
       if (valor === 'Sim' && !l.dataRevisao) { l.dataRevisao = hojeISO(); }
       if (valor === 'Não') { l.dataRevisao = ''; }
@@ -65,13 +73,26 @@
         var inp = tr.querySelector('[data-campo="dataRevisao"]');
         if (inp) inp.value = l.dataRevisao;
       }
+      if (campo === 'motivo') {   // confirmado pelo usuário: a marca sai na hora
+        var marca = tr.querySelector('.marcaPalpite');
+        if (marca) marca.remove();
+        var sel = tr.querySelector('[data-campo="motivo"]');
+        if (sel) sel.classList.remove('palpite');
+      }
     }
   }
 
+  /* Remover marca uma lápide em vez de tirar a linha do array.
+   * Some da tela e das contas na hora; o registro de QUE foi removida viaja
+   * na próxima sincronização e apaga a linha nos outros aparelhos também.
+   * Sem isso, a linha voltava sozinha no dia seguinte. */
   function remover(id) {
     if (!confirm('Apagar esta linha do log?')) return;
     var p = dados();
-    p.linhas = p.linhas.filter(function (x) { return x.id !== id; });
+    var l = p.linhas.filter(function (x) { return x.id === id; })[0];
+    if (!l) return;
+    l.removido = Date.now();
+    l.em = l.removido;
     salvar(p);
     render();
   }
@@ -118,7 +139,7 @@
   function render() {
     var p = dados();
     corpo.innerHTML = '';
-    var visiveis = p.linhas.filter(function (l) {
+    var visiveis = vivas(p).filter(function (l) {
       if (filtro === 'pendentes') return l.revisei !== 'Sim';
       if (filtro === 'revisadas') return l.revisei === 'Sim';
       return true;
@@ -127,7 +148,7 @@
     if (!visiveis.length) {
       var tr0 = document.createElement('tr');
       tr0.innerHTML = '<td colspan="9" style="padding:26px;text-align:center;color:var(--texto-fraco)">' +
-        (p.linhas.length ? 'Nenhuma linha neste filtro.' :
+        (vivas(p).length ? 'Nenhuma linha neste filtro.' :
           'Log vazio. Toque em "+ Nova linha" e registre o primeiro erro.') + '</td>';
       corpo.appendChild(tr0);
       recalcular();
@@ -140,7 +161,15 @@
       tr.className = l.revisei === 'Sim' ? 'revisado' : (l.tema ? 'pendente' : '');
 
       var tdN = document.createElement('td');
-      tdN.className = 'num'; tdN.textContent = i + 1;
+      tdN.className = 'num';
+      tdN.textContent = i + 1;
+      if (l.reincidencias > 1) {
+        var rc = document.createElement('span');
+        rc.className = 'reincid';
+        rc.textContent = l.reincidencias + 'x';
+        rc.title = 'Você errou esta questão ' + l.reincidencias + ' vezes.';
+        tdN.appendChild(rc);
+      }
       tr.appendChild(tdN);
 
       function cel(el) { var td = document.createElement('td'); td.appendChild(el); tr.appendChild(td); return td; }
@@ -158,7 +187,18 @@
       desc.placeholder = 'o que a questão cobrava e onde eu errei';
       var tdD = cel(desc); tdD.style.minWidth = '260px';
 
-      cel(selectSimples('motivo', MOTIVOS, l.motivo, true));
+      // Motivo vindo de palpite fica sinalizado até o usuário confirmar: um
+      // palpite silencioso distorceria o resumo "por motivo", que é o que
+      // orienta o que estudar em seguida.
+      var tdM = cel(selectSimples('motivo', MOTIVOS, l.motivo, true));
+      if (l.auto) {
+        tdM.querySelector('select').classList.add('palpite');
+        var dica = document.createElement('span');
+        dica.className = 'marcaPalpite';
+        dica.textContent = 'palpite';
+        dica.title = 'Motivo sugerido pelo app. Confirme ou troque — ao mexer, a marca sai.';
+        tdM.appendChild(dica);
+      }
       cel(selectSimples('revisei', ['Não', 'Sim'], l.revisei || 'Não', false));
 
       var dr = document.createElement('input');
@@ -187,7 +227,7 @@
   /* ------------------------------------------------------------ "fórmulas" */
   function recalcular() {
     var p = dados();
-    var linhas = p.linhas;
+    var linhas = vivas(p);
     var total = linhas.length;
     var pend = linhas.filter(function (l) { return l.revisei !== 'Sim'; }).length;
 
@@ -261,7 +301,7 @@
     var p = dados();
     var m = [['Data', 'Código do tema', 'Tema do edital', 'Seção', 'Fonte',
       'Descrição do erro', 'Motivo', 'Revisei?', 'Data da revisão']];
-    p.linhas.forEach(function (l) {
+    vivas(p).forEach(function (l) {
       var t = EDITAL.tema(l.tema);
       m.push([l.data || '', l.tema || '', t ? t.nome : '', t ? String(t.sec) : '',
         l.fonte || '', l.descricao || '', l.motivo || '', l.revisei || 'Não', l.dataRevisao || '']);
@@ -272,7 +312,7 @@
   function matrizResumo() {
     var p = dados();
     var porTema = {};
-    p.linhas.forEach(function (l) {
+    vivas(p).forEach(function (l) {
       if (!l.tema) return;
       var t = porTema[l.tema] = porTema[l.tema] || { n: 0, p: 0 };
       t.n++; if (l.revisei !== 'Sim') t.p++;
@@ -293,13 +333,13 @@
 
   document.getElementById('btXlsx').onclick = function () {
     var p = dados();
-    if (!p.linhas.length) { Store.avisar('aviso', 'O log está vazio — nada a exportar.'); return; }
+    if (!vivas(p).length) { Store.avisar('aviso', 'O log está vazio — nada a exportar.'); return; }
     try {
       XLSX.gerar([
         { nome: 'Log de erros', larguras: [11, 9, 34, 7, 17, 60, 27, 9, 13], linhas: matrizLancamentos() },
         { nome: 'Resumo por tema', larguras: [9, 40, 7, 8, 10, 11], linhas: matrizResumo() }
       ], nomeArquivo('.xlsx'));
-      Store.avisar('info', 'Planilha .xlsx exportada com ' + p.linhas.length + ' lançamento(s).');
+      Store.avisar('info', 'Planilha .xlsx exportada com ' + vivas(p).length + ' lançamento(s).');
     } catch (e) {
       Store.avisar('erro', 'Falha ao gerar o arquivo .xlsx.', e.message);
     }

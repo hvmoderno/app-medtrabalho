@@ -7,6 +7,11 @@
 <link rel="stylesheet" href="../assets/app.css">
 <link rel="stylesheet" href="guia.css">
 <style>
+  .caixaDuvida { margin: 10px 0 0; }
+  .caixaDuvida textarea { width: 100%; resize: vertical; margin-top: 4px;
+    padding: 8px 10px; border: 1px solid var(--borda); border-radius: var(--raio);
+    background: var(--superficie); color: var(--texto); font: inherit; font-size: .9rem; }
+  .caixaDuvida textarea:focus { outline: 2px solid var(--acento); outline-offset: -2px; }
   body { padding-bottom: 40px; }
   .lista .sec { margin: 18px 0 6px; font-size: .78rem; text-transform: uppercase;
     letter-spacing: .04em; color: var(--texto-fraco); font-weight: 700; }
@@ -39,8 +44,32 @@
     <div class="linha voltar">
       <button id="btVoltar">← Todos os temas</button>
       <span style="flex:1"></span>
+      <button id="btDuvida" title="Montar uma pergunta com o contexto deste guia">Tenho uma dúvida</button>
       <button id="btLido" class="primario">Marcar como revisado</button>
     </div>
+
+    <!-- Monta a pergunta já com o contexto que costuma faltar quando a gente
+         digita a dúvida do zero: tema do edital, guia aberto e o trecho que
+         estava sendo lido. Copiar e colar no Claude leva tudo junto. -->
+    <div class="cartao caixaDuvida oculto" id="caixaDuvida">
+      <label class="pequeno fraco" for="txtDuvida">Qual é a sua dúvida sobre este tema?</label>
+      <textarea id="txtDuvida" rows="3"
+        placeholder="ex.: não entendi por que a concausa preexistente não afasta o nexo"></textarea>
+      <label class="pequeno fraco" style="display:flex;align-items:center;gap:6px;margin:8px 0 0;cursor:pointer">
+        <input type="checkbox" id="chkTrechoGuia" checked>
+        Anexar o trecho do guia que está na tela
+      </label>
+      <div class="linha" style="margin-top:10px">
+        <button class="primario" id="btCopiarDuvida">Copiar pergunta</button>
+        <button id="btFecharDuvida">Cancelar</button>
+        <span class="pequeno fraco" id="statusDuvida" style="flex:1"></span>
+      </div>
+      <p class="pequeno fraco" style="margin:8px 0 0">
+        Cole no app do Claude. Nada sai daqui sozinho — o botão só põe o texto
+        na área de transferência.
+      </p>
+    </div>
+
     <div class="cartao guia" id="conteudoGuia"></div>
     <div class="linha voltar" style="margin-top:12px">
       <button id="btVoltar2">← Todos os temas</button>
@@ -76,7 +105,7 @@
   function renderLista() {
     var m = dados();
     var comGuia = EDITAL.temas.filter(function (t) { return temGuia(t.id); });
-    var lidos = comGuia.filter(function (t) { return m.lidos[t.id]; }).length;
+    var lidos = comGuia.filter(function (t) { return m.lidos[t.id] > 0; }).length;
 
     document.getElementById('barraLidos').style.width =
       (comGuia.length ? lidos / comGuia.length * 100 : 0) + '%';
@@ -138,7 +167,7 @@
         var r = document.createElement('span');
         if (!temGuia(t.id)) {
           r.className = 'rotulo cinza'; r.textContent = 'em produção';
-        } else if (m.lidos[t.id]) {
+        } else if (m.lidos[t.id] > 0) {
           r.className = 'rotulo ok'; r.textContent = 'revisado';
         } else {
           r.className = 'rotulo'; r.textContent = 'abrir';
@@ -177,7 +206,7 @@
   function atualizarBotaoLido() {
     var m = dados();
     var b = document.getElementById('btLido');
-    if (m.lidos[atual]) {
+    if (m.lidos[atual] > 0) {
       b.textContent = 'Revisado ✓ (desmarcar)';
       b.className = '';
     } else {
@@ -189,13 +218,110 @@
   document.getElementById('btLido').onclick = function () {
     Store.patch('materiais', function (m) {
       m = m || {}; if (!m.lidos) m.lidos = {};
-      if (m.lidos[atual]) { delete m.lidos[atual]; } else { m.lidos[atual] = Date.now(); }
+      // Negativo = desmarcado nesta hora. Antes a chave era apagada, e o
+      // aparelho vizinho — que ainda a tinha — devolvia o "revisado" na
+      // sincronização seguinte.
+      m.lidos[atual] = (m.lidos[atual] > 0) ? -Date.now() : Date.now();
       return m;
     });
     atualizarBotaoLido();
   };
 
+  /* --------------------------------------------------------------- dúvida --
+   * O que faz a pergunta render é o contexto: sem ele, "não entendi a
+   * concausa" vira uma aula genérica. Com tema do edital, guia e trecho na
+   * tela, a resposta já vem no recorte da prova.
+   */
+  var caixa = document.getElementById('caixaDuvida');
+  var txtDuvida = document.getElementById('txtDuvida');
+  var statusDuvida = document.getElementById('statusDuvida');
+
+  /* Trecho visível: o parágrafo mais próximo do topo da janela. É onde o olho
+   * está quando a dúvida aparece. */
+  function trechoNaTela() {
+    var blocos = elGuia.querySelectorAll('p, li, td, h2, h3');
+    var melhor = null, menor = Infinity;
+    for (var i = 0; i < blocos.length; i++) {
+      var r = blocos[i].getBoundingClientRect();
+      if (r.bottom < 60) continue;                 // já passou
+      var d = Math.abs(r.top - 90);
+      if (d < menor) { menor = d; melhor = blocos[i]; }
+    }
+    if (!melhor) return '';
+    var textos = [], el = melhor;
+    for (var k = 0; k < 3 && el; k++) {
+      var s = (el.textContent || '').replace(/\s+/g, ' ').trim();
+      if (s) textos.push(s);
+      el = el.nextElementSibling;
+    }
+    return textos.join('\n\n').slice(0, 1200);
+  }
+
+  function montarPergunta() {
+    var tema = EDITAL.tema(atual);
+    var duvida = (txtDuvida.value || '').trim();
+    var linhas = [
+      'Estou estudando para a prova de título de Medicina do Trabalho (ANAMT/AMB, 01/11/2026).',
+      '',
+      'Tema do edital: ' + atual + ' — ' + (tema ? tema.nome : ''),
+      'Estou lendo o guia de revisão deste tema no meu app de estudo.'
+    ];
+    if (document.getElementById('chkTrechoGuia').checked) {
+      var trecho = trechoNaTela();
+      if (trecho) {
+        linhas.push('', 'Trecho do guia que eu estava lendo:', '---', trecho, '---');
+      }
+    }
+    linhas.push('', 'Minha dúvida:', duvida, '',
+      'Responda no nível da prova de título: direto, sem rodeio, e diga ' +
+      'explicitamente se algum ponto é controverso ou se costuma cair como ' +
+      'pegadinha. Se citar norma, prefira o conceito a número de artigo.');
+    return linhas.join('\n');
+  }
+
+  function mostrarStatus(msg, erro) {
+    statusDuvida.textContent = msg;
+    statusDuvida.style.color = erro ? 'var(--erro)' : 'var(--ok)';
+    clearTimeout(statusDuvida._t);
+    statusDuvida._t = setTimeout(function () { statusDuvida.textContent = ''; }, 6000);
+  }
+
+  document.getElementById('btDuvida').onclick = function () {
+    caixa.classList.toggle('oculto');
+    if (!caixa.classList.contains('oculto')) { txtDuvida.focus(); }
+  };
+  document.getElementById('btFecharDuvida').onclick = function () {
+    caixa.classList.add('oculto');
+  };
+
+  document.getElementById('btCopiarDuvida').onclick = function () {
+    if (!(txtDuvida.value || '').trim()) {
+      mostrarStatus('Escreva a dúvida primeiro.', true);
+      txtDuvida.focus();
+      return;
+    }
+    var texto = montarPergunta();
+    function caiuNoManual(e) {
+      // Safari em iPad recusa a área de transferência fora de alguns gestos.
+      // Em vez de falhar calado, deixa o texto selecionado para copiar à mão.
+      txtDuvida.value = texto;
+      txtDuvida.select();
+      mostrarStatus('Não consegui copiar sozinho — está selecionado, use Copiar.' +
+        (e ? '' : ''), true);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(texto).then(function () {
+        mostrarStatus('Copiado. Cole no Claude.');
+      }).catch(caiuNoManual);
+    } else {
+      caiuNoManual();
+    }
+  };
+
   function voltar() {
+    caixa.classList.add('oculto');
+    txtDuvida.value = '';
+    statusDuvida.textContent = '';
     telaGuia.classList.add('oculto');
     telaLista.classList.remove('oculto');
     renderLista();

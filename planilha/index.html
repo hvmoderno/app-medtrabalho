@@ -30,6 +30,14 @@
     background: transparent; color: var(--texto-fraco); font-size: 1rem; }
   table.plan td.acao button:hover { color: var(--erro); background: transparent; }
 
+  /* Motivo sugerido pelo app: visivelmente provisório até o usuário confirmar. */
+  table.plan tbody td select.palpite { font-style: italic; color: var(--texto-fraco); }
+  .marcaPalpite { display: block; font-size: .64rem; text-transform: uppercase;
+    letter-spacing: .04em; color: var(--texto-fraco); padding: 0 8px 4px;
+    border-top: 1px dashed var(--borda); margin-top: -2px; }
+  .reincid { display: block; font-size: .62rem; font-weight: 700; color: var(--erro);
+    line-height: 1.1; margin-top: 1px; }
+
   .resumo-bar { height: 8px; background: var(--superficie-2); border-radius: 999px; overflow: hidden;
     min-width: 70px; }
   .resumo-bar > i { display: block; height: 100%; background: var(--erro); }

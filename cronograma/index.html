@@ -107,7 +107,9 @@
   function marcar(id, valor) {
     Store.patch('cronograma', function (c) {
       c = c || {}; if (!c.feitos) c.feitos = {};
-      if (valor) { c.feitos[id] = Date.now(); } else { delete c.feitos[id]; }
+      // Negativo = desmarcado nesta hora. Apagar a chave fazia o bloco voltar
+      // marcado do outro aparelho na sincronização seguinte.
+      c.feitos[id] = valor ? Date.now() : -Date.now();
       return c;
     });
   }
@@ -128,7 +130,7 @@
     var total = 0, feito = 0;
 
     plano.dias.forEach(function (d) {
-      d.blocos.forEach(function (b) { total++; if (feitos[b.id]) feito++; });
+      d.blocos.forEach(function (b) { total++; if (feitos[b.id] > 0) feito++; });
     });
 
     document.getElementById('linhaTopo').textContent =
@@ -175,7 +177,7 @@
     plano.semanas.forEach(function (sem) {
       var t = 0, f = 0;
       sem.dias.forEach(function (d) {
-        d.blocos.forEach(function (b) { t++; if (feitos[b.id]) f++; });
+        d.blocos.forEach(function (b) { t++; if (feitos[b.id] > 0) f++; });
       });
       var pc = t ? f / t : 0;
 
@@ -209,10 +211,10 @@
 
         dia.blocos.forEach(function (b) {
           var lab = document.createElement('label');
-          lab.className = 'bloco' + (feitos[b.id] ? ' feito' : '');
+          lab.className = 'bloco' + (feitos[b.id] > 0 ? ' feito' : '');
           var chk = document.createElement('input');
           chk.type = 'checkbox';
-          chk.checked = !!feitos[b.id];
+          chk.checked = feitos[b.id] > 0;
           chk.onchange = function () {
             marcar(b.id, chk.checked);
             lab.classList.toggle('feito', chk.checked);
@@ -245,7 +247,7 @@
     var feitos = dados().feitos;
     var total = 0, feito = 0;
     plano.dias.forEach(function (d) {
-      d.blocos.forEach(function (b) { total++; if (feitos[b.id]) feito++; });
+      d.blocos.forEach(function (b) { total++; if (feitos[b.id] > 0) feito++; });
     });
     document.getElementById('barraGeral').style.width = (feito / total * 100).toFixed(1) + '%';
     var res = document.getElementById('resumo').children;
@@ -255,7 +257,7 @@
     plano.semanas.forEach(function (sem) {
       var t = 0, f = 0;
       sem.dias.forEach(function (d) {
-        d.blocos.forEach(function (b) { t++; if (feitos[b.id]) f++; });
+        d.blocos.forEach(function (b) { t++; if (feitos[b.id] > 0) f++; });
       });
       var det = document.querySelector('details[data-semana="' + sem.n + '"]');
       if (!det) return;

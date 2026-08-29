@@ -275,7 +275,7 @@
 
       b.onclick = function () {
         if (b.disabled) return;
-        registrar(q, a.ok);
+        registrar(q, a.ok, a);
         revelar(ul, alts, q);
       };
       li.appendChild(b);
@@ -369,17 +369,40 @@
     atualizarPlacar();
   }
 
-  function registrar(q, acertou) {
+  function registrar(q, acertou, altMarcada) {
     var p = prog();
-    if (!p.respostas[q.id]) {
+    // Lido ANTES de sobrescrever: acertar antes e errar agora é o sinal que
+    // separa "não sabia o conteúdo" de "sabia, mas errei o raciocínio".
+    var anterior = p.respostas[q.id];
+    var acertouAntes = !!(anterior && anterior.ok);
+
+    if (!anterior) {
       p.respostas[q.id] = { ok: acertou, ts: Date.now(), tema: q.tema };
     } else {
-      p.respostas[q.id].ok = acertou;
-      p.respostas[q.id].ts = Date.now();
-      p.respostas[q.id].revisoes = (p.respostas[q.id].revisoes || 0) + 1;
+      anterior.ok = acertou;
+      anterior.ts = Date.now();
+      anterior.revisoes = (anterior.revisoes || 0) + 1;
     }
     p.ultimo = { tema: estado.tema, modo: estado.modo, idx: estado.idx, id: q.id };
     salvar(p);   // gravação imediata em localStorage + IndexedDB
+
+    if (!acertou && window.LogErros && LogErros.ligado()) {
+      var r = LogErros.registrar(q, altMarcada, acertouAntes, 'Questões do app');
+      if (r === 'nova' || r === 'atualizada') { avisarRegistro(r); }
+    }
+  }
+
+  /* Aviso discreto: confirma o lançamento sem interromper a sequência de
+   * estudo, e lembra que o motivo é palpite até o usuário confirmar. */
+  function avisarRegistro(tipo) {
+    var el = document.getElementById('avisoLog');
+    if (!el) return;
+    el.textContent = tipo === 'nova'
+      ? 'Registrado no log de erros — confira o motivo na aba Erros.'
+      : 'Você já tinha errado esta questão: atualizei a linha no log de erros.';
+    el.hidden = false;
+    clearTimeout(el._t);
+    el._t = setTimeout(function () { el.hidden = true; }, 6000);
   }
 
   function irPara(i) {
@@ -414,8 +437,14 @@
     salvar(p);
   }
 
+  var chkAuto = document.getElementById('chkAutoLog');
+  if (chkAuto) {
+    chkAuto.onchange = function () { LogErros.definirLigado(chkAuto.checked); };
+  }
+
   Promise.all([Store.init(), BancoLoader.carregar('../banco/')]).then(function (r) {
     BANCO = r[1] || [];
+    if (chkAuto) { chkAuto.checked = LogErros.ligado(); }
     montarSelectTemas();
     var p = prog();
     if (p.ultimo) {

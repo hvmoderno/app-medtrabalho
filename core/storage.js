@@ -526,10 +526,36 @@
    *
    * Regra geral: na dúvida, preserva. Uma questão respondida em qualquer um dos
    * lados continua respondida; um bloco cumprido continua cumprido.
+   *
+   * A exceção é a REMOÇÃO. "Preservar na dúvida" ressuscitava tudo que o usuário
+   * apagava: a linha some daqui, mas continua no aparelho vizinho e volta na
+   * sincronização seguinte. Apagar não é a ausência de um dado — é um fato, com
+   * hora, que precisa viajar junto. Daí as duas convenções abaixo:
+   *
+   *   • listas  — o item ganha o campo `removido` (timestamp) e continua no
+   *               array como lápide. Quem lê filtra; a mesclagem compara.
+   *   • mapas   — o valor vira NEGATIVO (-timestamp) em vez de a chave sumir.
+   *               Vence o maior valor absoluto, isto é, a ação mais recente.
+   *
+   * As lápides são varridas depois de PRAZO_LAPIDE, quando já não há aparelho
+   * plausível segurando a versão antiga do dado.
    */
+  var PRAZO_LAPIDE = 180 * 24 * 60 * 60 * 1000;   // 180 dias
+
   function maisRecente(a, b, campo) {
     var ta = (a && a[campo]) || 0, tb = (b && b[campo]) || 0;
     return tb > ta ? b : a;
+  }
+
+  /* Última ação sobre o item: edição ou remoção, o que for mais recente. */
+  function carimbo(x, campoTempo) {
+    if (!x) return 0;
+    return Math.max((campoTempo && x[campoTempo]) || 0, x.removido || 0);
+  }
+
+  /* Mapa de marcações (lidos, feitos): positivo = marcado, negativo = desmarcado. */
+  function marcaMaisRecente(a, b) {
+    return Math.abs(b || 0) > Math.abs(a || 0) ? b : a;
   }
 
   function unirMapa(destino, origem, resolver) {
@@ -550,9 +576,16 @@
       if (!x || x.id == null) return;
       if (!(x.id in idx)) { destino.push(x); return; }
       var atual = destino[idx[x.id]];
-      if (campoTempo) destino[idx[x.id]] = maisRecente(atual, x, campoTempo);
+      // Vence quem agiu por último — e remover É agir. Sem isto, a linha
+      // apagada aqui voltava do aparelho que ainda não sabia da remoção.
+      destino[idx[x.id]] = carimbo(x, campoTempo) > carimbo(atual, campoTempo) ? x : atual;
     });
-    return destino;
+    // Varre lápides antigas: passado o prazo, nenhum aparelho ainda carrega a
+    // versão viva do item, e guardá-las para sempre incharia o arquivo.
+    var limite = Date.now() - PRAZO_LAPIDE;
+    return destino.filter(function (x) {
+      return !(x && x.removido && x.removido < limite);
+    });
   }
 
   function mesclarModulo(mod, meu, dele) {
@@ -566,13 +599,14 @@
         return meu;
 
       case 'cronograma':
-        // Bloco cumprido em qualquer aparelho permanece cumprido.
-        meu.feitos = unirMapa(meu.feitos, dele.feitos, function (a, b) { return a || b; });
+        // Vence a marcação mais recente: marcar E desmarcar viajam entre
+        // aparelhos. Antes, desmarcar aqui voltava marcado do outro lado.
+        meu.feitos = unirMapa(meu.feitos, dele.feitos, marcaMaisRecente);
         if (!meu.inicio) meu.inicio = dele.inicio;
         return meu;
 
       case 'materiais':
-        meu.lidos = unirMapa(meu.lidos, dele.lidos, function (a, b) { return a || b; });
+        meu.lidos = unirMapa(meu.lidos, dele.lidos, marcaMaisRecente);
         return meu;
 
       case 'simulados':
@@ -604,6 +638,9 @@
         return meu;
 
       case 'planilha':
+        // 'em' é o carimbo da última edição da linha, gravado a cada alteração.
+        // Sem ele a comparação era entre dois indefinidos e a edição mais nova
+        // podia perder para a antiga.
         meu.linhas = unirListaPorId(meu.linhas, dele.linhas, 'em');
         return meu;
 

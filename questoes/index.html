@@ -103,9 +103,19 @@
           <span class="linha" id="listaFracos"></span>
         </div>
       </div>
+      <div class="linha" style="margin-top:6px">
+        <label class="pequeno fraco" style="display:flex;align-items:center;gap:6px;cursor:pointer">
+          <input type="checkbox" id="chkAutoLog" checked>
+          Registrar no log de erros toda questão que eu errar
+        </label>
+      </div>
       <div class="placar" id="placar"></div>
     </details>
   </div>
+
+  <!-- Confirmação do lançamento automático. Discreta de propósito: não pode
+       cortar o ritmo de quem está numa sequência de questões. -->
+  <div class="faixa info" id="avisoLog" hidden style="margin-bottom:10px"></div>
 
   <div id="area"></div>
 
@@ -116,6 +126,7 @@
 <script src="../core/banco-loader.js"></script>
 <script src="../core/storage.js"></script>
 <script src="../core/desempenho.js"></script>
+<script src="../core/log-erros.js"></script>
 <script src="questoes.js"></script>
 </body>
 </html>
