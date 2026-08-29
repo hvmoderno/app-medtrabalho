@@ -62,6 +62,76 @@
     return 'GitHub respondeu ' + resp.status + '.';
   }
 
+  /* Procura na conta um gist já criado por este app.
+   *
+   * Sem esta busca, cada aparelho que ligava a sincronização criava o SEU
+   * próprio gist — porque o identificador mora no localStorage, que não
+   * atravessa aparelhos. O resultado era cada aparelho conversando consigo
+   * mesmo, sem nunca encontrar os outros. Foi exatamente o que aconteceu
+   * entre o notebook e o celular.
+   *
+   * Regra de convergência: adotar sempre o MAIS ANTIGO. É a única escolha que
+   * todos os aparelhos fazem igual, sem combinar nada entre si.
+   */
+  function descobrirGist() {
+    return fetch(API + '/gists?per_page=100', { headers: cabecalhos() })
+      .then(function (r) {
+        if (!r.ok) throw new Error(erroLegivel(r));
+        return r.json();
+      }).then(function (lista) {
+        var meus = (lista || []).filter(function (g) {
+          return g && g.files && g.files[ARQ];
+        });
+        if (!meus.length) return null;
+        meus.sort(function (a, b) {
+          return String(a.created_at || '').localeCompare(String(b.created_at || ''));
+        });
+        return meus[0].id;
+      });
+  }
+
+  /* Garante que este aparelho aponte para o mesmo gist que os outros.
+   *
+   * Se ele já vinha usando um gist diferente do original, o conteúdo daquele
+   * é lido e mesclado ANTES da troca — trocar de arquivo não pode custar o
+   * progresso que ficou no antigo.
+   */
+  function reconciliarGist() {
+    return descobrirGist().then(function (original) {
+      var c = cfg();
+      if (!original) return c.gistId || null;      // nenhum ainda: será criado
+      if (c.gistId === original) return original;  // já está certo
+
+      var antigo = c.gistId;
+      if (!antigo) {                               // aparelho novo: só adota
+        c.gistId = original; salvarCfg(c);
+        return original;
+      }
+
+      // Estava num gist órfão: recolhe o que havia lá antes de mudar.
+      return lerGist().then(function (dadosAntigos) {
+        if (dadosAntigos && dadosAntigos.dados) {
+          Store.aplicarSnapshot(dadosAntigos, 'mesclar');
+        }
+      }).catch(function (e) {
+        Store.avisar('aviso', 'Não consegui ler o arquivo de sincronização antigo.',
+          'Nada foi perdido neste aparelho. Detalhe: ' + e.message);
+      }).then(function () {
+        var x = cfg(); x.gistId = original; salvarCfg(x);
+        Store.avisar('info',
+          'Este aparelho estava sincronizando num arquivo separado dos outros. Já corrigi.',
+          'O progresso que estava lá foi mesclado. O arquivo antigo (' +
+          String(antigo).slice(0, 8) + ') ficou sem uso e pode ser apagado em gist.github.com.');
+        return original;
+      });
+    }).catch(function (e) {
+      // Descoberta é otimização, não requisito: se o GitHub falhar aqui,
+      // segue com o que este aparelho já conhecia.
+      console.warn('[sync] não consegui procurar o gist original', e);
+      return cfg().gistId || null;
+    });
+  }
+
   /* Cria o gist privado na primeira sincronização. */
   function criarGist(corpo) {
     return fetch(API + '/gists', {
@@ -115,9 +185,13 @@
         files: (function () { var f = {}; f[ARQ] = { content: corpo }; return f; })()
       })
     }).then(function (r) {
-      if (r.status === 404) {           // gist apagado: recria
+      if (r.status === 404) {           // gist apagado: procura outro, senão recria
         var x = cfg(); delete x.gistId; salvarCfg(x);
-        return criarGist(corpo);
+        return descobrirGist().then(function (id) {
+          if (!id) return criarGist(corpo);
+          var y = cfg(); y.gistId = id; salvarCfg(y);
+          return escreverGist(corpo);   // uma única retentativa: o id é recém-listado
+        });
       }
       if (!r.ok) throw new Error(erroLegivel(r));
       return c.gistId;
@@ -135,7 +209,11 @@
       return Promise.resolve({ feito: false, motivo: 'offline' });
     }
 
-    return lerGist().then(function (remoto) {
+    // Antes de qualquer coisa: garantir que este aparelho olha para o mesmo
+    // arquivo que os demais. É o que faz os aparelhos se encontrarem.
+    return reconciliarGist().then(function () {
+      return lerGist();
+    }).then(function (remoto) {
       if (remoto && remoto.dados) {
         // Mescla o que veio da nuvem com o que existe aqui.
         Store.aplicarSnapshot(remoto, 'mesclar');
